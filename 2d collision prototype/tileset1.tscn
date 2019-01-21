@@ -1,0 +1,47 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://screenshotone-.jpg" type="Texture" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 13.0612, 10 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="c_sp1" type="KinematicBody2D" parent="." index="0"]
+
+position = Vector2( 212.441, 36.7647 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+_sections_unfolded = [ "Region" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="c_sp1" index="0"]
+
+position = Vector2( 33.8015, -3.0659 )
+scale = Vector2( 1, 1.22966 )
+shape = SubResource( 1 )
+disabled = true
+
+[node name="sp1_sp" type="Sprite" parent="c_sp1" index="1"]
+
+position = Vector2( 33.4496, -3.08089 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 69, 94, 32, 32 )
+_sections_unfolded = [ "Region" ]
+
+[node name="Sprite2" type="Sprite" parent="." index="1"]
+
+position = Vector2( 72, 29 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 205, 94, 34, 34 )
+_sections_unfolded = [ "Region" ]
+
+
