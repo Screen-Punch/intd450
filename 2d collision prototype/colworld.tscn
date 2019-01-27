@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://tileset1.tres" type="TileSet" id=1]
 [ext_resource path="res://player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://screenshotone-.jpg" type="Texture" id=3]
+[ext_resource path="res://next_W.tscn" type="PackedScene" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -56,67 +57,7 @@ region_enabled = true
 region_rect = Rect2( 205, 94, 33, 33 )
 _sections_unfolded = [ "Region" ]
 
-[node name="Sprite" type="Sprite" parent="." index="5"]
-
-position = Vector2( 236.973, 286.271 )
-texture = ExtResource( 3 )
-region_enabled = true
-region_rect = Rect2( 69, 94, 33, 33 )
-_sections_unfolded = [ "Region" ]
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Sprite" index="0"]
-
-position = Vector2( -117.752, -178.317 )
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite/StaticBody2D" index="0"]
-
-position = Vector2( 117.912, 178.579 )
-shape = SubResource( 1 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Sprite4" type="Sprite" parent="." index="6"]
-
-position = Vector2( 313.849, 371.387 )
-texture = ExtResource( 3 )
-region_enabled = true
-region_rect = Rect2( 69, 94, 33, 33 )
-_sections_unfolded = [ "Region" ]
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Sprite4" index="0"]
-
-position = Vector2( -117.752, -178.317 )
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite4/StaticBody2D" index="0"]
-
-position = Vector2( 117.912, 178.579 )
-shape = SubResource( 1 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Sprite5" type="Sprite" parent="." index="7"]
+[node name="Sprite5" type="Sprite" parent="." index="5"]
 
 position = Vector2( 288.891, 253.274 )
 scale = Vector2( 0.898417, 1 )
@@ -146,5 +87,10 @@ shape = SubResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
+
+[node name="next_W" parent="." index="6" instance=ExtResource( 4 )]
+
+position = Vector2( 132.224, 95.8186 )
+next_world = "res://colworld2.tscn"
 
 
