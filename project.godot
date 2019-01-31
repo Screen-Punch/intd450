@@ -10,8 +10,8 @@ config_version=3
 
 [application]
 
-config/name="Kinematic Collision"
-run/main_scene="res://colworld.tscn"
+config/name="INT D 450"
+run/main_scene="res://Scenes/colworld.tscn"
 config/icon="res://icon.png"
 
 [display]

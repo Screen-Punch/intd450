@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scenes/tileset1.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Art/screenshotone-.jpg" type="Texture" id=3]
 [ext_resource path="res://Scenes/next_W.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Monster.tscn" type="PackedScene" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -69,7 +70,6 @@ __meta__ = {
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Sprite5" index="0"]
 
-position = Vector2( -117.752, -178.317 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -77,11 +77,12 @@ constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
+_sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite5/StaticBody2D" index="0"]
 
-position = Vector2( 117.912, 178.579 )
 shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_group_": true
 }
@@ -90,5 +91,9 @@ __meta__ = {
 
 position = Vector2( 129.649, 97.3518 )
 next_world = "res://Scenes/colworld2.tscn"
+
+[node name="Monster" parent="." index="6" instance=ExtResource( 5 )]
+
+position = Vector2( 484.958, 85.9419 )
 
 
