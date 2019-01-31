@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://screenshotone-.jpg" type="Texture" id=1]
+[ext_resource path="res://Art/screenshotone-.jpg" type="Texture" id=1]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -17,9 +17,6 @@ collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
 _sections_unfolded = [ "Region" ]
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="c_sp1" index="0"]
 

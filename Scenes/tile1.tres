@@ -1,12 +1,10 @@
-[gd_resource type="TileSet" load_steps=3 format=2]
+[gd_resource type="TileSet" load_steps=2 format=2]
 
-[ext_resource path="res://player.png" type="Texture" id=1]
-[ext_resource path="res://screenshotone-.jpg" type="Texture" id=2]
+[ext_resource path="res://Art/screenshotone-.jpg" type="Texture" id=1]
 
 [resource]
 
 0/name = "sprite"
-0/texture = ExtResource( 1 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
 0/region = Rect2( 0, 0, 16, 16 )
@@ -15,7 +13,6 @@
 0/navigation_offset = Vector2( 8, 8 )
 0/shapes = [  ]
 1/name = "Sprite"
-1/texture = ExtResource( 2 )
 1/tex_offset = Vector2( 0, 0 )
 1/modulate = Color( 1, 1, 1, 1 )
 1/region = Rect2( 69, 94, 33, 33 )
@@ -24,16 +21,15 @@
 1/navigation_offset = Vector2( 16.5, 16.5 )
 1/shapes = [  ]
 2/name = "Sprite2"
-2/texture = ExtResource( 2 )
+2/texture = ExtResource( 1 )
 2/tex_offset = Vector2( 0, 0 )
 2/modulate = Color( 1, 1, 1, 1 )
-2/region = Rect2( 205, 94, 33, 33 )
+2/region = Rect2( 205, 94, 34, 34 )
 2/is_autotile = false
-2/occluder_offset = Vector2( 16.5, 16.5 )
-2/navigation_offset = Vector2( 16.5, 16.5 )
+2/occluder_offset = Vector2( 17, 17 )
+2/navigation_offset = Vector2( 17, 17 )
 2/shapes = [  ]
 3/name = "Sprite3"
-3/texture = ExtResource( 2 )
 3/tex_offset = Vector2( 0, 0 )
 3/modulate = Color( 1, 1, 1, 1 )
 3/region = Rect2( 296, 229, 33, 33 )
@@ -41,4 +37,13 @@
 3/occluder_offset = Vector2( 16.5, 16.5 )
 3/navigation_offset = Vector2( 16.5, 16.5 )
 3/shapes = [  ]
+4/name = "sp1_sp"
+4/texture = ExtResource( 1 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 69, 94, 32, 32 )
+4/is_autotile = false
+4/occluder_offset = Vector2( 16, 16 )
+4/navigation_offset = Vector2( 16, 16 )
+4/shapes = [  ]
 
