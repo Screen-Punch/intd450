@@ -246,31 +246,14 @@ shape = SubResource( 2 )
 
 [node name="BlackTile" type="Sprite" parent="." index="10"]
 
-editor/display_folded = true
 position = Vector2( 717.272, 34.5173 )
 texture = ExtResource( 3 )
 vframes = 5
 hframes = 4
 _sections_unfolded = [ "Animation" ]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="BlackTile" index="0"]
-
-visible = false
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BlackTile/StaticBody2D" index="0"]
-
-shape = SubResource( 2 )
-
 [node name="BlackTile2" type="Sprite" parent="." index="11"]
 
-editor/display_folded = true
 position = Vector2( 785.691, 34.5173 )
 texture = ExtResource( 3 )
 vframes = 5
@@ -278,24 +261,8 @@ hframes = 4
 frame = 4
 _sections_unfolded = [ "Animation" ]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="BlackTile2" index="0"]
-
-visible = false
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BlackTile2/StaticBody2D" index="0"]
-
-shape = SubResource( 2 )
-
 [node name="BlackTile3" type="Sprite" parent="." index="12"]
 
-editor/display_folded = true
 position = Vector2( 854.924, 34.5173 )
 texture = ExtResource( 3 )
 vframes = 5
@@ -303,44 +270,13 @@ hframes = 4
 frame = 8
 _sections_unfolded = [ "Animation" ]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="BlackTile3" index="0"]
-
-visible = false
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BlackTile3/StaticBody2D" index="0"]
-
-shape = SubResource( 2 )
-
 [node name="BlackTile4" type="Sprite" parent="." index="13"]
 
-editor/display_folded = true
 position = Vector2( 927.415, 34.5173 )
 texture = ExtResource( 3 )
 vframes = 5
 hframes = 4
 frame = 12
 _sections_unfolded = [ "Animation" ]
-
-[node name="StaticBody2D" type="StaticBody2D" parent="BlackTile4" index="0"]
-
-visible = false
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BlackTile4/StaticBody2D" index="0"]
-
-shape = SubResource( 2 )
 
 
