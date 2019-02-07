@@ -14,7 +14,9 @@ var magnitude = 10
 var gap = 0.1
 
 func _ready():
-	target = get_tree().get_nodes_in_group("Monster")[0]
+	var monsters  = get_tree().get_nodes_in_group("Monster")
+	for t in monsters:
+		target = t
 
 func _physics_process(delta):
 	var motion = Vector2()
@@ -33,12 +35,13 @@ func _physics_process(delta):
 	move_and_slide(motion)
 	
 func _process(delta):
-	distance = sqrt(pow((target.position.x - position.x),2) + pow((target.position.y - position.y),2))
-	timer += delta
-	if distance < 100 and timer > gap:
-		update_magnitude_and_gap(distance)
-		$Camera2D/Shaker.shake(magnitude)
-		timer = 0
-		
+	if target:
+		distance = sqrt(pow((target.position.x - position.x),2) + pow((target.position.y - position.y),2))
+		timer += delta
+		if distance < 100 and timer > gap:
+			update_magnitude_and_gap(distance)
+			$Camera2D/Shaker.shake(magnitude)
+			timer = 0
+			
 func update_magnitude_and_gap(distance):
 	magnitude = pow(2,-distance/50) * 25
