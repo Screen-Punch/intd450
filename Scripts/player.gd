@@ -35,7 +35,6 @@ func _physics_process(delta):
 func _process(delta):
 	distance = sqrt(pow((target.position.x - position.x),2) + pow((target.position.y - position.y),2))
 	timer += delta
-	print(magnitude)
 	if distance < 100 and timer > gap:
 		update_magnitude_and_gap(distance)
 		$Camera2D/Shaker.shake(magnitude)

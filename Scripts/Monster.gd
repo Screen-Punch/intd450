@@ -18,4 +18,4 @@ func _process(delta):
 func findNewTarget():
 	var targets = get_tree().get_nodes_in_group("Player")
 	for t in targets:
-		target = t	
+		target = t

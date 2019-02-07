@@ -97,9 +97,7 @@ __meta__ = {
 position = Vector2( 129.649, 97.3518 )
 next_world = "res://Scenes/colworld2.tscn"
 
-[node name="Monster" parent="." index="6" groups=[
-"Monster",
-] instance=ExtResource( 5 )]
+[node name="Monster" parent="." index="6" instance=ExtResource( 5 )]
 
 position = Vector2( 484.958, 85.9419 )
 SPEED = 50
