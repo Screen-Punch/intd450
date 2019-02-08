@@ -24,6 +24,9 @@ func _process(delta):
 		if timer >= 60:
 			path = Nav2D.update_navigation_path(position, target.position)
 			timer = 0
+			
+		if (target.position - position).length() < 40:
+			target.takeDamage()
 
 func findNewTarget():
 	var targets = get_tree().get_nodes_in_group("Player")

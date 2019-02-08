@@ -81,5 +81,6 @@ enabled = true
 [node name="Monster" parent="Nav2D" index="1" instance=ExtResource( 5 )]
 
 position = Vector2( 60.1268, -509.408 )
+SPEED = 150
 
 

@@ -1,17 +1,24 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Scenes/tileset1.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Art/screenshotone-.jpg" type="Texture" id=3]
 [ext_resource path="res://Scenes/next_W.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Scenes/Monster.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Art/fog.png" type="Texture" id=6]
-[ext_resource path="res://Scenes/Mirror.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Art/fog.png" type="Texture" id=5]
+[ext_resource path="res://Scenes/Mirror.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Nav2D.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Monster.tscn" type="PackedScene" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 16.2355, 16.2734 )
+
+[sub_resource type="NavigationPolygon" id=2]
+
+vertices = PoolVector2Array( 1100.35, -276.586, 1068.62, 804.024, 515.616, -66.2378, 512.292, -192.554, -579.855, 775.631, 133.344, -67.3458, -566.493, -268.235, 126.696, -192.554 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 2, 1, 4, 5 ), PoolIntArray( 5, 4, 6, 7 ), PoolIntArray( 7, 6, 0, 3 ) ]
+outlines = [ PoolVector2Array( -566.493, -268.235, 1100.35, -276.586, 1068.62, 804.024, -579.855, 775.631 ), PoolVector2Array( 126.696, -192.554, 512.292, -192.554, 515.616, -66.2378, 133.344, -67.3458 ) ]
 
 [node name="colworld" type="Node2D" index="0"]
 
@@ -97,19 +104,18 @@ __meta__ = {
 position = Vector2( 129.649, 97.3518 )
 next_world = "res://Scenes/colworld2.tscn"
 
-[node name="Monster" parent="." index="6" instance=ExtResource( 5 )]
-
-position = Vector2( 484.958, 85.9419 )
-SPEED = 50
-
-[node name="Fog" type="Sprite" parent="." index="7"]
+[node name="Fog" type="Sprite" parent="." index="6"]
 
 position = Vector2( 296.392, 321.218 )
 scale = Vector2( 1.75306, 1.67498 )
-texture = ExtResource( 6 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="Mirror" parent="." index="8" instance=ExtResource( 7 )]
+[node name="Mirror" parent="." index="7" instance=ExtResource( 6 )]
 
+editor/display_folded = true
 position = Vector2( -59.5425, 77.9199 )
 
 [node name="CollisionShape2D" parent="Mirror/Area2D" index="0"]
@@ -117,6 +123,18 @@ position = Vector2( -59.5425, 77.9199 )
 position = Vector2( 0, 76.6622 )
 scale = Vector2( 1, 3.19035 )
 _sections_unfolded = [ "Transform" ]
+
+[node name="Nav2D" parent="." index="8" instance=ExtResource( 7 )]
+
+[node name="Monster" parent="Nav2D" index="0" instance=ExtResource( 8 )]
+
+position = Vector2( 484.958, 85.9419 )
+SPEED = 50
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Nav2D" index="1"]
+
+navpoly = SubResource( 2 )
+enabled = true
 
 
 [editable path="Mirror"]

@@ -21,13 +21,13 @@ func _ready():
 func _physics_process(delta):
 	var motion = Vector2()
 	
-	if Input.is_action_pressed("move_up"):
+	if Input.is_action_pressed("ui_up"):
 		motion += Vector2(0, -1)
-	if Input.is_action_pressed("move_bottom"):
+	if Input.is_action_pressed("ui_down"):
 		motion += Vector2(0, 1)
-	if Input.is_action_pressed("move_left"):
+	if Input.is_action_pressed("ui_left"):
 		motion += Vector2(-1, 0)
-	if Input.is_action_pressed("move_right"):
+	if Input.is_action_pressed("ui_right"):
 		motion += Vector2(1, 0)
 	
 	motion = motion.normalized() * MOTION_SPEED
@@ -45,3 +45,7 @@ func _process(delta):
 			
 func update_magnitude_and_gap(distance):
 	magnitude = pow(2,-distance/50) * 25
+
+func takeDamage():
+	var sceneName = get_tree().get_current_scene().get_name()
+	get_tree().change_scene("res://Levels/" + sceneName + ".tscn")
