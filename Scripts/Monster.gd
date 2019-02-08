@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-export (int) var SPEED = 50
+export (int) var SPEED = 200
 var target
 var velocity
 onready var Nav2D = get_node("../")
@@ -21,12 +21,14 @@ func _process(delta):
 #		if (target.position - position).length() > 5:
 #			move_and_slide(velocity)
 		timer += 1
-		if timer >= 60:
+		if timer >= 5:
 			path = Nav2D.update_navigation_path(position, target.position)
 			timer = 0
 			
 		if (target.position - position).length() < 40:
 			target.takeDamage()
+	else:
+		findNewTarget()
 
 func findNewTarget():
 	var targets = get_tree().get_nodes_in_group("Player")

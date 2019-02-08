@@ -68,7 +68,7 @@ scale = Vector2( 1, 4.78201 )
 [node name="next_W" parent="." index="4" instance=ExtResource( 4 )]
 
 position = Vector2( 701.06, -131.162 )
-next_world = "res://Scenes/colworld.tscn"
+next_world = "res://Levels/Level1-5.tscn"
 
 [node name="Label" type="Label" parent="." index="5"]
 
