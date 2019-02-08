@@ -1,12 +1,19 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scenes/tileset1.tres" type="TileSet" id=1]
-[ext_resource path="res://Scenes/Monster.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Scenes/player.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Scenes/Mirror.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Scenes/next_W.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Mirror.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/next_W.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Nav2D.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Monster.tscn" type="PackedScene" id=6]
 
-[node name="Level1-4" type="Node2D"]
+[sub_resource type="NavigationPolygon" id=1]
+
+vertices = PoolVector2Array( 192.9, 61.6497, -448.653, 64.9738, -446.437, -62.4505, 320.324, -69.0987, 321.432, 193.506, 642.763, -190.983, 767.971, -192.091, 761.323, 313.174, 643.871, 192.398, 194.008, 316.498, 191.792, 62.7577 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 0, 3, 4 ), PoolIntArray( 5, 6, 7, 8 ), PoolIntArray( 8, 7, 9, 4 ), PoolIntArray( 4, 9, 10, 0 ) ]
+outlines = [ PoolVector2Array( -446.437, -62.4505, 320.324, -69.0987, 321.432, 193.506, 643.871, 192.398, 642.763, -190.983, 767.971, -192.091, 761.323, 313.174, 194.008, 316.498, 191.792, 62.7577, 192.9, 61.6497, -448.653, 64.9738 ) ]
+
+[node name="Level1-4" type="Node2D" index="0"]
 
 [node name="TileMap" type="TileMap" parent="." index="0"]
 
@@ -31,15 +38,11 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Monster" parent="." index="1" instance=ExtResource( 2 )]
-
-position = Vector2( -386.781, 7.40253 )
-
-[node name="player" parent="." index="2" instance=ExtResource( 3 )]
+[node name="player" parent="." index="1" instance=ExtResource( 2 )]
 
 position = Vector2( -179.511, 0 )
 
-[node name="Mirror" parent="." index="3" instance=ExtResource( 4 )]
+[node name="Mirror" parent="." index="2" instance=ExtResource( 3 )]
 
 editor/display_folded = true
 position = Vector2( 258.037, -126.936 )
@@ -50,7 +53,7 @@ scale = Vector2( 1.96528, 1.84629 )
 position = Vector2( 0.397217, 135 )
 scale = Vector2( 1, 3.26991 )
 
-[node name="Mirror2" parent="." index="4" instance=ExtResource( 4 )]
+[node name="Mirror2" parent="." index="3" instance=ExtResource( 3 )]
 
 editor/display_folded = true
 position = Vector2( 816.055, 256.341 )
@@ -62,12 +65,12 @@ scale = Vector2( 1.96528, 1.84629 )
 position = Vector2( 0.397217, 183.387 )
 scale = Vector2( 1, 4.78201 )
 
-[node name="next_W" parent="." index="5" instance=ExtResource( 5 )]
+[node name="next_W" parent="." index="4" instance=ExtResource( 4 )]
 
 position = Vector2( 701.06, -131.162 )
 next_world = "res://Scenes/colworld.tscn"
 
-[node name="Label" type="Label" parent="." index="6"]
+[node name="Label" type="Label" parent="." index="5"]
 
 modulate = Color( 0.546875, 0.893799, 1, 1 )
 anchor_left = 0.0
@@ -92,6 +95,17 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Rect", "Visibility" ]
+
+[node name="Nav2D" parent="." index="6" instance=ExtResource( 5 )]
+
+[node name="Monster" parent="Nav2D" index="0" instance=ExtResource( 6 )]
+
+position = Vector2( -386.781, 7.40253 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Nav2D" index="1"]
+
+navpoly = SubResource( 1 )
+enabled = true
 
 
 [editable path="Mirror"]

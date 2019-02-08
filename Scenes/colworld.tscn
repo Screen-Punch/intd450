@@ -13,7 +13,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 16.2355, 16.2734 )
 
-[node name="colworld" type="Node2D"]
+[node name="colworld" type="Node2D" index="0"]
 
 [node name="TileMap" type="TileMap" parent="." index="0"]
 

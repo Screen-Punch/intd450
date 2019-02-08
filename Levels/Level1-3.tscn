@@ -1,9 +1,16 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scenes/tileset1.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/next_W.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Scenes/Monster.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Nav2D.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Monster.tscn" type="PackedScene" id=5]
+
+[sub_resource type="NavigationPolygon" id=1]
+
+vertices = PoolVector2Array( 364.568, 55.931, -533.282, 55.931, -527.84, -76.0257, 495.164, -70.5842, 495.164, 179.725, 364.568, 181.086, 685.617, 183.807, 689.698, 307.601, -527.84, 310.322, -527.84, 181.086 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 0, 3, 4, 5 ), PoolIntArray( 4, 6, 7, 8, 5 ), PoolIntArray( 5, 8, 9 ) ]
+outlines = [ PoolVector2Array( 495.164, -70.5842, 495.164, 179.725, 685.617, 183.807, 689.698, 307.601, -527.84, 310.322, -527.84, 181.086, 364.568, 181.086, 364.568, 55.931, -533.282, 55.931, -527.84, -76.0257 ) ]
 
 [node name="Level1-3" type="Node2D"]
 
@@ -63,7 +70,15 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Rect", "Visibility" ]
 
-[node name="Monster" parent="." index="4" instance=ExtResource( 4 )]
+[node name="Nav2D" parent="." index="4" instance=ExtResource( 4 )]
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Nav2D" index="0"]
+
+position = Vector2( 529.043, -502.385 )
+navpoly = SubResource( 1 )
+enabled = true
+
+[node name="Monster" parent="Nav2D" index="1" instance=ExtResource( 5 )]
 
 position = Vector2( 60.1268, -509.408 )
 
