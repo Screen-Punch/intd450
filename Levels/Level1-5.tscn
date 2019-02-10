@@ -47,7 +47,7 @@ position = Vector2( -115.664, 184.099 )
 [node name="next_W" parent="." index="2" instance=ExtResource( 3 )]
 
 position = Vector2( 705.523, -171.256 )
-next_world = "res://Levels/Main Menu.tscn"
+next_world = "res://Levels/Level1-6.tscn"
 
 [node name="Label" type="Label" parent="." index="3"]
 

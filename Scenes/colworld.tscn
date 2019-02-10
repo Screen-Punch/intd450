@@ -20,7 +20,7 @@ vertices = PoolVector2Array( 1100.35, -276.586, 1068.62, 804.024, 515.616, -66.2
 polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 2, 1, 4, 5 ), PoolIntArray( 5, 4, 6, 7 ), PoolIntArray( 7, 6, 0, 3 ) ]
 outlines = [ PoolVector2Array( -566.493, -268.235, 1100.35, -276.586, 1068.62, 804.024, -579.855, 775.631 ), PoolVector2Array( 126.696, -192.554, 512.292, -192.554, 515.616, -66.2378, 133.344, -67.3458 ) ]
 
-[node name="colworld" type="Node2D" index="0"]
+[node name="colworld" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="." index="0"]
 
