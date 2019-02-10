@@ -14,7 +14,7 @@ func _on_Area2D_body_entered(body):
 		$Sprite.flip_v = true;
 		var enemies = get_tree().get_nodes_in_group("Monster")
 		for enemy in enemies:
-    		enemy.target = self
+			enemy.target = self
 
 
 func _on_Area2D_body_exited(body):
