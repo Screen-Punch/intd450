@@ -1,0 +1,98 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Levels/level_book.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/tileset1.tres" type="TileSet" id=2]
+[ext_resource path="res://Scenes/player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Levels/Book.gd" type="Script" id=4]
+[ext_resource path="res://Art/screenshotone-.jpg" type="Texture" id=5]
+[ext_resource path="res://Art/book1_521.jpg" type="Texture" id=6]
+[ext_resource path="res://Art/walltileset.png" type="Texture" id=7]
+[ext_resource path="res://Scenes/next_W.tscn" type="PackedScene" id=8]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 22.3846, 19.7759 )
+
+[node name="Level_book" type="Node2D" index="0"]
+
+script = ExtResource( 1 )
+
+[node name="TileMap" type="TileMap" parent="." index="0"]
+
+position = Vector2( 70.4908, 128.394 )
+mode = 0
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 32, 32 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 0, 3, 0, 2, 3, 0, 4, 3, 0, 6, 3, 0, 10, 3, 0, 12, 3, 0, 14, 3, 0, 16, 3, 0, 18, 3, 0, 20, 3, 0, 22, 3, 0, 24, 3, 0, 65544, 1, 0, 262144, 3, 0, 262152, 1, 0, 262168, 3, 0, 524288, 3, 0, 524312, 3, 0, 786432, 3, 0, 786456, 3, 0, 917504, 3, 0, 917506, 3, 0, 917508, 3, 0, 917510, 3, 0, 917512, 3, 0, 917514, 3, 0, 917516, 3, 0, 917518, 3, 0, 917520, 3, 0, 917522, 3, 0, 917524, 3, 0, 917526, 3, 0, 917528, 3, 0 )
+_sections_unfolded = [ "Cell", "Collision" ]
+
+[node name="player" parent="." index="1" instance=ExtResource( 3 )]
+
+position = Vector2( 284.216, 357.746 )
+
+[node name="Book" type="StaticBody2D" parent="." index="2"]
+
+position = Vector2( 612.971, 390.295 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 4 )
+_sections_unfolded = [ "Collision" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Book" index="0"]
+
+position = Vector2( 4.59728, -1.6198 )
+scale = Vector2( 0.603496, 0.699889 )
+shape = SubResource( 1 )
+
+[node name="Sprite_block" type="Sprite" parent="Book" index="1"]
+
+position = Vector2( 4.86324, -1.62109 )
+texture = ExtResource( 5 )
+region_enabled = true
+region_rect = Rect2( 206, 229, 32, 32 )
+_sections_unfolded = [ "Animation", "Offset", "Region", "Transform", "Visibility", "Z Index" ]
+
+[node name="Sprite_book" type="Sprite" parent="." index="3"]
+
+position = Vector2( 614.939, 388.534 )
+scale = Vector2( 0.225594, 0.198512 )
+texture = ExtResource( 6 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="Sprite_wall" type="Sprite" parent="." index="4"]
+
+position = Vector2( 359.343, 192.523 )
+texture = ExtResource( 7 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 65, 127 )
+_sections_unfolded = [ "Animation", "Offset", "Region" ]
+
+[node name="next_W" parent="." index="5" instance=ExtResource( 8 )]
+
+position = Vector2( 278.089, 79.8773 )
+scale = Vector2( 0.474539, 0.476853 )
+next_world = "res://Levels/Level1-1.tscn"
+
+
