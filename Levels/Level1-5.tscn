@@ -13,7 +13,7 @@ vertices = PoolVector2Array( 768.343, 256.474, -451.098, 257.982, -445.995, 124.
 polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 4, 5, 6, 7 ), PoolIntArray( 8, 9, 10, 11, 12 ), PoolIntArray( 13, 14, 15, 0 ), PoolIntArray( 7, 16, 8, 12 ), PoolIntArray( 12, 17, 4, 7 ), PoolIntArray( 18, 12, 11, 19 ), PoolIntArray( 18, 19, 3 ), PoolIntArray( 2, 18, 3 ), PoolIntArray( 0, 3, 13 ) ]
 outlines = [ PoolVector2Array( -445.995, 124.146, 377.532, 124.146, 384.069, -250.032, -192.628, -257.926, -196.311, -319.313, -251.559, -320.541, -249.104, -384.383, -191.4, -386.839, -187.717, -448.226, 382.205, -451.845, 568.577, -447.764, 573.483, -192.855, 508.72, -192.013, 508.72, -66.8581, 512.033, 192.451, 642.781, 197.991, 642.037, -257.311, 765.831, -257.311, 768.343, 256.474, -451.098, 257.982 ) ]
 
-[node name="Level1-5" type="Node2D" index="0"]
+[node name="Level1-5" type="Node2D"]
 
 _sections_unfolded = [ "Transform" ]
 
@@ -78,7 +78,6 @@ _sections_unfolded = [ "Rect", "Visibility" ]
 [node name="Monster" parent="Nav2D" index="0" instance=ExtResource( 5 )]
 
 position = Vector2( -379.165, 174.054 )
-SPEED = 180
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Nav2D" index="1"]
 
