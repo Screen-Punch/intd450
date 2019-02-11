@@ -9,10 +9,10 @@ func _ready():
 	# Initialization here
 	pass
 
-#func _process(delta):
-#	# Called every frame. Delta is time since last frame.
-#	# Update game logic here.
-#	pass
+func _process(delta): #for testing
+	if Input.is_action_pressed("ui_up"):
+		get_tree().change_scene("res://Levels/level_book.tscn")
+	pass
 
 
 func _on_NewGameButton_pressed():
