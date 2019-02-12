@@ -14,7 +14,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 22.3846, 19.7759 )
 
-[node name="Level_book" type="Node2D" index="0"]
+[node name="Level_book" type="Node2D"]
 
 script = ExtResource( 1 )
 

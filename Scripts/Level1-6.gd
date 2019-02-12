@@ -20,6 +20,7 @@ func _ready():
 	player = get_tree().get_nodes_in_group("Player")[0]
 	buttons = [upper_Button,right_Button,buttom_Button,left_Button]
 	$Label.hide()
+	$next_W.hide()
 
 func _process(delta):
 	var button_index = check_hit()
@@ -38,6 +39,7 @@ func _process(delta):
 			current_button = "UPPER"
 	if not_pressed==[]:
 		$Label.show()
+		$next_W.show()
 		
 	
 
