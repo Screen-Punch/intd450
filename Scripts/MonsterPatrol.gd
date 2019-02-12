@@ -5,18 +5,14 @@ extends Node2D
 # var b = "textvar"
 
 func _ready():
-	$Player/Button.hide()
-	# Called when the node is added to the scene for the first time.
-	# Initialization here
+
 	pass
 
-#func _process(delta):
-#	# Called every frame. Delta is time since last frame.
-#	# Update game logic here.
-#	pass
 
 
-func _on_Player_body_entered(body):
-	$Player/Button.show()
+func _on_Player_body_entered(body): 
+	get_tree().change_scene("res://Levels/Level1-7.tscn")
 
 
+func _on_player_area_entered(area):
+	get_tree().change_scene("res://Levels/Main Menu.tscn")
