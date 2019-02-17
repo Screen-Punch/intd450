@@ -7,7 +7,9 @@ export (String, FILE, "*.tscn") var next_world
 func _ready():
 	# Called when the node is added to the scene for the first time.
 	# Initialization here
-	pass
+	if !next_world:
+		next_world = "res://Levels/Main Menu.tscn"
+
 
 func _process(delta):
 	# Called every frame. Delta is time since last frame.
