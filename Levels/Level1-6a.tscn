@@ -7,7 +7,6 @@
 [ext_resource path="res://Scenes/Monster.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Mirror.tscn" type="PackedScene" id=6]
 
-
 [sub_resource type="NavigationPolygon" id=1]
 
 vertices = PoolVector2Array( 126.435, 256.063, -451.098, 257.982, -445.995, 124.146, 127.734, 128.165, 128.001, 191.001, 1150.26, 123.904, 1153.94, 258.956, 643.296, 256.185, 578.003, 128.001, 579.003, 256.001, 641.626, 316.312, 581.169, 318.681, 192.423, 191.189, 192.002, 129.001, 383.002, 127.001, 385.002, 252.001, 578.159, 571.851, 198.45, 570.757, 191.296, 319.461, 128.386, 319.461 )
@@ -48,7 +47,7 @@ position = Vector2( -115.664, 184.099 )
 [node name="next_W" parent="." index="2" instance=ExtResource( 3 )]
 
 position = Vector2( 1080.37, 190.327 )
-next_world = "res://Levels/Level1-6.tscn"
+next_world = "res://Levels/Level1-7a.tscn"
 
 [node name="Label" type="Label" parent="." index="3"]
 

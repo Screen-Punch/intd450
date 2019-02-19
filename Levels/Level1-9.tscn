@@ -7,7 +7,6 @@
 [ext_resource path="res://Scenes/Monster.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Mirror.tscn" type="PackedScene" id=6]
 
-
 [sub_resource type="NavigationPolygon" id=1]
 
 vertices = PoolVector2Array( 643.925, -123.664, 768.166, -131.582, 766.938, 64.8567, 639.844, 59.9871, 321.104, 259.56, -451.098, 257.982, -445.995, 124.146, 258.001, 125, 768.166, 126.244, 773.681, 388.502, 389.538, 386.832, 453.472, 69.5097, 257.426, -134.037, 442.589, -130.466, 387.949, 458.951, 320.423, 458.951, 955.731, 67.8263, 957.402, 117.932 )
@@ -48,7 +47,7 @@ position = Vector2( -115.664, 184.099 )
 [node name="next_W" parent="." index="2" instance=ExtResource( 3 )]
 
 position = Vector2( 926.188, 95.18 )
-next_world = "res://Levels/Level1-6.tscn"
+next_world = "res://Levels/Level 1-10.tscn"
 
 [node name="Label" type="Label" parent="." index="3"]
 
@@ -122,7 +121,7 @@ _sections_unfolded = [ "Collision", "Transform", "Visibility" ]
 
 position = Vector2( 0, 253.773 )
 scale = Vector2( 1, 7.05541 )
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Collision", "Transform" ]
 
 
 [editable path="Mirror"]
