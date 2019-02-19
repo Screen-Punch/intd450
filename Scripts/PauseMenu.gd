@@ -20,7 +20,15 @@ func _on_ResumeButton_pressed():
 	hide()
 	get_tree().paused = false
 
-# Returns to main menu
+
 func _on_ExitButton_pressed():
+	$ExitButton/ExitConfirmation.show()
+
+
+func _on_ExitYes_pressed():
 	get_tree().paused = false
 	get_tree().change_scene("res://Levels/Main Menu.tscn")
+
+
+func _on_ExitNo_pressed():
+	$ExitButton/ExitConfirmation.hide()
