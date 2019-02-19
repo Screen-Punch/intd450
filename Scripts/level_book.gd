@@ -18,7 +18,7 @@ func _process(delta):
 
 func check_hit():
 	var distance = book.position.distance_to(player.position)
-	if distance < 55:
+	if distance < 50:
 		return 1
 	else:
 		return 0
