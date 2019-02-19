@@ -2,14 +2,17 @@
 
 [ext_resource path="res://Scripts/player.gd" type="Script" id=1]
 [ext_resource path="res://Art/player.png" type="Texture" id=2]
+
 [ext_resource path="res://Scripts/Shaker.gd" type="Script" id=3]
 [ext_resource path="res://Scripts/PauseMenu.gd" type="Script" id=4]
 [ext_resource path="res://godotIcon.png" type="Texture" id=5]
+
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 8, 8 )
+
 
 [sub_resource type="Animation" id=2]
 
@@ -72,15 +75,21 @@ drag_margin_bottom = 0.2
 editor_draw_screen = true
 editor_draw_limits = false
 editor_draw_drag_margin = false
+script = ExtResource( 3 )
 _sections_unfolded = [ "Offset" ]
 
 [node name="Shaker" type="Node" parent="Camera2D" index="0"]
 
-script = ExtResource( 3 )
+script = ExtResource( 4 )
+
+[node name="Zoomer" type="Node" parent="Camera2D" index="1"]
+
+script = ExtResource( 5 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." index="3"]
 
 pause_mode = 2
+editor/display_folded = true
 layer = 1
 offset = Vector2( 0, 0 )
 rotation = 0.0
@@ -106,7 +115,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-script = ExtResource( 4 )
+script = ExtResource( 6 )
 
 [node name="ResumeButton" type="Button" parent="CanvasLayer/PauseMenu" index="0"]
 

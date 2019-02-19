@@ -44,11 +44,12 @@ func _process(delta):
 	if target:
 		distance = sqrt(pow((target.position.x - position.x),2) + pow((target.position.y - position.y),2))
 		timer += delta
+		# zoom by distance
+		$Camera2D.zoomIn(distance/100)
 		if distance < 100 and timer > gap:
 			update_magnitude_and_gap(distance)
 			$Camera2D/Shaker.shake(magnitude)
 			timer = 0
-			
 func update_magnitude_and_gap(distance):
 	magnitude = pow(2,-distance/50) * 25
 

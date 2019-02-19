@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scripts/level_book.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/tileset1.tres" type="TileSet" id=2]
+
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scripts/Book.gd" type="Script" id=4]
 [ext_resource path="res://Art/screenshotone-.jpg" type="Texture" id=5]
@@ -47,55 +48,27 @@ _sections_unfolded = [ "Cell", "Collision" ]
 
 position = Vector2( 284.216, 357.746 )
 
-[node name="Book" type="StaticBody2D" parent="." index="2"]
+[node name="Book" parent="." index="2" instance=ExtResource( 4 )]
 
-position = Vector2( 612.971, 390.295 )
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-script = ExtResource( 4 )
-_sections_unfolded = [ "Collision" ]
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Book" index="0"]
-
-position = Vector2( 4.59728, -1.6198 )
-scale = Vector2( 0.603496, 0.699889 )
-shape = SubResource( 1 )
-
-[node name="Sprite_block" type="Sprite" parent="Book" index="1"]
-
-position = Vector2( 4.86324, -1.62109 )
-texture = ExtResource( 5 )
-region_enabled = true
-region_rect = Rect2( 206, 229, 32, 32 )
-_sections_unfolded = [ "Animation", "Offset", "Region", "Transform", "Visibility", "Z Index" ]
-
-[node name="Sprite_book" type="Sprite" parent="." index="3"]
-
-position = Vector2( 614.939, 388.534 )
-scale = Vector2( 0.225594, 0.198512 )
-texture = ExtResource( 6 )
-_sections_unfolded = [ "Visibility" ]
-
-[node name="Sprite_wall" type="Sprite" parent="." index="4"]
+[node name="Sprite_wall" type="Sprite" parent="." index="3"]
 
 position = Vector2( 359.343, 192.523 )
-texture = ExtResource( 7 )
+texture = ExtResource( 5 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 65, 127 )
 _sections_unfolded = [ "Animation", "Offset", "Region" ]
 
-[node name="next_W" parent="." index="5" instance=ExtResource( 8 )]
+[node name="next_W" parent="." index="4" instance=ExtResource( 6 )]
 
 position = Vector2( 278.089, 79.8773 )
 scale = Vector2( 0.474539, 0.476853 )
 next_world = "res://Levels/Level1-1.tscn"
+
+[node name="Sprite_book" type="Sprite" parent="." index="5"]
+
+position = Vector2( 614.939, 388.534 )
+scale = Vector2( 0.225594, 0.198512 )
+texture = ExtResource( 7 )
+_sections_unfolded = [ "Visibility" ]
 
 

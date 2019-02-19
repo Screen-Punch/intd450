@@ -1,5 +1,9 @@
 extends Node2D
 
+# for book (Wang)
+onready var book = $Book
+onready var S_book = $Sprite_book
+
 onready var upper_Button = $Button1
 onready var right_Button = $Button2
 onready var buttom_Button = $Button3
@@ -40,9 +44,20 @@ func _process(delta):
 	if not_pressed==[]:
 		$Label.show()
 		$next_W.show()
-		
+	# Wang
+	if check_hit_book():
+		S_book.show()
+	else:
+		S_book.hide()
+	pass
 	
-
+# Wang
+func check_hit_book():
+	var distance = book.position.distance_to(player.position)
+	if distance < 50:
+		return 1
+	else:
+		return 0
 
 func check_hit():
 	for i in range(len(buttons)):
