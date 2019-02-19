@@ -14,10 +14,15 @@ func _ready():
 func _process(delta):
 	# Called every frame. Delta is time since last frame.
 	# Update game logic here.
-	var coli_list = get_overlapping_bodies()
-	for coli in coli_list:
-		if coli.name == "player":
-			get_tree().change_scene(next_world)
 	pass
 
 
+func _on_next_W_body_entered(body):
+	if body.is_in_group("Player"):
+		body.vulnerable = false
+		$CanvasLayer/AnimationPlayer.play("SceneTransition")
+
+
+func _on_AnimationPlayer_animation_finished(anim_name):
+	if anim_name == "SceneTransition":
+		get_tree().change_scene(next_world)

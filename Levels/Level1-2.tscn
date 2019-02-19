@@ -1,8 +1,9 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scenes/tileset1.tres" type="TileSet" id=1]
-[ext_resource path="res://Scenes/player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/next_W.tscn" type="PackedScene" id=3]
+
 
 [node name="Level1-2" type="Node2D"]
 
