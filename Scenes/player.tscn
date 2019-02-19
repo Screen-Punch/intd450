@@ -2,38 +2,19 @@
 
 [ext_resource path="res://Scripts/player.gd" type="Script" id=1]
 [ext_resource path="res://Art/player.png" type="Texture" id=2]
-
-[ext_resource path="res://Scripts/Shaker.gd" type="Script" id=3]
-[ext_resource path="res://Scripts/PauseMenu.gd" type="Script" id=4]
-[ext_resource path="res://godotIcon.png" type="Texture" id=5]
-
+[ext_resource path="res://Scenes/Camera2D.gd" type="Script" id=3]
+[ext_resource path="res://Scripts/Shaker.gd" type="Script" id=4]
+[ext_resource path="res://Scenes/Zoomer.gd" type="Script" id=5]
+[ext_resource path="res://Scripts/PauseMenu.gd" type="Script" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 8, 8 )
 
-
-[sub_resource type="Animation" id=2]
-
-resource_name = "SceneTransition"
-length = 0.2
-loop = false
-step = 0.02
-tracks/0/type = "value"
-tracks/0/path = NodePath("CanvasLayer/LoadScreen:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.2 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ) ]
-}
-
-[node name="Player" type="KinematicBody2D" groups=["Player",]]
+[node name="player" type="KinematicBody2D" groups=[
+"Player",
+]]
 
 input_pickable = false
 collision_layer = 1
@@ -97,7 +78,6 @@ _sections_unfolded = [ "Pause" ]
 
 [node name="PauseMenu" type="Panel" parent="CanvasLayer" index="0"]
 
-editor/display_folded = true
 visible = false
 anchor_left = 0.0
 anchor_top = 0.0
@@ -190,122 +170,6 @@ text = "Exit"
 flat = false
 align = 1
 
-[node name="ExitConfirmation" type="Panel" parent="CanvasLayer/PauseMenu/ExitButton" index="0"]
-
-visible = false
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = -79.0
-margin_top = -104.0
-margin_right = 151.0
-margin_bottom = 65.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-
-[node name="Label" type="Label" parent="CanvasLayer/PauseMenu/ExitButton/ExitConfirmation" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 48.0
-margin_right = 230.0
-margin_bottom = 85.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-text = "Exiting will lose all progress, are you sure you want to exit?"
-align = 1
-autowrap = true
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="ExitYes" type="Button" parent="CanvasLayer/PauseMenu/ExitButton/ExitConfirmation" index="1"]
-
-modulate = Color( 1, 0, 0, 1 )
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 52.0
-margin_top = 112.0
-margin_right = 87.0
-margin_bottom = 132.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "Exit"
-flat = false
-align = 1
-_sections_unfolded = [ "Visibility" ]
-
-[node name="ExitNo" type="Button" parent="CanvasLayer/PauseMenu/ExitButton/ExitConfirmation" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 146.0
-margin_top = 112.0
-margin_right = 181.0
-margin_bottom = 132.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "Stay"
-flat = false
-align = 1
-
-[node name="LoadScreen" type="Sprite" parent="CanvasLayer" index="1"]
-
-modulate = Color( 0, 0, 0, 1 )
-position = Vector2( 515.361, 312.64 )
-scale = Vector2( 17.105, 10.77 )
-texture = ExtResource( 5 )
-_sections_unfolded = [ "Visibility" ]
-
-[node name="SceneTransition" type="AnimationPlayer" parent="." index="4"]
-
-root_node = NodePath("..")
-autoplay = ""
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
-anims/SceneTransition = SubResource( 2 )
-blend_times = [  ]
-
 [connection signal="pressed" from="CanvasLayer/PauseMenu/ResumeButton" to="CanvasLayer/PauseMenu" method="_on_ResumeButton_pressed"]
 
 [connection signal="pressed" from="CanvasLayer/PauseMenu/ExitButton" to="CanvasLayer/PauseMenu" method="_on_ExitButton_pressed"]
-
-[connection signal="pressed" from="CanvasLayer/PauseMenu/ExitButton/ExitConfirmation/ExitYes" to="CanvasLayer/PauseMenu" method="_on_ExitYes_pressed"]
-
-[connection signal="pressed" from="CanvasLayer/PauseMenu/ExitButton/ExitConfirmation/ExitNo" to="CanvasLayer/PauseMenu" method="_on_ExitNo_pressed"]
-
-
