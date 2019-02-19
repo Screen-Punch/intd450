@@ -14,7 +14,7 @@ _data = {
 "points": PoolVector2Array( 0, 0, 7.75623, 23.2687, 40.1616, 742.378, -39.8892, 42.1053, 19.9446, 34.349, 303.873, 745.702, -24.3767, 3.3241, 3.3241, -18.8366, 297.225, 213.846, -16.6205, -38.7812, 35.4571, 26.5928, 465.646, 219.386, -15.5125, -24.3767, 16.6205, 21.0526, 472.294, 689.192, -36.5651, 24.3767, 23.2687, 6.6482, 803.596, 692.517, -28.8089, 15.5125, 17.7285, -21.0526, 796.948, 322.433, -4.43213, -33.241, 31.0249, 18.8366, 990.854, 325.758, -25.4848, 11.0803, 11.0803, 12.1884, 997.502, 692.517, -6.6482, 26.5928, 6.6482, 17.7285, 1270.08, 690.3, 27.075, 19.855, -30.685, -11.7325, 1274.62, 6.72589, -60.4675, -49.6375, -29.7825, 4.5125, 36.1306, 11.2668, 0, 0, -7.75623, -4.43213, 38.3428, 741.8, 0, 0, 0, 0, 40.1616, 742.378 )
 }
 
-[node name="MonsterPatrol" type="Node2D" index="0"]
+[node name="MonsterPatrol" type="Node2D"]
 
 script = ExtResource( 1 )
 
@@ -55,7 +55,7 @@ script = ExtResource( 4 )
 [node name="Monster1" type="PathFollow2D" parent="Path2D" index="0"]
 
 position = Vector2( 40.1616, 742.378 )
-rotation = 0.910396
+rotation = 0.910397
 scale = Vector2( 1.1072, 0.879889 )
 offset = 0.0
 h_offset = 0.0
@@ -73,7 +73,7 @@ scale = Vector2( 0.539861, 0.749248 )
 [node name="Monster2" type="PathFollow2D" parent="Path2D" index="1"]
 
 position = Vector2( 477.509, 263.208 )
-rotation = 1.48659
+rotation = 1.48658
 scale = Vector2( 1.1072, 0.879889 )
 offset = 1036.05
 h_offset = 0.0
@@ -90,8 +90,8 @@ scale = Vector2( 0.539861, 0.749248 )
 
 [node name="Monster3" type="PathFollow2D" parent="Path2D" index="2"]
 
-position = Vector2( 790.662, 420.716 )
-rotation = -1.62995
+position = Vector2( 790.661, 420.716 )
+rotation = -1.62998
 scale = Vector2( 1.1072, 0.879889 )
 offset = 2072.1
 h_offset = 0.0
@@ -108,8 +108,8 @@ scale = Vector2( 0.539861, 0.749248 )
 
 [node name="Monster4" type="PathFollow2D" parent="Path2D" index="3"]
 
-position = Vector2( 1276.74, 607.702 )
-rotation = -1.52243
+position = Vector2( 1276.74, 607.701 )
+rotation = -1.52234
 scale = Vector2( 1.1072, 0.879889 )
 offset = 3108.15
 h_offset = 0.0
@@ -126,7 +126,7 @@ scale = Vector2( 0.539861, 0.749248 )
 
 [node name="Monster5" type="PathFollow2D" parent="Path2D" index="4"]
 
-position = Vector2( 1000.64, -6.3182 )
+position = Vector2( 1000.64, -6.31818 )
 rotation = -3.11252
 scale = Vector2( 1.1072, 0.879889 )
 offset = 3984.35
@@ -144,7 +144,7 @@ scale = Vector2( 0.539861, 0.749248 )
 
 [node name="Monster6" type="PathFollow2D" parent="Path2D" index="5"]
 
-position = Vector2( 23.4634, 174.29 )
+position = Vector2( 23.4634, 174.294 )
 rotation = 1.57329
 scale = Vector2( 1.1072, 0.879889 )
 offset = 5122.74

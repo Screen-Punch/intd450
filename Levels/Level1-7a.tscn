@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scenes/tileset1.tres" type="TileSet" id=1]
-[ext_resource path="res://Scenes/player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/next_W.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/Nav2D.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Monster.tscn" type="PackedScene" id=5]
@@ -13,7 +13,7 @@ vertices = PoolVector2Array( 196.072, 448.612, 190.631, 388.755, 318.506, 386.03
 polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 4, 3, 2, 5 ), PoolIntArray( 6, 7, 4, 8 ), PoolIntArray( 8, 4, 5, 9 ), PoolIntArray( 9, 5, 10, 11 ) ]
 outlines = [ PoolVector2Array( -445.995, 124.146, 258.126, 125.252, 252.155, -64.4866, 761.99, -71.0528, 767.431, -1.67346, 581.059, 1.0473, 581.059, 458.134, 196.072, 448.612, 190.631, 388.755, 318.506, 386.034, 315.786, 260.88, -451.098, 257.982 ) ]
 
-[node name="Level1-7a" type="Node2D" index="0"]
+[node name="Level1-7a" type="Node2D"]
 
 _sections_unfolded = [ "Transform" ]
 
@@ -47,7 +47,7 @@ position = Vector2( -115.664, 184.099 )
 [node name="next_W" parent="." index="2" instance=ExtResource( 3 )]
 
 position = Vector2( 734.641, -31.808 )
-next_world = "res://Levels/Level1-6.tscn"
+next_world = "res://Levels/Level1-8.tscn"
 
 [node name="Label" type="Label" parent="." index="3"]
 

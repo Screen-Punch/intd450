@@ -3,7 +3,7 @@
 [ext_resource path="res://Scenes/tileset1.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/Nav2D.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/Monster.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Scenes/player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/next_W.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Key.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/Lock.tscn" type="PackedScene" id=7]
@@ -61,6 +61,7 @@ position = Vector2( -102.355, 126.913 )
 [node name="next_W" parent="." index="3" instance=ExtResource( 5 )]
 
 position = Vector2( -4.2453, -241.411 )
+next_world = "res://Levels/Level 1-12.tscn"
 
 [node name="Key" parent="." index="4" instance=ExtResource( 6 )]
 

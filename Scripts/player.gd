@@ -8,6 +8,7 @@ const MOTION_SPEED = 160 # Pixels/second
 var distance = 500
 
 var target
+var vulnerable
 
 var timer = 0
 var magnitude = 10
@@ -17,6 +18,8 @@ func _ready():
 	var monsters  = get_tree().get_nodes_in_group("Monster")
 	for t in monsters:
 		target = t
+	$SceneTransition.play("SceneTransition")
+	vulnerable = true
 
 func _physics_process(delta):
 	var motion = Vector2()
@@ -51,5 +54,6 @@ func update_magnitude_and_gap(distance):
 	magnitude = pow(2,-distance/50) * 25
 
 func takeDamage():
-	var sceneName = get_tree().get_current_scene().get_name()
-	get_tree().change_scene("res://Levels/" + sceneName + ".tscn")
+	if vulnerable:
+		var sceneName = get_tree().get_current_scene().get_name()
+		get_tree().change_scene("res://Levels/" + sceneName + ".tscn")

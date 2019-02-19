@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scenes/tileset1.tres" type="TileSet" id=1]
-[ext_resource path="res://Scenes/player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/next_W.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/Nav2D.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Monster.tscn" type="PackedScene" id=5]
@@ -47,7 +47,7 @@ position = Vector2( -115.664, 184.099 )
 [node name="next_W" parent="." index="2" instance=ExtResource( 3 )]
 
 position = Vector2( 926.188, 95.18 )
-next_world = "res://Levels/Level1-6.tscn"
+next_world = "res://Levels/Level 1-10.tscn"
 
 [node name="Label" type="Label" parent="." index="3"]
 
@@ -121,7 +121,7 @@ _sections_unfolded = [ "Collision", "Transform", "Visibility" ]
 
 position = Vector2( 0, 253.773 )
 scale = Vector2( 1, 7.05541 )
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Collision", "Transform" ]
 
 
 [editable path="Mirror"]
