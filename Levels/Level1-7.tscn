@@ -1,0 +1,174 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Scripts/MonsterPatrol.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/tileset1.tres" type="TileSet" id=2]
+[ext_resource path="res://Scenes/OtherPlayerAndMonster/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scripts/Path2D.gd" type="Script" id=4]
+[ext_resource path="res://Scenes/OtherPlayerAndMonster/Moster.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/next_W.tscn" type="PackedScene" id=6]
+
+[sub_resource type="Curve2D" id=1]
+
+bake_interval = 5.0
+_data = {
+"points": PoolVector2Array( 0, 0, 7.75623, 23.2687, 40.1616, 742.378, -39.8892, 42.1053, 19.9446, 34.349, 303.873, 745.702, -24.3767, 3.3241, 3.3241, -18.8366, 297.225, 213.846, -16.6205, -38.7812, 35.4571, 26.5928, 465.646, 219.386, -15.5125, -24.3767, 16.6205, 21.0526, 472.294, 689.192, -36.5651, 24.3767, 23.2687, 6.6482, 803.596, 692.517, -28.8089, 15.5125, 17.7285, -21.0526, 796.948, 322.433, -4.43213, -33.241, 31.0249, 18.8366, 990.854, 325.758, -25.4848, 11.0803, 11.0803, 12.1884, 997.502, 692.517, -6.6482, 26.5928, 6.6482, 17.7285, 1270.08, 690.3, 27.075, 19.855, -30.685, -11.7325, 1274.62, 6.72589, -60.4675, -49.6375, -29.7825, 4.5125, 36.1306, 11.2668, 0, 0, -7.75623, -4.43213, 38.3428, 741.8, 0, 0, 0, 0, 40.1616, 742.378 )
+}
+
+[node name="MonsterPatrol" type="Node2D" index="0"]
+
+script = ExtResource( 1 )
+
+[node name="TileMap" type="TileMap" parent="." index="0"]
+
+mode = 0
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 64, 64 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( -262152, 3, 0, -262151, 3, 0, -262150, 3, 0, -262149, 3, 0, -262148, 3, 0, -262147, 3, 0, -262146, 3, 0, -262145, 3, 0, -327680, 3, 0, -327679, 3, 0, -327678, 3, 0, -327677, 3, 0, -327676, 3, 0, -327675, 3, 0, -327674, 3, 0, -327673, 3, 0, -327672, 3, 0, -327671, 3, 0, -327670, 3, 0, -327669, 3, 0, -327668, 3, 0, -327667, 3, 0, -327666, 3, 0, -131080, 3, 0, -196594, 3, 0, -8, 3, 0, -4, -1610612733, 0, -2, -1610612733, 0, -65536, -1610612733, 0, -65534, -1610612733, 0, -65532, -1610612733, 0, -65531, 3, 0, -65530, 3, 0, -65529, 3, 0, -65528, 3, 0, -65527, 3, 0, -65526, 3, 0, -65525, 3, 0, -65522, 3, 0, 65531, 3, 0, 65532, 3, 0, 2, 3, 0, 3, 3, 0, 4, 3, 0, 5, 3, 0, 6, 3, 0, 7, 3, 0, 8, 3, 0, 9, 3, 0, 131064, 3, 0, 65546, 3, 0, 65547, 3, 0, 65550, 3, 0, 196603, 3, 0, 196604, 3, 0, 196607, 3, 0, 131074, 3, 0, 131075, 3, 0, 131076, 3, 0, 262136, 3, 0, 196615, 3, 0, 196618, 3, 0, 196619, 3, 0, 196622, 3, 0, 327675, 3, 0, 327679, 3, 0, 262146, 3, 0, 393208, 3, 0, 327682, 3, 0, 327683, 3, 0, 327684, 3, 0, 327687, 3, 0, 327690, 3, 0, 327691, 3, 0, 327694, 3, 0, 458747, 3, 0, 458748, 3, 0, 458751, 3, 0, 524280, 3, 0, 458759, 3, 0, 458766, 3, 0, 589823, 3, 0, 655352, 3, 0, 589824, 3, 0, 589825, 3, 0, 589826, 3, 0, 589827, 3, 0, 589828, 3, 0, 589829, 3, 0, 589830, 3, 0, 589831, 3, 0, 589832, 3, 0, 589833, 3, 0, 589834, 3, 0, 589835, 3, 0, 589836, 3, 0, 589837, 3, 0, 589838, 3, 0, 720888, 3, 0, 720889, 3, 0, 720890, 3, 0, 720891, 3, 0, 720892, 3, 0, 720893, 3, 0, 720894, 3, 0, 720895, 3, 0 )
+
+[node name="player" parent="." index="1" groups=[
+"player",
+] instance=ExtResource( 3 )]
+
+position = Vector2( -382.495, 521.05 )
+
+[node name="Path2D" type="Path2D" parent="." index="2"]
+
+self_modulate = Color( 0.5, 0.6, 1, 0.7 )
+position = Vector2( -419.284, -143.437 )
+scale = Vector2( 1, 0.968139 )
+curve = SubResource( 1 )
+script = ExtResource( 4 )
+
+[node name="Monster1" type="PathFollow2D" parent="Path2D" index="0"]
+
+position = Vector2( 40.1616, 742.378 )
+rotation = 0.910396
+scale = Vector2( 1.1072, 0.879889 )
+offset = 0.0
+h_offset = 0.0
+v_offset = 0.0
+rotate = true
+cubic_interp = true
+loop = true
+lookahead = 4.0
+
+[node name="RigidBody2D" parent="Path2D/Monster1" index="0" instance=ExtResource( 5 )]
+
+position = Vector2( -14.7245, 16.7605 )
+scale = Vector2( 0.539861, 0.749248 )
+
+[node name="Monster2" type="PathFollow2D" parent="Path2D" index="1"]
+
+position = Vector2( 477.509, 263.208 )
+rotation = 1.48659
+scale = Vector2( 1.1072, 0.879889 )
+offset = 1036.05
+h_offset = 0.0
+v_offset = 0.0
+rotate = true
+cubic_interp = true
+loop = true
+lookahead = 4.0
+
+[node name="RigidBody2D" parent="Path2D/Monster2" index="0" instance=ExtResource( 5 )]
+
+position = Vector2( -14.7245, 16.7605 )
+scale = Vector2( 0.539861, 0.749248 )
+
+[node name="Monster3" type="PathFollow2D" parent="Path2D" index="2"]
+
+position = Vector2( 790.662, 420.716 )
+rotation = -1.62995
+scale = Vector2( 1.1072, 0.879889 )
+offset = 2072.1
+h_offset = 0.0
+v_offset = 0.0
+rotate = true
+cubic_interp = true
+loop = true
+lookahead = 4.0
+
+[node name="RigidBody2D" parent="Path2D/Monster3" index="0" instance=ExtResource( 5 )]
+
+position = Vector2( -14.7245, 16.7605 )
+scale = Vector2( 0.539861, 0.749248 )
+
+[node name="Monster4" type="PathFollow2D" parent="Path2D" index="3"]
+
+position = Vector2( 1276.74, 607.702 )
+rotation = -1.52243
+scale = Vector2( 1.1072, 0.879889 )
+offset = 3108.15
+h_offset = 0.0
+v_offset = 0.0
+rotate = true
+cubic_interp = true
+loop = true
+lookahead = 4.0
+
+[node name="RigidBody2D" parent="Path2D/Monster4" index="0" instance=ExtResource( 5 )]
+
+position = Vector2( -14.7245, 16.7605 )
+scale = Vector2( 0.539861, 0.749248 )
+
+[node name="Monster5" type="PathFollow2D" parent="Path2D" index="4"]
+
+position = Vector2( 1000.64, -6.3182 )
+rotation = -3.11252
+scale = Vector2( 1.1072, 0.879889 )
+offset = 3984.35
+h_offset = 0.0
+v_offset = 0.0
+rotate = true
+cubic_interp = true
+loop = true
+lookahead = 4.0
+
+[node name="RigidBody2D" parent="Path2D/Monster5" index="0" instance=ExtResource( 5 )]
+
+position = Vector2( -14.7245, 16.7605 )
+scale = Vector2( 0.539861, 0.749248 )
+
+[node name="Monster6" type="PathFollow2D" parent="Path2D" index="5"]
+
+position = Vector2( 23.4634, 174.29 )
+rotation = 1.57329
+scale = Vector2( 1.1072, 0.879889 )
+offset = 5122.74
+h_offset = 0.0
+v_offset = 0.0
+rotate = true
+cubic_interp = true
+loop = true
+lookahead = 4.0
+
+[node name="RigidBody2D" parent="Path2D/Monster6" index="0" instance=ExtResource( 5 )]
+
+position = Vector2( -14.7245, 16.7605 )
+scale = Vector2( 0.539861, 0.749248 )
+
+[node name="next_W" parent="." index="3" instance=ExtResource( 6 )]
+
+position = Vector2( 799.052, -139.185 )
+z_index = -1
+_sections_unfolded = [ "Collision", "Region" ]
+next_world = "res://Levels/Main Menu.tscn"
+
+[connection signal="area_entered" from="player" to="." method="_on_player_area_entered"]
+
+[connection signal="body_entered" from="player" to="." method="_on_Player_body_entered"]
+
+

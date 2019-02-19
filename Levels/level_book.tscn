@@ -1,20 +1,22 @@
 [gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://Levels/level_book.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/level_book.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/tileset1.tres" type="TileSet" id=2]
 [ext_resource path="res://Scenes/player.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Levels/Book.gd" type="Script" id=4]
+[ext_resource path="res://Scripts/Book.gd" type="Script" id=4]
 [ext_resource path="res://Art/screenshotone-.jpg" type="Texture" id=5]
 [ext_resource path="res://Art/book1_521.jpg" type="Texture" id=6]
 [ext_resource path="res://Art/walltileset.png" type="Texture" id=7]
 [ext_resource path="res://Scenes/next_W.tscn" type="PackedScene" id=8]
+
+
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 22.3846, 19.7759 )
 
-[node name="Level_book" type="Node2D" index="0"]
+[node name="Level_book" type="Node2D"]
 
 script = ExtResource( 1 )
 

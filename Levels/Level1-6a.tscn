@@ -1,0 +1,116 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Scenes/tileset1.tres" type="TileSet" id=1]
+[ext_resource path="res://Scenes/player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/next_W.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Nav2D.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Monster.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Mirror.tscn" type="PackedScene" id=6]
+
+[sub_resource type="NavigationPolygon" id=1]
+
+vertices = PoolVector2Array( 126.435, 256.063, -451.098, 257.982, -445.995, 124.146, 127.734, 128.165, 128.001, 191.001, 1150.26, 123.904, 1153.94, 258.956, 643.296, 256.185, 578.003, 128.001, 579.003, 256.001, 641.626, 316.312, 581.169, 318.681, 192.423, 191.189, 192.002, 129.001, 383.002, 127.001, 385.002, 252.001, 578.159, 571.851, 198.45, 570.757, 191.296, 319.461, 128.386, 319.461 )
+polygons = [ PoolIntArray( 0, 1, 2, 3, 4 ), PoolIntArray( 5, 6, 7, 8 ), PoolIntArray( 9, 8, 7, 10, 11 ), PoolIntArray( 12, 13, 14, 15 ), PoolIntArray( 9, 11, 16, 17, 18, 15 ), PoolIntArray( 0, 4, 12, 15, 18, 19 ) ]
+outlines = [ PoolVector2Array( -445.995, 124.146, 127.734, 128.165, 128.001, 191.001, 192.423, 191.189, 192.002, 129.001, 383.002, 127.001, 385.002, 252.001, 579.003, 256.001, 578.003, 128.001, 1150.26, 123.904, 1153.94, 258.956, 643.296, 256.185, 641.626, 316.312, 581.169, 318.681, 578.159, 571.851, 198.45, 570.757, 191.296, 319.461, 128.386, 319.461, 126.435, 256.063, -451.098, 257.982 ) ]
+
+[node name="Level1-6a" type="Node2D"]
+
+_sections_unfolded = [ "Transform" ]
+
+[node name="TileMap" type="TileMap" parent="." index="0"]
+
+mode = 0
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 64, 64 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 65528, 3, 0, 65529, 3, 0, 65530, 3, 0, 65531, 3, 0, 65532, 3, 0, 65533, 3, 0, 65534, 3, 0, 65535, 3, 0, 0, 3, 0, 1, 3, 0, 2, 3, 0, 3, 3, 0, 4, 3, 0, 5, 3, 0, 6, 3, 0, 7, 3, 0, 8, 3, 0, 9, 3, 0, 10, 3, 0, 11, 3, 0, 12, 3, 0, 13, 3, 0, 14, 3, 0, 15, 3, 0, 16, 3, 0, 17, 3, 0, 18, 3, 0, 65538, 3, 0, 196600, 3, 0, 131078, 3, 0, 131079, 3, 0, 131080, 3, 0, 131090, 3, 0, 327672, 3, 0, 327673, 3, 0, 327674, 3, 0, 327675, 3, 0, 327676, 3, 0, 327677, 3, 0, 327678, 3, 0, 327679, 3, 0, 262144, 3, 0, 262145, 3, 0, 262154, 3, 0, 262155, 3, 0, 262156, 3, 0, 262157, 3, 0, 262158, 3, 0, 262159, 3, 0, 262160, 3, 0, 262161, 3, 0, 262162, 3, 0, 327682, 3, 0, 327689, 3, 0, 393218, 3, 0, 458761, 3, 0, 524290, 3, 0, 589827, 3, 0, 589828, 3, 0, 589829, 3, 0, 589830, 3, 0, 589831, 3, 0, 589832, 3, 0, 589833, 3, 0 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="player" parent="." index="1" instance=ExtResource( 2 )]
+
+position = Vector2( -115.664, 184.099 )
+
+[node name="next_W" parent="." index="2" instance=ExtResource( 3 )]
+
+position = Vector2( 1080.37, 190.327 )
+next_world = "res://Levels/Level1-6.tscn"
+
+[node name="Label" type="Label" parent="." index="3"]
+
+modulate = Color( 1, 0.984375, 0, 1 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 237.0
+margin_top = 85.0
+margin_right = 369.0
+margin_bottom = 99.0
+rect_scale = Vector2( 2, 2 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "These mirrors..."
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "Visibility" ]
+
+[node name="Nav2D" parent="." index="4" instance=ExtResource( 4 )]
+
+[node name="Monster" parent="Nav2D" index="0" instance=ExtResource( 5 )]
+
+position = Vector2( -379.165, 174.054 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Nav2D" index="1"]
+
+navpoly = SubResource( 1 )
+enabled = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Mirror" parent="." index="5" instance=ExtResource( 6 )]
+
+editor/display_folded = true
+position = Vector2( 541.278, 345.165 )
+rotation = 1.57034
+_sections_unfolded = [ "Collision", "Transform", "Visibility" ]
+
+[node name="Area2D" parent="Mirror" index="2"]
+
+position = Vector2( 0.397217, 186.774 )
+scale = Vector2( 1, 4.88782 )
+
+[node name="Mirror3" parent="." index="6" instance=ExtResource( 6 )]
+
+editor/display_folded = true
+position = Vector2( 233.152, 549.016 )
+rotation = 3.14159
+_sections_unfolded = [ "Collision", "Transform", "Visibility" ]
+
+[node name="Area2D" parent="Mirror3" index="2"]
+
+position = Vector2( 0.397217, 225.189 )
+scale = Vector2( 1, 6.08833 )
+
+
+[editable path="Mirror"]
+[editable path="Mirror3"]

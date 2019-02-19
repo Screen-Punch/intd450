@@ -24,9 +24,6 @@ func _process(delta):
 		if timer >= 5:
 			path = Nav2D.update_navigation_path(position, target.position)
 			timer = 0
-			
-		if (target.position - position).length() < 40:
-			target.takeDamage()
 	else:
 		findNewTarget()
 
@@ -51,3 +48,7 @@ func move_along_path(distance):
 		distance -= distance_between_points
 		last_point = path[0]
 		path.remove(0)
+
+func _on_Area2D_body_entered(body):
+	if body.has_method("takeDamage"):
+		body.takeDamage()
