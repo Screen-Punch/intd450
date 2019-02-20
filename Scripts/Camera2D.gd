@@ -36,6 +36,4 @@ func zoomIn(distance):
 	else: 
 		if total_zoom < 0:
 			zoomfactor = 1+zoomfactor_speed
-			
-	print(zoomfactor, '+',distance, '+',relative_dis,'+',total_zoom)
-	pass
+

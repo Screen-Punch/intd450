@@ -18,7 +18,7 @@ func _ready():
 	var monsters  = get_tree().get_nodes_in_group("Monster")
 	for t in monsters:
 		target = t
-	#$SceneTransition.play("SceneTransition")
+	$CanvasLayer/SceneTransition.play("SceneTransition")
 	vulnerable = true
 
 func _physics_process(delta):
