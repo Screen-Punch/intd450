@@ -9,14 +9,13 @@
 [ext_resource path="res://Scenes/Lock.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/Mirror.tscn" type="PackedScene" id=8]
 
-
 [sub_resource type="NavigationPolygon" id=1]
 
 vertices = PoolVector2Array( 448.699, 252.819, 900.901, 444.252, -59.2755, 438.222, 252.744, 249.805, 121.606, -193.354, 255.759, -1.92148, -66.8122, 191.018, -62.2901, 64.4016, 840.608, -124.016, 905.423, -130.046, 447.191, 2.60056, 124.62, -255.155, 840.608, -259.677, -448.999, 189.001, -448.999, 64.0005, -62.2901, -190.339 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 4, 5, 3, 2, 6, 7 ), PoolIntArray( 8, 9, 1, 0, 10 ), PoolIntArray( 11, 12, 8, 10, 5, 4 ), PoolIntArray( 13, 14, 7, 6 ), PoolIntArray( 4, 7, 15 ) ]
 outlines = [ PoolVector2Array( -448.999, 64.0005, -62.2901, 64.4016, -62.2901, -190.339, 121.606, -193.354, 124.62, -255.155, 840.608, -259.677, 840.608, -124.016, 905.423, -130.046, 900.901, 444.252, -59.2755, 438.222, -66.8122, 191.018, -448.999, 189.001 ), PoolVector2Array( 255.759, -1.92148, 447.191, 2.60056, 448.699, 252.819, 252.744, 249.805 ) ]
 
-[node name="Level 1-12" type="Node2D" index="0"]
+[node name="Level 1-12" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="." index="0"]
 

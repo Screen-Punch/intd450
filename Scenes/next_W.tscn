@@ -64,6 +64,7 @@ transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 
 [node name="ScreenBlocker" type="Sprite" parent="CanvasLayer" index="0"]
 
+visible = false
 modulate = Color( 0, 0, 0, 0 )
 position = Vector2( 532.765, 310.185 )
 scale = Vector2( 17.6489, 10.6933 )
