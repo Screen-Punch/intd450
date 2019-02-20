@@ -173,3 +173,5 @@ align = 1
 [connection signal="pressed" from="CanvasLayer/PauseMenu/ResumeButton" to="CanvasLayer/PauseMenu" method="_on_ResumeButton_pressed"]
 
 [connection signal="pressed" from="CanvasLayer/PauseMenu/ExitButton" to="CanvasLayer/PauseMenu" method="_on_ExitButton_pressed"]
+
+
