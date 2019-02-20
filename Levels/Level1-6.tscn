@@ -8,9 +8,9 @@
 [ext_resource path="res://Scenes/Book.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Art/book2_clock.jpg" type="Texture" id=7]
 
+[node name="Level1-6" type="Node2D" index="0"]
 
-[node name="Level1-6" type="Node2D"]
-
+position = Vector2( -99.3073, -951.14 )
 script = ExtResource( 1 )
 
 [node name="TileMap" type="TileMap" parent="." index="0"]
@@ -38,23 +38,23 @@ __meta__ = {
 
 [node name="Button1" parent="." index="1" instance=ExtResource( 3 )]
 
-position = Vector2( 631.495, 287.196 )
+position = Vector2( 674.495, 287.196 )
 
 [node name="Button2" parent="." index="2" instance=ExtResource( 3 )]
 
-position = Vector2( 759.054, 404.756 )
+position = Vector2( 799.838, 404.756 )
 
 [node name="Button3" parent="." index="3" instance=ExtResource( 3 )]
 
-position = Vector2( 631.071, 525.645 )
+position = Vector2( 674.071, 525.645 )
 
 [node name="Button4" parent="." index="4" instance=ExtResource( 3 )]
 
-position = Vector2( 500.292, 408.071 )
+position = Vector2( 543.292, 406.266 )
 
 [node name="player" parent="." index="5" instance=ExtResource( 4 )]
 
-position = Vector2( 177.025, 526.001 )
+position = Vector2( 220.025, 526.001 )
 
 [node name="Label" type="Label" parent="." index="6"]
 
@@ -62,10 +62,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 363.0
-margin_top = 224.0
-margin_right = 604.0
-margin_bottom = 300.0
+margin_left = 223.0
+margin_top = 176.0
+margin_right = 464.0
+margin_bottom = 252.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -80,16 +80,16 @@ max_lines_visible = -1
 
 [node name="next_W" parent="." index="7" instance=ExtResource( 5 )]
 
-position = Vector2( 872.498, 197.605 )
+position = Vector2( 909.958, 195.389 )
 next_world = "res://Levels/Level1-7.tscn"
 
 [node name="Book" parent="." index="8" instance=ExtResource( 6 )]
 
-position = Vector2( 208.875, 372.825 )
+position = Vector2( 251.875, 372.825 )
 
 [node name="Sprite_book" type="Sprite" parent="." index="9"]
 
-position = Vector2( 213.873, 373.935 )
+position = Vector2( 256.873, 373.935 )
 scale = Vector2( 0.186103, 0.182618 )
 texture = ExtResource( 7 )
 
