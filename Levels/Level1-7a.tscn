@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Scenes/tileset1.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Scenes/Nav2D.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Monster.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Mirror.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/StairBlocker.tscn" type="PackedScene" id=7]
 
 [sub_resource type="NavigationPolygon" id=1]
 
@@ -110,6 +111,10 @@ _sections_unfolded = [ "Collision", "Transform", "Visibility" ]
 
 position = Vector2( 0.397217, 225.189 )
 scale = Vector2( 1, 6.08833 )
+
+[node name="StairBlocker" parent="." index="7" instance=ExtResource( 7 )]
+
+position = Vector2( 674.747, -32.649 )
 
 
 [editable path="Mirror"]
