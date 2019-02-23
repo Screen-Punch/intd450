@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-export (int) var SPEED = 180
+export (int) var SPEED = 170
 var target
 var velocity
 onready var Nav2D = get_node("../")
