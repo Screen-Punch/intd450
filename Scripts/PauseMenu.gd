@@ -25,10 +25,10 @@ func _on_ExitButton_pressed():
 	$ExitButton/ExitConfirmation.show()
 
 
-func _on_ExitYes_pressed():
+func _on_YesExit_pressed():
 	get_tree().paused = false
 	get_tree().change_scene("res://Levels/Main Menu.tscn")
 
 
-func _on_ExitNo_pressed():
+func _on_NoExit_pressed():
 	$ExitButton/ExitConfirmation.hide()

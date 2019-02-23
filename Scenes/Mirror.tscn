@@ -13,7 +13,9 @@ extents = Vector2( 32, 32 )
 custom_solver_bias = 0.0
 extents = Vector2( 32, 32 )
 
-[node name="Mirror" type="StaticBody2D"]
+[node name="Mirror" type="StaticBody2D" groups=[
+"Mirror",
+]]
 
 modulate = Color( 0, 1, 0.34375, 1 )
 input_pickable = false

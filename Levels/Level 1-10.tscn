@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Scenes/tileset1.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/Nav2D.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Scenes/Key.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/Lock.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/Mirror.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/StairBlocker.tscn" type="PackedScene" id=9]
 
 [sub_resource type="NavigationPolygon" id=1]
 
@@ -69,7 +70,7 @@ position = Vector2( 401.697, 309.145 )
 
 [node name="Lock" parent="Key" index="2" instance=ExtResource( 7 )]
 
-position = Vector2( 206.655, -213.307 )
+position = Vector2( 138.636, -213.307 )
 
 [node name="Mirror" parent="." index="5" instance=ExtResource( 8 )]
 
@@ -79,6 +80,10 @@ position = Vector2( 275.844, 87.426 )
 
 position = Vector2( 0.397217, 165.969 )
 scale = Vector2( 1, 4.2377 )
+
+[node name="StairBlocker" parent="." index="6" instance=ExtResource( 9 )]
+
+position = Vector2( 609.449, 95.2264 )
 
 [connection signal="keyGotten" from="Key" to="Key/Lock" method="_on_Key_keyGotten"]
 

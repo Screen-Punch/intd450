@@ -21,6 +21,11 @@ func takeDamage():
 	var enemies = get_tree().get_nodes_in_group("Monster")
 	for enemy in enemies:
 		enemy.findNewTarget();
+	var mirrorsLeft = get_tree().get_nodes_in_group("Mirror")
+	if len(mirrorsLeft)-1 == 0:
+		var blockers = get_tree().get_nodes_in_group("StairBlocker")
+		for blocker in blockers:
+			blocker.queue_free();
 	queue_free()
 
 func _on_Area2D_body_entered(body):
