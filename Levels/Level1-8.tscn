@@ -14,7 +14,7 @@ vertices = PoolVector2Array( -254.976, 127.584, -259.489, -63.7471, -188.191, -6
 polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 4, 5, 6, 0 ), PoolIntArray( 4, 0, 3, 7 ), PoolIntArray( 4, 7, 8, 9 ) ]
 outlines = [ PoolVector2Array( -445.995, 124.146, -254.976, 127.584, -259.489, -63.7471, -188.191, -61.9421, -188.191, 126.681, 383.466, 127.539, 387.949, 458.951, 320.423, 458.951, 321.104, 259.56, -451.098, 257.982 ) ]
 
-[node name="Level1-8" type="Node2D"]
+[node name="Level1-8" type="Node2D" index="0"]
 
 _sections_unfolded = [ "Transform" ]
 
@@ -90,15 +90,14 @@ __meta__ = {
 
 [node name="Mirror" parent="." index="5" instance=ExtResource( 6 )]
 
-editor/display_folded = true
 position = Vector2( 351.505, 433.512 )
 rotation = 3.14159
 _sections_unfolded = [ "Collision", "Transform", "Visibility" ]
 
 [node name="Area2D" parent="Mirror" index="2"]
 
-position = Vector2( 0.397217, 167.256 )
-scale = Vector2( 1, 4.27792 )
+position = Vector2( -8.16142, 167.256 )
+scale = Vector2( 0.732543, 4.27792 )
 
 [node name="StairBlocker" parent="." index="6" instance=ExtResource( 7 )]
 

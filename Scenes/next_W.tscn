@@ -7,7 +7,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 16.2355, 16.2734 )
+extents = Vector2( 32, 32 )
 
 [sub_resource type="Animation" id=2]
 
@@ -46,9 +46,6 @@ next_world = null
 
 position = Vector2( 0.160004, 0.261993 )
 shape = SubResource( 1 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="Sprite" type="Sprite" parent="." index="1"]
 

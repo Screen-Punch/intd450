@@ -91,7 +91,7 @@ __meta__ = {
 [node name="Mirror" parent="." index="5" instance=ExtResource( 6 )]
 
 editor/display_folded = true
-position = Vector2( 541.278, 345.165 )
+position = Vector2( 543.733, 470.395 )
 rotation = 1.57034
 _sections_unfolded = [ "Collision", "Transform", "Visibility" ]
 
@@ -103,7 +103,7 @@ scale = Vector2( 1, 4.88782 )
 [node name="Mirror3" parent="." index="6" instance=ExtResource( 6 )]
 
 editor/display_folded = true
-position = Vector2( 351.712, 545.692 )
+position = Vector2( 238.76, 540.781 )
 rotation = 3.14159
 _sections_unfolded = [ "Collision", "Transform", "Visibility" ]
 
