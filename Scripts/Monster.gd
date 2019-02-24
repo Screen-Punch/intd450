@@ -7,17 +7,21 @@ onready var Nav2D = get_node("../")
 var path
 var timer = 0
 
+var canMove = false
+
 func _ready():
 	var targets = get_tree().get_nodes_in_group("Player")
 	for t in targets:
 		target = t
 	path = Nav2D.update_navigation_path(position, target.position)
+	$AnimationPlayer.play("SpawnAnimation")
 
 func _process(delta):
 	if target:
 		velocity = (target.position - position).normalized() * SPEED
 		var move_dist = SPEED * delta
-		move_along_path(move_dist)
+		if canMove:
+			move_along_path(move_dist)
 #		if (target.position - position).length() > 5:
 #			move_and_slide(velocity)
 		timer += 1
@@ -52,3 +56,8 @@ func move_along_path(distance):
 func _on_Area2D_body_entered(body):
 	if body.has_method("takeDamage"):
 		body.takeDamage()
+
+
+func _on_AnimationPlayer_animation_finished(anim_name):
+	if anim_name == "SpawnAnimation":
+		canMove = true

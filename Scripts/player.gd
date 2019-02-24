@@ -14,12 +14,15 @@ var timer = 0
 var magnitude = 10
 var gap = 0.1
 
+var canMove = false
+
 func _ready():
 	var monsters  = get_tree().get_nodes_in_group("Monster")
 	for t in monsters:
 		target = t
 	$CanvasLayer/SceneTransition.play("SceneTransition")
 	vulnerable = true
+	$AnimationPlayer.play("SpawnAnimation")
 
 func _physics_process(delta):
 	var motion = Vector2()
@@ -36,9 +39,9 @@ func _physics_process(delta):
 		$CanvasLayer/PauseMenu.show()
 		get_tree().paused = true
 	
-	motion = motion.normalized() * MOTION_SPEED
-
-	move_and_slide(motion)
+	if canMove:
+		motion = motion.normalized() * MOTION_SPEED
+		move_and_slide(motion)
 	
 func _process(delta):
 	if target:
@@ -59,3 +62,7 @@ func takeDamage():
 	if vulnerable:
 		var sceneName = get_tree().get_current_scene().get_name()
 		get_tree().change_scene("res://Levels/" + sceneName + ".tscn")
+
+func _on_AnimationPlayer_animation_finished(anim_name):
+	if anim_name == "SpawnAnimation":
+		canMove = true
