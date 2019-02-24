@@ -83,7 +83,7 @@ tracks/1/keys = {
 "values": [ 180.0, 0.0 ]
 }
 
-[node name="Player" type="KinematicBody2D" groups=[
+[node name="Player" type="KinematicBody2D" index="0" groups=[
 "Player",
 ]]
 
@@ -140,7 +140,6 @@ script = ExtResource( 5 )
 [node name="CanvasLayer" type="CanvasLayer" parent="." index="3"]
 
 pause_mode = 2
-editor/display_folded = true
 layer = 1
 offset = Vector2( 0, 0 )
 rotation = 0.0
@@ -166,6 +165,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 script = ExtResource( 6 )
+_sections_unfolded = [ "Pause" ]
 
 [node name="ResumeButton" type="Button" parent="CanvasLayer/PauseMenu" index="0"]
 
@@ -351,7 +351,6 @@ modulate = Color( 0, 0, 0, 1 )
 position = Vector2( 553.168, 316.428 )
 scale = Vector2( 18.2865, 10.8884 )
 texture = ExtResource( 7 )
-_sections_unfolded = [ "Visibility" ]
 
 [node name="Blur" type="ColorRect" parent="CanvasLayer" index="3"]
 
@@ -364,13 +363,13 @@ margin_right = 1056.0
 margin_bottom = 654.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
-mouse_filter = 0
+mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 color = Color( 1, 1, 1, 1 )
 script = ExtResource( 8 )
-_sections_unfolded = [ "Material" ]
+_sections_unfolded = [ "Material", "Mouse" ]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="4"]
 

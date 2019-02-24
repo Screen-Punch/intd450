@@ -53,7 +53,8 @@ func _process(delta):
 			update_magnitude_and_gap(distance)
 			$Camera2D/Shaker.shake(magnitude)
 			timer = 0
-		$CanvasLayer/Blur.updateBlur(-1*(distance/5)+20)
+		var blurLevel = -1*(distance/5)+20
+		$CanvasLayer/Blur.updateBlur(blurLevel)
 
 func update_magnitude_and_gap(distance):
 	magnitude = pow(2,-distance/50) * 25
