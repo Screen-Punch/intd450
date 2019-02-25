@@ -40,15 +40,15 @@ next_world = "res://Levels/Level1-3.tscn"
 
 [node name="Label" type="Label" parent="." index="3"]
 
-modulate = Color( 0.546875, 0.893799, 1, 1 )
+modulate = Color( 0.93103, 1, 0.117188, 1 )
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 530.0
-margin_top = -815.0
-margin_right = 686.0
-margin_bottom = -801.0
+margin_left = 473.0
+margin_top = -196.0
+margin_right = 732.0
+margin_bottom = -131.0
 rect_scale = Vector2( 2, 2 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -56,7 +56,111 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-text = "He texted me days ago."
+text = "This… monster, I do not know how long I’ll be able to keep it at bay…"
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "Visibility" ]
+
+[node name="Label5" type="Label" parent="." index="4"]
+
+modulate = Color( 0, 1, 0.835938, 1 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 474.0
+margin_top = -123.0
+margin_right = 733.0
+margin_bottom = -58.0
+rect_scale = Vector2( 2, 2 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Who are you...?"
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "Visibility" ]
+
+[node name="Label2" type="Label" parent="." index="5"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1089.0
+margin_top = -564.0
+margin_right = 1348.0
+margin_bottom = -499.0
+rect_scale = Vector2( 2, 2 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Each step feels labored, my shoulders feel heavier and heavier…
+Why are you here…?
+"
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "Visibility" ]
+
+[node name="Label3" type="Label" parent="." index="6"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -250.0
+margin_top = -814.0
+margin_right = 9.0
+margin_bottom = -749.0
+rect_scale = Vector2( 2, 2 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "I am being sapped of my strength, step by step…
+No one should’ve ever found this place again…
+"
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "Visibility" ]
+
+[node name="Label4" type="Label" parent="." index="7"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -543.0
+margin_top = -47.0
+margin_right = -284.0
+margin_bottom = 35.0
+rect_scale = Vector2( 2, 2 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "I must find a way to… buy myself some time...
+I was at peace…
+"
+autowrap = true
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
