@@ -38,31 +38,7 @@ position = Vector2( -384.928, 4.08112 )
 position = Vector2( 577.266, -4.64673 )
 next_world = "res://Levels/Level1-2.tscn"
 
-[node name="Label" type="Label" parent="." index="3"]
-
-modulate = Color( 0.92218, 1, 0.00390625, 1 )
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 173.0
-margin_top = -229.0
-margin_right = 329.0
-margin_bottom = -215.0
-rect_scale = Vector2( 2, 2 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-text = "She hasn't called in days"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Rect", "Visibility" ]
-
-[node name="ControlsLabel" type="Label" parent="." index="4"]
+[node name="ControlsLabel" type="Label" parent="." index="3"]
 
 anchor_left = 0.0
 anchor_top = 0.0

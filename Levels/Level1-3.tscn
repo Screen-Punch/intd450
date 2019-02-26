@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scenes/tileset1.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
@@ -7,12 +7,37 @@
 [ext_resource path="res://Scenes/Monster.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Mirror.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/StairBlocker.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scripts/AppearingText.gd" type="Script" id=8]
 
-[sub_resource type="NavigationPolygon" id=1]
+[sub_resource type="NavigationPolygon" id=3]
 
 vertices = PoolVector2Array( 463.656, -172.263, 462.96, 28.3859, -503.043, 22.3859, -507.074, -167.741 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 outlines = [ PoolVector2Array( 463.656, -172.263, 462.96, 28.3859, -503.043, 22.3859, -507.074, -167.741 ) ]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 32, 32 )
+
+[sub_resource type="Animation" id=2]
+
+resource_name = "DisplayText"
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Label:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.546875, 0.893799, 1, 0 ), Color( 0.546875, 0.893799, 1, 1 ) ]
+}
 
 [node name="Level1-3" type="Node2D"]
 
@@ -53,7 +78,7 @@ next_world = "res://Levels/Level1-4.tscn"
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Nav2D" index="0"]
 
 position = Vector2( 529.043, -505.4 )
-navpoly = SubResource( 1 )
+navpoly = SubResource( 3 )
 enabled = true
 
 [node name="Monster" parent="Nav2D" index="1" instance=ExtResource( 5 )]
@@ -64,7 +89,7 @@ SPEED = 130
 [node name="Mirror" parent="." index="4" instance=ExtResource( 6 )]
 
 editor/display_folded = true
-position = Vector2( 318.05, -660.198 )
+position = Vector2( 318.05, -673.56 )
 
 [node name="Area2D" parent="Mirror" index="2"]
 
@@ -84,6 +109,68 @@ scale = Vector2( 1, 5.3552 )
 
 position = Vector2( 1084.22, -257.09 )
 scale = Vector2( 1.23156, 1.91372 )
+
+[node name="Text1" type="Node2D" parent="." index="7"]
+
+position = Vector2( 487.066, -323.607 )
+script = ExtResource( 8 )
+
+[node name="Label" type="Label" parent="Text1" index="0"]
+
+modulate = Color( 0.546875, 0.893799, 1, 1 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -228.0
+margin_top = -92.0
+margin_right = -20.0
+margin_bottom = -45.0
+rect_scale = Vector2( 2, 2 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "I have never seen these strange objects before..."
+align = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "Visibility" ]
+
+[node name="Area2D" type="Area2D" parent="Text1" index="1"]
+
+position = Vector2( -0.212646, 66.1379 )
+scale = Vector2( 1.6719, 1.96878 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Text1/Area2D" index="0"]
+
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Text1" index="2"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/DisplayText = SubResource( 2 )
+blend_times = [  ]
+
+[connection signal="body_entered" from="Text1/Area2D" to="Text1" method="_on_Area2D_body_entered"]
 
 
 [editable path="Mirror"]

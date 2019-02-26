@@ -1,10 +1,172 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Scenes/tileset1.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/next_W.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scripts/AppearingText.gd" type="Script" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 32, 32 )
+
+[sub_resource type="Animation" id=2]
+
+resource_name = "DisplayText"
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Label:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.546875, 0.893799, 1, 0 ), Color( 0.546875, 0.893799, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+
+resource_name = "DisplayText"
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Label:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 1, 0.835938, 0 ), Color( 0, 1, 0.835938, 1 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+
+resource_name = "DisplayText"
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Label:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.93103, 1, 0.117188, 0 ), Color( 0.93103, 1, 0.117188, 1 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+
+resource_name = "DisplayText"
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Label:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 1, 0.835938, 0 ), Color( 0, 1, 0.835938, 1 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+
+resource_name = "DisplayText"
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Label:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.93103, 1, 0.117188, 0 ), Color( 0.93103, 1, 0.117188, 1 ) ]
+}
+
+[sub_resource type="Animation" id=7]
+
+resource_name = "DisplayText"
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Label:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 1, 0.835938, 0 ), Color( 0, 1, 0.835938, 1 ) ]
+}
+
+[sub_resource type="Animation" id=8]
+
+resource_name = "DisplayText"
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Label:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.93103, 1, 0.117188, 0 ), Color( 0.93103, 1, 0.117188, 1 ) ]
+}
+
+[sub_resource type="Animation" id=9]
+
+resource_name = "DisplayText"
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Label:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 1, 0.835938, 0 ), Color( 0, 1, 0.835938, 1 ) ]
+}
 
 [node name="Level1-2" type="Node2D"]
+
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="TileMap" type="TileMap" parent="." index="0"]
 
@@ -24,7 +186,7 @@ collision_layer = 1
 collision_mask = 1
 occluder_light_mask = 1
 format = 1
-tile_data = PoolIntArray( -786436, 6, 0, -786435, 6, 0, -786434, 6, 0, -786433, 6, 0, -851968, 6, 0, -851967, 6, 0, -851966, 6, 0, -851965, 6, 0, -851964, 6, 0, -851963, 6, 0, -851962, 6, 0, -851961, 6, 0, -851960, 6, 0, -851959, 6, 0, -851958, 6, 0, -851957, 6, 0, -851956, 6, 0, -851955, 6, 0, -851954, 6, 0, -851953, 6, 0, -851952, 6, 0, -655364, 6, 0, -720880, 6, 0, -524292, 6, 0, -524289, 6, 0, -589824, 6, 0, -589823, 6, 0, -589822, 6, 0, -589821, 6, 0, -589820, 6, 0, -589819, 6, 0, -589818, 6, 0, -589817, 6, 0, -589816, 6, 0, -589815, 6, 0, -589814, 6, 0, -589813, 6, 0, -589812, 6, 0, -589811, 6, 0, -589808, 6, 0, -393220, 6, 0, -393217, 6, 0, -458752, 6, 0, -458751, 6, 0, -458750, 6, 0, -458749, 6, 0, -458748, 6, 0, -458747, 6, 0, -458746, 6, 0, -458745, 6, 0, -458744, 6, 0, -458743, 6, 0, -458742, 6, 0, -458741, 6, 0, -458740, 6, 0, -458739, 6, 0, -458736, 6, 0, -262148, 6, 0, -262145, 6, 0, -327664, 6, 0, -131076, 6, 0, -131075, 6, 0, -131074, 6, 0, -131073, 6, 0, -196608, 6, 0, -196607, 6, 0, -196606, 6, 0, -196605, 6, 0, -196604, 6, 0, -196601, 6, 0, -196600, 6, 0, -196599, 6, 0, -196598, 6, 0, -196597, 6, 0, -196596, 6, 0, -196595, 6, 0, -196594, 6, 0, -196593, 6, 0, -196592, 6, 0, -65532, 6, 0, -65521, 6, 0, 65540, 6, 0, 65541, 6, 0, 65542, 6, 0, 65543, 6, 0, 65544, 6, 0, 65545, 6, 0, 65546, 6, 0, 65547, 6, 0, 65548, 6, 0, 65549, 6, 0, 65550, 6, 0, 65551, 6, 0 )
+tile_data = PoolIntArray( -786436, 6, 0, -786435, 6, 0, -786434, 6, 0, -786433, 6, 0, -851968, 6, 0, -851967, 6, 0, -851966, 6, 0, -851965, 6, 0, -851964, 6, 0, -851963, 6, 0, -851962, 6, 0, -851961, 6, 0, -851960, 6, 0, -851959, 6, 0, -851958, 6, 0, -851957, 6, 0, -851956, 6, 0, -851955, 6, 0, -851954, 6, 0, -851953, 6, 0, -851952, 6, 0, -655364, 6, 0, -720880, 6, 0, -524292, 6, 0, -524289, 6, 0, -589824, 6, 0, -589823, 6, 0, -589822, 6, 0, -589821, 6, 0, -589820, 6, 0, -589819, 6, 0, -589818, 6, 0, -589817, 6, 0, -589816, 6, 0, -589815, 6, 0, -589814, 6, 0, -589813, 6, 0, -589812, 6, 0, -589811, 6, 0, -589808, 6, 0, -393220, 6, 0, -393217, 6, 0, -458752, 6, 0, -458751, 6, 0, -458750, 6, 0, -458749, 6, 0, -458748, 6, 0, -458747, 6, 0, -458746, 6, 0, -458745, 6, 0, -458744, 6, 0, -458743, 6, 0, -458742, 6, 0, -458741, 6, 0, -458740, 6, 0, -458739, 6, 0, -458736, 6, 0, -262148, 6, 0, -262145, 6, 0, -327664, 6, 0, -131076, 6, 0, -131073, 6, 0, -196608, 6, 0, -196607, 6, 0, -196606, 6, 0, -196605, 6, 0, -196604, 6, 0, -196601, 6, 0, -196600, 6, 0, -196599, 6, 0, -196598, 6, 0, -196597, 6, 0, -196596, 6, 0, -196595, 6, 0, -196594, 6, 0, -196593, 6, 0, -196592, 6, 0, -4, 6, 0, -3, 6, 0, -2, 6, 0, -1, 6, 0, -65532, 6, 0, -65521, 6, 0, 65540, 6, 0, 65541, 6, 0, 65542, 6, 0, 65543, 6, 0, 65544, 6, 0, 65545, 6, 0, 65546, 6, 0, 65547, 6, 0, 65548, 6, 0, 65549, 6, 0, 65550, 6, 0, 65551, 6, 0 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -35,20 +197,26 @@ position = Vector2( 851.095, 2.57376 )
 
 [node name="next_W" parent="." index="2" instance=ExtResource( 3 )]
 
-position = Vector2( -126.465, -248.798 )
+position = Vector2( -126.465, -131.916 )
 next_world = "res://Levels/Level1-3.tscn"
 
-[node name="Label" type="Label" parent="." index="3"]
+[node name="Text1" type="Node2D" parent="." index="3"]
+
+editor/display_folded = true
+position = Vector2( 515.592, -9.41406 )
+script = ExtResource( 4 )
+
+[node name="Label" type="Label" parent="Text1" index="0"]
 
 modulate = Color( 0.93103, 1, 0.117188, 1 )
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 473.0
-margin_top = -196.0
-margin_right = 732.0
-margin_bottom = -131.0
+margin_left = -318.0
+margin_top = 226.0
+margin_right = -59.0
+margin_bottom = 291.0
 rect_scale = Vector2( 2, 2 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -56,24 +224,59 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-text = "This… monster, I do not know how long I’ll be able to keep it at bay…"
+text = "This… monster, I do not know how long I'll be able to keep it at bay..."
 autowrap = true
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Rect", "Visibility" ]
 
-[node name="Label5" type="Label" parent="." index="4"]
+[node name="Area2D" type="Area2D" parent="Text1" index="1"]
+
+position = Vector2( -10.2021, 13.1061 )
+scale = Vector2( 1.6719, 1.96878 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Text1/Area2D" index="0"]
+
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Text1" index="2"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/DisplayText = SubResource( 2 )
+blend_times = [  ]
+
+[node name="Text2" type="Node2D" parent="." index="4"]
+
+editor/display_folded = true
+position = Vector2( 591.94, -272.83 )
+script = ExtResource( 4 )
+
+[node name="Label" type="Label" parent="Text2" index="0"]
 
 modulate = Color( 0, 1, 0.835938, 1 )
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 474.0
-margin_top = -123.0
-margin_right = 733.0
-margin_bottom = -58.0
+margin_left = -7.0
+margin_top = 101.0
+margin_right = 252.0
+margin_bottom = 166.0
 rect_scale = Vector2( 2, 2 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -88,16 +291,52 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Rect", "Visibility" ]
 
-[node name="Label2" type="Label" parent="." index="5"]
+[node name="Area2D" type="Area2D" parent="Text2" index="1"]
 
+position = Vector2( -18.8943, 19.0744 )
+scale = Vector2( 1.6719, 1.96878 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Text2/Area2D" index="0"]
+
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Text2" index="2"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/DisplayText = SubResource( 3 )
+blend_times = [  ]
+
+[node name="Text3" type="Node2D" parent="." index="5"]
+
+editor/display_folded = true
+position = Vector2( 959.449, -394.159 )
+script = ExtResource( 4 )
+
+[node name="Label" type="Label" parent="Text3" index="0"]
+
+modulate = Color( 0.93103, 1, 0.117188, 1 )
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 1089.0
-margin_top = -564.0
-margin_right = 1348.0
-margin_bottom = -499.0
+margin_left = 132.0
+margin_top = -52.0
+margin_right = 391.0
+margin_bottom = 13.0
 rect_scale = Vector2( 2, 2 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -105,25 +344,59 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-text = "Each step feels labored, my shoulders feel heavier and heavier…
-Why are you here…?
-"
+text = "Each step feels labored, my shoulders feel heavier and heavier..."
 autowrap = true
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Rect", "Visibility" ]
 
-[node name="Label3" type="Label" parent="." index="6"]
+[node name="Area2D" type="Area2D" parent="Text3" index="1"]
 
+position = Vector2( 0.0375352, 3.01144 )
+scale = Vector2( 1.90414, 1.96878 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Text3/Area2D" index="0"]
+
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Text3" index="2"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/DisplayText = SubResource( 4 )
+blend_times = [  ]
+
+[node name="Text4" type="Node2D" parent="." index="6"]
+
+editor/display_folded = true
+position = Vector2( 963.319, -564.619 )
+script = ExtResource( 4 )
+
+[node name="Label" type="Label" parent="Text4" index="0"]
+
+modulate = Color( 0, 1, 0.835938, 1 )
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = -250.0
-margin_top = -814.0
-margin_right = 9.0
-margin_bottom = -749.0
+margin_left = 127.0
+margin_top = -88.0
+margin_right = 386.0
+margin_bottom = -23.0
 rect_scale = Vector2( 2, 2 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -131,25 +404,60 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-text = "I am being sapped of my strength, step by step…
-No one should’ve ever found this place again…
-"
+text = "Why are you here?"
 autowrap = true
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Rect", "Visibility" ]
 
-[node name="Label4" type="Label" parent="." index="7"]
+[node name="Area2D" type="Area2D" parent="Text4" index="1"]
 
+position = Vector2( -3.04919, 33.0963 )
+scale = Vector2( 1.95316, 1.3544 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Text4/Area2D" index="0"]
+
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Text4" index="2"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/DisplayText = SubResource( 5 )
+blend_times = [  ]
+
+[node name="Text5" type="Node2D" parent="." index="7"]
+
+editor/display_folded = true
+position = Vector2( 453.771, -564.207 )
+script = ExtResource( 4 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Label" type="Label" parent="Text5" index="0"]
+
+modulate = Color( 0.93103, 1, 0.117188, 1 )
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = -543.0
-margin_top = -47.0
-margin_right = -284.0
-margin_bottom = 35.0
+margin_left = -176.0
+margin_top = -306.0
+margin_right = 160.0
+margin_bottom = -241.0
 rect_scale = Vector2( 2, 2 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -157,13 +465,236 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-text = "I must find a way to… buy myself some time...
-I was at peace…
-"
+text = "I am being sapped of my strength, step by step..."
 autowrap = true
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Rect", "Visibility" ]
+
+[node name="Area2D" type="Area2D" parent="Text5" index="1"]
+
+position = Vector2( 45.433, -77.4803 )
+scale = Vector2( 1.90414, 1.96878 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Text5/Area2D" index="0"]
+
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Text5" index="2"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/DisplayText = SubResource( 6 )
+blend_times = [  ]
+
+[node name="Text6" type="Node2D" parent="." index="8"]
+
+editor/display_folded = true
+position = Vector2( 51.3955, -691.553 )
+script = ExtResource( 4 )
+
+[node name="Label" type="Label" parent="Text6" index="0"]
+
+modulate = Color( 0, 1, 0.835938, 1 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -264.0
+margin_top = -210.0
+margin_right = -95.0
+margin_bottom = -172.0
+rect_scale = Vector2( 2, 2 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "No one should have ever found this place again."
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "Visibility" ]
+
+[node name="Area2D" type="Area2D" parent="Text6" index="1"]
+
+position = Vector2( 21.2477, 53.1405 )
+scale = Vector2( 2.71244, 1.98078 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Text6/Area2D" index="0"]
+
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Text6" index="2"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/DisplayText = SubResource( 7 )
+blend_times = [  ]
+
+[node name="Text7" type="Node2D" parent="." index="9"]
+
+editor/display_folded = true
+position = Vector2( -172.55, -427.251 )
+script = ExtResource( 4 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Label" type="Label" parent="Text7" index="0"]
+
+modulate = Color( 0.93103, 1, 0.117188, 1 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -411.0
+margin_top = -187.0
+margin_right = -247.0
+margin_bottom = -122.0
+rect_scale = Vector2( 2, 2 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "I must find a way to buy myself some time..."
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "Visibility" ]
+
+[node name="Area2D" type="Area2D" parent="Text7" index="1"]
+
+position = Vector2( 45.433, -77.4803 )
+scale = Vector2( 1.90414, 1.96878 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Text7/Area2D" index="0"]
+
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Text7" index="2"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/DisplayText = SubResource( 8 )
+blend_times = [  ]
+
+[node name="Text8" type="Node2D" parent="." index="10"]
+
+position = Vector2( -112.283, -387.579 )
+script = ExtResource( 4 )
+
+[node name="Label" type="Label" parent="Text8" index="0"]
+
+modulate = Color( 0, 1, 0.835938, 1 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -415.0
+margin_top = 17.0
+margin_right = -280.0
+margin_bottom = 52.0
+rect_scale = Vector2( 2, 2 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "I was at peace!"
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "Visibility" ]
+
+[node name="Area2D" type="Area2D" parent="Text8" index="1"]
+
+position = Vector2( -15.9676, 31.6681 )
+scale = Vector2( 1.94541, 1.71602 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Text8/Area2D" index="0"]
+
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Text8" index="2"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/DisplayText = SubResource( 9 )
+blend_times = [  ]
+
+[connection signal="body_entered" from="Text1/Area2D" to="Text1" method="_on_Area2D_body_entered"]
+
+[connection signal="body_entered" from="Text2/Area2D" to="Text2" method="_on_Area2D_body_entered"]
+
+[connection signal="body_entered" from="Text3/Area2D" to="Text3" method="_on_Area2D_body_entered"]
+
+[connection signal="body_entered" from="Text4/Area2D" to="Text4" method="_on_Area2D_body_entered"]
+
+[connection signal="body_entered" from="Text5/Area2D" to="Text5" method="_on_Area2D_body_entered"]
+
+[connection signal="body_entered" from="Text6/Area2D" to="Text6" method="_on_Area2D_body_entered"]
+
+[connection signal="body_entered" from="Text7/Area2D" to="Text7" method="_on_Area2D_body_entered"]
+
+[connection signal="body_entered" from="Text8/Area2D" to="Text8" method="_on_Area2D_body_entered"]
 
 
