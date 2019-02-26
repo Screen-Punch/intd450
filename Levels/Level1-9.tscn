@@ -101,15 +101,14 @@ scale = Vector2( 1, 7.55802 )
 
 [node name="Mirror2" parent="." index="6" instance=ExtResource( 6 )]
 
-editor/display_folded = true
-position = Vector2( 810.021, 92.3132 )
+position = Vector2( 807.027, 98.3006 )
 rotation = 1.5708
 _sections_unfolded = [ "Collision", "Transform", "Visibility" ]
 
 [node name="Area2D" parent="Mirror2" index="2"]
 
-position = Vector2( 0.397217, 318.673 )
-scale = Vector2( 1, 9.0097 )
+position = Vector2( 11.9122, 318.673 )
+scale = Vector2( 0.640157, 9.0097 )
 
 [node name="Mirror3" parent="." index="7" instance=ExtResource( 6 )]
 

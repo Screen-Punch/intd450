@@ -32,6 +32,21 @@ func _process(delta):
 		findNewTarget()
 
 func findNewTarget():
+	var otherAreas = $Area2D.get_overlapping_areas()
+	var otherMirrorsInSight = []
+	for i in otherAreas:
+		if "Mirror" in i.get_parent().name:
+			otherMirrorsInSight.append(i.get_parent())
+	if len(otherMirrorsInSight) > 0:
+		var closestMirrorDist = 999999
+		var closestMirror = otherMirrorsInSight[0]
+		for mirror in otherMirrorsInSight:
+			var dist = mirror.position.distance_to(global_position)
+			if dist < closestMirrorDist:
+				closestMirrorDist = dist
+				closestMirror = mirror
+		target = closestMirror
+		return
 	var targets = get_tree().get_nodes_in_group("Player")
 	for t in targets:
 		target = t

@@ -16,7 +16,7 @@ vertices = PoolVector2Array( 253.122, 578.547, 185.493, 587.368, 186.732, 445.36
 polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 4, 5, 6, 3, 2, 7 ), PoolIntArray( 4, 7, 8 ), PoolIntArray( 9, 4, 8, 10 ) ]
 outlines = [ PoolVector2Array( -448.999, 64.0005, -62.2901, 64.4016, -62.2901, -190.339, 241.877, -194.992, 250.228, 439.679, 253.122, 578.547, 185.493, 587.368, 186.732, 445.369, -59.2755, 438.222, -66.8122, 191.018, -448.999, 189.001 ) ]
 
-[node name="Level 1-12" type="Node2D" index="0"]
+[node name="Level 1-12" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="." index="0"]
 
@@ -101,7 +101,7 @@ scale = Vector2( 1, 10.9909 )
 [node name="Mirror3" parent="." index="7" instance=ExtResource( 8 )]
 
 editor/display_folded = true
-position = Vector2( 224.955, 32 )
+position = Vector2( 222.955, 6.99997 )
 rotation = 1.5708
 _sections_unfolded = [ "Collision", "Transform", "Visibility" ]
 

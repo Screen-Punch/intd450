@@ -97,7 +97,7 @@ _sections_unfolded = [ "Collision", "Visibility" ]
 [node name="Mirror" parent="." index="5" instance=ExtResource( 8 )]
 
 editor/display_folded = true
-position = Vector2( -31.6333, 282.525 )
+position = Vector2( -30.5253, 304.686 )
 rotation = -1.56231
 
 [node name="Area2D" parent="Mirror" index="2"]

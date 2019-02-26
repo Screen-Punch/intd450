@@ -149,9 +149,10 @@ __meta__ = {
 [node name="Mirror" parent="." index="4" instance=ExtResource( 6 )]
 
 editor/display_folded = true
-position = Vector2( 25.2313, -357.11 )
+position = Vector2( 20.4414, -352.919 )
 rotation = -1.5708
 _sections_unfolded = [ "Collision", "Transform", "Visibility" ]
+visionType = null
 
 [node name="Area2D" parent="Mirror" index="2"]
 
@@ -164,6 +165,7 @@ editor/display_folded = true
 position = Vector2( 474.915, 290.548 )
 rotation = 3.14159
 _sections_unfolded = [ "Collision", "Transform", "Visibility" ]
+visionType = null
 
 [node name="Area2D" parent="Mirror3" index="2"]
 
@@ -237,6 +239,7 @@ blend_times = [  ]
 
 [node name="Text2" type="Node2D" parent="." index="8"]
 
+editor/display_folded = true
 position = Vector2( 308.388, 127.503 )
 script = ExtResource( 8 )
 

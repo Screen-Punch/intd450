@@ -129,6 +129,7 @@ __meta__ = {
 
 editor/display_folded = true
 position = Vector2( 255.37, -124.002 )
+visionType = null
 
 [node name="Area2D" parent="Mirror" index="2"]
 
@@ -140,6 +141,7 @@ scale = Vector2( 1, 6.37046 )
 position = Vector2( 798.033, 262.737 )
 rotation = 1.5708
 _sections_unfolded = [ "Collision", "Transform", "Visibility" ]
+visionType = null
 
 [node name="Area2D" parent="Mirror2" index="2"]
 

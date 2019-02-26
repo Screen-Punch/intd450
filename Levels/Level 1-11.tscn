@@ -16,7 +16,7 @@ vertices = PoolVector2Array( 125.522, -250.321, 135.045, -189.104, -66.291, -198
 polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 0, 3, 4, 5 ), PoolIntArray( 5, 4, 6 ), PoolIntArray( 7, 8, 9, 10 ), PoolIntArray( 11, 12, 13, 14, 10 ), PoolIntArray( 15, 16, 17, 7, 10, 14 ), PoolIntArray( 18, 19, 20, 12, 11 ), PoolIntArray( 14, 21, 15 ), PoolIntArray( 16, 15, 5, 6, 22 ) ]
 outlines = [ PoolVector2Array( -448.999, 64.0005, -62.9602, 65.6861, -62.9602, -69.5989, 134.122, -61.2479, 134.122, -124.715, 257.479, -126.527, 254.758, -258.483, 125.522, -250.321, 135.045, -189.104, -66.291, -198.627, -69.0117, -379.557, 321.416, -383.638, 318.695, -261.204, 445.21, -257.123, 447.931, -131.968, 503.233, -123.045, 518.264, -64.5883, 630.167, -64.5883, 625.032, -4.30472, 254.226, -1.29004, 254.226, 179.591, -129.564, 189.046, -448.999, 189.001 ) ]
 
-[node name="Level 1-11" type="Node2D"]
+[node name="Level 1-11" type="Node2D" index="0"]
 
 [node name="TileMap" type="TileMap" parent="." index="0"]
 
@@ -77,11 +77,13 @@ _sections_unfolded = [ "Collision", "Visibility" ]
 
 position = Vector2( -26.2905, -36.6878 )
 rotation = -1.56231
+visionType = "LoS"
 
 [node name="Area2D" parent="Mirror" index="2"]
 
 position = Vector2( 0.397217, 309.71 )
 scale = Vector2( 1, 8.72962 )
+collision_layer = 16
 
 [node name="StairBlocker" parent="." index="6" instance=ExtResource( 9 )]
 
