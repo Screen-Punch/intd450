@@ -82,7 +82,7 @@ tracks/0/keys = {
 "values": [ Color( 0.93103, 1, 0.117188, 0 ), Color( 0.93103, 1, 0.117188, 1 ) ]
 }
 
-[node name="Level1-4" type="Node2D" index="0"]
+[node name="Level1-4" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="." index="0"]
 
@@ -132,7 +132,7 @@ __meta__ = {
 
 [node name="Mirror" parent="." index="4" instance=ExtResource( 6 )]
 
-position = Vector2( 255.37, -124.002 )
+position = Vector2( 258.628, -254.516 )
 visionType = null
 
 [node name="Area2D" type="Area2D" parent="Mirror" index="3"]
