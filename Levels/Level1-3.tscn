@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Scenes/tileset1.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
@@ -14,6 +14,30 @@
 vertices = PoolVector2Array( 463.656, -172.263, 462.96, 28.3859, -503.043, 22.3859, -507.074, -167.741 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 outlines = [ PoolVector2Array( 463.656, -172.263, 462.96, 28.3859, -503.043, 22.3859, -507.074, -167.741 ) ]
+
+[sub_resource type="RectangleShape2D" id=4]
+
+custom_solver_bias = 0.0
+extents = Vector2( 32, 32 )
+
+[sub_resource type="Animation" id=5]
+
+resource_name = "MonsterSpotted"
+length = 1.0
+loop = false
+step = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 2, 3, 4, 5 ]
+}
 
 [sub_resource type="RectangleShape2D" id=2]
 
@@ -88,23 +112,52 @@ SPEED = 130
 [node name="Mirror" parent="." index="4" instance=ExtResource( 6 )]
 
 editor/display_folded = true
-position = Vector2( 318.05, -673.56 )
+position = Vector2( 309.867, -698.303 )
 visionType = null
 
-[node name="Area2D" parent="Mirror" index="2"]
+[node name="Area2D" type="Area2D" parent="Mirror" index="3"]
 
-position = Vector2( 0.397217, 195.485 )
-scale = Vector2( 1, 5.16008 )
+position = Vector2( 0.295593, 105.031 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mirror/Area2D" index="0"]
+
+position = Vector2( 0, 52.0761 )
+scale = Vector2( 1, 2.68223 )
+shape = SubResource( 4 )
 
 [node name="Mirror2" parent="." index="5" instance=ExtResource( 6 )]
 
-position = Vector2( 642.129, -670.768 )
+editor/display_folded = true
+position = Vector2( 674.448, -694.222 )
 visionType = null
 
-[node name="Area2D" parent="Mirror2" index="2"]
+[node name="AnimationPlayer" parent="Mirror2" index="2"]
 
-position = Vector2( 0.397217, 201.729 )
-scale = Vector2( 1, 5.3552 )
+anims/MonsterSpotted = SubResource( 5 )
+
+[node name="Area2D" type="Area2D" parent="Mirror2" index="3"]
+
+position = Vector2( 0.295593, 105.031 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mirror2/Area2D" index="0"]
+
+position = Vector2( 0, 52.0761 )
+scale = Vector2( 1, 2.68223 )
+shape = SubResource( 4 )
 
 [node name="StairBlocker" parent="." index="6" instance=ExtResource( 7 )]
 
@@ -171,8 +224,11 @@ playback_speed = 1.0
 anims/DisplayText = SubResource( 3 )
 blend_times = [  ]
 
+[connection signal="body_entered" from="Mirror/Area2D" to="Mirror" method="_on_Area2D_body_entered"]
+
+[connection signal="body_entered" from="Mirror2/Area2D" to="Mirror2" method="_on_Area2D_body_entered"]
+
 [connection signal="body_entered" from="Text1/Area2D" to="Text1" method="_on_Area2D_body_entered"]
 
 
-[editable path="Mirror"]
 [editable path="Mirror2"]

@@ -1,11 +1,17 @@
 extends StaticBody2D
 
-var RAYCASTING = false
 var target
 export(String, "Area", "LoS") var visionType
+export(String, "vertical", "horizontal") var mirrorDirection
 
 func _ready():
-	pass
+	if !mirrorDirection:
+		mirrorDirection = "vertical"
+	if mirrorDirection == "horizontal":
+		$Sprite.texture = load("res://Art/floors_ceilings.png")
+		$Sprite.hframes = 5
+		$Sprite.vframes = 4
+		$Sprite.frame = 19
 
 func _physics_process(delta):
 	pass
@@ -28,27 +34,18 @@ func _on_Area2D_body_entered(body):
 			visionType = "Area"
 		if visionType == "Area":
 			body.target = self
+			playMonsterSpotted()
 			return
 		target = body
 		var space_state = get_world_2d().direct_space_state
-#		var target_extents = target.get_node('CollisionShape2D').shape.extents
-#		var my_extents = $CollisionShape2D.shape.extents
-#		var nw = target.position - target_extents
-#		var se = target.position + target_extents
-#		var ne = target.position + Vector2(target_extents.x, -target_extents.y)
-#		var sw = target.position + Vector2(-target_extents.x, target_extents.y)
-#		var mynw = position - my_extents
-#		var myse = position + my_extents
-#		var myne = position + Vector2(my_extents.x, -my_extents.y)
-#		var mysw = position + Vector2(-my_extents.x, my_extents.y)
-#		for mypos in [mynw, myne, myse, mysw]:
-#			for pos in [nw, ne, se, sw]:
 		var result = space_state.intersect_ray(position, target.position, 
 										[self], collision_mask)
 		if result:
 			if result.collider.name == "Monster":
 				$Sprite.flip_v = true
 				result.collider.target = self
+				playMonsterSpotted()
 
-func _on_Area2D_body_exited(body):
-	RAYCASTING = false
+func playMonsterSpotted():
+	if mirrorDirection == "vertical":
+		$AnimationPlayer.play("MonsterSpotted")
