@@ -23,285 +23,381 @@ extents = Vector2( 32, 32 )
 custom_solver_bias = 0.0
 extents = Vector2( 32, 32 )
 
-[node name="Node2D" type="Node2D" index="0"]
+[node name="Node2D" type="Node2D"]
 
 [node name="GreenFloorTile" type="Sprite" parent="." index="0"]
 
-position = Vector2( 143.813, 36.5838 )
+position = Vector2( 134.949, 22.1793 )
 texture = ExtResource( 1 )
-vframes = 8
+vframes = 10
 hframes = 5
 _sections_unfolded = [ "Animation" ]
 
-[node name="GreenFloorTile2" type="Sprite" parent="." index="1"]
+[node name="GreenFloorTile11" type="Sprite" parent="." index="1"]
 
-position = Vector2( 210.155, 36.5838 )
+position = Vector2( -151.881, 291.697 )
 texture = ExtResource( 1 )
-vframes = 8
+_sections_unfolded = [ "Animation" ]
+
+[node name="GreenFloorTile2" type="Sprite" parent="." index="2"]
+
+position = Vector2( 201.291, 22.1793 )
+texture = ExtResource( 1 )
+vframes = 10
 hframes = 5
 frame = 1
 _sections_unfolded = [ "Animation" ]
 
-[node name="GreenFloorTile3" type="Sprite" parent="." index="2"]
+[node name="GreenFloorTile3" type="Sprite" parent="." index="3"]
 
-position = Vector2( 279.151, 36.5838 )
+position = Vector2( 270.287, 22.1793 )
 texture = ExtResource( 1 )
-vframes = 8
+vframes = 10
 hframes = 5
 frame = 2
 _sections_unfolded = [ "Animation" ]
 
-[node name="GreenFloorTile4" type="Sprite" parent="." index="3"]
+[node name="GreenFloorTile4" type="Sprite" parent="." index="4"]
 
-position = Vector2( 354.781, 36.5838 )
+position = Vector2( 345.917, 22.1793 )
 texture = ExtResource( 1 )
-vframes = 8
+vframes = 10
 hframes = 5
 frame = 3
 _sections_unfolded = [ "Animation" ]
 
-[node name="GreenFloorTile5" type="Sprite" parent="." index="4"]
+[node name="GreenFloorTile5" type="Sprite" parent="." index="5"]
 
-position = Vector2( 427.094, 36.5838 )
+position = Vector2( 418.23, 22.1793 )
 texture = ExtResource( 1 )
-vframes = 8
+vframes = 10
 hframes = 5
 frame = 4
 _sections_unfolded = [ "Animation" ]
 
-[node name="GreenFloorTile6" type="Sprite" parent="." index="5"]
+[node name="GreenFloorTile6" type="Sprite" parent="." index="6"]
 
-position = Vector2( 144.476, 109.56 )
+position = Vector2( 135.612, 95.1555 )
 texture = ExtResource( 1 )
-vframes = 8
+vframes = 10
 hframes = 5
 frame = 5
 _sections_unfolded = [ "Animation" ]
 
-[node name="GreenFloorTile7" type="Sprite" parent="." index="6"]
+[node name="GreenFloorTile7" type="Sprite" parent="." index="7"]
 
-position = Vector2( 212.145, 109.56 )
+position = Vector2( 203.281, 95.1555 )
 texture = ExtResource( 1 )
-vframes = 8
+vframes = 10
 hframes = 5
 frame = 6
 _sections_unfolded = [ "Animation" ]
 
-[node name="GreenFloorTile8" type="Sprite" parent="." index="7"]
+[node name="GreenFloorTile8" type="Sprite" parent="." index="8"]
 
-position = Vector2( 284.458, 109.56 )
+position = Vector2( 275.594, 95.1555 )
 texture = ExtResource( 1 )
-vframes = 8
+vframes = 10
 hframes = 5
 frame = 7
 _sections_unfolded = [ "Animation" ]
 
-[node name="GreenFloorTile9" type="Sprite" parent="." index="8"]
+[node name="GreenFloorTile9" type="Sprite" parent="." index="9"]
 
-position = Vector2( 358.098, 109.56 )
+position = Vector2( 349.234, 95.1555 )
 texture = ExtResource( 1 )
-vframes = 8
+vframes = 10
 hframes = 5
 frame = 8
 _sections_unfolded = [ "Animation" ]
 
-[node name="GreenFloorTile10" type="Sprite" parent="." index="9"]
+[node name="GreenFloorTile10" type="Sprite" parent="." index="10"]
 
-position = Vector2( 426.43, 109.56 )
+position = Vector2( 417.566, 95.1555 )
 texture = ExtResource( 1 )
-vframes = 8
+vframes = 10
 hframes = 5
 frame = 9
 _sections_unfolded = [ "Animation" ]
 
-[node name="PinkFloorTile01" type="Sprite" parent="." index="10"]
+[node name="PinkFloorTile01" type="Sprite" parent="." index="11"]
 
-position = Vector2( 145.803, 187.181 )
+position = Vector2( 136.939, 172.777 )
 texture = ExtResource( 1 )
-vframes = 8
+vframes = 10
 hframes = 5
 frame = 10
 _sections_unfolded = [ "Animation" ]
 
-[node name="PinkFloorTile02" type="Sprite" parent="." index="11"]
+[node name="PinkFloorTile02" type="Sprite" parent="." index="12"]
 
-position = Vector2( 210.155, 187.181 )
+position = Vector2( 201.291, 172.777 )
 texture = ExtResource( 1 )
-vframes = 8
+vframes = 10
 hframes = 5
 frame = 11
 _sections_unfolded = [ "Animation" ]
 
-[node name="PinkFloorTile03" type="Sprite" parent="." index="12"]
+[node name="PinkFloorTile03" type="Sprite" parent="." index="13"]
 
-position = Vector2( 281.141, 187.181 )
+position = Vector2( 272.277, 172.777 )
 texture = ExtResource( 1 )
-vframes = 8
+vframes = 10
 hframes = 5
 frame = 12
 _sections_unfolded = [ "Animation" ]
 
-[node name="PinkFloorTile04" type="Sprite" parent="." index="13"]
+[node name="PinkFloorTile04" type="Sprite" parent="." index="14"]
 
-position = Vector2( 357.434, 187.181 )
+position = Vector2( 348.57, 172.777 )
 texture = ExtResource( 1 )
-vframes = 8
+vframes = 10
 hframes = 5
 frame = 13
 _sections_unfolded = [ "Animation" ]
 
-[node name="PinkFloorTile05" type="Sprite" parent="." index="14"]
+[node name="PinkFloorTile05" type="Sprite" parent="." index="15"]
 
-position = Vector2( 427.757, 187.181 )
+position = Vector2( 418.893, 172.777 )
 texture = ExtResource( 1 )
-vframes = 8
+vframes = 10
 hframes = 5
 frame = 14
 _sections_unfolded = [ "Animation" ]
 
-[node name="PinkFloorTile06" type="Sprite" parent="." index="15"]
+[node name="PinkFloorTile06" type="Sprite" parent="." index="16"]
 
-position = Vector2( 145.803, 254.85 )
+position = Vector2( 136.939, 240.446 )
 texture = ExtResource( 1 )
-vframes = 8
+vframes = 10
 hframes = 5
 frame = 15
 _sections_unfolded = [ "Animation" ]
 
-[node name="PinkFloorTile07" type="Sprite" parent="." index="16"]
+[node name="PinkFloorTile07" type="Sprite" parent="." index="17"]
 
-position = Vector2( 215.462, 254.85 )
+position = Vector2( 206.598, 240.446 )
 texture = ExtResource( 1 )
-vframes = 8
+vframes = 10
 hframes = 5
 frame = 16
 _sections_unfolded = [ "Animation" ]
 
-[node name="PinkFloorTile08" type="Sprite" parent="." index="17"]
+[node name="PinkFloorTile08" type="Sprite" parent="." index="18"]
 
-position = Vector2( 280.477, 254.85 )
+position = Vector2( 271.613, 240.446 )
 texture = ExtResource( 1 )
-vframes = 8
+vframes = 10
 hframes = 5
 frame = 17
 _sections_unfolded = [ "Animation" ]
 
-[node name="PinkFloorTile09" type="Sprite" parent="." index="18"]
+[node name="PinkFloorTile09" type="Sprite" parent="." index="19"]
 
-position = Vector2( 356.771, 254.85 )
+position = Vector2( 347.907, 240.446 )
 texture = ExtResource( 1 )
-vframes = 8
+vframes = 10
 hframes = 5
 frame = 18
 _sections_unfolded = [ "Animation" ]
 
-[node name="PinkFloorTile10" type="Sprite" parent="." index="19"]
+[node name="PinkFloorTile10" type="Sprite" parent="." index="20"]
 
-position = Vector2( 426.43, 254.85 )
+position = Vector2( 417.566, 240.446 )
 texture = ExtResource( 1 )
-vframes = 8
+vframes = 10
 hframes = 5
 frame = 19
 _sections_unfolded = [ "Animation" ]
 
-[node name="RedFloorTile01" type="Sprite" parent="." index="20"]
+[node name="RedFloorTile01" type="Sprite" parent="." index="21"]
 
-position = Vector2( 149.3, 326.889 )
+position = Vector2( 140.436, 312.485 )
 texture = ExtResource( 1 )
-vframes = 8
+vframes = 10
 hframes = 5
 frame = 20
 _sections_unfolded = [ "Animation" ]
 
-[node name="RedFloorTile02" type="Sprite" parent="." index="21"]
+[node name="RedFloorTile02" type="Sprite" parent="." index="22"]
 
-position = Vector2( 212.518, 326.889 )
+position = Vector2( 203.654, 312.485 )
 texture = ExtResource( 1 )
-vframes = 8
+vframes = 10
 hframes = 5
 frame = 21
 _sections_unfolded = [ "Animation" ]
 
-[node name="RedFloorTile03" type="Sprite" parent="." index="22"]
+[node name="RedFloorTile03" type="Sprite" parent="." index="23"]
 
-position = Vector2( 278.677, 326.889 )
+position = Vector2( 269.813, 312.485 )
 texture = ExtResource( 1 )
-vframes = 8
+vframes = 10
 hframes = 5
 frame = 22
 _sections_unfolded = [ "Animation" ]
 
-[node name="RedFloorTile04" type="Sprite" parent="." index="23"]
+[node name="RedFloorTile04" type="Sprite" parent="." index="24"]
 
-position = Vector2( 358.067, 326.889 )
+position = Vector2( 349.203, 312.485 )
 texture = ExtResource( 1 )
-vframes = 8
+vframes = 10
 hframes = 5
 frame = 23
 _sections_unfolded = [ "Animation" ]
 
-[node name="RedFloorTile05" type="Sprite" parent="." index="24"]
+[node name="RedFloorTile05" type="Sprite" parent="." index="25"]
 
-position = Vector2( 424.225, 326.889 )
+position = Vector2( 415.361, 312.485 )
 texture = ExtResource( 1 )
-vframes = 8
+vframes = 10
 hframes = 5
 frame = 24
 _sections_unfolded = [ "Animation" ]
 
-[node name="RedFloorTile06" type="Sprite" parent="." index="25"]
+[node name="RedFloorTile06" type="Sprite" parent="." index="26"]
 
-position = Vector2( 146.36, 398.193 )
+position = Vector2( 137.496, 383.789 )
 texture = ExtResource( 1 )
-vframes = 8
+vframes = 10
 hframes = 5
 frame = 25
 _sections_unfolded = [ "Animation" ]
 
-[node name="RedFloorTile07" type="Sprite" parent="." index="26"]
+[node name="RedFloorTile07" type="Sprite" parent="." index="27"]
 
-position = Vector2( 211.783, 398.193 )
+position = Vector2( 202.919, 383.789 )
 texture = ExtResource( 1 )
-vframes = 8
+vframes = 10
 hframes = 5
 frame = 26
 _sections_unfolded = [ "Animation" ]
 
-[node name="RedFloorTile08" type="Sprite" parent="." index="27"]
+[node name="RedFloorTile08" type="Sprite" parent="." index="28"]
 
-position = Vector2( 280.882, 398.193 )
+position = Vector2( 272.018, 383.789 )
 texture = ExtResource( 1 )
-vframes = 8
+vframes = 10
 hframes = 5
 frame = 27
 _sections_unfolded = [ "Animation" ]
 
-[node name="RedFloorTile09" type="Sprite" parent="." index="28"]
+[node name="RedFloorTile09" type="Sprite" parent="." index="29"]
 
-position = Vector2( 359.537, 399.663 )
+position = Vector2( 350.673, 385.259 )
 texture = ExtResource( 1 )
-vframes = 8
+vframes = 10
 hframes = 5
 frame = 28
 _sections_unfolded = [ "Animation" ]
 
-[node name="RedFloorTile10" type="Sprite" parent="." index="29"]
+[node name="RedFloorTile10" type="Sprite" parent="." index="30"]
 
-position = Vector2( 428.636, 399.663 )
+position = Vector2( 419.772, 385.259 )
 texture = ExtResource( 1 )
-vframes = 8
+vframes = 10
 hframes = 5
 frame = 29
 _sections_unfolded = [ "Animation" ]
 
-[node name="CeilingTile01" type="Sprite" parent="." index="30"]
+[node name="BlackFloorTile01" type="Sprite" parent="." index="31"]
 
-editor/display_folded = true
-position = Vector2( 145.677, 469.043 )
+position = Vector2( 140.436, 475.485 )
 texture = ExtResource( 1 )
-vframes = 8
+vframes = 10
 hframes = 5
 frame = 30
+_sections_unfolded = [ "Animation" ]
+
+[node name="BlackFloorTile02" type="Sprite" parent="." index="32"]
+
+position = Vector2( 203.654, 475.485 )
+texture = ExtResource( 1 )
+vframes = 10
+hframes = 5
+frame = 31
+_sections_unfolded = [ "Animation" ]
+
+[node name="BlackFloorTile03" type="Sprite" parent="." index="33"]
+
+position = Vector2( 269.813, 475.485 )
+texture = ExtResource( 1 )
+vframes = 10
+hframes = 5
+frame = 32
+_sections_unfolded = [ "Animation" ]
+
+[node name="BlackFloorTile04" type="Sprite" parent="." index="34"]
+
+position = Vector2( 349.203, 475.485 )
+texture = ExtResource( 1 )
+vframes = 10
+hframes = 5
+frame = 33
+_sections_unfolded = [ "Animation" ]
+
+[node name="BlackFloorTile05" type="Sprite" parent="." index="35"]
+
+position = Vector2( 415.361, 475.485 )
+texture = ExtResource( 1 )
+vframes = 10
+hframes = 5
+frame = 34
+_sections_unfolded = [ "Animation" ]
+
+[node name="BlackFloorTile06" type="Sprite" parent="." index="36"]
+
+position = Vector2( 137.496, 546.789 )
+texture = ExtResource( 1 )
+vframes = 10
+hframes = 5
+frame = 35
+_sections_unfolded = [ "Animation" ]
+
+[node name="BlackFloorTile07" type="Sprite" parent="." index="37"]
+
+position = Vector2( 202.919, 546.789 )
+texture = ExtResource( 1 )
+vframes = 10
+hframes = 5
+frame = 36
+_sections_unfolded = [ "Animation" ]
+
+[node name="BlackFloorTile08" type="Sprite" parent="." index="38"]
+
+position = Vector2( 272.018, 546.789 )
+texture = ExtResource( 1 )
+vframes = 10
+hframes = 5
+frame = 37
+_sections_unfolded = [ "Animation" ]
+
+[node name="BlackFloorTile09" type="Sprite" parent="." index="39"]
+
+position = Vector2( 350.673, 548.259 )
+texture = ExtResource( 1 )
+vframes = 10
+hframes = 5
+frame = 38
+_sections_unfolded = [ "Animation" ]
+
+[node name="BlackFloorTile10" type="Sprite" parent="." index="40"]
+
+position = Vector2( 419.772, 548.259 )
+texture = ExtResource( 1 )
+vframes = 10
+hframes = 5
+frame = 39
+_sections_unfolded = [ "Animation" ]
+
+[node name="CeilingTile01" type="Sprite" parent="." index="41"]
+
+editor/display_folded = true
+position = Vector2( 145.564, 647.706 )
+texture = ExtResource( 1 )
+vframes = 10
+hframes = 5
+frame = 40
 _sections_unfolded = [ "Animation" ]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="CeilingTile01" index="0"]
@@ -318,14 +414,14 @@ bounce = 0.0
 
 shape = SubResource( 1 )
 
-[node name="CeilingTile02" type="Sprite" parent="." index="31"]
+[node name="CeilingTile02" type="Sprite" parent="." index="42"]
 
 editor/display_folded = true
-position = Vector2( 222.409, 469.043 )
+position = Vector2( 222.296, 647.706 )
 texture = ExtResource( 1 )
-vframes = 8
+vframes = 10
 hframes = 5
-frame = 31
+frame = 41
 _sections_unfolded = [ "Animation", "Transform" ]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="CeilingTile02" index="0"]
@@ -342,14 +438,13 @@ bounce = 0.0
 
 shape = SubResource( 2 )
 
-[node name="CeilingTile03" type="Sprite" parent="." index="32"]
+[node name="CeilingTile03" type="Sprite" parent="." index="43"]
 
-editor/display_folded = true
-position = Vector2( 294.382, 469.483 )
+position = Vector2( 294.269, 648.146 )
 texture = ExtResource( 1 )
-vframes = 8
+vframes = 10
 hframes = 5
-frame = 33
+frame = 43
 _sections_unfolded = [ "Animation" ]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="CeilingTile03" index="0"]
@@ -366,7 +461,7 @@ bounce = 0.0
 
 shape = SubResource( 3 )
 
-[node name="LowerWallTile01" type="Sprite" parent="." index="33"]
+[node name="LowerWallTile01" type="Sprite" parent="." index="44"]
 
 editor/display_folded = true
 position = Vector2( 728.631, 211.633 )
@@ -391,7 +486,7 @@ bounce = 0.0
 
 shape = SubResource( 1 )
 
-[node name="LowerWallTile02" type="Sprite" parent="." index="34"]
+[node name="LowerWallTile02" type="Sprite" parent="." index="45"]
 
 editor/display_folded = true
 position = Vector2( 798.541, 211.633 )
@@ -416,7 +511,7 @@ bounce = 0.0
 
 shape = SubResource( 1 )
 
-[node name="LowerWallTile03" type="Sprite" parent="." index="35"]
+[node name="LowerWallTile03" type="Sprite" parent="." index="46"]
 
 editor/display_folded = true
 position = Vector2( 872.423, 211.633 )
@@ -441,7 +536,7 @@ bounce = 0.0
 
 shape = SubResource( 1 )
 
-[node name="LowerWallTile04" type="Sprite" parent="." index="36"]
+[node name="LowerWallTile04" type="Sprite" parent="." index="47"]
 
 editor/display_folded = true
 position = Vector2( 943.127, 211.633 )
@@ -466,7 +561,7 @@ bounce = 0.0
 
 shape = SubResource( 1 )
 
-[node name="LowerWallTile05" type="Sprite" parent="." index="37"]
+[node name="LowerWallTile05" type="Sprite" parent="." index="48"]
 
 editor/display_folded = true
 position = Vector2( 1016.98, 211.633 )
@@ -491,7 +586,7 @@ bounce = 0.0
 
 shape = SubResource( 1 )
 
-[node name="LowerWallTile06" type="Sprite" parent="." index="38"]
+[node name="LowerWallTile06" type="Sprite" parent="." index="49"]
 
 editor/display_folded = true
 position = Vector2( 729.469, 284.048 )
@@ -516,7 +611,7 @@ bounce = 0.0
 
 shape = SubResource( 1 )
 
-[node name="LowerWallTile07" type="Sprite" parent="." index="39"]
+[node name="LowerWallTile07" type="Sprite" parent="." index="50"]
 
 editor/display_folded = true
 position = Vector2( 802.588, 284.048 )
@@ -541,7 +636,7 @@ bounce = 0.0
 
 shape = SubResource( 1 )
 
-[node name="LowerWallTile08" type="Sprite" parent="." index="40"]
+[node name="LowerWallTile08" type="Sprite" parent="." index="51"]
 
 editor/display_folded = true
 position = Vector2( 872.795, 284.048 )
@@ -566,7 +661,7 @@ bounce = 0.0
 
 shape = SubResource( 1 )
 
-[node name="LowerWallTile09" type="Sprite" parent="." index="41"]
+[node name="LowerWallTile09" type="Sprite" parent="." index="52"]
 
 editor/display_folded = true
 position = Vector2( 945.59, 284.048 )
@@ -591,7 +686,7 @@ bounce = 0.0
 
 shape = SubResource( 1 )
 
-[node name="LowerWallTile10" type="Sprite" parent="." index="42"]
+[node name="LowerWallTile10" type="Sprite" parent="." index="53"]
 
 editor/display_folded = true
 position = Vector2( 1016.44, 284.048 )
@@ -616,7 +711,7 @@ bounce = 0.0
 
 shape = SubResource( 1 )
 
-[node name="UpperWallTile01" type="Sprite" parent="." index="43"]
+[node name="UpperWallTile01" type="Sprite" parent="." index="54"]
 
 editor/display_folded = true
 position = Vector2( 724.936, 41.2744 )
@@ -641,7 +736,7 @@ bounce = 0.0
 
 shape = SubResource( 1 )
 
-[node name="UpperWallTile02" type="Sprite" parent="." index="44"]
+[node name="UpperWallTile02" type="Sprite" parent="." index="55"]
 
 editor/display_folded = true
 position = Vector2( 799.844, 41.2744 )
@@ -666,7 +761,7 @@ bounce = 0.0
 
 shape = SubResource( 1 )
 
-[node name="UpperWallTile03" type="Sprite" parent="." index="45"]
+[node name="UpperWallTile03" type="Sprite" parent="." index="56"]
 
 editor/display_folded = true
 position = Vector2( 872.044, 41.2744 )
@@ -691,7 +786,7 @@ bounce = 0.0
 
 shape = SubResource( 1 )
 
-[node name="UpperWallTile04" type="Sprite" parent="." index="46"]
+[node name="UpperWallTile04" type="Sprite" parent="." index="57"]
 
 editor/display_folded = true
 position = Vector2( 945.146, 41.2744 )
@@ -716,7 +811,7 @@ bounce = 0.0
 
 shape = SubResource( 1 )
 
-[node name="UpperWallTile05" type="Sprite" parent="." index="47"]
+[node name="UpperWallTile05" type="Sprite" parent="." index="58"]
 
 editor/display_folded = true
 position = Vector2( 1021.86, 41.2744 )
@@ -741,7 +836,7 @@ bounce = 0.0
 
 shape = SubResource( 1 )
 
-[node name="UpperWallTile06" type="Sprite" parent="." index="48"]
+[node name="UpperWallTile06" type="Sprite" parent="." index="59"]
 
 editor/display_folded = true
 position = Vector2( 724.936, 121.597 )
@@ -766,7 +861,7 @@ bounce = 0.0
 
 shape = SubResource( 1 )
 
-[node name="UpperWallTile07" type="Sprite" parent="." index="49"]
+[node name="UpperWallTile07" type="Sprite" parent="." index="60"]
 
 editor/display_folded = true
 position = Vector2( 799.843, 121.597 )
@@ -791,7 +886,7 @@ bounce = 0.0
 
 shape = SubResource( 1 )
 
-[node name="UpperWallTile08" type="Sprite" parent="." index="50"]
+[node name="UpperWallTile08" type="Sprite" parent="." index="61"]
 
 editor/display_folded = true
 position = Vector2( 872.946, 121.597 )
@@ -816,7 +911,7 @@ bounce = 0.0
 
 shape = SubResource( 1 )
 
-[node name="UpperWallTile09" type="Sprite" parent="." index="51"]
+[node name="UpperWallTile09" type="Sprite" parent="." index="62"]
 
 editor/display_folded = true
 position = Vector2( 945.146, 121.597 )
@@ -841,7 +936,7 @@ bounce = 0.0
 
 shape = SubResource( 1 )
 
-[node name="UpperWallTile10" type="Sprite" parent="." index="52"]
+[node name="UpperWallTile10" type="Sprite" parent="." index="63"]
 
 editor/display_folded = true
 position = Vector2( 1019.15, 121.597 )
@@ -866,7 +961,7 @@ bounce = 0.0
 
 shape = SubResource( 1 )
 
-[node name="BackGroundNull" type="Sprite" parent="." index="53"]
+[node name="BackGroundNull" type="Sprite" parent="." index="64"]
 
 editor/display_folded = true
 position = Vector2( 150.968, -49.1774 )

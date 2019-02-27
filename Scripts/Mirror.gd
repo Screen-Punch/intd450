@@ -10,8 +10,8 @@ func _ready():
 	if mirrorDirection == "horizontal":
 		$Sprite.texture = load("res://Art/floors_ceilings.png")
 		$Sprite.hframes = 5
-		$Sprite.vframes = 4
-		$Sprite.frame = 19
+		$Sprite.vframes = 5
+		$Sprite.frame = 24
 
 func _physics_process(delta):
 	pass

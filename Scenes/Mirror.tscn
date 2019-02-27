@@ -8,7 +8,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 32, 32 )
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=2]
 
 resource_name = "MonsterSpotted"
 length = 1.0
@@ -63,7 +63,7 @@ autoplay = ""
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
-anims/MonsterSpotted = SubResource( 3 )
+anims/MonsterSpotted = SubResource( 2 )
 blend_times = [  ]
 
 
