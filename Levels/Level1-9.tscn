@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Scenes/tileset1.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
@@ -13,6 +13,11 @@
 vertices = PoolVector2Array( 643.925, -123.664, 768.166, -131.582, 766.938, 64.8567, 639.844, 59.9871, 321.104, 259.56, -451.098, 257.982, -445.995, 124.146, 258.001, 125, 768.166, 126.244, 773.681, 388.502, 389.538, 386.832, 453.472, 69.5097, 257.426, -134.037, 442.589, -130.466, 387.949, 458.951, 320.423, 458.951, 955.731, 67.8263, 957.402, 117.932 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 4, 5, 6, 7 ), PoolIntArray( 8, 9, 10, 4, 7, 11, 3 ), PoolIntArray( 7, 12, 13, 11 ), PoolIntArray( 14, 15, 4, 10 ), PoolIntArray( 8, 3, 2 ), PoolIntArray( 8, 2, 16, 17 ) ]
 outlines = [ PoolVector2Array( -445.995, 124.146, 258.001, 125, 257.426, -134.037, 442.589, -130.466, 453.472, 69.5097, 639.844, 59.9871, 643.925, -123.664, 768.166, -131.582, 766.938, 64.8567, 955.731, 67.8263, 957.402, 117.932, 768.166, 126.244, 773.681, 388.502, 389.538, 386.832, 387.949, 458.951, 320.423, 458.951, 321.104, 259.56, -451.098, 257.982 ) ]
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 32, 32 )
 
 [node name="Level1-9" type="Node2D"]
 
@@ -91,43 +96,85 @@ __meta__ = {
 [node name="Mirror" parent="." index="5" instance=ExtResource( 6 )]
 
 editor/display_folded = true
-position = Vector2( 356.416, -95.6447 )
+position = Vector2( 357.746, -177.645 )
 _sections_unfolded = [ "Collision", "Transform", "Visibility" ]
 
-[node name="Area2D" parent="Mirror" index="2"]
+[node name="Area2D" type="Area2D" parent="Mirror" index="3"]
 
-position = Vector2( 0.397217, 272.219 )
-scale = Vector2( 1, 7.55802 )
+position = Vector2( 4, 83.0003 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mirror/Area2D" index="0"]
+
+position = Vector2( 0, 257.513 )
+scale = Vector2( 1, 8.35752 )
+shape = SubResource( 2 )
 
 [node name="Mirror2" parent="." index="6" instance=ExtResource( 6 )]
 
-position = Vector2( 807.027, 98.3006 )
-rotation = 1.5708
+editor/display_folded = true
+position = Vector2( 795.335, 62.8621 )
+rotation = 3.14159
 _sections_unfolded = [ "Collision", "Transform", "Visibility" ]
+mirrorDirection = "horizontal"
 
-[node name="Area2D" parent="Mirror2" index="2"]
+[node name="Area2D" type="Area2D" parent="Mirror2" index="3"]
 
-position = Vector2( 11.9122, 318.673 )
-scale = Vector2( 0.640157, 9.0097 )
+position = Vector2( 23.5482, -7.41023 )
+rotation = -1.5708
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mirror2/Area2D" index="0"]
+
+position = Vector2( 0, 257.513 )
+scale = Vector2( 1, 8.35752 )
+shape = SubResource( 2 )
 
 [node name="Mirror3" parent="." index="7" instance=ExtResource( 6 )]
 
-editor/display_folded = true
-position = Vector2( 570.05, 351.601 )
-rotation = 3.13121
+position = Vector2( 553.224, 401.69 )
+rotation = -1.5708
 _sections_unfolded = [ "Collision", "Transform", "Visibility" ]
+mirrorDirection = "horizontal"
 
-[node name="Area2D" parent="Mirror3" index="2"]
+[node name="Area2D" type="Area2D" parent="Mirror3" index="3"]
 
-position = Vector2( 0, 253.773 )
-scale = Vector2( 1, 7.05541 )
-_sections_unfolded = [ "Collision", "Transform" ]
+position = Vector2( 4, 83.0003 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mirror3/Area2D" index="0"]
+
+position = Vector2( 183.845, -86.1111 )
+scale = Vector2( 4.4616, 1.22541 )
+shape = SubResource( 2 )
 
 [node name="StairBlocker" parent="." index="8" instance=ExtResource( 7 )]
 
 position = Vector2( 870.642, 96.5868 )
 
+[connection signal="body_entered" from="Mirror/Area2D" to="Mirror" method="_on_Area2D_body_entered"]
 
-[editable path="Mirror"]
-[editable path="Mirror2"]
-[editable path="Mirror3"]
+[connection signal="body_entered" from="Mirror2/Area2D" to="Mirror2" method="_on_Area2D_body_entered"]
+
+[connection signal="body_entered" from="Mirror3/Area2D" to="Mirror3" method="_on_Area2D_body_entered"]
+
+

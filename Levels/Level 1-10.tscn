@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scenes/tileset1.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/Nav2D.tscn" type="PackedScene" id=2]
@@ -12,9 +12,14 @@
 
 [sub_resource type="NavigationPolygon" id=1]
 
-vertices = PoolVector2Array( -448.999, 64.0005, 711.569, 64.5006, 706.154, 126.773, 577.998, 125.871, -448.999, 189.001, -129.564, 189.046, 575.291, 383.084, -65.4863, 254.929, -61.8763, 383.987, -125.954, 254.929 )
-polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 4, 0, 3, 5 ), PoolIntArray( 5, 3, 6, 7 ), PoolIntArray( 6, 8, 7 ), PoolIntArray( 5, 7, 9 ) ]
-outlines = [ PoolVector2Array( -448.999, 64.0005, 711.569, 64.5006, 706.154, 126.773, 577.998, 125.871, 575.291, 383.084, -61.8763, 383.987, -65.4863, 254.929, -125.954, 254.929, -129.564, 189.046, -448.999, 189.001 ) ]
+vertices = PoolVector2Array( 385.718, 63.6841, 711.569, 64.5006, 706.154, 126.773, 577.998, 125.871, 385.715, 313.81, 575.291, 383.084, -61.8763, 383.987, 319.057, 321.972, -65.4863, 254.929, 312.255, 63.5001, -129.564, 189.046, -448.999, 189.001, -448.999, 64.0005, -125.954, 254.929 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 4, 0, 3, 5 ), PoolIntArray( 4, 5, 6, 7 ), PoolIntArray( 7, 6, 8, 9 ), PoolIntArray( 10, 11, 12, 9 ), PoolIntArray( 10, 9, 8, 13 ) ]
+outlines = [ PoolVector2Array( -448.999, 64.0005, 312.255, 63.5001, 319.057, 321.972, 385.715, 313.81, 385.718, 63.6841, 711.569, 64.5006, 706.154, 126.773, 577.998, 125.871, 575.291, 383.084, -61.8763, 383.987, -65.4863, 254.929, -125.954, 254.929, -129.564, 189.046, -448.999, 189.001 ) ]
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 32, 32 )
 
 [node name="Level 1-10" type="Node2D"]
 
@@ -36,7 +41,7 @@ collision_layer = 1
 collision_mask = 1
 occluder_light_mask = 1
 format = 1
-tile_data = PoolIntArray( -8, 3, 0, -7, 3, 0, -6, 3, 0, -5, 3, 0, -4, 3, 0, -3, 3, 0, -2, 3, 0, -1, 3, 0, -65536, 3, 0, -65535, 3, 0, -65534, 3, 0, -65533, 3, 0, -65532, 3, 0, -65531, 3, 0, -65530, 3, 0, -65529, 3, 0, -65528, 3, 0, -65527, 3, 0, -65526, 3, 0, -65525, 3, 0, 131064, 3, 0, 65547, 3, 0, 131081, 3, 0, 131082, 3, 0, 262136, 3, 0, 262137, 3, 0, 262138, 3, 0, 262139, 3, 0, 262140, 3, 0, 262141, 3, 0, 327678, 3, 0, 262153, 3, 0, 458750, 3, 0, 458751, 3, 0, 393216, 3, 0, 393217, 3, 0, 393218, 3, 0, 393219, 3, 0, 393220, 3, 0, 393221, 3, 0, 393222, 3, 0, 393223, 3, 0, 393224, 3, 0, 393225, 3, 0 )
+tile_data = PoolIntArray( -8, 3, 0, -7, 3, 0, -6, 3, 0, -5, 3, 0, -4, 3, 0, -3, 3, 0, -2, 3, 0, -1, 3, 0, -65536, 3, 0, -65535, 3, 0, -65534, 3, 0, -65533, 3, 0, -65532, 3, 0, -65531, 3, 0, -65530, 3, 0, -65529, 3, 0, -65528, 3, 0, -65527, 3, 0, -65526, 3, 0, -65525, 3, 0, 131064, 3, 0, 65541, 3, 0, 65547, 3, 0, 131081, 3, 0, 131082, 3, 0, 262136, 3, 0, 262137, 3, 0, 262138, 3, 0, 262139, 3, 0, 262140, 3, 0, 262141, 3, 0, 196613, 3, 0, 327678, 3, 0, 262153, 3, 0, 458750, 3, 0, 458751, 3, 0, 393216, 3, 0, 393217, 3, 0, 393218, 3, 0, 393219, 3, 0, 393220, 3, 0, 393221, 3, 0, 393222, 3, 0, 393223, 3, 0, 393224, 3, 0, 393225, 3, 0 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -66,20 +71,31 @@ next_world = "res://Levels/Level 1-11.tscn"
 
 [node name="Key" parent="." index="4" instance=ExtResource( 6 )]
 
-position = Vector2( 401.697, 309.145 )
+position = Vector2( 423.778, 346.83 )
 
 [node name="Lock" parent="Key" index="2" instance=ExtResource( 7 )]
 
-position = Vector2( 138.636, -213.307 )
+position = Vector2( 120.915, -242.271 )
 
 [node name="Mirror" parent="." index="5" instance=ExtResource( 8 )]
 
-position = Vector2( 275.844, 87.426 )
+position = Vector2( 267.682, 9.88447 )
 
-[node name="Area2D" parent="Mirror" index="2"]
+[node name="Area2D" type="Area2D" parent="Mirror" index="3"]
 
-position = Vector2( 0.397217, 165.969 )
-scale = Vector2( 1, 4.2377 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mirror/Area2D" index="0"]
+
+position = Vector2( -1.36035, 208.238 )
+scale = Vector2( 1, 4.77305 )
+shape = SubResource( 2 )
 
 [node name="StairBlocker" parent="." index="6" instance=ExtResource( 9 )]
 
@@ -87,5 +103,6 @@ position = Vector2( 609.449, 95.2264 )
 
 [connection signal="keyGotten" from="Key" to="Key/Lock" method="_on_Key_keyGotten"]
 
+[connection signal="body_entered" from="Mirror/Area2D" to="Mirror" method="_on_Area2D_body_entered"]
 
-[editable path="Mirror"]
+
