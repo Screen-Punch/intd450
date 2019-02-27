@@ -9,7 +9,6 @@
 [ext_resource path="res://Scenes/Nav2D.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/Monster.tscn" type="PackedScene" id=8]
 
-
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0

@@ -21,3 +21,5 @@ Reference:
 Button image https://www.vectorstock.com/royalty-free-vector/pixel-art-arrows-buttons-pilot-lights-pointers-vector-20338210
 
 Tile set https://www.gamedevmarket.net/asset/topdown-tiles-7932/
+
+Boulder image https://www.deviantart.com/tdeleeuw/art/Boulder-pixel-art-427731885
