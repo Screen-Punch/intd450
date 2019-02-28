@@ -23,6 +23,7 @@ func _ready():
 	$CanvasLayer/SceneTransition.play("SceneTransition")
 	vulnerable = true
 	$AnimationPlayer.play("SpawnAnimation")
+	$CanvasLayer/Blur.show()
 
 func _physics_process(delta):
 	var motion = Vector2()

@@ -43,7 +43,7 @@ tracks/0/keys = {
 "values": [ Color( 0.546875, 0.893799, 1, 0 ), Color( 0.546875, 0.893799, 1, 1 ) ]
 }
 
-[node name="Level1-3" type="Node2D" index="0"]
+[node name="Level1-3" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="." index="0"]
 
@@ -88,7 +88,6 @@ enabled = true
 [node name="Monster" parent="Nav2D" index="1" instance=ExtResource( 5 )]
 
 position = Vector2( 66.1562, -842.531 )
-SPEED = 130
 
 [node name="Mirror" parent="." index="4" instance=ExtResource( 6 )]
 
