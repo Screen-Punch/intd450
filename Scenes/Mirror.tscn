@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scripts/Mirror.gd" type="Script" id=1]
-[ext_resource path="res://Art/Mirrors_walls_monsters.png" type="Texture" id=2]
+[ext_resource path="res://Art/mirrors_gates.png" type="Texture" id=2]
 [ext_resource path="res://Sounds/SoundFiles/24 bit/break.wav" type="AudioStream" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -47,7 +47,7 @@ mirrorDirection = null
 [node name="Sprite" type="Sprite" parent="." index="0"]
 
 texture = ExtResource( 2 )
-vframes = 3
+vframes = 4
 hframes = 7
 _sections_unfolded = [ "Animation" ]
 
