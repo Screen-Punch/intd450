@@ -386,7 +386,6 @@ _sections_unfolded = [ "Animation" ]
 
 [node name="CeilingTile01" type="Sprite" parent="." index="40"]
 
-editor/display_folded = true
 position = Vector2( 145.564, 647.706 )
 texture = ExtResource( 1 )
 vframes = 10
@@ -957,7 +956,6 @@ shape = SubResource( 3 )
 
 [node name="BackGroundNull" type="Sprite" parent="." index="63"]
 
-editor/display_folded = true
 position = Vector2( 150.968, -49.1774 )
 texture = ExtResource( 1 )
 vframes = 10
