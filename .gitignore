@@ -4,6 +4,7 @@
 export.cfg
 export_presets.cfg
 Art/*.import
+Sounds/SoundFiles/*/*.import
 
 # Mono-specific ignores
 .mono/

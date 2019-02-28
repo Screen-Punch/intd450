@@ -6,6 +6,12 @@ var velocity
 onready var Nav2D = get_node("../")
 var path
 var timer = 0
+var randomNoiseTimer
+var randomNoiseDelay
+var randomMonsterNoises = ["res://Sounds/SoundFiles/24 bit/comingupto.wav", "res://Sounds/SoundFiles/24 bit/slimycrunchy.wav",
+					"res://Sounds/SoundFiles/24 bit/longgroan.wav", "res://Sounds/SoundFiles/16 bit/16 bit 2/laughing.wav",
+					"res://Sounds/SoundFiles/16 bit/16 bit 2/2crack.wav", "res://Sounds/SoundFiles/24 bit/3crack.wav"]
+var entryNoise = "res://Sounds/SoundFiles/warp.wav"
 
 var canMove = false
 
@@ -15,6 +21,11 @@ func _ready():
 		target = t
 	path = Nav2D.update_navigation_path(position, target.position)
 	$AnimationPlayer.play("SpawnAnimation")
+	$AudioStreamPlayer2D.stream = load(entryNoise)
+	$AudioStreamPlayer2D.play(0)
+	randomNoiseTimer = get_node("Timer")
+	randomNoiseTimer.set_wait_time(2)
+	randomNoiseTimer.start()
 
 func _process(delta):
 	if target:
@@ -76,3 +87,12 @@ func _on_Area2D_body_entered(body):
 func _on_AnimationPlayer_animation_finished(anim_name):
 	if anim_name == "SpawnAnimation":
 		canMove = true
+
+
+func _on_Timer_timeout():
+	var index = randi() % len(randomMonsterNoises)
+	$AudioStreamPlayer2D.stream = load(randomMonsterNoises[index])
+	$AudioStreamPlayer2D.play(0)
+	randomNoiseDelay = randi() % 5 + 10
+	randomNoiseTimer.set_wait_time(randomNoiseDelay)
+	randomNoiseTimer.start()

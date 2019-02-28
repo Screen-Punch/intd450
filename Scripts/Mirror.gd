@@ -18,6 +18,7 @@ func _physics_process(delta):
 
 func takeDamage():
 	name = "deadmirror"
+	$AudioStreamPlayer2D.play(0)
 	var enemies = get_tree().get_nodes_in_group("Monster")
 	for enemy in enemies:
 		enemy.findNewTarget();
@@ -26,7 +27,7 @@ func takeDamage():
 		var blockers = get_tree().get_nodes_in_group("StairBlocker")
 		for blocker in blockers:
 			blocker.queue_free();
-	queue_free()
+
 
 func _on_Area2D_body_entered(body):
 	if body.is_in_group("Monster"):
@@ -49,3 +50,7 @@ func _on_Area2D_body_entered(body):
 func playMonsterSpotted():
 	if mirrorDirection == "vertical":
 		$AnimationPlayer.play("MonsterSpotted")
+
+
+func _on_AudioStreamPlayer2D_finished():
+	queue_free()
