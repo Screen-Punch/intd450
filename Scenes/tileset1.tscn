@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Art/floors_ceilings.png" type="Texture" id=1]
+[ext_resource path="res://Art/Walls.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -32,13 +33,7 @@ vframes = 10
 hframes = 5
 _sections_unfolded = [ "Animation" ]
 
-[node name="GreenFloorTile11" type="Sprite" parent="." index="1"]
-
-position = Vector2( -151.881, 291.697 )
-texture = ExtResource( 1 )
-_sections_unfolded = [ "Animation" ]
-
-[node name="GreenFloorTile2" type="Sprite" parent="." index="2"]
+[node name="GreenFloorTile2" type="Sprite" parent="." index="1"]
 
 position = Vector2( 201.291, 22.1793 )
 texture = ExtResource( 1 )
@@ -47,7 +42,7 @@ hframes = 5
 frame = 1
 _sections_unfolded = [ "Animation" ]
 
-[node name="GreenFloorTile3" type="Sprite" parent="." index="3"]
+[node name="GreenFloorTile3" type="Sprite" parent="." index="2"]
 
 position = Vector2( 270.287, 22.1793 )
 texture = ExtResource( 1 )
@@ -56,7 +51,7 @@ hframes = 5
 frame = 2
 _sections_unfolded = [ "Animation" ]
 
-[node name="GreenFloorTile4" type="Sprite" parent="." index="4"]
+[node name="GreenFloorTile4" type="Sprite" parent="." index="3"]
 
 position = Vector2( 345.917, 22.1793 )
 texture = ExtResource( 1 )
@@ -65,7 +60,7 @@ hframes = 5
 frame = 3
 _sections_unfolded = [ "Animation" ]
 
-[node name="GreenFloorTile5" type="Sprite" parent="." index="5"]
+[node name="GreenFloorTile5" type="Sprite" parent="." index="4"]
 
 position = Vector2( 418.23, 22.1793 )
 texture = ExtResource( 1 )
@@ -74,7 +69,7 @@ hframes = 5
 frame = 4
 _sections_unfolded = [ "Animation" ]
 
-[node name="GreenFloorTile6" type="Sprite" parent="." index="6"]
+[node name="GreenFloorTile6" type="Sprite" parent="." index="5"]
 
 position = Vector2( 135.612, 95.1555 )
 texture = ExtResource( 1 )
@@ -83,7 +78,7 @@ hframes = 5
 frame = 5
 _sections_unfolded = [ "Animation" ]
 
-[node name="GreenFloorTile7" type="Sprite" parent="." index="7"]
+[node name="GreenFloorTile7" type="Sprite" parent="." index="6"]
 
 position = Vector2( 203.281, 95.1555 )
 texture = ExtResource( 1 )
@@ -92,7 +87,7 @@ hframes = 5
 frame = 6
 _sections_unfolded = [ "Animation" ]
 
-[node name="GreenFloorTile8" type="Sprite" parent="." index="8"]
+[node name="GreenFloorTile8" type="Sprite" parent="." index="7"]
 
 position = Vector2( 275.594, 95.1555 )
 texture = ExtResource( 1 )
@@ -101,7 +96,7 @@ hframes = 5
 frame = 7
 _sections_unfolded = [ "Animation" ]
 
-[node name="GreenFloorTile9" type="Sprite" parent="." index="9"]
+[node name="GreenFloorTile9" type="Sprite" parent="." index="8"]
 
 position = Vector2( 349.234, 95.1555 )
 texture = ExtResource( 1 )
@@ -110,7 +105,7 @@ hframes = 5
 frame = 8
 _sections_unfolded = [ "Animation" ]
 
-[node name="GreenFloorTile10" type="Sprite" parent="." index="10"]
+[node name="GreenFloorTile10" type="Sprite" parent="." index="9"]
 
 position = Vector2( 417.566, 95.1555 )
 texture = ExtResource( 1 )
@@ -119,7 +114,7 @@ hframes = 5
 frame = 9
 _sections_unfolded = [ "Animation" ]
 
-[node name="PinkFloorTile01" type="Sprite" parent="." index="11"]
+[node name="PinkFloorTile01" type="Sprite" parent="." index="10"]
 
 position = Vector2( 136.939, 172.777 )
 texture = ExtResource( 1 )
@@ -128,7 +123,7 @@ hframes = 5
 frame = 10
 _sections_unfolded = [ "Animation" ]
 
-[node name="PinkFloorTile02" type="Sprite" parent="." index="12"]
+[node name="PinkFloorTile02" type="Sprite" parent="." index="11"]
 
 position = Vector2( 201.291, 172.777 )
 texture = ExtResource( 1 )
@@ -137,7 +132,7 @@ hframes = 5
 frame = 11
 _sections_unfolded = [ "Animation" ]
 
-[node name="PinkFloorTile03" type="Sprite" parent="." index="13"]
+[node name="PinkFloorTile03" type="Sprite" parent="." index="12"]
 
 position = Vector2( 272.277, 172.777 )
 texture = ExtResource( 1 )
@@ -146,7 +141,7 @@ hframes = 5
 frame = 12
 _sections_unfolded = [ "Animation" ]
 
-[node name="PinkFloorTile04" type="Sprite" parent="." index="14"]
+[node name="PinkFloorTile04" type="Sprite" parent="." index="13"]
 
 position = Vector2( 348.57, 172.777 )
 texture = ExtResource( 1 )
@@ -155,7 +150,7 @@ hframes = 5
 frame = 13
 _sections_unfolded = [ "Animation" ]
 
-[node name="PinkFloorTile05" type="Sprite" parent="." index="15"]
+[node name="PinkFloorTile05" type="Sprite" parent="." index="14"]
 
 position = Vector2( 418.893, 172.777 )
 texture = ExtResource( 1 )
@@ -164,7 +159,7 @@ hframes = 5
 frame = 14
 _sections_unfolded = [ "Animation" ]
 
-[node name="PinkFloorTile06" type="Sprite" parent="." index="16"]
+[node name="PinkFloorTile06" type="Sprite" parent="." index="15"]
 
 position = Vector2( 136.939, 240.446 )
 texture = ExtResource( 1 )
@@ -173,7 +168,7 @@ hframes = 5
 frame = 15
 _sections_unfolded = [ "Animation" ]
 
-[node name="PinkFloorTile07" type="Sprite" parent="." index="17"]
+[node name="PinkFloorTile07" type="Sprite" parent="." index="16"]
 
 position = Vector2( 206.598, 240.446 )
 texture = ExtResource( 1 )
@@ -182,7 +177,7 @@ hframes = 5
 frame = 16
 _sections_unfolded = [ "Animation" ]
 
-[node name="PinkFloorTile08" type="Sprite" parent="." index="18"]
+[node name="PinkFloorTile08" type="Sprite" parent="." index="17"]
 
 position = Vector2( 271.613, 240.446 )
 texture = ExtResource( 1 )
@@ -191,7 +186,7 @@ hframes = 5
 frame = 17
 _sections_unfolded = [ "Animation" ]
 
-[node name="PinkFloorTile09" type="Sprite" parent="." index="19"]
+[node name="PinkFloorTile09" type="Sprite" parent="." index="18"]
 
 position = Vector2( 347.907, 240.446 )
 texture = ExtResource( 1 )
@@ -200,7 +195,7 @@ hframes = 5
 frame = 18
 _sections_unfolded = [ "Animation" ]
 
-[node name="PinkFloorTile10" type="Sprite" parent="." index="20"]
+[node name="PinkFloorTile10" type="Sprite" parent="." index="19"]
 
 position = Vector2( 417.566, 240.446 )
 texture = ExtResource( 1 )
@@ -209,7 +204,7 @@ hframes = 5
 frame = 19
 _sections_unfolded = [ "Animation" ]
 
-[node name="RedFloorTile01" type="Sprite" parent="." index="21"]
+[node name="RedFloorTile01" type="Sprite" parent="." index="20"]
 
 position = Vector2( 140.436, 312.485 )
 texture = ExtResource( 1 )
@@ -218,7 +213,7 @@ hframes = 5
 frame = 20
 _sections_unfolded = [ "Animation" ]
 
-[node name="RedFloorTile02" type="Sprite" parent="." index="22"]
+[node name="RedFloorTile02" type="Sprite" parent="." index="21"]
 
 position = Vector2( 203.654, 312.485 )
 texture = ExtResource( 1 )
@@ -227,7 +222,7 @@ hframes = 5
 frame = 21
 _sections_unfolded = [ "Animation" ]
 
-[node name="RedFloorTile03" type="Sprite" parent="." index="23"]
+[node name="RedFloorTile03" type="Sprite" parent="." index="22"]
 
 position = Vector2( 269.813, 312.485 )
 texture = ExtResource( 1 )
@@ -236,7 +231,7 @@ hframes = 5
 frame = 22
 _sections_unfolded = [ "Animation" ]
 
-[node name="RedFloorTile04" type="Sprite" parent="." index="24"]
+[node name="RedFloorTile04" type="Sprite" parent="." index="23"]
 
 position = Vector2( 349.203, 312.485 )
 texture = ExtResource( 1 )
@@ -245,7 +240,7 @@ hframes = 5
 frame = 23
 _sections_unfolded = [ "Animation" ]
 
-[node name="RedFloorTile05" type="Sprite" parent="." index="25"]
+[node name="RedFloorTile05" type="Sprite" parent="." index="24"]
 
 position = Vector2( 415.361, 312.485 )
 texture = ExtResource( 1 )
@@ -254,7 +249,7 @@ hframes = 5
 frame = 24
 _sections_unfolded = [ "Animation" ]
 
-[node name="RedFloorTile06" type="Sprite" parent="." index="26"]
+[node name="RedFloorTile06" type="Sprite" parent="." index="25"]
 
 position = Vector2( 137.496, 383.789 )
 texture = ExtResource( 1 )
@@ -263,7 +258,7 @@ hframes = 5
 frame = 25
 _sections_unfolded = [ "Animation" ]
 
-[node name="RedFloorTile07" type="Sprite" parent="." index="27"]
+[node name="RedFloorTile07" type="Sprite" parent="." index="26"]
 
 position = Vector2( 202.919, 383.789 )
 texture = ExtResource( 1 )
@@ -272,7 +267,7 @@ hframes = 5
 frame = 26
 _sections_unfolded = [ "Animation" ]
 
-[node name="RedFloorTile08" type="Sprite" parent="." index="28"]
+[node name="RedFloorTile08" type="Sprite" parent="." index="27"]
 
 position = Vector2( 272.018, 383.789 )
 texture = ExtResource( 1 )
@@ -281,7 +276,7 @@ hframes = 5
 frame = 27
 _sections_unfolded = [ "Animation" ]
 
-[node name="RedFloorTile09" type="Sprite" parent="." index="29"]
+[node name="RedFloorTile09" type="Sprite" parent="." index="28"]
 
 position = Vector2( 350.673, 385.259 )
 texture = ExtResource( 1 )
@@ -290,7 +285,7 @@ hframes = 5
 frame = 28
 _sections_unfolded = [ "Animation" ]
 
-[node name="RedFloorTile10" type="Sprite" parent="." index="30"]
+[node name="RedFloorTile10" type="Sprite" parent="." index="29"]
 
 position = Vector2( 419.772, 385.259 )
 texture = ExtResource( 1 )
@@ -299,7 +294,7 @@ hframes = 5
 frame = 29
 _sections_unfolded = [ "Animation" ]
 
-[node name="BlackFloorTile01" type="Sprite" parent="." index="31"]
+[node name="BlackFloorTile01" type="Sprite" parent="." index="30"]
 
 position = Vector2( 140.436, 475.485 )
 texture = ExtResource( 1 )
@@ -308,7 +303,7 @@ hframes = 5
 frame = 30
 _sections_unfolded = [ "Animation" ]
 
-[node name="BlackFloorTile02" type="Sprite" parent="." index="32"]
+[node name="BlackFloorTile02" type="Sprite" parent="." index="31"]
 
 position = Vector2( 203.654, 475.485 )
 texture = ExtResource( 1 )
@@ -317,7 +312,7 @@ hframes = 5
 frame = 31
 _sections_unfolded = [ "Animation" ]
 
-[node name="BlackFloorTile03" type="Sprite" parent="." index="33"]
+[node name="BlackFloorTile03" type="Sprite" parent="." index="32"]
 
 position = Vector2( 269.813, 475.485 )
 texture = ExtResource( 1 )
@@ -326,7 +321,7 @@ hframes = 5
 frame = 32
 _sections_unfolded = [ "Animation" ]
 
-[node name="BlackFloorTile04" type="Sprite" parent="." index="34"]
+[node name="BlackFloorTile04" type="Sprite" parent="." index="33"]
 
 position = Vector2( 349.203, 475.485 )
 texture = ExtResource( 1 )
@@ -335,7 +330,7 @@ hframes = 5
 frame = 33
 _sections_unfolded = [ "Animation" ]
 
-[node name="BlackFloorTile05" type="Sprite" parent="." index="35"]
+[node name="BlackFloorTile05" type="Sprite" parent="." index="34"]
 
 position = Vector2( 415.361, 475.485 )
 texture = ExtResource( 1 )
@@ -344,7 +339,7 @@ hframes = 5
 frame = 34
 _sections_unfolded = [ "Animation" ]
 
-[node name="BlackFloorTile06" type="Sprite" parent="." index="36"]
+[node name="BlackFloorTile06" type="Sprite" parent="." index="35"]
 
 position = Vector2( 137.496, 546.789 )
 texture = ExtResource( 1 )
@@ -353,7 +348,7 @@ hframes = 5
 frame = 35
 _sections_unfolded = [ "Animation" ]
 
-[node name="BlackFloorTile07" type="Sprite" parent="." index="37"]
+[node name="BlackFloorTile07" type="Sprite" parent="." index="36"]
 
 position = Vector2( 202.919, 546.789 )
 texture = ExtResource( 1 )
@@ -362,7 +357,7 @@ hframes = 5
 frame = 36
 _sections_unfolded = [ "Animation" ]
 
-[node name="BlackFloorTile08" type="Sprite" parent="." index="38"]
+[node name="BlackFloorTile08" type="Sprite" parent="." index="37"]
 
 position = Vector2( 272.018, 546.789 )
 texture = ExtResource( 1 )
@@ -371,7 +366,7 @@ hframes = 5
 frame = 37
 _sections_unfolded = [ "Animation" ]
 
-[node name="BlackFloorTile09" type="Sprite" parent="." index="39"]
+[node name="BlackFloorTile09" type="Sprite" parent="." index="38"]
 
 position = Vector2( 350.673, 548.259 )
 texture = ExtResource( 1 )
@@ -380,7 +375,7 @@ hframes = 5
 frame = 38
 _sections_unfolded = [ "Animation" ]
 
-[node name="BlackFloorTile10" type="Sprite" parent="." index="40"]
+[node name="BlackFloorTile10" type="Sprite" parent="." index="39"]
 
 position = Vector2( 419.772, 548.259 )
 texture = ExtResource( 1 )
@@ -389,7 +384,7 @@ hframes = 5
 frame = 39
 _sections_unfolded = [ "Animation" ]
 
-[node name="CeilingTile01" type="Sprite" parent="." index="41"]
+[node name="CeilingTile01" type="Sprite" parent="." index="40"]
 
 editor/display_folded = true
 position = Vector2( 145.564, 647.706 )
@@ -413,7 +408,7 @@ bounce = 0.0
 
 shape = SubResource( 1 )
 
-[node name="CeilingTile02" type="Sprite" parent="." index="42"]
+[node name="CeilingTile02" type="Sprite" parent="." index="41"]
 
 editor/display_folded = true
 position = Vector2( 222.296, 647.706 )
@@ -437,8 +432,9 @@ bounce = 0.0
 
 shape = SubResource( 2 )
 
-[node name="CeilingTile03" type="Sprite" parent="." index="43"]
+[node name="CeilingTile03" type="Sprite" parent="." index="42"]
 
+editor/display_folded = true
 position = Vector2( 294.269, 648.146 )
 texture = ExtResource( 1 )
 vframes = 10
@@ -460,14 +456,513 @@ bounce = 0.0
 
 shape = SubResource( 3 )
 
-[node name="BackGroundNull" type="Sprite" parent="." index="44"]
+[node name="UpperWall01" type="Sprite" parent="." index="43"]
+
+editor/display_folded = true
+position = Vector2( 775.31, 31.9221 )
+texture = ExtResource( 2 )
+vframes = 8
+hframes = 5
+_sections_unfolded = [ "Animation" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="UpperWall01" index="0"]
+
+visible = false
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UpperWall01/StaticBody2D" index="0"]
+
+shape = SubResource( 3 )
+
+[node name="UpperWall02" type="Sprite" parent="." index="44"]
+
+editor/display_folded = true
+position = Vector2( 848.084, 31.9221 )
+texture = ExtResource( 2 )
+vframes = 8
+hframes = 5
+frame = 1
+_sections_unfolded = [ "Animation" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="UpperWall02" index="0"]
+
+visible = false
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UpperWall02/StaticBody2D" index="0"]
+
+shape = SubResource( 3 )
+
+[node name="UpperWall03" type="Sprite" parent="." index="45"]
+
+editor/display_folded = true
+position = Vector2( 921.594, 31.9221 )
+texture = ExtResource( 2 )
+vframes = 8
+hframes = 5
+frame = 2
+_sections_unfolded = [ "Animation" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="UpperWall03" index="0"]
+
+visible = false
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UpperWall03/StaticBody2D" index="0"]
+
+shape = SubResource( 3 )
+
+[node name="UpperWall04" type="Sprite" parent="." index="46"]
+
+editor/display_folded = true
+position = Vector2( 991.427, 31.9221 )
+texture = ExtResource( 2 )
+vframes = 8
+hframes = 5
+frame = 3
+_sections_unfolded = [ "Animation" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="UpperWall04" index="0"]
+
+visible = false
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UpperWall04/StaticBody2D" index="0"]
+
+shape = SubResource( 3 )
+
+[node name="UpperWall05" type="Sprite" parent="." index="47"]
+
+editor/display_folded = true
+position = Vector2( 1066.41, 31.9221 )
+texture = ExtResource( 2 )
+vframes = 8
+hframes = 5
+frame = 4
+_sections_unfolded = [ "Animation" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="UpperWall05" index="0"]
+
+visible = false
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UpperWall05/StaticBody2D" index="0"]
+
+shape = SubResource( 3 )
+
+[node name="UpperWall06" type="Sprite" parent="." index="48"]
+
+editor/display_folded = true
+position = Vector2( 775.31, 106.166 )
+texture = ExtResource( 2 )
+vframes = 8
+hframes = 5
+frame = 5
+_sections_unfolded = [ "Animation" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="UpperWall06" index="0"]
+
+visible = false
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UpperWall06/StaticBody2D" index="0"]
+
+shape = SubResource( 3 )
+
+[node name="UpperWall07" type="Sprite" parent="." index="49"]
+
+editor/display_folded = true
+position = Vector2( 848.084, 106.166 )
+texture = ExtResource( 2 )
+vframes = 8
+hframes = 5
+frame = 6
+_sections_unfolded = [ "Animation" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="UpperWall07" index="0"]
+
+visible = false
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UpperWall07/StaticBody2D" index="0"]
+
+shape = SubResource( 3 )
+
+[node name="UpperWall08" type="Sprite" parent="." index="50"]
+
+editor/display_folded = true
+position = Vector2( 918.653, 106.166 )
+texture = ExtResource( 2 )
+vframes = 8
+hframes = 5
+frame = 7
+_sections_unfolded = [ "Animation" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="UpperWall08" index="0"]
+
+visible = false
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UpperWall08/StaticBody2D" index="0"]
+
+shape = SubResource( 3 )
+
+[node name="UpperWall09" type="Sprite" parent="." index="51"]
+
+editor/display_folded = true
+position = Vector2( 990.692, 106.166 )
+texture = ExtResource( 2 )
+vframes = 8
+hframes = 5
+frame = 8
+_sections_unfolded = [ "Animation" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="UpperWall09" index="0"]
+
+visible = false
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UpperWall09/StaticBody2D" index="0"]
+
+shape = SubResource( 3 )
+
+[node name="UpperWall10" type="Sprite" parent="." index="52"]
+
+editor/display_folded = true
+position = Vector2( 1066.41, 106.166 )
+texture = ExtResource( 2 )
+vframes = 8
+hframes = 5
+frame = 9
+_sections_unfolded = [ "Animation" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="UpperWall10" index="0"]
+
+visible = false
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UpperWall10/StaticBody2D" index="0"]
+
+shape = SubResource( 3 )
+
+[node name="LowerWall01" type="Sprite" parent="." index="53"]
+
+editor/display_folded = true
+position = Vector2( 775.31, 183.351 )
+texture = ExtResource( 2 )
+vframes = 8
+hframes = 5
+frame = 10
+_sections_unfolded = [ "Animation" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="LowerWall01" index="0"]
+
+visible = false
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LowerWall01/StaticBody2D" index="0"]
+
+shape = SubResource( 3 )
+
+[node name="LowerWall02" type="Sprite" parent="." index="54"]
+
+editor/display_folded = true
+position = Vector2( 845.144, 183.351 )
+texture = ExtResource( 2 )
+vframes = 8
+hframes = 5
+frame = 11
+_sections_unfolded = [ "Animation" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="LowerWall02" index="0"]
+
+visible = false
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LowerWall02/StaticBody2D" index="0"]
+
+shape = SubResource( 3 )
+
+[node name="LowerWall03" type="Sprite" parent="." index="55"]
+
+editor/display_folded = true
+position = Vector2( 919.388, 183.351 )
+texture = ExtResource( 2 )
+vframes = 8
+hframes = 5
+frame = 12
+_sections_unfolded = [ "Animation" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="LowerWall03" index="0"]
+
+visible = false
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LowerWall03/StaticBody2D" index="0"]
+
+shape = SubResource( 3 )
+
+[node name="LowerWall04" type="Sprite" parent="." index="56"]
+
+editor/display_folded = true
+position = Vector2( 990.692, 183.351 )
+texture = ExtResource( 2 )
+vframes = 8
+hframes = 5
+frame = 13
+_sections_unfolded = [ "Animation" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="LowerWall04" index="0"]
+
+visible = false
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LowerWall04/StaticBody2D" index="0"]
+
+shape = SubResource( 3 )
+
+[node name="LowerWall05" type="Sprite" parent="." index="57"]
+
+editor/display_folded = true
+position = Vector2( 1067.88, 183.351 )
+texture = ExtResource( 2 )
+vframes = 8
+hframes = 5
+frame = 14
+_sections_unfolded = [ "Animation" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="LowerWall05" index="0"]
+
+visible = false
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LowerWall05/StaticBody2D" index="0"]
+
+shape = SubResource( 3 )
+
+[node name="CornerWall01" type="Sprite" parent="." index="58"]
+
+editor/display_folded = true
+position = Vector2( 776.045, 259.801 )
+texture = ExtResource( 2 )
+vframes = 8
+hframes = 5
+frame = 15
+_sections_unfolded = [ "Animation" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="CornerWall01" index="0"]
+
+visible = false
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CornerWall01/StaticBody2D" index="0"]
+
+shape = SubResource( 3 )
+
+[node name="CornerWall02" type="Sprite" parent="." index="59"]
+
+editor/display_folded = true
+position = Vector2( 846.614, 259.801 )
+texture = ExtResource( 2 )
+vframes = 8
+hframes = 5
+frame = 16
+_sections_unfolded = [ "Animation" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="CornerWall02" index="0"]
+
+visible = false
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CornerWall02/StaticBody2D" index="0"]
+
+shape = SubResource( 3 )
+
+[node name="CornerWall03" type="Sprite" parent="." index="60"]
+
+editor/display_folded = true
+position = Vector2( 919.388, 259.801 )
+texture = ExtResource( 2 )
+vframes = 8
+hframes = 5
+frame = 17
+_sections_unfolded = [ "Animation" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="CornerWall03" index="0"]
+
+visible = false
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CornerWall03/StaticBody2D" index="0"]
+
+shape = SubResource( 3 )
+
+[node name="CornerWall04" type="Sprite" parent="." index="61"]
+
+editor/display_folded = true
+position = Vector2( 993.632, 259.801 )
+texture = ExtResource( 2 )
+vframes = 8
+hframes = 5
+frame = 18
+_sections_unfolded = [ "Animation" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="CornerWall04" index="0"]
+
+visible = false
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CornerWall04/StaticBody2D" index="0"]
+
+shape = SubResource( 3 )
+
+[node name="CornerWall05" type="Sprite" parent="." index="62"]
+
+editor/display_folded = true
+position = Vector2( 1067.88, 259.801 )
+texture = ExtResource( 2 )
+vframes = 8
+hframes = 5
+frame = 19
+_sections_unfolded = [ "Animation" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="CornerWall05" index="0"]
+
+visible = false
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CornerWall05/StaticBody2D" index="0"]
+
+shape = SubResource( 3 )
+
+[node name="BackGroundNull" type="Sprite" parent="." index="63"]
 
 editor/display_folded = true
 position = Vector2( 150.968, -49.1774 )
 texture = ExtResource( 1 )
-vframes = 8
+vframes = 10
 hframes = 5
-frame = 35
+frame = 45
 _sections_unfolded = [ "Animation" ]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="BackGroundNull" index="0"]
