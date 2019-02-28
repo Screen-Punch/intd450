@@ -44,7 +44,7 @@ tracks/0/keys = {
 "values": [ Color( 0.546875, 0.893799, 1, 0 ), Color( 0.546875, 0.893799, 1, 1 ) ]
 }
 
-[node name="Level1-3" type="Node2D" index="0"]
+[node name="Level1-3" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="." index="0"]
 

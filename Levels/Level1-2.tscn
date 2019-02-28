@@ -162,7 +162,7 @@ tracks/0/keys = {
 "values": [ Color( 0, 1, 0.835938, 0 ), Color( 0, 1, 0.835938, 1 ) ]
 }
 
-[node name="Level1-2" type="Node2D"]
+[node name="Level1-2" type="Node2D" index="0"]
 
 __meta__ = {
 "_edit_lock_": true
