@@ -1,0 +1,151 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Scenes/tileset1.tres" type="TileSet" id=1]
+[ext_resource path="res://Scenes/Nav2D.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Monster.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/next_W.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Key.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Lock.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Mirror.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/StairBlocker.tscn" type="PackedScene" id=9]
+
+[sub_resource type="NavigationPolygon" id=1]
+
+vertices = PoolVector2Array( 448.699, 252.819, 900.901, 444.252, -59.2755, 438.222, 252.744, 249.805, 121.606, -193.354, 255.759, -1.92148, -66.8122, 191.018, -62.2901, 64.4016, 895.969, -1.64395, 896.704, 62.3092, 447.191, 2.60056, 837.162, -129.55, 124.62, -255.155, 840.608, -259.677, 898.175, -130.285, 1153.74, -0.180206, 1153.74, 65.3603, -448.999, 189.001, -448.999, 64.0005, -62.2901, -190.339 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 4, 5, 3, 2, 6, 7 ), PoolIntArray( 8, 9, 1, 0, 10, 11 ), PoolIntArray( 4, 12, 13, 11, 10, 5 ), PoolIntArray( 11, 14, 8 ), PoolIntArray( 15, 16, 9, 8 ), PoolIntArray( 17, 18, 7, 6 ), PoolIntArray( 4, 7, 19 ) ]
+outlines = [ PoolVector2Array( -448.999, 64.0005, -62.2901, 64.4016, -62.2901, -190.339, 121.606, -193.354, 124.62, -255.155, 840.608, -259.677, 837.162, -129.55, 898.175, -130.285, 895.969, -1.64395, 1153.74, -0.180206, 1153.74, 65.3603, 896.704, 62.3092, 900.901, 444.252, -59.2755, 438.222, -66.8122, 191.018, -448.999, 189.001 ), PoolVector2Array( 255.759, -1.92148, 447.191, 2.60056, 448.699, 252.819, 252.744, 249.805 ) ]
+
+[node name="Level 1-13" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="." index="0"]
+
+mode = 0
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 64, 64 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( -393214, 3, 0, -393213, 3, 0, -393212, 3, 0, -393211, 3, 0, -393210, 3, 0, -393209, 3, 0, -393208, 3, 0, -393207, 3, 0, -393206, 3, 0, -393205, 3, 0, -393204, 3, 0, -393203, 3, 0, -262146, 3, 0, -262145, 3, 0, -327680, 3, 0, -327679, 3, 0, -262131, 3, 0, -262130, 3, 0, -131074, 3, 0, -131058, 3, 0, -131057, 3, 0, -131056, 3, 0, -131055, 3, 0, -131054, 3, 0, -8, 3, 0, -7, 3, 0, -6, 3, 0, -5, 3, 0, -4, 3, 0, -3, 3, 0, -2, 3, 0, 4, 3, 0, 5, 3, 0, 6, 3, 0, 18, 3, 0, 131064, 3, 0, 65550, 3, 0, 65551, 3, 0, 65552, 3, 0, 65553, 3, 0, 131076, 3, 0, 131077, 3, 0, 131078, 3, 0, 262136, 3, 0, 262137, 3, 0, 262138, 3, 0, 262139, 3, 0, 262140, 3, 0, 262141, 3, 0, 262142, 3, 0, 196622, 3, 0, 393214, 3, 0, 327694, 3, 0, 524286, 3, 0, 524287, 3, 0, 458752, 3, 0, 458753, 3, 0, 458754, 3, 0, 458755, 3, 0, 458756, 3, 0, 458757, 3, 0, 458758, 3, 0, 458759, 3, 0, 458760, 3, 0, 458761, 3, 0, 458762, 3, 0, 458763, 3, 0, 458764, 3, 0, 458765, 3, 0, 458766, 3, 0 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Nav2D" parent="." index="1" instance=ExtResource( 2 )]
+
+editor/display_folded = true
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Nav2D" index="0"]
+
+navpoly = SubResource( 1 )
+enabled = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Monster" parent="Nav2D" index="1" instance=ExtResource( 3 )]
+
+position = Vector2( -373.984, 128.71 )
+
+[node name="player" parent="." index="2" instance=ExtResource( 4 )]
+
+position = Vector2( -102.355, 126.913 )
+
+[node name="next_W" parent="." index="3" instance=ExtResource( 5 )]
+
+position = Vector2( 1120.88, 30.8717 )
+
+[node name="KeysAndLocks" type="Node2D" parent="." index="4"]
+
+[node name="Key" parent="KeysAndLocks" index="0" instance=ExtResource( 6 )]
+
+position = Vector2( 209.447, 389.833 )
+
+[node name="Lock3" parent="KeysAndLocks" index="1" instance=ExtResource( 7 )]
+
+position = Vector2( 941.935, 30.9032 )
+_sections_unfolded = [ "Collision", "Visibility" ]
+
+[node name="Key2" parent="KeysAndLocks" index="2" instance=ExtResource( 6 )]
+
+position = Vector2( 733.172, -93.1785 )
+
+[node name="Lock2" parent="KeysAndLocks" index="3" instance=ExtResource( 7 )]
+
+position = Vector2( 1004.55, 29.1141 )
+_sections_unfolded = [ "Collision", "Visibility" ]
+
+[node name="Key3" parent="KeysAndLocks" index="4" instance=ExtResource( 6 )]
+
+position = Vector2( 161.39, -132.684 )
+
+[node name="Lock" parent="KeysAndLocks" index="5" instance=ExtResource( 7 )]
+
+position = Vector2( 875.224, 34.5623 )
+_sections_unfolded = [ "Collision", "Visibility" ]
+
+[node name="Mirror" parent="." index="5" instance=ExtResource( 8 )]
+
+editor/display_folded = true
+position = Vector2( -30.5253, 304.686 )
+rotation = -1.56231
+
+[node name="Area2D" parent="Mirror" index="2"]
+
+position = Vector2( 0.397217, 479.907 )
+scale = Vector2( 1, 14.0483 )
+
+[node name="Mirror2" parent="." index="6" instance=ExtResource( 8 )]
+
+editor/display_folded = true
+position = Vector2( 640.24, 61.9685 )
+
+[node name="Area2D" parent="Mirror2" index="2"]
+
+position = Vector2( 0.397217, 205.569 )
+scale = Vector2( 1, 5.47521 )
+
+[node name="Mirror3" parent="." index="7" instance=ExtResource( 8 )]
+
+editor/display_folded = true
+position = Vector2( 804.921, -221.579 )
+
+[node name="Area2D" parent="Mirror3" index="2"]
+
+position = Vector2( 0.397217, 351.112 )
+scale = Vector2( 1, 10.0234 )
+
+[node name="Mirror4" parent="." index="8" instance=ExtResource( 8 )]
+
+position = Vector2( 290.917, -230.623 )
+
+[node name="Area2D" parent="Mirror4" index="2"]
+
+position = Vector2( 0.397217, 126.518 )
+scale = Vector2( 1, 3.00484 )
+
+[node name="StairBlocker" parent="." index="9" instance=ExtResource( 9 )]
+
+position = Vector2( 1061.09, 28.5679 )
+
+[connection signal="keyGotten" from="KeysAndLocks/Key" to="KeysAndLocks/Lock3" method="_on_Key_keyGotten"]
+
+[connection signal="keyGotten" from="KeysAndLocks/Key2" to="KeysAndLocks/Lock2" method="_on_Key_keyGotten"]
+
+[connection signal="keyGotten" from="KeysAndLocks/Key3" to="KeysAndLocks/Lock" method="_on_Key_keyGotten"]
+
+
+[editable path="Mirror"]
+[editable path="Mirror2"]
+[editable path="Mirror3"]
+[editable path="Mirror4"]

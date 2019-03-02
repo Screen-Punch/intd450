@@ -6,18 +6,33 @@ var velocity
 onready var Nav2D = get_node("../")
 var path
 var timer = 0
+var randomNoiseTimer
+var randomNoiseDelay
+var randomMonsterNoises = ["res://Sounds/SoundFiles/24 bit/comingupto.wav", "res://Sounds/SoundFiles/24 bit/slimycrunchy.wav",
+					"res://Sounds/SoundFiles/24 bit/longgroan.wav", "res://Sounds/SoundFiles/16 bit/16 bit 2/laughing.wav",
+					"res://Sounds/SoundFiles/16 bit/16 bit 2/2crack.wav", "res://Sounds/SoundFiles/24 bit/3crack.wav"]
+var entryNoise = "res://Sounds/SoundFiles/warp.wav"
+
+var canMove = false
 
 func _ready():
 	var targets = get_tree().get_nodes_in_group("Player")
 	for t in targets:
 		target = t
 	path = Nav2D.update_navigation_path(position, target.position)
+	$AnimationPlayer.play("SpawnAnimation")
+	$AudioStreamPlayer2D.stream = load(entryNoise)
+	$AudioStreamPlayer2D.play(0)
+	randomNoiseTimer = get_node("Timer")
+	randomNoiseTimer.set_wait_time(2)
+	randomNoiseTimer.start()
 
 func _process(delta):
 	if target:
 		velocity = (target.position - position).normalized() * SPEED
 		var move_dist = SPEED * delta
-		move_along_path(move_dist)
+		if canMove:
+			move_along_path(move_dist)
 #		if (target.position - position).length() > 5:
 #			move_and_slide(velocity)
 		timer += 1
@@ -28,6 +43,21 @@ func _process(delta):
 		findNewTarget()
 
 func findNewTarget():
+	var otherAreas = $Area2D.get_overlapping_areas()
+	var otherMirrorsInSight = []
+	for i in otherAreas:
+		if "Mirror" in i.get_parent().name:
+			otherMirrorsInSight.append(i.get_parent())
+	if len(otherMirrorsInSight) > 0:
+		var closestMirrorDist = 999999
+		var closestMirror = otherMirrorsInSight[0]
+		for mirror in otherMirrorsInSight:
+			var dist = mirror.position.distance_to(global_position)
+			if dist < closestMirrorDist:
+				closestMirrorDist = dist
+				closestMirror = mirror
+		target = closestMirror
+		return
 	var targets = get_tree().get_nodes_in_group("Player")
 	for t in targets:
 		target = t
@@ -52,3 +82,17 @@ func move_along_path(distance):
 func _on_Area2D_body_entered(body):
 	if body.has_method("takeDamage"):
 		body.takeDamage()
+
+
+func _on_AnimationPlayer_animation_finished(anim_name):
+	if anim_name == "SpawnAnimation":
+		canMove = true
+
+
+func _on_Timer_timeout():
+	var index = randi() % len(randomMonsterNoises)
+	$AudioStreamPlayer2D.stream = load(randomMonsterNoises[index])
+	$AudioStreamPlayer2D.play(0)
+	randomNoiseDelay = randi() % 5 + 10
+	randomNoiseTimer.set_wait_time(randomNoiseDelay)
+	randomNoiseTimer.start()

@@ -4,6 +4,10 @@
 export.cfg
 export_presets.cfg
 Art/*.import
+Sounds/SoundFiles/*.import
+Sounds/SoundFiles/16 bit/*.import
+Sounds/SoundFiles/16 bit/16 bit 2/*.import
+Sounds/SoundFiles/24 bit/*.import
 
 # Mono-specific ignores
 .mono/

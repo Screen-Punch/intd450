@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Scenes/tileset1.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
@@ -7,12 +7,95 @@
 [ext_resource path="res://Scenes/Monster.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Mirror.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/StairBlocker.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scripts/AppearingText.gd" type="Script" id=8]
 
 [sub_resource type="NavigationPolygon" id=1]
 
-vertices = PoolVector2Array( 760.786, 132.888, 765.308, 259.505, 643.296, 256.185, 578.003, 128.001, 579.003, 256.001, 641.626, 316.312, 581.169, 318.681, 126.435, 256.063, -451.098, 257.982, -445.995, 124.146, 127.734, 128.165, 128.001, 191.001, 192.423, 191.189, 192.002, 129.001, 383.002, 127.001, 385.002, 252.001, 578.159, 571.851, 198.45, 570.757, 191.296, 319.461, 128.386, 319.461 )
-polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 4, 3, 2, 5, 6 ), PoolIntArray( 7, 8, 9, 10, 11 ), PoolIntArray( 12, 13, 14, 15 ), PoolIntArray( 4, 6, 16, 17, 18, 15 ), PoolIntArray( 7, 11, 12, 15, 18, 19 ) ]
-outlines = [ PoolVector2Array( -445.995, 124.146, 127.734, 128.165, 128.001, 191.001, 192.423, 191.189, 192.002, 129.001, 383.002, 127.001, 385.002, 252.001, 579.003, 256.001, 578.003, 128.001, 760.786, 132.888, 765.308, 259.505, 643.296, 256.185, 641.626, 316.312, 581.169, 318.681, 578.159, 571.851, 198.45, 570.757, 191.296, 319.461, 128.386, 319.461, 126.435, 256.063, -451.098, 257.982 ) ]
+vertices = PoolVector2Array( 123.785, 251.158, -451.098, 257.982, -445.995, 124.146, 125.835, 187.591, 192.002, 129.001, 634.372, 195.794, 191.453, -390.664, 570.805, -378.36, 572.855, 124.024, 1213.33, 133.223, 650.776, 253.209, 1209.65, 249.858 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 3, 2, 4, 5 ), PoolIntArray( 4, 6, 7, 8 ), PoolIntArray( 5, 4, 8, 9 ), PoolIntArray( 10, 5, 9, 11 ) ]
+outlines = [ PoolVector2Array( -445.995, 124.146, 192.002, 129.001, 191.453, -390.664, 570.805, -378.36, 572.855, 124.024, 1213.33, 133.223, 1209.65, 249.858, 650.776, 253.209, 634.372, 195.794, 125.835, 187.591, 123.785, 251.158, -451.098, 257.982 ) ]
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 32, 32 )
+
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 32, 32 )
+
+[sub_resource type="Animation" id=4]
+
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Label:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.93103, 1, 0.117188, 0 ), Color( 0.93103, 1, 0.117188, 1 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Label:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.546875, 0.893799, 1, 0 ), Color( 0.546875, 0.893799, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Label:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.93103, 1, 0.117188, 0 ), Color( 0.93103, 1, 0.117188, 1 ) ]
+}
+
+[sub_resource type="Animation" id=7]
+
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Label:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.546875, 0.893799, 1, 0 ), Color( 0.546875, 0.893799, 1, 1 ) ]
+}
 
 [node name="Level1-6a" type="Node2D"]
 
@@ -36,7 +119,7 @@ collision_layer = 1
 collision_mask = 1
 occluder_light_mask = 1
 format = 1
-tile_data = PoolIntArray( 65528, 3, 0, 65529, 3, 0, 65530, 3, 0, 65531, 3, 0, 65532, 3, 0, 65533, 3, 0, 65534, 3, 0, 65535, 3, 0, 0, 3, 0, 1, 3, 0, 2, 3, 0, 3, 3, 0, 4, 3, 0, 5, 3, 0, 6, 3, 0, 7, 3, 0, 8, 3, 0, 9, 3, 0, 10, 3, 0, 11, 3, 0, 12, 3, 0, 65538, 3, 0, 196600, 3, 0, 131078, 3, 0, 131079, 3, 0, 131080, 3, 0, 131084, 3, 0, 327672, 3, 0, 327673, 3, 0, 327674, 3, 0, 327675, 3, 0, 327676, 3, 0, 327677, 3, 0, 327678, 3, 0, 327679, 3, 0, 262144, 3, 0, 262145, 3, 0, 262154, 3, 0, 262155, 3, 0, 262156, 3, 0, 327682, 3, 0, 327689, 3, 0, 393218, 3, 0, 458761, 3, 0, 524290, 3, 0, 589827, 3, 0, 589828, 3, 0, 589829, 3, 0, 589830, 3, 0, 589831, 3, 0, 589832, 3, 0, 589833, 3, 0 )
+tile_data = PoolIntArray( -524286, 3, 0, -524285, 3, 0, -524284, 3, 0, -524283, 3, 0, -524282, 3, 0, -524281, 3, 0, -524280, 3, 0, -524279, 3, 0, -393214, 3, 0, -393207, 3, 0, -262142, 3, 0, -262135, 3, 0, -131070, 3, 0, -131063, 3, 0, 65528, 3, 0, 65529, 3, 0, 65530, 3, 0, 65531, 3, 0, 65532, 3, 0, 65533, 3, 0, 65534, 3, 0, 65535, 3, 0, 0, 3, 0, 1, 3, 0, 2, 3, 0, 9, 3, 0, 10, 3, 0, 11, 3, 0, 12, 3, 0, 13, 3, 0, 14, 3, 0, 15, 3, 0, 16, 3, 0, 17, 3, 0, 18, 3, 0, 19, 3, 0, 196600, 3, 0, 131091, 3, 0, 196610, 3, 0, 196611, 3, 0, 196612, 3, 0, 196613, 3, 0, 196614, 3, 0, 196615, 3, 0, 196616, 3, 0, 196617, 3, 0, 327672, 3, 0, 327673, 3, 0, 327674, 3, 0, 327675, 3, 0, 327676, 3, 0, 327677, 3, 0, 327678, 3, 0, 327679, 3, 0, 262144, 3, 0, 262145, 3, 0, 262154, 3, 0, 262155, 3, 0, 262156, 3, 0, 262157, 3, 0, 262158, 3, 0, 262159, 3, 0, 262160, 3, 0, 262161, 3, 0, 262162, 3, 0, 262163, 3, 0 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -47,34 +130,10 @@ position = Vector2( -115.664, 184.099 )
 
 [node name="next_W" parent="." index="2" instance=ExtResource( 3 )]
 
-position = Vector2( 713.61, 192.543 )
+position = Vector2( 1168.22, 192.033 )
 next_world = "res://Levels/Level1-7a.tscn"
 
-[node name="Label" type="Label" parent="." index="3"]
-
-modulate = Color( 1, 0.984375, 0, 1 )
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 237.0
-margin_top = 85.0
-margin_right = 369.0
-margin_bottom = 99.0
-rect_scale = Vector2( 2, 2 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-text = "These mirrors..."
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Rect", "Visibility" ]
-
-[node name="Nav2D" parent="." index="4" instance=ExtResource( 4 )]
+[node name="Nav2D" parent="." index="3" instance=ExtResource( 4 )]
 
 [node name="Monster" parent="Nav2D" index="0" instance=ExtResource( 5 )]
 
@@ -88,34 +147,306 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Mirror" parent="." index="5" instance=ExtResource( 6 )]
+[node name="Mirror" parent="." index="4" instance=ExtResource( 6 )]
 
-editor/display_folded = true
-position = Vector2( 541.278, 345.165 )
-rotation = 1.57034
-_sections_unfolded = [ "Collision", "Transform", "Visibility" ]
-
-[node name="Area2D" parent="Mirror" index="2"]
-
-position = Vector2( 0.397217, 186.774 )
-scale = Vector2( 1, 4.88782 )
-
-[node name="Mirror3" parent="." index="6" instance=ExtResource( 6 )]
-
-editor/display_folded = true
-position = Vector2( 351.712, 545.692 )
+position = Vector2( 229.259, -424.736 )
 rotation = 3.14159
 _sections_unfolded = [ "Collision", "Transform", "Visibility" ]
 
-[node name="Area2D" parent="Mirror3" index="2"]
+[node name="Area2D" type="Area2D" parent="Mirror" index="3"]
 
-position = Vector2( 0.397217, 225.189 )
-scale = Vector2( 1, 6.08833 )
+position = Vector2( 5.55188, -5.55182 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
 
-[node name="StairBlocker" parent="." index="7" instance=ExtResource( 7 )]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mirror/Area2D" index="0"]
 
-position = Vector2( 608.312, 283.657 )
+position = Vector2( 1.85153, -327.05 )
+scale = Vector2( 1, 8.10934 )
+shape = SubResource( 2 )
+
+[node name="Mirror2" parent="." index="5" instance=ExtResource( 6 )]
+
+position = Vector2( 605.744, -320.539 )
+rotation = 3.14159
+_sections_unfolded = [ "Collision", "Transform", "Visibility" ]
+mirrorDirection = "horizontal"
+
+[node name="Area2D" type="Area2D" parent="Mirror2" index="3"]
+
+position = Vector2( 5.55188, -5.55182 )
+rotation = 1.5708
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mirror2/Area2D" index="0"]
+
+position = Vector2( 3.07928, -220.811 )
+scale = Vector2( 1, 5.74043 )
+shape = SubResource( 2 )
+
+[node name="StairBlocker" parent="." index="6" instance=ExtResource( 7 )]
+
+position = Vector2( 608.312, 158.449 )
+
+[node name="Text1" type="Node2D" parent="." index="7"]
+
+position = Vector2( -43.2041, 123.792 )
+script = ExtResource( 8 )
+
+[node name="Label" type="Label" parent="Text1" index="0"]
+
+modulate = Color( 0.93103, 1, 0.117188, 1 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -322.0
+margin_top = -198.0
+margin_right = -63.0
+margin_bottom = -158.0
+rect_scale = Vector2( 2, 2 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "A room of mirrors for a third time in a row? This was an intentional design..."
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "Visibility" ]
+
+[node name="Area2D" type="Area2D" parent="Text1" index="1"]
+
+position = Vector2( -2.66534, 67.3705 )
+scale = Vector2( 1.6719, 1.96878 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Text1/Area2D" index="0"]
+
+shape = SubResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Text1" index="2"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/DisplayText = SubResource( 4 )
+blend_times = [  ]
+
+[node name="Text2" type="Node2D" parent="." index="8"]
+
+position = Vector2( 59.9981, 122.123 )
+script = ExtResource( 8 )
+
+[node name="Label" type="Label" parent="Text2" index="0"]
+
+modulate = Color( 0.546875, 0.893799, 1, 1 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -421.0
+margin_top = 269.0
+margin_right = -162.0
+margin_bottom = 312.0
+rect_scale = Vector2( 2, 2 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "This... this is torment... but I cannot deny the hunger that gnaws within!"
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "Visibility" ]
+
+[node name="Area2D" type="Area2D" parent="Text2" index="1"]
+
+position = Vector2( -2.66534, 67.3705 )
+scale = Vector2( 1.6719, 1.96878 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Text2/Area2D" index="0"]
+
+shape = SubResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Text2" index="2"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/DisplayText = SubResource( 5 )
+blend_times = [  ]
+
+[node name="Text3" type="Node2D" parent="." index="9"]
+
+position = Vector2( 681.468, 110.765 )
+script = ExtResource( 8 )
+
+[node name="Label" type="Label" parent="Text3" index="0"]
+
+modulate = Color( 0.93103, 1, 0.117188, 1 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 24.0
+margin_top = -191.0
+margin_right = 283.0
+margin_bottom = -143.0
+rect_scale = Vector2( 2, 2 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "I seem to be infuriating it, whatever it is... I should be careful, though.
+"
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "Visibility" ]
+
+[node name="Area2D" type="Area2D" parent="Text3" index="1"]
+
+position = Vector2( -2.66534, 76.2347 )
+scale = Vector2( 1.6719, 1.96878 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Text3/Area2D" index="0"]
+
+shape = SubResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Text3" index="2"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/DisplayText = SubResource( 6 )
+blend_times = [  ]
+
+[node name="Text4" type="Node2D" parent="." index="10"]
+
+position = Vector2( 750.167, 109.657 )
+script = ExtResource( 8 )
+
+[node name="Label" type="Label" parent="Text4" index="0"]
+
+modulate = Color( 0.546875, 0.893799, 1, 1 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -73.0
+margin_top = 280.0
+margin_right = 186.0
+margin_bottom = 326.0
+rect_scale = Vector2( 2, 2 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "I-I refuse! I refuse to believe that I am responsible for this... wicked image!"
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "Visibility" ]
+
+[node name="Area2D" type="Area2D" parent="Text4" index="1"]
+
+position = Vector2( -2.66534, 76.2347 )
+scale = Vector2( 1.6719, 1.96878 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Text4/Area2D" index="0"]
+
+shape = SubResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Text4" index="2"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/DisplayText = SubResource( 7 )
+blend_times = [  ]
+
+[connection signal="body_entered" from="Mirror/Area2D" to="Mirror" method="_on_Area2D_body_entered"]
+
+[connection signal="body_entered" from="Mirror2/Area2D" to="Mirror2" method="_on_Area2D_body_entered"]
+
+[connection signal="body_entered" from="Text1/Area2D" to="Text1" method="_on_Area2D_body_entered"]
+
+[connection signal="body_entered" from="Text2/Area2D" to="Text2" method="_on_Area2D_body_entered"]
+
+[connection signal="body_entered" from="Text3/Area2D" to="Text3" method="_on_Area2D_body_entered"]
+
+[connection signal="body_entered" from="Text4/Area2D" to="Text4" method="_on_Area2D_body_entered"]
 
 
-[editable path="Mirror"]
-[editable path="Mirror3"]

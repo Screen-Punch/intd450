@@ -7,7 +7,7 @@ extends Control
 func _ready():
 	# Called when the node is added to the scene for the first time.
 	# Initialization here
-	pass
+	$AnimationPlayer.play("MainMenuAnimation")
 
 func _on_NewGameButton_pressed():
 	get_tree().change_scene("res://Levels/Level1-1.tscn")
