@@ -42,6 +42,10 @@ func _process(delta):
 	else:
 		findNewTarget()
 
+# Called by crystals and such when it sees a new target
+func sawNewTarget():
+	$AnimationPlayer.play("NewTargetAnimation")
+
 func findNewTarget():
 	var otherAreas = $Area2D.get_overlapping_areas()
 	var otherMirrorsInSight = []
