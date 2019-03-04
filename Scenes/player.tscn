@@ -32,6 +32,18 @@ tracks/0/keys = {
 "update": 0,
 "values": [ Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ) ]
 }
+tracks/1/type = "value"
+tracks/1/path = NodePath("ScreenBlocker:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
 
 [sub_resource type="Shader" id=3]
 
@@ -348,10 +360,11 @@ blend_times = [  ]
 [node name="ScreenBlocker" type="Sprite" parent="CanvasLayer" index="2"]
 
 visible = false
-modulate = Color( 0, 0, 0, 1 )
+modulate = Color( 0, 0, 0, 5.96046e-008 )
 position = Vector2( 553.168, 316.428 )
 scale = Vector2( 18.2865, 10.8884 )
 texture = ExtResource( 7 )
+_sections_unfolded = [ "Visibility" ]
 
 [node name="Blur" type="ColorRect" parent="CanvasLayer" index="3"]
 
@@ -390,6 +403,8 @@ blend_times = [  ]
 [connection signal="pressed" from="CanvasLayer/PauseMenu/ExitButton/ExitConfirmation/YesExit" to="CanvasLayer/PauseMenu" method="_on_YesExit_pressed"]
 
 [connection signal="pressed" from="CanvasLayer/PauseMenu/ExitButton/ExitConfirmation/NoExit" to="CanvasLayer/PauseMenu" method="_on_NoExit_pressed"]
+
+[connection signal="animation_finished" from="CanvasLayer/SceneTransition" to="." method="_on_SceneTransition_animation_finished"]
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
 

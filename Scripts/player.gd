@@ -15,6 +15,7 @@ var magnitude = 10
 var gap = 0.1
 
 var canMove = false
+var dead = false
 
 func _ready():
 	var monsters  = get_tree().get_nodes_in_group("Monster")
@@ -62,9 +63,18 @@ func update_magnitude_and_gap(distance):
 
 func takeDamage():
 	if vulnerable:
-		var sceneName = get_tree().get_current_scene().get_name()
-		get_tree().change_scene("res://Levels/" + sceneName + ".tscn")
+		MOTION_SPEED = 0
+		dead = true
+		$CanvasLayer/SceneTransition.play_backwards("SceneTransition")
+
 
 func _on_AnimationPlayer_animation_finished(anim_name):
 	if anim_name == "SpawnAnimation":
 		canMove = true
+
+
+func _on_SceneTransition_animation_finished(anim_name):
+	if anim_name == "SceneTransition" and dead:
+		dead = false
+		MOTION_SPEED = 150
+		GameManager.reloadLevel()
