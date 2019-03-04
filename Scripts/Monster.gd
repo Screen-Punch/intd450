@@ -13,6 +13,7 @@ var randomMonsterNoises = ["res://Sounds/SoundFiles/24 bit/comingupto.wav", "res
 					"res://Sounds/SoundFiles/16 bit/16 bit 2/2crack.wav", "res://Sounds/SoundFiles/24 bit/3crack.wav"]
 var entryNoise = "res://Sounds/SoundFiles/warp.wav"
 
+onready var player = get_tree().get_nodes_in_group("Player")[0]
 var canMove = false
 
 func _ready():
@@ -42,6 +43,8 @@ func _process(delta):
 			timer = 0
 	else:
 		findNewTarget()
+	var distToTarget = position.distance_to(player.position)
+	$AudioStreamPlayer2D.volume_db = 20 - distToTarget/20
 
 # Called by crystals and such when it sees a new target
 func sawNewTarget():
