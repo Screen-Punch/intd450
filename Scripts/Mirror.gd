@@ -35,7 +35,7 @@ func _on_Area2D_body_entered(body):
 			visionType = "Area"
 		if visionType == "Area":
 			body.target = self
-			playMonsterSpotted()
+			playMonsterSpotted(body)
 			return
 		target = body
 		var space_state = get_world_2d().direct_space_state
@@ -45,11 +45,12 @@ func _on_Area2D_body_entered(body):
 			if result.collider.name == "Monster":
 				$Sprite.flip_v = true
 				result.collider.target = self
-				playMonsterSpotted()
+				playMonsterSpotted(body)
 
-func playMonsterSpotted():
+func playMonsterSpotted(body):
 	if mirrorDirection == "vertical":
 		$AnimationPlayer.play("MonsterSpotted")
+	body.sawNewTarget()
 
 
 func _on_AudioStreamPlayer2D_finished():

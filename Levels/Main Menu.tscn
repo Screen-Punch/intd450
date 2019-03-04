@@ -16,13 +16,13 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 1, 2 ),
-"transitions": PoolRealArray( -4, -4, -4 ),
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( -4, -4 ),
 "update": 0,
-"values": [ Vector2( 120.033, 380.856 ), Vector2( 355.586, 379.954 ), Vector2( 120.033, 380.856 ) ]
+"values": [ Vector2( 120.033, 380.856 ), Vector2( 355.586, 379.954 ) ]
 }
 
-[node name="Main Menu" type="Control"]
+[node name="Main Menu" type="Control" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -245,7 +245,7 @@ blend_times = [  ]
 
 [node name="Sprite" type="Sprite" parent="." index="3"]
 
-position = Vector2( 120.049, 380.856 )
+position = Vector2( 355.521, 379.954 )
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Transform" ]
 
