@@ -26,6 +26,7 @@ func _ready():
 	randomNoiseTimer = get_node("Timer")
 	randomNoiseTimer.set_wait_time(2)
 	randomNoiseTimer.start()
+	$MonsterSprites.play("MonsterMovement")
 
 func _process(delta):
 	if target:
