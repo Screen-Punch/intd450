@@ -94,6 +94,9 @@ func _on_AnimationPlayer_animation_finished(anim_name):
 		canMove = true
 
 
+func change_speed(new_speed):
+	SPEED = new_speed
+
 func _on_Timer_timeout():
 	var index = randi() % len(randomMonsterNoises)
 	$AudioStreamPlayer2D.stream = load(randomMonsterNoises[index])
