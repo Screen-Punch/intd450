@@ -54,6 +54,7 @@ position = Vector2( -115.664, 184.099 )
 
 position = Vector2( 734.641, -31.808 )
 next_world = "res://Levels/Level1-8.tscn"
+transitionText = null
 
 [node name="Label" type="Label" parent="." index="3"]
 

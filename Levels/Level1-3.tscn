@@ -76,6 +76,7 @@ position = Vector2( 64.0522, -595.372 )
 
 position = Vector2( 1167.87, -313.486 )
 next_world = "res://Levels/Level1-4.tscn"
+transitionText = "I expected that, one day, another wanderlusting soul would arrive..."
 
 [node name="Nav2D" parent="." index="3" instance=ExtResource( 4 )]
 
