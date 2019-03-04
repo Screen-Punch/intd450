@@ -48,6 +48,7 @@ func _process(delta):
 
 # Called by crystals and such when it sees a new target
 func sawNewTarget():
+	$SurpriseMarkAudio.play(0)
 	$AnimationPlayer.play("NewTargetAnimation")
 
 func findNewTarget():
