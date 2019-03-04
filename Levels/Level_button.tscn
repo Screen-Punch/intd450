@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Scripts/Level_button.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/tileset1.tres" type="TileSet" id=2]
@@ -8,7 +8,13 @@
 [ext_resource path="res://Scenes/Nav2D.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/Monster.tscn" type="PackedScene" id=7]
 
-[node name="Node2D" type="Node2D" index="0"]
+[sub_resource type="NavigationPolygon" id=1]
+
+vertices = PoolVector2Array( 820.453, 249.232, 840.958, 659.341, 12.5377, 634.735, 16.6388, 249.232, 812.251, 130.3, -696.951, 117.997, -705.153, 249.232 )
+polygons = [ PoolIntArray( 0, 1, 2, 3, 4 ), PoolIntArray( 5, 4, 3, 6 ) ]
+outlines = [ PoolVector2Array( -696.951, 117.997, -705.153, 249.232, 16.6388, 249.232, 12.5377, 634.735, 840.958, 659.341, 820.453, 249.232, 812.251, 130.3 ) ]
+
+[node name="Node2D" type="Node2D"]
 
 position = Vector2( 0, -773 )
 script = ExtResource( 1 )
@@ -89,27 +95,28 @@ max_lines_visible = -1
 
 [node name="KinematicBody2D" parent="." index="8" instance=ExtResource( 5 )]
 
-position = Vector2( 126.134, 271.222 )
-scale = Vector2( 0.44245, 0.44245 )
+position = Vector2( 51.847, 292.7 )
+scale = Vector2( 0.297237, 0.297237 )
 
 [node name="Nav2D" parent="." index="9" instance=ExtResource( 6 )]
 
 [node name="Monster" parent="Nav2D" index="0" instance=ExtResource( 7 )]
 
-position = Vector2( 68.7532, 243.092 )
+position = Vector2( -613.576, 198.941 )
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Nav2D" index="1"]
 
-navpoly = null
+visible = false
+navpoly = SubResource( 1 )
 enabled = true
 
-[connection signal="reset" from="." to="ButtonBottom" method="_on_Node2D_reset"]
+[connection signal="reset" from="." to="ButtonLeft" method="_on_Node2D_reset"]
 
 [connection signal="reset" from="." to="ButtonRight" method="_on_Node2D_reset"]
 
 [connection signal="reset" from="." to="ButtonUp" method="_on_Node2D_reset"]
 
-[connection signal="reset" from="." to="ButtonLeft" method="_on_Node2D_reset"]
+[connection signal="reset" from="." to="ButtonBottom" method="_on_Node2D_reset"]
 
 [connection signal="button_pressed" from="ButtonUp" to="." method="_on_ButtonUp_button_pressed"]
 
