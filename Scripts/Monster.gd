@@ -26,6 +26,7 @@ func _ready():
 	randomNoiseTimer = get_node("Timer")
 	randomNoiseTimer.set_wait_time(2)
 	randomNoiseTimer.start()
+	$MonsterSprites.play("MonsterMovement")
 
 func _process(delta):
 	if target:
@@ -92,6 +93,9 @@ func _on_AnimationPlayer_animation_finished(anim_name):
 	if anim_name == "SpawnAnimation":
 		canMove = true
 
+
+func change_speed(new_speed):
+	SPEED = new_speed
 
 func _on_Timer_timeout():
 	var index = randi() % len(randomMonsterNoises)
