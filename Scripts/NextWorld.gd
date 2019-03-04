@@ -9,6 +9,8 @@ func _ready():
 	# Initialization here
 	if !next_world:
 		next_world = "res://Levels/Main Menu.tscn"
+	if !transitionText:
+		transitionText = "What is that sound..?"
 	$CanvasLayer/Label.text = transitionText
 
 
