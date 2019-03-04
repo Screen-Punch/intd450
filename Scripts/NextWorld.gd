@@ -2,13 +2,14 @@ extends Area2D
 
 # class member variables go here, for example:
 export (String, FILE, "*.tscn") var next_world
-# var b = "textvar"
+export (String) var transitionText
 
 func _ready():
 	# Called when the node is added to the scene for the first time.
 	# Initialization here
 	if !next_world:
 		next_world = "res://Levels/Main Menu.tscn"
+	$CanvasLayer/Label.text = transitionText
 
 
 func _process(delta):

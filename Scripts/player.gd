@@ -15,6 +15,7 @@ var magnitude = 10
 var gap = 0.1
 
 var canMove = false
+var dead = false
 
 func _ready():
 	var monsters  = get_tree().get_nodes_in_group("Monster")
@@ -54,17 +55,27 @@ func _process(delta):
 			update_magnitude_and_gap(distance)
 			$Camera2D/Shaker.shake(magnitude)
 			timer = 0
-		var blurLevel = -1*(distance/5)+20
-		$CanvasLayer/Blur.updateBlur(blurLevel)
+		if vulnerable:
+			var blurLevel = -1*((distance-20)/5)+20 # Scale runs from [0,20]. Outer 20 moves value into this range. Inner +20 affects distance at which blur starts occuring
+			$CanvasLayer/Blur.updateBlur(blurLevel)
 
 func update_magnitude_and_gap(distance):
 	magnitude = pow(2,-distance/50) * 25
 
 func takeDamage():
 	if vulnerable:
-		var sceneName = get_tree().get_current_scene().get_name()
-		get_tree().change_scene("res://Levels/" + sceneName + ".tscn")
+		MOTION_SPEED = 0
+		dead = true
+		$CanvasLayer/SceneTransition.play_backwards("SceneTransition")
+
 
 func _on_AnimationPlayer_animation_finished(anim_name):
 	if anim_name == "SpawnAnimation":
 		canMove = true
+
+
+func _on_SceneTransition_animation_finished(anim_name):
+	if anim_name == "SceneTransition" and dead:
+		dead = false
+		MOTION_SPEED = 150
+		GameManager.reloadLevel()
