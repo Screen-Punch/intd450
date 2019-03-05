@@ -66,6 +66,7 @@ func findNewTarget():
 				closestMirrorDist = dist
 				closestMirror = mirror
 		target = closestMirror
+		sawNewTarget()
 		return
 	var targets = get_tree().get_nodes_in_group("Player")
 	for t in targets:

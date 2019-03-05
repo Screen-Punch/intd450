@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Scenes/dungeonTileset.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
@@ -6,7 +6,6 @@
 [ext_resource path="res://Scenes/Nav2D.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Monster.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Mirror.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Scenes/StairBlocker.tscn" type="PackedScene" id=7]
 
 [sub_resource type="NavigationPolygon" id=1]
 
@@ -140,10 +139,6 @@ _sections_unfolded = [ "Transform" ]
 position = Vector2( 191.945, 9.07295 )
 scale = Vector2( 4.67544, 1 )
 shape = SubResource( 2 )
-
-[node name="StairBlocker" parent="." index="7" instance=ExtResource( 7 )]
-
-position = Vector2( 674.747, -32.649 )
 
 [connection signal="body_entered" from="Mirror/Area2D" to="Mirror" method="_on_Area2D_body_entered"]
 

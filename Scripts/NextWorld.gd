@@ -3,6 +3,7 @@ extends Area2D
 # class member variables go here, for example:
 export (String, FILE, "*.tscn") var next_world
 export (String) var transitionText
+var blocked = true
 
 func _ready():
 	# Called when the node is added to the scene for the first time.
@@ -21,7 +22,7 @@ func _process(delta):
 
 
 func _on_next_W_body_entered(body):
-	if body.is_in_group("Player"):
+	if body.is_in_group("Player") and !blocked:
 		body.vulnerable = false
 		$CanvasLayer/AnimationPlayer.play("SceneTransition")
 
@@ -29,3 +30,7 @@ func _on_next_W_body_entered(body):
 func _on_AnimationPlayer_animation_finished(anim_name):
 	if anim_name == "SceneTransition":
 		get_tree().change_scene(next_world)
+
+func revealExit():
+	blocked = false
+	$CanvasLayer/AnimationPlayer.play("ExitUnlocked")

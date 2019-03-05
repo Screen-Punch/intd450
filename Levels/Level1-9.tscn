@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Scenes/dungeonTileset.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
@@ -6,7 +6,6 @@
 [ext_resource path="res://Scenes/Nav2D.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Monster.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Mirror.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Scenes/StairBlocker.tscn" type="PackedScene" id=7]
 
 [sub_resource type="NavigationPolygon" id=1]
 
@@ -19,7 +18,7 @@ outlines = [ PoolVector2Array( -445.995, 124.146, 258.001, 125, 257.426, -134.03
 custom_solver_bias = 0.0
 extents = Vector2( 32, 32 )
 
-[node name="Level1-9" type="Node2D" index="0"]
+[node name="Level1-9" type="Node2D"]
 
 _sections_unfolded = [ "Transform" ]
 
@@ -166,10 +165,6 @@ audio_bus_name = "Master"
 position = Vector2( 183.845, -86.1111 )
 scale = Vector2( 4.4616, 1.22541 )
 shape = SubResource( 2 )
-
-[node name="StairBlocker" parent="." index="8" instance=ExtResource( 7 )]
-
-position = Vector2( 870.642, 96.5868 )
 
 [connection signal="body_entered" from="Mirror/Area2D" to="Mirror" method="_on_Area2D_body_entered"]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scenes/dungeonTileset.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
@@ -6,8 +6,7 @@
 [ext_resource path="res://Scenes/Nav2D.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Monster.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Mirror.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Scenes/StairBlocker.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Scripts/AppearingText.gd" type="Script" id=8]
+[ext_resource path="res://Scripts/AppearingText.gd" type="Script" id=7]
 
 [sub_resource type="NavigationPolygon" id=1]
 
@@ -43,7 +42,7 @@ tracks/0/keys = {
 "values": [ Color( 0.546875, 0.893799, 1, 0 ), Color( 0.546875, 0.893799, 1, 1 ) ]
 }
 
-[node name="Level1-3" type="Node2D" index="0"]
+[node name="Level1-3" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="." index="0"]
 
@@ -115,15 +114,10 @@ position = Vector2( 0, 145.522 )
 scale = Vector2( 1, 5.35212 )
 shape = SubResource( 2 )
 
-[node name="StairBlocker" parent="." index="5" instance=ExtResource( 7 )]
-
-position = Vector2( 673.108, -321.314 )
-scale = Vector2( 1.23156, 1.91372 )
-
-[node name="Text1" type="Node2D" parent="." index="6"]
+[node name="Text1" type="Node2D" parent="." index="5"]
 
 position = Vector2( 485.603, -385.542 )
-script = ExtResource( 8 )
+script = ExtResource( 7 )
 
 [node name="Label" type="Label" parent="Text1" index="0"]
 
