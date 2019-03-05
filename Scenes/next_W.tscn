@@ -39,6 +39,18 @@ tracks/1/keys = {
 "update": 0,
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
+tracks/2/type = "value"
+tracks/2/path = NodePath("ScreenBlocker:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
 
 [sub_resource type="Animation" id=3]
 
@@ -111,6 +123,7 @@ transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 
 [node name="ScreenBlocker" type="Sprite" parent="CanvasLayer" index="0"]
 
+visible = false
 modulate = Color( 0, 0, 0, 0 )
 position = Vector2( 532.765, 310.185 )
 scale = Vector2( 17.6489, 10.6933 )
