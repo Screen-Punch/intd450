@@ -6,6 +6,7 @@ extends KinematicBody2D
 
 var attack = 10
 var radius = 16
+var attack_times = 30
 
 func start(pos):
 	position = pos
@@ -36,6 +37,10 @@ func _on_Area2D_body_entered(body):
 			velocity.x += 10
 			position += velocity
 	if body.name == "Monster":
+		if attack_times==0:
+			hide()
+			$Area2D/CollisionShape2D.disabled =true
+		attack_times-=1
 		var vec = Vector2()
 		vec.x -=20
 		body.position = body.position + vec
