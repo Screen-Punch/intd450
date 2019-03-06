@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Scenes/dungeonTileset.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
@@ -6,8 +6,7 @@
 [ext_resource path="res://Scenes/Nav2D.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Monster.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Mirror.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Scenes/StairBlocker.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Scripts/AppearingText.gd" type="Script" id=8]
+[ext_resource path="res://Scripts/AppearingText.gd" type="Script" id=7]
 
 [sub_resource type="NavigationPolygon" id=1]
 
@@ -97,7 +96,7 @@ tracks/0/keys = {
 "values": [ Color( 0.546875, 0.893799, 1, 0 ), Color( 0.546875, 0.893799, 1, 1 ) ]
 }
 
-[node name="Level1-6a" type="Node2D"]
+[node name="Level1-6a" type="Node2D" index="0"]
 
 _sections_unfolded = [ "Transform" ]
 
@@ -196,14 +195,10 @@ position = Vector2( 3.07928, -220.811 )
 scale = Vector2( 1, 5.74043 )
 shape = SubResource( 2 )
 
-[node name="StairBlocker" parent="." index="6" instance=ExtResource( 7 )]
-
-position = Vector2( 608.312, 158.449 )
-
-[node name="Text1" type="Node2D" parent="." index="7"]
+[node name="Text1" type="Node2D" parent="." index="6"]
 
 position = Vector2( -43.2041, 123.792 )
-script = ExtResource( 8 )
+script = ExtResource( 7 )
 
 [node name="Label" type="Label" parent="Text1" index="0"]
 
@@ -259,10 +254,10 @@ playback_speed = 1.0
 anims/DisplayText = SubResource( 4 )
 blend_times = [  ]
 
-[node name="Text2" type="Node2D" parent="." index="8"]
+[node name="Text2" type="Node2D" parent="." index="7"]
 
 position = Vector2( 59.9981, 122.123 )
-script = ExtResource( 8 )
+script = ExtResource( 7 )
 
 [node name="Label" type="Label" parent="Text2" index="0"]
 
@@ -318,10 +313,10 @@ playback_speed = 1.0
 anims/DisplayText = SubResource( 5 )
 blend_times = [  ]
 
-[node name="Text3" type="Node2D" parent="." index="9"]
+[node name="Text3" type="Node2D" parent="." index="8"]
 
 position = Vector2( 681.468, 110.765 )
-script = ExtResource( 8 )
+script = ExtResource( 7 )
 
 [node name="Label" type="Label" parent="Text3" index="0"]
 
@@ -378,10 +373,10 @@ playback_speed = 1.0
 anims/DisplayText = SubResource( 6 )
 blend_times = [  ]
 
-[node name="Text4" type="Node2D" parent="." index="10"]
+[node name="Text4" type="Node2D" parent="." index="9"]
 
 position = Vector2( 750.167, 109.657 )
-script = ExtResource( 8 )
+script = ExtResource( 7 )
 
 [node name="Label" type="Label" parent="Text4" index="0"]
 

@@ -5,7 +5,7 @@ extends KinematicBody2D
 # var b = "textvar"
 
 var attack = 10
-
+var radius = 16
 
 func start(pos):
 	position = pos
@@ -16,22 +16,22 @@ func _on_Area2D_body_entered(body):
 	if body.name == "Player":
 		print(body.position)
 		
-		if body.position.y>position.y:
+		if body.position.y>position.y+radius:
 			var velocity = Vector2()
 			velocity.y -= 10
 			position += velocity
 			
-		if body.position.x>position.x:
+		if body.position.x>position.x+radius:
 			var velocity = Vector2()
 			velocity.x -= 10
 			position += velocity
 			
-		if body.position.y<position.y:
+		if body.position.y<position.y-radius:
 			var velocity = Vector2()
 			velocity.y += 10
 			position += velocity
 			
-		if body.position.x<position.x:
+		if body.position.x<position.x-radius:
 			var velocity = Vector2()
 			velocity.x += 10
 			position += velocity
