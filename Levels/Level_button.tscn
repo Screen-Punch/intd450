@@ -14,7 +14,7 @@ vertices = PoolVector2Array( 820.453, 249.232, 840.958, 659.341, 12.5377, 634.73
 polygons = [ PoolIntArray( 0, 1, 2, 3, 4 ), PoolIntArray( 5, 4, 3, 6 ) ]
 outlines = [ PoolVector2Array( -696.951, 117.997, -705.153, 249.232, 16.6388, 249.232, 12.5377, 634.735, 840.958, 659.341, 820.453, 249.232, 812.251, 130.3 ) ]
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node2D" index="0"]
 
 position = Vector2( 0, -773 )
 script = ExtResource( 1 )
@@ -112,9 +112,9 @@ enabled = true
 
 [connection signal="reset" from="." to="ButtonLeft" method="_on_Node2D_reset"]
 
-[connection signal="reset" from="." to="ButtonRight" method="_on_Node2D_reset"]
-
 [connection signal="reset" from="." to="ButtonUp" method="_on_Node2D_reset"]
+
+[connection signal="reset" from="." to="ButtonRight" method="_on_Node2D_reset"]
 
 [connection signal="reset" from="." to="ButtonBottom" method="_on_Node2D_reset"]
 
