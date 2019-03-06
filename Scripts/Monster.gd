@@ -45,6 +45,7 @@ func _process(delta):
 		findNewTarget()
 	var distToTarget = position.distance_to(player.position)
 	$AudioStreamPlayer2D.volume_db = 20 - distToTarget/20
+	$Sprite.rotation += 0.01
 
 # Called by crystals and such when it sees a new target
 func sawNewTarget():
@@ -66,6 +67,7 @@ func findNewTarget():
 				closestMirrorDist = dist
 				closestMirror = mirror
 		target = closestMirror
+		sawNewTarget()
 		return
 	var targets = get_tree().get_nodes_in_group("Player")
 	for t in targets:

@@ -55,9 +55,10 @@ func _process(delta):
 			update_magnitude_and_gap(distance)
 			$Camera2D/Shaker.shake(magnitude)
 			timer = 0
+		var blurLevel = 0
 		if vulnerable:
-			var blurLevel = -1*((distance-20)/5)+20 # Scale runs from [0,20]. Outer 20 moves value into this range. Inner +20 affects distance at which blur starts occuring
-			$CanvasLayer/Blur.updateBlur(blurLevel)
+			blurLevel = -1*((distance)/4)+30 # Scale runs from [0,30]. Outer 30 moves value into this range.
+		$CanvasLayer/Blur.updateBlur(blurLevel)
 
 func update_magnitude_and_gap(distance):
 	magnitude = pow(2,-distance/50) * 25
