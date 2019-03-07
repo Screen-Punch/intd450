@@ -10,7 +10,7 @@ func _ready():
 	$AnimationPlayer.play("MainMenuAnimation")
 
 func _on_NewGameButton_pressed():
-	get_tree().change_scene("res://Levels/Level1-1.tscn")
+	get_tree().change_scene("res://Levels/Level1-3.tscn")
 
 
 func _on_ExitButton_pressed():

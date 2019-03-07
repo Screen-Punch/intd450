@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Scenes/tileset1.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/Nav2D.tscn" type="PackedScene" id=2]
@@ -25,7 +25,12 @@ extents = Vector2( 32, 32 )
 custom_solver_bias = 0.0
 extents = Vector2( 32, 32 )
 
-[node name="Level 1-13" type="Node2D"]
+[sub_resource type="RectangleShape2D" id=4]
+
+custom_solver_bias = 0.0
+extents = Vector2( 32, 32 )
+
+[node name="Level 1-13" type="Node2D" index="0"]
 
 [node name="TileMap" type="TileMap" parent="." index="0"]
 
@@ -148,7 +153,6 @@ shape = SubResource( 3 )
 
 [node name="Mirror5" parent="." index="7" instance=ExtResource( 8 )]
 
-editor/display_folded = true
 position = Vector2( 737.337, -314.036 )
 
 [node name="Area2D" type="Area2D" parent="Mirror5" index="4"]
@@ -167,12 +171,11 @@ position = Vector2( 0, 409.752 )
 scale = Vector2( 1, 9.84403 )
 shape = SubResource( 3 )
 
-[node name="Mirror6" parent="." index="8" instance=ExtResource( 8 )]
+[node name="Mirror2" parent="." index="8" instance=ExtResource( 8 )]
 
-editor/display_folded = true
-position = Vector2( 608, 66.0631 )
+position = Vector2( 608.089, 61.217 )
 
-[node name="Area2D" type="Area2D" parent="Mirror6" index="4"]
+[node name="Area2D" type="Area2D" parent="Mirror2" index="4"]
 
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -182,11 +185,11 @@ angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Mirror6/Area2D" index="0"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mirror2/Area2D" index="0"]
 
-position = Vector2( 0, 223.796 )
-scale = Vector2( 1, 4.53099 )
-shape = SubResource( 3 )
+position = Vector2( 0, 175.342 )
+scale = Vector2( 1, 6.00979 )
+shape = SubResource( 4 )
 
 [connection signal="keyGotten" from="KeysAndLocks/Key" to="KeysAndLocks/Lock3" method="_on_Key_keyGotten"]
 
@@ -200,6 +203,6 @@ shape = SubResource( 3 )
 
 [connection signal="body_entered" from="Mirror5/Area2D" to="Mirror5" method="_on_Area2D_body_entered"]
 
-[connection signal="body_entered" from="Mirror6/Area2D" to="Mirror6" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Mirror2/Area2D" to="Mirror2" method="_on_Area2D_body_entered"]
 
 
