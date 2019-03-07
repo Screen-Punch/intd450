@@ -18,4 +18,3 @@ func reloadLevel():
 func loadNextLevel(sceneName):
 	deathsInLevel = 0
 	get_tree().change_scene(sceneName)
-#get_tree().change_scene("res://Levels/" + sceneName + ".tscn")
