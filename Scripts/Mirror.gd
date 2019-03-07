@@ -19,9 +19,9 @@ func _physics_process(delta):
 func takeDamage():
 	name = "deadmirror"
 	$AudioStreamPlayer2D.play(0)
-	var enemies = get_tree().get_nodes_in_group("Monster")
-	for enemy in enemies:
-		enemy.findNewTarget();
+	var enemy = get_tree().get_nodes_in_group("Monster")[0]
+	if enemy.target == self:
+		enemy.findNewTarget()
 	var mirrorsLeft = get_tree().get_nodes_in_group("Mirror")
 	if len(mirrorsLeft)-1 == 0:
 		var exits = get_tree().get_nodes_in_group("Exit")
@@ -55,7 +55,3 @@ func playMonsterSpotted(body):
 
 func _on_AudioStreamPlayer2D_finished():
 	queue_free()
-
-
-func _on_Area2D2_body_entered(body):
-	pass # replace with function body

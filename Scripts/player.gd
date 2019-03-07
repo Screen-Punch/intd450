@@ -26,6 +26,11 @@ func _ready():
 	$AnimationPlayer.play("SpawnAnimation")
 	$CanvasLayer/Blur.show()
 
+func _input(event):
+	if event is InputEventKey and target and !target.spawned:
+		if event.pressed:
+			target.spawn()
+
 func _physics_process(delta):
 	var motion = Vector2()
 	
@@ -79,4 +84,4 @@ func _on_SceneTransition_animation_finished(anim_name):
 	if anim_name == "SceneTransition" and dead:
 		dead = false
 		MOTION_SPEED = 150
-		GameManager.reloadLevel()
+		GameManagerNode.reloadLevel()

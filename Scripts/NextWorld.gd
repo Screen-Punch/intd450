@@ -3,7 +3,9 @@ extends Area2D
 # class member variables go here, for example:
 export (String, FILE, "*.tscn") var next_world
 export (String) var transitionText
+export (String) var nextLevelText
 var blocked = true
+var textCanAdvance = false
 
 func _ready():
 	# Called when the node is added to the scene for the first time.
@@ -12,14 +14,18 @@ func _ready():
 		next_world = "res://Levels/Main Menu.tscn"
 	if !transitionText:
 		transitionText = "What is that sound..?"
+	if !nextLevelText:
+		nextLevelText = "Level: ???"
 	$CanvasLayer/Label.text = transitionText
 
 
 func _process(delta):
-	# Called every frame. Delta is time since last frame.
-	# Update game logic here.
 	pass
 
+func _input(event):
+	if event is InputEventKey and textCanAdvance:
+		if event.pressed:
+			GameManagerNode.loadNextLevel(next_world, nextLevelText)
 
 func _on_next_W_body_entered(body):
 	if body.is_in_group("Player") and !blocked:
@@ -29,7 +35,8 @@ func _on_next_W_body_entered(body):
 
 func _on_AnimationPlayer_animation_finished(anim_name):
 	if anim_name == "SceneTransition":
-		get_tree().change_scene(next_world)
+		textCanAdvance = true
+
 
 func revealExit():
 	blocked = false

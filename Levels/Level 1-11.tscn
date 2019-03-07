@@ -20,7 +20,7 @@ outlines = [ PoolVector2Array( -448.999, 64.0005, -38.0213, 65.5188, -64.1939, -
 custom_solver_bias = 0.0
 extents = Vector2( 32, 32 )
 
-[node name="Level 1-11" type="Node2D"]
+[node name="Level 1-11" type="Node2D" index="0"]
 
 [node name="TileMap" type="TileMap" parent="." index="0"]
 
