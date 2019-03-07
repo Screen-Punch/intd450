@@ -115,6 +115,7 @@ script = ExtResource( 1 )
 _sections_unfolded = [ "Region" ]
 next_world = null
 transitionText = "What is that sound?"
+nextLevelText = null
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
 

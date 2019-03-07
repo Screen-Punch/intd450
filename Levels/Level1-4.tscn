@@ -51,6 +51,7 @@ position = Vector2( -166.923, 0 )
 
 position = Vector2( 701.06, -131.162 )
 next_world = "res://Levels/Level1-5.tscn"
+nextLevelText = null
 
 [node name="Nav2D" parent="." index="3" instance=ExtResource( 4 )]
 

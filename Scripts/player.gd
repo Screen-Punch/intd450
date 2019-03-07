@@ -79,4 +79,4 @@ func _on_SceneTransition_animation_finished(anim_name):
 	if anim_name == "SceneTransition" and dead:
 		dead = false
 		MOTION_SPEED = 150
-		GameManager.reloadLevel()
+		GameManagerNode.reloadLevel()
