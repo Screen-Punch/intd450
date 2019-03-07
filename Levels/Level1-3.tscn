@@ -7,18 +7,18 @@
 [ext_resource path="res://Scenes/Monster.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Mirror.tscn" type="PackedScene" id=6]
 
-[sub_resource type="NavigationPolygon" id=1]
+[sub_resource type="NavigationPolygon" id=4]
 
-vertices = PoolVector2Array( 688.051, 129.977, 692.573, 253.58, -516.318, 247.55, -148.526, 123.948, -530.637, -388.605, -405.429, -387.497, -397.673, 121.092, -281.329, 121.092, -155.041, -155.599, -269.042, -152.599 )
-polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 2, 4, 5, 6 ), PoolIntArray( 3, 2, 6, 7 ), PoolIntArray( 8, 3, 7, 9 ) ]
-outlines = [ PoolVector2Array( -148.526, 123.948, 688.051, 129.977, 692.573, 253.58, -516.318, 247.55, -530.637, -388.605, -405.429, -387.497, -397.673, 121.092, -281.329, 121.092, -269.042, -152.599, -155.041, -155.599 ) ]
+vertices = PoolVector2Array( -260.769, 125.646, -271.021, -138.876, -141.836, -130.674, -123.381, 119.495, 676.337, 133.849, 678.388, 248.68, -521.19, 240.478, -389.954, 129.748, -531.443, -391.095, -408.409, -393.145 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 3, 4, 5, 6, 0 ), PoolIntArray( 7, 0, 6 ), PoolIntArray( 7, 6, 8, 9 ) ]
+outlines = [ PoolVector2Array( -271.021, -138.876, -141.836, -130.674, -123.381, 119.495, 676.337, 133.849, 678.388, 248.68, -521.19, 240.478, -531.443, -391.095, -408.409, -393.145, -389.954, 129.748, -260.769, 125.646 ) ]
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=5]
 
 custom_solver_bias = 0.0
 extents = Vector2( 32, 32 )
 
-[node name="Level1-3" type="Node2D" index="0"]
+[node name="Level1-3" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="." index="0"]
 
@@ -52,14 +52,13 @@ position = Vector2( 64.0522, -595.372 )
 position = Vector2( 1167.87, -313.486 )
 next_world = "res://Levels/Level1-4.tscn"
 transitionText = "I expected that, one day, another wanderlusting soul would arrive..."
-nextLevelText = null
 
 [node name="Nav2D" parent="." index="3" instance=ExtResource( 4 )]
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Nav2D" index="0"]
 
 position = Vector2( 529.043, -505.4 )
-navpoly = SubResource( 1 )
+navpoly = SubResource( 4 )
 enabled = true
 __meta__ = {
 "_edit_lock_": true
@@ -89,7 +88,7 @@ audio_bus_name = "Master"
 
 position = Vector2( 0, 145.522 )
 scale = Vector2( 1, 5.35212 )
-shape = SubResource( 2 )
+shape = SubResource( 5 )
 
 [connection signal="body_entered" from="Mirror/Area2D" to="Mirror" method="_on_Area2D_body_entered"]
 

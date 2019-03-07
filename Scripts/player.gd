@@ -27,7 +27,7 @@ func _ready():
 	$CanvasLayer/Blur.show()
 
 func _input(event):
-	if event is InputEventKey and !target.spawned:
+	if event is InputEventKey and target and !target.spawned:
 		if event.pressed:
 			target.spawn()
 
