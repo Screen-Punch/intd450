@@ -21,7 +21,8 @@ func takeDamage():
 	$AudioStreamPlayer2D.play(0)
 	var enemies = get_tree().get_nodes_in_group("Monster")
 	for enemy in enemies:
-		enemy.findNewTarget();
+		if enemy.target == self:
+			enemy.findNewTarget();
 	var mirrorsLeft = get_tree().get_nodes_in_group("Mirror")
 	if len(mirrorsLeft)-1 == 0:
 		var exits = get_tree().get_nodes_in_group("Exit")

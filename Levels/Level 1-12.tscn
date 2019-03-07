@@ -39,7 +39,7 @@ tracks/0/keys = {
 "values": [ 0, 2, 3, 4, 5 ]
 }
 
-[node name="Level 1-12" type="Node2D" index="0"]
+[node name="Level 1-12" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="." index="0"]
 
