@@ -69,9 +69,7 @@ func findNewTarget():
 		target = closestMirror
 		sawNewTarget()
 		return
-	var targets = get_tree().get_nodes_in_group("Player")
-	for t in targets:
-		target = t
+	target = get_tree().get_nodes_in_group("Player")[0]
 
 # Used Nav2D to move
 func move_along_path(distance):

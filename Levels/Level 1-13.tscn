@@ -11,9 +11,9 @@
 
 [sub_resource type="NavigationPolygon" id=1]
 
-vertices = PoolVector2Array( 448.699, 252.819, 900.901, 444.252, -59.2755, 438.222, 252.744, 249.805, 255.759, -1.92148, -66.8122, 191.018, -62.2901, 64.4016, 896.704, 62.3092, 704.362, 125.808, 640.297, 125.209, 577.43, 128.802, 895.969, -1.64395, 704.362, 2.46811, 837.162, -129.55, 575.633, 58.7495, 640.896, 62.9407, 510.371, 127.006, 447.191, 2.60056, 511.568, -0.525574, 121.606, -193.354, 124.62, -255.155, 840.608, -259.677, 576.232, -63.9918, 898.175, -130.285, 1153.74, -0.180206, 1153.74, 65.3603, -448.999, 189.001, -448.999, 64.0005, -62.2901, -190.339, 576.232, -1.12431, 639.1, -0.525574, 639.1, -63.9918 )
-polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 4, 3, 2, 5, 6 ), PoolIntArray( 7, 1, 0, 8 ), PoolIntArray( 9, 8, 0, 10 ), PoolIntArray( 11, 7, 8, 12, 13 ), PoolIntArray( 10, 14, 15, 9 ), PoolIntArray( 16, 10, 0 ), PoolIntArray( 16, 0, 17, 18 ), PoolIntArray( 4, 19, 20, 21, 13, 22 ), PoolIntArray( 13, 23, 11 ), PoolIntArray( 24, 25, 7, 11 ), PoolIntArray( 26, 27, 6, 5 ), PoolIntArray( 4, 6, 28, 19 ), PoolIntArray( 22, 29, 18 ), PoolIntArray( 12, 30, 31, 13 ), PoolIntArray( 22, 18, 17, 4 ), PoolIntArray( 22, 13, 31 ) ]
-outlines = [ PoolVector2Array( -448.999, 64.0005, -62.2901, 64.4016, -62.2901, -190.339, 121.606, -193.354, 124.62, -255.155, 840.608, -259.677, 837.162, -129.55, 898.175, -130.285, 895.969, -1.64395, 1153.74, -0.180206, 1153.74, 65.3603, 896.704, 62.3092, 900.901, 444.252, -59.2755, 438.222, -66.8122, 191.018, -448.999, 189.001 ), PoolVector2Array( 255.759, -1.92148, 447.191, 2.60056, 448.699, 252.819, 252.744, 249.805 ), PoolVector2Array( 511.568, -0.525574, 576.232, -1.12431, 576.232, -63.9918, 639.1, -63.9918, 639.1, -0.525574, 704.362, 2.46811, 704.362, 125.808, 640.297, 125.209, 640.896, 62.9407, 575.633, 58.7495, 577.43, 128.802, 510.371, 127.006 ) ]
+vertices = PoolVector2Array( 448.699, 252.819, 900.901, 444.252, -59.2755, 438.222, 252.744, 249.805, 255.759, -1.92148, -66.8122, 191.018, -62.2901, 64.4016, 896.704, 62.3092, 704.362, 125.808, 640.297, 125.209, 577.43, 128.802, 895.969, -1.64395, 704.362, 2.46811, 837.162, -129.55, 575.633, 58.7495, 640.896, 62.9407, 510.371, 127.006, 447.191, 2.60056, 511.568, -0.525574, 121.606, -193.354, 124.62, -255.155, 840.608, -259.677, 576.232, -63.9918, 898.175, -130.285, 1153.74, -0.180206, 1153.74, 65.3603, -448.999, 189.001, -448.999, 64.0005, -62.2901, -190.339, 670.717, -23.4651, 639.1, -63.9918, 542.811, -27.1406 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 4, 3, 2, 5, 6 ), PoolIntArray( 7, 1, 0, 8 ), PoolIntArray( 9, 8, 0, 10 ), PoolIntArray( 11, 7, 8, 12, 13 ), PoolIntArray( 10, 14, 15, 9 ), PoolIntArray( 16, 10, 0 ), PoolIntArray( 16, 0, 17, 18 ), PoolIntArray( 4, 19, 20, 21, 13, 22 ), PoolIntArray( 13, 23, 11 ), PoolIntArray( 24, 25, 7, 11 ), PoolIntArray( 26, 27, 6, 5 ), PoolIntArray( 4, 6, 28, 19 ), PoolIntArray( 13, 12, 29, 30 ), PoolIntArray( 22, 31, 18, 17, 4 ), PoolIntArray( 22, 13, 30 ) ]
+outlines = [ PoolVector2Array( -448.999, 64.0005, -62.2901, 64.4016, -62.2901, -190.339, 121.606, -193.354, 124.62, -255.155, 840.608, -259.677, 837.162, -129.55, 898.175, -130.285, 895.969, -1.64395, 1153.74, -0.180206, 1153.74, 65.3603, 896.704, 62.3092, 900.901, 444.252, -59.2755, 438.222, -66.8122, 191.018, -448.999, 189.001 ), PoolVector2Array( 255.759, -1.92148, 447.191, 2.60056, 448.699, 252.819, 252.744, 249.805 ), PoolVector2Array( 511.568, -0.525574, 542.811, -27.1406, 576.232, -63.9918, 639.1, -63.9918, 670.717, -23.4651, 704.362, 2.46811, 704.362, 125.808, 640.297, 125.209, 640.896, 62.9407, 575.633, 58.7495, 577.43, 128.802, 510.371, 127.006 ) ]
 
 [sub_resource type="RectangleShape2D" id=2]
 
@@ -28,7 +28,7 @@ extents = Vector2( 32, 32 )
 [sub_resource type="RectangleShape2D" id=4]
 
 custom_solver_bias = 0.0
-extents = Vector2( 32, 32 )
+extents = Vector2( 29.4005, 32 )
 
 [node name="Level 1-13" type="Node2D" index="0"]
 
@@ -110,7 +110,7 @@ _sections_unfolded = [ "Collision", "Visibility" ]
 [node name="Mirror" parent="." index="5" instance=ExtResource( 8 )]
 
 editor/display_folded = true
-position = Vector2( -98.051, 307.141 )
+position = Vector2( -98.051, 269.141 )
 _sections_unfolded = [ "Collision", "Transform", "Visibility" ]
 mirrorDirection = "horizontal"
 
@@ -132,8 +132,7 @@ shape = SubResource( 2 )
 
 [node name="Mirror4" parent="." index="6" instance=ExtResource( 8 )]
 
-editor/display_folded = true
-position = Vector2( 287.272, -315.665 )
+position = Vector2( 287.272, -330.665 )
 
 [node name="Area2D" type="Area2D" parent="Mirror4" index="4"]
 
@@ -153,7 +152,7 @@ shape = SubResource( 3 )
 
 [node name="Mirror5" parent="." index="7" instance=ExtResource( 8 )]
 
-position = Vector2( 737.337, -314.036 )
+position = Vector2( 736.897, -324.159 )
 
 [node name="Area2D" type="Area2D" parent="Mirror5" index="4"]
 
@@ -173,7 +172,7 @@ shape = SubResource( 3 )
 
 [node name="Mirror2" parent="." index="8" instance=ExtResource( 8 )]
 
-position = Vector2( 608.089, 61.217 )
+position = Vector2( 608.824, 37.694 )
 
 [node name="Area2D" type="Area2D" parent="Mirror2" index="4"]
 
