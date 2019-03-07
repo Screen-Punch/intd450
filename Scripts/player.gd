@@ -26,6 +26,11 @@ func _ready():
 	$AnimationPlayer.play("SpawnAnimation")
 	$CanvasLayer/Blur.show()
 
+func _input(event):
+	if event is InputEventKey and !target.spawned:
+		if event.pressed:
+			target.spawn()
+
 func _physics_process(delta):
 	var motion = Vector2()
 	

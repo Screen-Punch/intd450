@@ -8,7 +8,7 @@
 [ext_resource path="res://Scenes/Book.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Art/book2_clock.jpg" type="Texture" id=7]
 
-[node name="Level1-6" type="Node2D"]
+[node name="Level1-6" type="Node2D" index="0"]
 
 position = Vector2( -99.3073, -951.14 )
 script = ExtResource( 1 )
@@ -82,7 +82,6 @@ max_lines_visible = -1
 
 position = Vector2( 909.958, 195.389 )
 next_world = "res://Levels/Level1-7.tscn"
-nextLevelText = null
 
 [node name="Book" parent="." index="8" instance=ExtResource( 6 )]
 

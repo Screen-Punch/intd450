@@ -1,5 +1,6 @@
 extends KinematicBody2D
 
+var MAXSPEED = 170
 export (int) var SPEED = 170
 var target
 var velocity
@@ -12,11 +13,16 @@ var randomMonsterNoises = ["res://Sounds/SoundFiles/24 bit/comingupto.wav", "res
 					"res://Sounds/SoundFiles/24 bit/longgroan.wav", "res://Sounds/SoundFiles/16 bit/16 bit 2/laughing.wav",
 					"res://Sounds/SoundFiles/16 bit/16 bit 2/2crack.wav", "res://Sounds/SoundFiles/24 bit/3crack.wav"]
 var entryNoise = "res://Sounds/SoundFiles/warp.wav"
+var spawned = false
 
 onready var player = get_tree().get_nodes_in_group("Player")[0]
 var canMove = false
 
 func _ready():
+	pass
+
+func spawn():
+	spawned = true
 	var targets = get_tree().get_nodes_in_group("Player")
 	for t in targets:
 		target = t

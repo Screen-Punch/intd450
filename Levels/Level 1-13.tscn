@@ -77,7 +77,6 @@ position = Vector2( -102.355, 126.913 )
 
 position = Vector2( 1120.88, 30.8717 )
 next_world = "res://Levels/Main Menu.tscn"
-nextLevelText = null
 
 [node name="KeysAndLocks" type="Node2D" parent="." index="4"]
 

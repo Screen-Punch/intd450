@@ -18,7 +18,7 @@ outlines = [ PoolVector2Array( -446.437, -62.4505, 197.171, -56.7083, 196.001, -
 custom_solver_bias = 0.0
 extents = Vector2( 32, 32 )
 
-[node name="Level1-4" type="Node2D"]
+[node name="Level1-4" type="Node2D" index="0"]
 
 [node name="TileMap" type="TileMap" parent="." index="0"]
 
@@ -51,7 +51,7 @@ position = Vector2( -166.923, 0 )
 
 position = Vector2( 701.06, -131.162 )
 next_world = "res://Levels/Level1-5.tscn"
-nextLevelText = null
+nextLevelText = "Level 3: Back Again"
 
 [node name="Nav2D" parent="." index="3" instance=ExtResource( 4 )]
 

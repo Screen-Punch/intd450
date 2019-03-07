@@ -39,7 +39,7 @@ tracks/0/keys = {
 "values": [ 0, 2, 3, 4, 5 ]
 }
 
-[node name="Level 1-12" type="Node2D"]
+[node name="Level 1-12" type="Node2D" index="0"]
 
 [node name="TileMap" type="TileMap" parent="." index="0"]
 
@@ -86,7 +86,6 @@ position = Vector2( -102.355, 126.913 )
 
 position = Vector2( 226.091, 604.919 )
 next_world = "res://Levels/Level 1-13.tscn"
-nextLevelText = null
 
 [node name="KeysAndLocks" type="Node2D" parent="." index="4"]
 

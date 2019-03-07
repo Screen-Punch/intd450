@@ -18,7 +18,7 @@ outlines = [ PoolVector2Array( -445.995, 124.146, 192.002, 129.001, 191.453, -39
 custom_solver_bias = 0.0
 extents = Vector2( 32, 32 )
 
-[node name="Level1-6a" type="Node2D"]
+[node name="Level1-6a" type="Node2D" index="0"]
 
 _sections_unfolded = [ "Transform" ]
 
@@ -53,7 +53,6 @@ position = Vector2( -115.664, 184.099 )
 
 position = Vector2( 1168.22, 192.033 )
 next_world = "res://Levels/Level1-7a.tscn"
-nextLevelText = null
 
 [node name="Nav2D" parent="." index="3" instance=ExtResource( 4 )]
 
