@@ -37,7 +37,7 @@ tracks/0/keys = {
 custom_solver_bias = 0.0
 extents = Vector2( 32, 32 )
 
-[sub_resource type="NavigationPolygon" id=6]
+[sub_resource type="NavigationPolygon" id=4]
 
 vertices = PoolVector2Array( -353.122, -391.414, -438.867, -374.719, -426.121, -517.804, -357.223, -561.61, -468.326, -584.128, -490.937, -520.819, -516.118, -1033.62, -472.848, -808.722, -332.616, -984.024, 1281.1, -1029.08, 1186.84, -977.872, 1274.28, -261.115, 1199.15, -280.684 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 4, 3, 2, 5 ), PoolIntArray( 4, 5, 6, 7 ), PoolIntArray( 8, 7, 6 ), PoolIntArray( 8, 6, 9, 10 ), PoolIntArray( 10, 9, 11, 12 ) ]
@@ -173,7 +173,7 @@ script = ExtResource( 6 )
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Nav2D" index="0"]
 
-navpoly = SubResource( 6 )
+navpoly = SubResource( 4 )
 enabled = true
 
 [node name="Mirror" parent="." index="6" instance=ExtResource( 7 )]
