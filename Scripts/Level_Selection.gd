@@ -10,8 +10,4 @@ func _ready():
 	pass
 
 
-func _on_Level1_pressed():
-	#get_tree().change_scene("res://Levels/Level1-2.tscn")
-	var level_file = "res://Levels/Level1-2.tscn"
-	get_tree().change_scene(level_file)
 	

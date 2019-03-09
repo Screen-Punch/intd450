@@ -4,6 +4,8 @@ extends Node2D
 var deathsInLevel = 0
 var totalDeaths = 0
 
+var level_selection_mode = false
+
 func _ready():
 	pass
 
@@ -25,3 +27,9 @@ func _loadNextLevel(sceneName, levelName):
 		$CanvasLayer/Label.text = levelName
 		$AnimationPlayer.play("LevelStart")
 	get_tree().change_scene(sceneName)
+	
+func set_level_selection_to_true():
+	level_selection_mode = true
+	
+func get_level_selection():
+	return level_selection_mode

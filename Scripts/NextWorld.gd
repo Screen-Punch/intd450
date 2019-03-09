@@ -8,6 +8,8 @@ var blocked = true
 var textCanAdvance = false
 
 func _ready():
+	if GameManagerNode.get_level_selection() == true:
+		next_world = "res://Levels/Main Menu.tscn"
 	# Called when the node is added to the scene for the first time.
 	# Initialization here
 	if !next_world:
@@ -41,3 +43,4 @@ func _on_AnimationPlayer_animation_finished(anim_name):
 func revealExit():
 	blocked = false
 	$CanvasLayer/AnimationPlayer.play("ExitUnlocked")
+	
