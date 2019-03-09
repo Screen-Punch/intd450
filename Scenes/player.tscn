@@ -1,7 +1,7 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=1]
-[ext_resource path="res://Art/player.png" type="Texture" id=2]
+[ext_resource path="res://Art/pcs.png" type="Texture" id=2]
 [ext_resource path="res://Scripts/Camera2D.gd" type="Script" id=3]
 [ext_resource path="res://Scripts/Shaker.gd" type="Script" id=4]
 [ext_resource path="res://Scripts/Zoomer.gd" type="Script" id=5]
@@ -12,7 +12,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 8, 8 )
+extents = Vector2( 8, 11.2131 )
 
 [sub_resource type="Animation" id=2]
 
@@ -66,7 +66,63 @@ _sections_unfolded = [ "shader_param" ]
 
 [sub_resource type="Animation" id=5]
 
-resource_name = "SpawnAnimation"
+resource_name = "IdleDown"
+length = 0.2
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=11]
+
+resource_name = "IdleRight"
+length = 0.1
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 6 ]
+}
+
+[sub_resource type="Animation" id=6]
+
+resource_name = "IdleUp"
+length = 0.2
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 3 ]
+}
+
+[sub_resource type="Animation" id=7]
+
 length = 0.8
 loop = false
 step = 0.1
@@ -95,7 +151,64 @@ tracks/1/keys = {
 "values": [ 180.0, 0.0 ]
 }
 
-[node name="Player" type="KinematicBody2D" groups=[
+[sub_resource type="Animation" id=8]
+
+resource_name = "WalkDown"
+length = 0.2
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 1, 2 ]
+}
+
+[sub_resource type="Animation" id=10]
+
+resource_name = "WalkRight"
+length = 0.2
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 6, 7 ]
+}
+
+[sub_resource type="Animation" id=9]
+
+resource_name = "WalkUp"
+length = 0.2
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 5, 4 ]
+}
+
+[node name="Player" type="KinematicBody2D" index="0" groups=[
 "Player",
 ]]
 
@@ -109,10 +222,15 @@ _sections_unfolded = [ "Collision" ]
 [node name="sprite" type="Sprite" parent="." index="0"]
 
 texture = ExtResource( 2 )
-_sections_unfolded = [ "Transform" ]
+vframes = 6
+hframes = 8
+frame = 7
+_sections_unfolded = [ "Animation", "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
+position = Vector2( 0.418457, 35.1235 )
+scale = Vector2( 3.07742, 1.932 )
 shape = SubResource( 1 )
 
 [node name="Camera2D" type="Camera2D" parent="." index="2"]
@@ -141,6 +259,9 @@ editor_draw_limits = false
 editor_draw_drag_margin = false
 script = ExtResource( 3 )
 _sections_unfolded = [ "Offset" ]
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Shaker" type="Node" parent="Camera2D" index="0"]
 
@@ -394,7 +515,13 @@ autoplay = ""
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
-anims/SpawnAnimation = SubResource( 5 )
+anims/IdleDown = SubResource( 5 )
+anims/IdleRight = SubResource( 11 )
+anims/IdleUp = SubResource( 6 )
+anims/SpawnAnimation = SubResource( 7 )
+anims/WalkDown = SubResource( 8 )
+anims/WalkRight = SubResource( 10 )
+anims/WalkUp = SubResource( 9 )
 blend_times = [  ]
 
 [connection signal="animation_finished" from="CanvasLayer/SceneTransition" to="." method="_on_SceneTransition_animation_finished"]
