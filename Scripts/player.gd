@@ -4,7 +4,8 @@ extends KinematicBody2D
 # move_and_slide works.
 
 # Member variables
-const MOTION_SPEED = 160 # Pixels/second
+const MAX_MOTION_SPEED = 240
+const MOTION_SPEED = 240 # Pixels/second
 var distance = 500
 
 var target
@@ -108,5 +109,5 @@ func _on_AnimationPlayer_animation_finished(anim_name):
 func _on_SceneTransition_animation_finished(anim_name):
 	if anim_name == "SceneTransition" and dead:
 		dead = false
-		MOTION_SPEED = 150
+		MOTION_SPEED = MAX_MOTION_SPEED
 		GameManagerNode.reloadLevel()

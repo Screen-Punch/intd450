@@ -18,7 +18,7 @@ outlines = [ PoolVector2Array( -445.995, 124.146, 258.126, 125.252, 252.155, -64
 custom_solver_bias = 0.0
 extents = Vector2( 32, 32 )
 
-[node name="Level1-7a" type="Node2D"]
+[node name="Level1-7a" type="Node2D" index="0"]
 
 _sections_unfolded = [ "Transform" ]
 
@@ -53,7 +53,8 @@ position = Vector2( -115.664, 184.099 )
 
 position = Vector2( 734.641, -31.808 )
 next_world = "res://Levels/Level1-8.tscn"
-transitionText = null
+transitionText = "The bittersweet stench of desperation reeks upon you… it betrays your every step. "
+nextLevelText = "Level 7: "
 
 [node name="Nav2D" parent="." index="3" instance=ExtResource( 4 )]
 

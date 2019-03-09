@@ -51,13 +51,15 @@ position = Vector2( -166.923, 0 )
 
 position = Vector2( 701.06, -131.162 )
 next_world = "res://Levels/Level1-5.tscn"
-nextLevelText = "Level 3: Back Again"
+transitionText = "..."
+nextLevelText = "Level 4: Back Again"
 
 [node name="Nav2D" parent="." index="3" instance=ExtResource( 4 )]
 
 [node name="Monster" parent="Nav2D" index="0" instance=ExtResource( 5 )]
 
 position = Vector2( -386.781, 7.40253 )
+_sections_unfolded = [ "Collision", "collision" ]
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Nav2D" index="1"]
 

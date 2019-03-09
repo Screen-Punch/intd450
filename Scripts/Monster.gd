@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-var MAXSPEED = 170
+var MAXSPEED
 export (int) var SPEED = 170
 var target
 var velocity
@@ -19,7 +19,7 @@ onready var player = get_tree().get_nodes_in_group("Player")[0]
 var canMove = false
 
 func _ready():
-	pass
+	MAXSPEED = SPEED
 
 func spawn():
 	spawned = true
@@ -56,6 +56,7 @@ func _process(delta):
 # Called by crystals and such when it sees a new target
 func sawNewTarget():
 	$SurpriseMarkAudio.play(0)
+	$surpriseMark.rotation_degrees = rad2deg(self.get_angle_to(target.position)) + 90
 	$AnimationPlayer.play("NewTargetAnimation")
 
 func findNewTarget():

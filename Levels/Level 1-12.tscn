@@ -39,7 +39,7 @@ tracks/0/keys = {
 "values": [ 0, 2, 3, 4, 5 ]
 }
 
-[node name="Level 1-12" type="Node2D" index="0"]
+[node name="Level 1-12" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="." index="0"]
 
@@ -86,6 +86,8 @@ position = Vector2( -102.355, 126.913 )
 
 position = Vector2( 226.091, 604.919 )
 next_world = "res://Levels/Level 1-13.tscn"
+transitionText = "..."
+nextLevelText = "Level 12: All Around Me"
 
 [node name="KeysAndLocks" type="Node2D" parent="." index="4"]
 
@@ -125,6 +127,7 @@ shape = SubResource( 2 )
 
 [node name="Mirror2" parent="." index="6" instance=ExtResource( 8 )]
 
+editor/display_folded = true
 position = Vector2( 418.935, 367.439 )
 rotation = 3.14159
 _sections_unfolded = [ "Collision", "Transform", "Visibility" ]
@@ -148,6 +151,7 @@ shape = SubResource( 2 )
 
 [node name="Mirror4" parent="." index="7" instance=ExtResource( 8 )]
 
+editor/display_folded = true
 position = Vector2( 411.179, -59.9551 )
 rotation = 3.14159
 _sections_unfolded = [ "Collision", "Transform", "Visibility" ]
