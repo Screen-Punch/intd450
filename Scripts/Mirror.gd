@@ -8,22 +8,24 @@ func _ready():
 	if !mirrorDirection:
 		mirrorDirection = "vertical"
 	if mirrorDirection == "horizontal":
-		$Sprite.texture = load("res://Art/floors_ceilings.png")
-		$Sprite.hframes = 5
-		$Sprite.vframes = 5
-		$Sprite.frame = 24
+		pass
 
 func _physics_process(delta):
 	pass
 
 func takeDamage():
 	name = "deadmirror"
+	$AnimationPlayer.play("DeathAnim")
+	$AudioStreamPlayer2D.volume_db += 20
 	$AudioStreamPlayer2D.play(0)
+	$CollisionShape2D.queue_free()
+	$Area2D.queue_free()
+	self.remove_from_group("Mirror")
 	var enemy = get_tree().get_nodes_in_group("Monster")[0]
 	if enemy.target == self:
 		enemy.findNewTarget()
 	var mirrorsLeft = get_tree().get_nodes_in_group("Mirror")
-	if len(mirrorsLeft)-1 == 0:
+	if len(mirrorsLeft) == 0:
 		var exits = get_tree().get_nodes_in_group("Exit")
 		for exit in exits:
 			exit.revealExit();
@@ -48,10 +50,8 @@ func _on_Area2D_body_entered(body):
 				playMonsterSpotted(body)
 
 func playMonsterSpotted(body):
-	if mirrorDirection == "vertical":
-		$AnimationPlayer.play("MonsterSpotted")
 	body.sawNewTarget()
 
 
 func _on_AudioStreamPlayer2D_finished():
-	queue_free()
+	pass
