@@ -53,6 +53,8 @@ position = Vector2( -115.664, 184.099 )
 
 position = Vector2( -219.321, -31.5884 )
 next_world = "res://Levels/Level1-9.tscn"
+transitionText = "It is nearly... irresistible."
+nextLevelText = "Level 8: Running Circles"
 
 [node name="Nav2D" parent="." index="3" instance=ExtResource( 4 )]
 
@@ -86,8 +88,8 @@ audio_bus_name = "Master"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mirror/Area2D" index="0"]
 
-position = Vector2( -1.36023, -247.876 )
-scale = Vector2( 1, 6.02216 )
+position = Vector2( 4.80852, -247.876 )
+scale = Vector2( 1.17625, 6.02216 )
 shape = SubResource( 2 )
 
 [connection signal="body_entered" from="Mirror/Area2D" to="Mirror" method="_on_Area2D_body_entered"]

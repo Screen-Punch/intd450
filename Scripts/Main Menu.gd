@@ -7,6 +7,7 @@ extends Control
 func _ready():
 	# Called when the node is added to the scene for the first time.
 	# Initialization here
+	GameManagerNode.level_selection_mode = false
 	$AnimationPlayer.play("MainMenuAnimation")
 
 func _on_NewGameButton_pressed():
@@ -25,3 +26,4 @@ func _on_CreditsButton_pressed():
 func _on_CreditsReturnButton_pressed():
 	$Credits.hide()
 	$DefaultMenu.show()
+

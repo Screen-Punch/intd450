@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-var MAXSPEED = 170
+var MAXSPEED
 export (int) var SPEED = 170
 var target
 var velocity
@@ -18,8 +18,12 @@ var spawned = false
 onready var player = get_tree().get_nodes_in_group("Player")[0]
 var canMove = false
 
+const CHASING_PLAYER_COLOR = Color(1, 1, 1, 1)
+const CHASING_MIRROR_COLOR = Color(0.5, 1, 0.5, 1)
+
 func _ready():
-	pass
+	MAXSPEED = SPEED
+	$Sprite.self_modulate = CHASING_PLAYER_COLOR
 
 func spawn():
 	spawned = true
@@ -55,7 +59,9 @@ func _process(delta):
 
 # Called by crystals and such when it sees a new target
 func sawNewTarget():
+	$Sprite.self_modulate = CHASING_MIRROR_COLOR
 	$SurpriseMarkAudio.play(0)
+	$surpriseMark.rotation_degrees = rad2deg(self.get_angle_to(target.position)) + 90
 	$AnimationPlayer.play("NewTargetAnimation")
 
 func findNewTarget():
@@ -76,6 +82,7 @@ func findNewTarget():
 		sawNewTarget()
 		return
 	target = get_tree().get_nodes_in_group("Player")[0]
+	$Sprite.self_modulate = CHASING_PLAYER_COLOR
 
 # Used Nav2D to move
 func move_along_path(distance):

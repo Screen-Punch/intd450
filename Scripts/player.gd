@@ -4,7 +4,8 @@ extends KinematicBody2D
 # move_and_slide works.
 
 # Member variables
-const MOTION_SPEED = 160 # Pixels/second
+const MAX_MOTION_SPEED = 240
+const MOTION_SPEED = 240 # Pixels/second
 var distance = 500
 
 var target
@@ -16,6 +17,8 @@ var gap = 0.1
 
 var canMove = false
 var dead = false
+var anim
+var oldAnim
 
 func _ready():
 	var monsters  = get_tree().get_nodes_in_group("Monster")
@@ -25,6 +28,8 @@ func _ready():
 	vulnerable = true
 	$AnimationPlayer.play("SpawnAnimation")
 	$CanvasLayer/Blur.show()
+	oldAnim = ""
+	anim = ""
 
 func _input(event):
 	if event is InputEventKey and target and !target.spawned:
@@ -47,6 +52,27 @@ func _physics_process(delta):
 		get_tree().paused = true
 	
 	if canMove:
+		if motion.y < 0:
+			anim = "WalkUp"
+		elif motion.y > 0:
+			anim = "WalkDown"
+		if motion.x < 0:
+			anim = "WalkRight"
+			$sprite.flip_h = true
+		elif motion.x > 0:
+			anim = "WalkRight"
+			$sprite.flip_h = false
+		if motion == Vector2(0, 0):
+			if oldAnim == "WalkUp":
+				anim = "IdleUp"
+			if oldAnim == "WalkDown":
+				anim = "IdleDown"
+			if oldAnim == "WalkRight":
+				anim = "IdleRight"
+		if oldAnim != anim:
+			$AnimationPlayer.play(anim)
+			oldAnim = anim
+		
 		motion = motion.normalized() * MOTION_SPEED
 		move_and_slide(motion)
 	
@@ -83,5 +109,5 @@ func _on_AnimationPlayer_animation_finished(anim_name):
 func _on_SceneTransition_animation_finished(anim_name):
 	if anim_name == "SceneTransition" and dead:
 		dead = false
-		MOTION_SPEED = 150
+		MOTION_SPEED = MAX_MOTION_SPEED
 		GameManagerNode.reloadLevel()
