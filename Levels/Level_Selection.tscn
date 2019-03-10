@@ -3,7 +3,7 @@
 [ext_resource path="res://Scripts/Level_Selection.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/Level1.gd" type="Script" id=2]
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 
@@ -14,7 +14,7 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 278.0
-margin_top = 133.0
+margin_top = 134.0
 margin_right = 338.0
 margin_bottom = 167.0
 rect_pivot_offset = Vector2( 0, 0 )
@@ -32,6 +32,7 @@ text = "Level 1"
 flat = false
 align = 1
 script = ExtResource( 2 )
+_sections_unfolded = [ "Anchor", "Margin" ]
 next_world = "res://Levels/Level1-2.tscn"
 
 [node name="Level2" type="Button" parent="." index="1"]
@@ -40,7 +41,7 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 364.0
+margin_left = 378.0
 margin_top = 134.0
 margin_right = 424.0
 margin_bottom = 168.0
@@ -59,6 +60,7 @@ text = "Level 2"
 flat = false
 align = 1
 script = ExtResource( 2 )
+_sections_unfolded = [ "Margin" ]
 next_world = "res://Levels/Level1-3.tscn"
 
 [node name="Level3" type="Button" parent="." index="2"]
@@ -67,8 +69,8 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 452.0
-margin_top = 133.0
+margin_left = 478.0
+margin_top = 134.0
 margin_right = 512.0
 margin_bottom = 167.0
 rect_pivot_offset = Vector2( 0, 0 )
@@ -86,6 +88,7 @@ text = "Level 3"
 flat = false
 align = 1
 script = ExtResource( 2 )
+_sections_unfolded = [ "Margin" ]
 next_world = "res://Levels/Level1-4.tscn"
 
 [node name="Level4" type="Button" parent="." index="3"]
@@ -94,7 +97,7 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 536.0
+margin_left = 578.0
 margin_top = 134.0
 margin_right = 596.0
 margin_bottom = 168.0
@@ -113,6 +116,7 @@ text = "Level 4"
 flat = false
 align = 1
 script = ExtResource( 2 )
+_sections_unfolded = [ "Margin" ]
 next_world = "res://Levels/Level1-5.tscn"
 
 [node name="Level5" type="Button" parent="." index="4"]
@@ -121,7 +125,7 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 635.0
+margin_left = 678.0
 margin_top = 134.0
 margin_right = 695.0
 margin_bottom = 168.0
@@ -140,6 +144,7 @@ text = "Level 5"
 flat = false
 align = 1
 script = ExtResource( 2 )
+_sections_unfolded = [ "Anchor", "Margin" ]
 next_world = "res://Levels/Level1-6a.tscn"
 
 [node name="Level6" type="Button" parent="." index="5"]
@@ -148,7 +153,7 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 277.0
+margin_left = 278.0
 margin_top = 220.0
 margin_right = 337.0
 margin_bottom = 254.0
@@ -167,6 +172,7 @@ text = "Level 6"
 flat = false
 align = 1
 script = ExtResource( 2 )
+_sections_unfolded = [ "Margin" ]
 next_world = "res://Levels/Level1-7a.tscn"
 
 [node name="Level7" type="Button" parent="." index="6"]
@@ -175,7 +181,7 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 367.0
+margin_left = 378.0
 margin_top = 220.0
 margin_right = 427.0
 margin_bottom = 254.0
@@ -194,6 +200,7 @@ text = "Level 7"
 flat = false
 align = 1
 script = ExtResource( 2 )
+_sections_unfolded = [ "Margin" ]
 next_world = "res://Levels/Level1-8.tscn"
 
 [node name="Level8" type="Button" parent="." index="7"]
@@ -202,7 +209,7 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 455.0
+margin_left = 478.0
 margin_top = 220.0
 margin_right = 515.0
 margin_bottom = 254.0
@@ -221,6 +228,7 @@ text = "Level 8"
 flat = false
 align = 1
 script = ExtResource( 2 )
+_sections_unfolded = [ "Margin" ]
 next_world = "res://Levels/Level1-9.tscn"
 
 [node name="Level9" type="Button" parent="." index="8"]
@@ -229,7 +237,7 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 541.0
+margin_left = 578.0
 margin_top = 219.0
 margin_right = 601.0
 margin_bottom = 253.0
@@ -248,6 +256,7 @@ text = "Level 9"
 flat = false
 align = 1
 script = ExtResource( 2 )
+_sections_unfolded = [ "Margin" ]
 next_world = "res://Levels/Level 1-10.tscn"
 
 [node name="Level10" type="Button" parent="." index="9"]
@@ -256,7 +265,7 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 631.0
+margin_left = 678.0
 margin_top = 219.0
 margin_right = 697.0
 margin_bottom = 253.0
@@ -275,6 +284,7 @@ text = "Level 10"
 flat = false
 align = 1
 script = ExtResource( 2 )
+_sections_unfolded = [ "Margin" ]
 next_world = "res://Levels/Level 1-11.tscn"
 
 [node name="Level11" type="Button" parent="." index="10"]
@@ -283,9 +293,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 403.0
+margin_left = 421.0
 margin_top = 307.0
-margin_right = 469.0
+margin_right = 487.0
 margin_bottom = 341.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -310,9 +320,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 522.0
+margin_left = 532.0
 margin_top = 307.0
-margin_right = 588.0
+margin_right = 598.0
 margin_bottom = 341.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -337,10 +347,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 378.0
-margin_top = 414.0
-margin_right = 625.0
-margin_bottom = 500.0
+margin_left = 379.0
+margin_top = 390.0
+margin_right = 626.0
+margin_bottom = 476.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
