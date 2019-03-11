@@ -37,6 +37,7 @@ func _input(event):
 	if event is InputEventKey and target and !target.spawned:
 		if event.pressed:
 			target.spawn()
+			$Camera2D/CanvasLayer/RichTextLabel.start()
 
 func _physics_process(delta):
 	var motion = Vector2()
