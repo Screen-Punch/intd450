@@ -12,7 +12,7 @@ extents = Vector2( 30, 30 )
 [sub_resource type="Animation" id=2]
 
 resource_name = "ExitUnlocked"
-length = 1.0
+length = 0.5
 loop = false
 step = 0.1
 tracks/0/type = "value"
@@ -34,10 +34,10 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 1 ),
+"times": PoolRealArray( 0, 0.3 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+"values": [ Color( 0.026062, 0.801029, 0.953125, 1 ), Color( 0.026062, 0.801029, 0.953125, 0 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("ScreenBlocker:visible")
@@ -50,6 +50,18 @@ tracks/2/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../StatueSprite:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 2, 3, 4, 5 ]
 }
 
 [sub_resource type="Animation" id=3]
@@ -141,7 +153,6 @@ transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 
 [node name="ScreenBlocker" type="Sprite" parent="CanvasLayer" index="0"]
 
-visible = false
 modulate = Color( 0, 0, 0, 0 )
 position = Vector2( 532.765, 310.185 )
 scale = Vector2( 17.6489, 10.6933 )
@@ -229,15 +240,20 @@ bounce = 0.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" index="0"]
 
 shape = SubResource( 4 )
+disabled = true
 _sections_unfolded = [ "Visibility" ]
 
 [node name="StatueSprite" type="Sprite" parent="." index="4"]
 
-visible = false
-position = Vector2( -0.0221882, 0 )
-scale = Vector2( 2.03329, 1 )
-texture = ExtResource( 3 )
-_sections_unfolded = [ "Visibility" ]
+modulate = Color( 0.026062, 0.801029, 0.953125, 1 )
+position = Vector2( -1.31115, -5.63423e-008 )
+rotation = 1.5708
+scale = Vector2( 1, 1.35533 )
+texture = ExtResource( 2 )
+vframes = 2
+hframes = 6
+frame = 2
+_sections_unfolded = [ "Animation", "Transform", "Visibility" ]
 
 [connection signal="body_entered" from="." to="." method="_on_next_W_body_entered"]
 

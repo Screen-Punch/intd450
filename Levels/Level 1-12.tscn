@@ -102,7 +102,7 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 position = Vector2( 226.333, 530.258 )
 collision_layer = 2
 collision_mask = 2
-_sections_unfolded = [ "Collision", "Visibility" ]
+_sections_unfolded = [ "Collision", "Transform", "Visibility" ]
 
 [node name="Mirror" parent="." index="5" instance=ExtResource( 8 )]
 
