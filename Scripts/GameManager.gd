@@ -5,6 +5,9 @@ var deathsInLevel = 0
 var totalDeaths = 0
 
 var level_selection_mode = false
+var level_time = [-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1]
+var current_time
+var current_level
 
 func _ready():
 	pass
@@ -33,3 +36,24 @@ func set_level_selection_to_true():
 	
 func get_level_selection():
 	return level_selection_mode
+	
+func get_level_time(level):
+	return level_time[level]
+
+func foo():
+	print($RichTextLabel.get_time())
+
+func set_level_time():
+	if level_time[current_level]==-1 or current_time<level_time[current_level]:
+		level_time[current_level] = current_time
+	print(level_time)
+	
+func set_current_time(time):
+	current_time = time
+
+func get_current_time():
+	return current_time
+	
+func set_current_level(level):
+	current_level = level
+
