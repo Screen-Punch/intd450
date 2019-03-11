@@ -19,7 +19,7 @@ _sections_unfolded = [ "Resource" ]
 custom_solver_bias = 0.0
 extents = Vector2( 32, 32 )
 
-[node name="Level1-5" type="Node2D"]
+[node name="Level1-5" type="Node2D" index="0"]
 
 _sections_unfolded = [ "Transform" ]
 
@@ -55,7 +55,6 @@ position = Vector2( -115.664, 184.099 )
 position = Vector2( 705.146, -380.377 )
 next_world = "res://Levels/Level1-6a.tscn"
 level = 4
-transitionText = "You may be able to run, and you may be able to buy yourself a moment's respite… but you will inevitably err."
 nextLevelText = "Level 5: In The Flow"
 
 [node name="Nav2D" parent="." index="3" instance=ExtResource( 4 )]
