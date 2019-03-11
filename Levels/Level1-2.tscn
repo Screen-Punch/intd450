@@ -85,6 +85,7 @@ position = Vector2( 869.511, 126.576 )
 
 position = Vector2( -126.465, -131.916 )
 next_world = "res://Levels/Level1-3.tscn"
+level = 1
 transitionText = "It was only a matter of time that, one day, another wanderlusting soul would find themselves here..."
 nextLevelText = "Level 2: I See You"
 

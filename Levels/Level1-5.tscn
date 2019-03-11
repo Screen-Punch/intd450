@@ -19,7 +19,7 @@ _sections_unfolded = [ "Resource" ]
 custom_solver_bias = 0.0
 extents = Vector2( 32, 32 )
 
-[node name="Level1-5" type="Node2D" index="0"]
+[node name="Level1-5" type="Node2D"]
 
 _sections_unfolded = [ "Transform" ]
 
@@ -54,6 +54,7 @@ position = Vector2( -115.664, 184.099 )
 
 position = Vector2( 701.822, -380.377 )
 next_world = "res://Levels/Level1-6a.tscn"
+level = 4
 transitionText = "My solitary slumber is rarely disturbed by… guests… anymore. "
 nextLevelText = "Level 5: In The Flow"
 
