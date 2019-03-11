@@ -11,22 +11,22 @@ var transitionText
 var textTracker = 0
 var narrativeSequences = [
 ["It was only a matter of time that another wanderlusting soul would find this place..."], #0 indexed
-["My wayward whispers… snaking and burrowing deeply into unsuspecting hearts and minds…",
+["My wayward whispers... snaking and burrowing deeply into unsuspecting hearts and minds…",
 "Like a siren's song... how sweetly they promise the countless, irresistible desires and curiosities of the mortal heart..."],
-[""],
+[""],	# 2 (Monster first starts appears)
 ["I-..."],
 ["My solitary slumber was left unabated by guests for countless ages since the last intrusion...",
 "...you bear an uncanny resemblance to him. Interesting."],
-["The bittersweet stench of desperation reeks upon you… it betrays your every step.",
+["The bittersweet stench of desperation reeks upon you... it betrays your every step.",
 "How you scurry about like a witless rat..."],
 ["You may be able to run, and you may be able to buy yourself a moment's respite… but you will inevitably err."],
-[], # 7
-[],
-[],
-[], # 10
-[],
-[],
-[],
+["Flee you fool..."], # 7
+["...Your essence tastes so sweet."],
+["What are we? Playing cat and mouse in the shadows?"],
+["Your world collapses on you..."], # 10
+["Turn around, you only delay the end. Perhaps I will be quick."],
+["Are you not tired!? You have run so far, only approaching the same end!"],
+["The end has come..."],  # 13 = Last level currently
 ]
 
 func _ready():

@@ -1,12 +1,24 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Scripts/Level_Selection.gd" type="Script" id=1]
-[ext_resource path="res://Scripts/Level1.gd" type="Script" id=2]
-[ext_resource path="res://godotIcon.png" type="Texture" id=3]
+[ext_resource path="res://nate'stesttheme.tres" type="Theme" id=1]
+[ext_resource path="res://miniboxes.tres" type="Theme" id=2]
+[ext_resource path="res://Scripts/Level1.gd" type="Script" id=3]
+[ext_resource path="res://godotIcon.png" type="Texture" id=4]
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Control" index="0"]
 
-script = ExtResource( 1 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+theme = ExtResource( 1 )
+_sections_unfolded = [ "Theme" ]
 
 [node name="Level1" type="Button" parent="." index="0"]
 
@@ -25,6 +37,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
+theme = ExtResource( 2 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -32,8 +45,8 @@ group = null
 text = "Level 1"
 flat = false
 align = 1
-script = ExtResource( 2 )
-_sections_unfolded = [ "Anchor", "Margin" ]
+script = ExtResource( 3 )
+_sections_unfolded = [ "Anchor", "Margin", "Material" ]
 next_world = "res://Levels/Level1-2.tscn"
 
 [node name="Level2" type="Button" parent="." index="1"]
@@ -53,6 +66,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
+theme = ExtResource( 2 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -60,7 +74,7 @@ group = null
 text = "Level 2"
 flat = false
 align = 1
-script = ExtResource( 2 )
+script = ExtResource( 3 )
 _sections_unfolded = [ "Margin" ]
 next_world = "res://Levels/Level1-3.tscn"
 
@@ -81,6 +95,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
+theme = ExtResource( 2 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -88,7 +103,7 @@ group = null
 text = "Level 3"
 flat = false
 align = 1
-script = ExtResource( 2 )
+script = ExtResource( 3 )
 _sections_unfolded = [ "Margin" ]
 next_world = "res://Levels/Level1-4.tscn"
 
@@ -109,6 +124,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
+theme = ExtResource( 2 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -116,7 +132,7 @@ group = null
 text = "Level 4"
 flat = false
 align = 1
-script = ExtResource( 2 )
+script = ExtResource( 3 )
 _sections_unfolded = [ "Margin" ]
 next_world = "res://Levels/Level1-5.tscn"
 
@@ -137,6 +153,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
+theme = ExtResource( 2 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -144,7 +161,7 @@ group = null
 text = "Level 5"
 flat = false
 align = 1
-script = ExtResource( 2 )
+script = ExtResource( 3 )
 _sections_unfolded = [ "Anchor", "Margin" ]
 next_world = "res://Levels/Level1-6a.tscn"
 
@@ -165,6 +182,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
+theme = ExtResource( 2 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -172,7 +190,7 @@ group = null
 text = "Level 6"
 flat = false
 align = 1
-script = ExtResource( 2 )
+script = ExtResource( 3 )
 _sections_unfolded = [ "Margin" ]
 next_world = "res://Levels/Level1-7a.tscn"
 
@@ -193,6 +211,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
+theme = ExtResource( 2 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -200,7 +219,7 @@ group = null
 text = "Level 7"
 flat = false
 align = 1
-script = ExtResource( 2 )
+script = ExtResource( 3 )
 _sections_unfolded = [ "Margin" ]
 next_world = "res://Levels/Level1-8.tscn"
 
@@ -221,6 +240,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
+theme = ExtResource( 2 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -228,7 +248,7 @@ group = null
 text = "Level 8"
 flat = false
 align = 1
-script = ExtResource( 2 )
+script = ExtResource( 3 )
 _sections_unfolded = [ "Margin" ]
 next_world = "res://Levels/Level1-9.tscn"
 
@@ -249,6 +269,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
+theme = ExtResource( 2 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -256,7 +277,7 @@ group = null
 text = "Level 9"
 flat = false
 align = 1
-script = ExtResource( 2 )
+script = ExtResource( 3 )
 _sections_unfolded = [ "Margin" ]
 next_world = "res://Levels/Level 1-10.tscn"
 
@@ -277,6 +298,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
+theme = ExtResource( 2 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -284,7 +306,7 @@ group = null
 text = "Level 10"
 flat = false
 align = 1
-script = ExtResource( 2 )
+script = ExtResource( 3 )
 _sections_unfolded = [ "Margin" ]
 next_world = "res://Levels/Level 1-11.tscn"
 
@@ -305,6 +327,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
+theme = ExtResource( 2 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -312,7 +335,7 @@ group = null
 text = "Level 11"
 flat = false
 align = 1
-script = ExtResource( 2 )
+script = ExtResource( 3 )
 next_world = "res://Levels/Level 1-12.tscn"
 
 [node name="Level12" type="Button" parent="." index="11"]
@@ -332,6 +355,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
+theme = ExtResource( 2 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -339,7 +363,7 @@ group = null
 text = "Level 12"
 flat = false
 align = 1
-script = ExtResource( 2 )
+script = ExtResource( 3 )
 next_world = "res://Levels/Level 1-13.tscn"
 
 [node name="Return" type="Button" parent="." index="12"]
@@ -359,6 +383,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
+theme = ExtResource( 2 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -366,7 +391,7 @@ group = null
 text = "Return"
 flat = false
 align = 1
-script = ExtResource( 2 )
+script = ExtResource( 3 )
 next_world = "res://Levels/Main Menu.tscn"
 
 [node name="Sprite" type="Sprite" parent="." index="13"]
@@ -375,7 +400,7 @@ modulate = Color( 0, 0, 0, 1 )
 position = Vector2( 573.019, 326.542 )
 scale = Vector2( 18.9068, 11.2044 )
 z_index = -10
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 _sections_unfolded = [ "Visibility", "Z Index" ]
 
 [connection signal="pressed" from="Level1" to="Level1" method="_on_Level1_pressed"]
