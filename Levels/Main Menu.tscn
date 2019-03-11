@@ -33,7 +33,7 @@ tracks/0/keys = {
 "values": [ Vector2( 120.033, 380.856 ), Vector2( 355.586, 379.954 ) ]
 }
 
-[node name="Main Menu" type="Control"]
+[node name="Main Menu" type="Control" index="0"]
 
 self_modulate = Color( 0, 0, 0, 1 )
 show_behind_parent = true
@@ -87,7 +87,8 @@ size_flags_horizontal = 1
 size_flags_vertical = 4
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0.511719, 0.505722, 0.505722, 1 )
-custom_colors/font_color_shadow = Color( 0.101961, 0.0784314, 0.784314, 1 )
+custom_colors/font_color_shadow = Color( 0.101961, 0.0784314, 0.588235, 1 )
+custom_constants/shadow_as_outline = 5
 text = "Fragments"
 align = 1
 valign = 1
@@ -95,7 +96,7 @@ clip_text = true
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-_sections_unfolded = [ "custom_fonts" ]
+_sections_unfolded = [ "custom_colors", "custom_constants", "custom_fonts" ]
 
 [node name="NewGameButton" type="Button" parent="DefaultMenu" index="1"]
 
