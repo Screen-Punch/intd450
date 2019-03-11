@@ -27,7 +27,7 @@ tracks/0/keys = {
 "values": [ 8, 9, 10, 11 ]
 }
 
-[node name="Lock" type="StaticBody2D"]
+[node name="Lock" type="StaticBody2D" index="0"]
 
 input_pickable = false
 collision_layer = 1

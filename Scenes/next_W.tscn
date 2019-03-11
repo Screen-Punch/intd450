@@ -22,10 +22,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ true ]
+"values": [ false, true ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("../StatueSprite:modulate")
@@ -34,10 +34,10 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.3 ),
+"times": PoolRealArray( 0.1, 0.4 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Color( 0.026062, 0.801029, 0.953125, 1 ), Color( 0.026062, 0.801029, 0.953125, 0 ) ]
+"values": [ Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("ScreenBlocker:visible")
@@ -46,7 +46,7 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0 ),
+"times": PoolRealArray( 0.1 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ true ]
@@ -58,7 +58,7 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"times": PoolRealArray( 0.1, 0.2, 0.3, 0.4 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
 "values": [ 2, 3, 4, 5 ]
@@ -109,7 +109,7 @@ tracks/2/keys = {
 [sub_resource type="RectangleShape2D" id=4]
 
 custom_solver_bias = 0.0
-extents = Vector2( 65.5098, 32 )
+extents = Vector2( 61.6574, 32 )
 
 [node name="next_W" type="Area2D" groups=[
 "Exit",
@@ -158,6 +158,9 @@ position = Vector2( 532.765, 310.185 )
 scale = Vector2( 17.6489, 10.6933 )
 texture = ExtResource( 3 )
 _sections_unfolded = [ "Transform", "Visibility" ]
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer" index="1"]
 
@@ -177,10 +180,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 264.0
-margin_top = 238.0
-margin_right = 529.0
-margin_bottom = 283.0
+margin_left = 44.0
+margin_top = 184.0
+margin_right = 525.0
+margin_bottom = 266.0
 rect_scale = Vector2( 2, 2 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -195,9 +198,6 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Rect", "Visibility" ]
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Label2" type="Label" parent="CanvasLayer" index="3"]
 
@@ -207,9 +207,9 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 386.0
-margin_top = 398.0
+margin_top = 478.0
 margin_right = 637.0
-margin_bottom = 428.0
+margin_bottom = 508.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -223,9 +223,6 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Rect", "Visibility" ]
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." index="3"]
 
@@ -240,12 +237,11 @@ bounce = 0.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" index="0"]
 
 shape = SubResource( 4 )
-disabled = true
 _sections_unfolded = [ "Visibility" ]
 
 [node name="StatueSprite" type="Sprite" parent="." index="4"]
 
-modulate = Color( 0.026062, 0.801029, 0.953125, 1 )
+modulate = Color( 0, 0, 0, 1 )
 position = Vector2( -1.31115, -5.63423e-008 )
 rotation = 1.5708
 scale = Vector2( 1, 1.35533 )

@@ -18,7 +18,7 @@ outlines = [ PoolVector2Array( -445.995, 124.146, 192.002, 129.001, 191.453, -39
 custom_solver_bias = 0.0
 extents = Vector2( 32, 32 )
 
-[node name="Level1-6a" type="Node2D"]
+[node name="Level1-6a" type="Node2D" index="0"]
 
 _sections_unfolded = [ "Transform" ]
 
@@ -51,7 +51,7 @@ position = Vector2( -115.664, 184.099 )
 
 [node name="next_W" parent="." index="2" instance=ExtResource( 3 )]
 
-position = Vector2( 1168.22, 192.033 )
+position = Vector2( 1150.22, 192.033 )
 next_world = "res://Levels/Level1-7a.tscn"
 level = 5
 transitionText = "I had… forgotten... the pleasure with which I indulge upon tender souls…"

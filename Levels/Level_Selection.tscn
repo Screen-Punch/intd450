@@ -1,9 +1,10 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scripts/Level_Selection.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/Level1.gd" type="Script" id=2]
+[ext_resource path="res://godotIcon.png" type="Texture" id=3]
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 
@@ -367,6 +368,15 @@ flat = false
 align = 1
 script = ExtResource( 2 )
 next_world = "res://Levels/Main Menu.tscn"
+
+[node name="Sprite" type="Sprite" parent="." index="13"]
+
+modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 573.019, 326.542 )
+scale = Vector2( 18.9068, 11.2044 )
+z_index = -10
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Visibility", "Z Index" ]
 
 [connection signal="pressed" from="Level1" to="Level1" method="_on_Level1_pressed"]
 

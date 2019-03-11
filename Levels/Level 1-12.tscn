@@ -84,10 +84,16 @@ position = Vector2( -102.355, 126.913 )
 
 [node name="next_W" parent="." index="3" instance=ExtResource( 5 )]
 
-position = Vector2( 226.091, 604.919 )
+position = Vector2( 225.493, 608.724 )
+scale = Vector2( 0.513084, 1 )
 next_world = "res://Levels/Level 1-13.tscn"
 level = 11
-transitionText = "..."
+transitionText = "You can feel the oppressive earth above our heads, isolating us completely from the surface world... 
+
+One by one, these conduits of light have nearly become completely expunged. 
+
+Soon, you will know naught but the all-encompassing darkness that returns to swallow this forgotten place.
+"
 nextLevelText = "Level 12: All Around Me"
 
 [node name="KeysAndLocks" type="Node2D" parent="." index="4"]

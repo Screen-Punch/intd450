@@ -30,7 +30,7 @@ extents = Vector2( 32, 32 )
 custom_solver_bias = 0.0
 extents = Vector2( 29.4005, 32 )
 
-[node name="Level 1-13" type="Node2D" index="0"]
+[node name="Level 1-13" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="." index="0"]
 
@@ -75,9 +75,12 @@ position = Vector2( -102.355, 126.913 )
 
 [node name="next_W" parent="." index="3" instance=ExtResource( 5 )]
 
-position = Vector2( 1120.88, 30.8717 )
+position = Vector2( 1088.3, 32.2987 )
 next_world = "res://Levels/Main Menu.tscn"
 level = 12
+transitionText = "You delude yourself, mortal. 
+
+You cannot escape the inevitable!"
 nextLevelText = "Null"
 
 [node name="KeysAndLocks" type="Node2D" parent="." index="4"]
@@ -89,7 +92,7 @@ position = Vector2( 209.447, 389.833 )
 [node name="Lock3" parent="KeysAndLocks" index="1" instance=ExtResource( 7 )]
 
 position = Vector2( 992, 32 )
-_sections_unfolded = [ "Collision", "Visibility" ]
+_sections_unfolded = [ "Collision", "Transform", "Visibility" ]
 
 [node name="Key2" parent="KeysAndLocks" index="2" instance=ExtResource( 6 )]
 
@@ -98,7 +101,7 @@ position = Vector2( 869.343, -95.34 )
 [node name="Lock2" parent="KeysAndLocks" index="3" instance=ExtResource( 7 )]
 
 position = Vector2( 1056, 32 )
-_sections_unfolded = [ "Collision", "Visibility" ]
+_sections_unfolded = [ "Collision", "Transform", "Visibility" ]
 
 [node name="Key3" parent="KeysAndLocks" index="4" instance=ExtResource( 6 )]
 
@@ -107,7 +110,7 @@ position = Vector2( 161.39, -132.684 )
 [node name="Lock" parent="KeysAndLocks" index="5" instance=ExtResource( 7 )]
 
 position = Vector2( 928, 32 )
-_sections_unfolded = [ "Collision", "Visibility" ]
+_sections_unfolded = [ "Collision", "Transform", "Visibility" ]
 
 [node name="Mirror" parent="." index="5" instance=ExtResource( 8 )]
 

@@ -70,7 +70,8 @@ scale = Vector2( -1, 1 )
 _sections_unfolded = [ "Region", "Transform" ]
 next_world = "res://Levels/Level 1-12.tscn"
 level = 10
-transitionText = "Your time dwindles..."
+transitionText = "You must realize by now that it is futile to hide just how fleeting and fragile that brave front of yours really is...
+"
 nextLevelText = "Level 11: Stuck in the Middle With You"
 
 [node name="Key" parent="." index="4" instance=ExtResource( 6 )]

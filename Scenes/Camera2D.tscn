@@ -14,7 +14,7 @@ height = 1.0
 ascent = 0.0
 distance_field = false
 
-[node name="Camera2D" type="Camera2D"]
+[node name="Camera2D" type="Camera2D" index="0"]
 
 anchor_mode = 1
 rotating = false

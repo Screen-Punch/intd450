@@ -51,10 +51,10 @@ position = Vector2( -115.664, 184.099 )
 
 [node name="next_W" parent="." index="2" instance=ExtResource( 3 )]
 
-position = Vector2( -219.321, -31.5884 )
+position = Vector2( -223.689, -31.3249 )
+scale = Vector2( 0.476443, 1 )
 next_world = "res://Levels/Level1-9.tscn"
 level = 7
-transitionText = "It is nearly... irresistible."
 nextLevelText = "Level 8: Running Circles"
 
 [node name="Nav2D" parent="." index="3" instance=ExtResource( 4 )]
