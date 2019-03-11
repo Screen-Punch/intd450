@@ -1,7 +1,7 @@
 [gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=1]
-[ext_resource path="res://Art/pcs.png" type="Texture" id=2]
+[ext_resource path="res://Art/PCs1.png" type="Texture" id=2]
 [ext_resource path="res://Scenes/Camera2D.tscn" type="PackedScene" id=3]
 [ext_resource path="res://godotIcon.png" type="Texture" id=4]
 [ext_resource path="res://Scripts/Blur.gd" type="Script" id=5]
@@ -218,7 +218,6 @@ _sections_unfolded = [ "Collision", "Z Index" ]
 [node name="sprite" type="Sprite" parent="." index="0"]
 
 texture = ExtResource( 2 )
-vframes = 6
 hframes = 8
 frame = 7
 _sections_unfolded = [ "Animation", "Transform" ]

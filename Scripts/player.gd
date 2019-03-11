@@ -30,6 +30,8 @@ func _ready():
 	$CanvasLayer/Blur.show()
 	oldAnim = ""
 	anim = ""
+	var deaths = GameManagerNode.totalDeaths
+	updatePlayerTexture(deaths)
 
 func _input(event):
 	if event is InputEventKey and target and !target.spawned:
@@ -111,3 +113,12 @@ func _on_SceneTransition_animation_finished(anim_name):
 		dead = false
 		MOTION_SPEED = MAX_MOTION_SPEED
 		GameManagerNode.reloadLevel()
+
+func updatePlayerTexture(deaths):
+	var i = 1
+	i = int((deaths+4)/ 4)
+	if i <= 0:	# if below limit
+		i = 1
+	if i > 6:	# if above limit
+		i = 5
+	$sprite.texture = load("res://Art/PCs" + str(i) + ".png")
