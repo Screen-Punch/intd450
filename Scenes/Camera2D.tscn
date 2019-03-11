@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scripts/Camera2D.gd" type="Script" id=1]
-[ext_resource path="res://Scenes/RichTextLabel.gd" type="Script" id=2]
-[ext_resource path="res://Scripts/Shaker.gd" type="Script" id=3]
-[ext_resource path="res://Scripts/Zoomer.gd" type="Script" id=4]
+[ext_resource path="res://Scripts/Shaker.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/Zoomer.gd" type="Script" id=3]
+[ext_resource path="res://Scenes/RichTextLabel.gd" type="Script" id=4]
 
 [sub_resource type="BitmapFont" id=1]
 
@@ -44,16 +44,33 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="RichTextLabel" type="RichTextLabel" parent="." index="0"]
+[node name="Shaker" type="Node" parent="." index="0"]
+
+script = ExtResource( 2 )
+
+[node name="Zoomer" type="Node" parent="." index="1"]
+
+script = ExtResource( 3 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." index="2"]
+
+layer = 1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = -115.0
-margin_top = -196.0
-margin_right = 117.0
-margin_bottom = -105.0
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 252.0
+margin_bottom = 111.0
+rect_scale = Vector2( 2, 2 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = true
 mouse_filter = 0
@@ -67,29 +84,21 @@ visible_characters = -1
 percent_visible = 1.0
 meta_underlined = true
 tab_size = 7
-text = ""
+text = "0:00"
 scroll_active = true
 scroll_following = false
 selection_enabled = false
 override_selected_font_color = false
-script = ExtResource( 2 )
-_sections_unfolded = [ "custom_fonts" ]
+script = ExtResource( 4 )
+_sections_unfolded = [ "Rect", "custom_fonts" ]
 
-[node name="Timer" type="Timer" parent="RichTextLabel" index="1"]
+[node name="Timer" type="Timer" parent="CanvasLayer/RichTextLabel" index="1"]
 
 process_mode = 1
 wait_time = 0.1
 one_shot = false
 autostart = true
 
-[node name="Shaker" type="Node" parent="." index="1"]
-
-script = ExtResource( 3 )
-
-[node name="Zoomer" type="Node" parent="." index="2"]
-
-script = ExtResource( 4 )
-
-[connection signal="timeout" from="RichTextLabel/Timer" to="RichTextLabel" method="_on_Timer_timeout"]
+[connection signal="timeout" from="CanvasLayer/RichTextLabel/Timer" to="CanvasLayer/RichTextLabel" method="_on_Timer_timeout"]
 
 

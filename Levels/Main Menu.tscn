@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://nate'stesttheme.tres" type="Theme" id=1]
 [ext_resource path="res://Scripts/Main Menu.gd" type="Script" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://miniboxes.tres" type="Theme" id=4]
 [ext_resource path="res://Scripts/LevelSelection.gd" type="Script" id=5]
 [ext_resource path="res://Art/player.png" type="Texture" id=6]
+[ext_resource path="res://godotIcon.png" type="Texture" id=7]
 
 [sub_resource type="DynamicFont" id=1]
 
@@ -21,7 +22,7 @@ length = 2.0
 loop = true
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:position")
+tracks/0/path = NodePath("BouncingBox:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -237,9 +238,9 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 14.0
-margin_right = 430.0
-margin_bottom = 208.0
-rect_scale = Vector2( 1.3, 1.3 )
+margin_right = 1890.0
+margin_bottom = 1070.0
+rect_scale = Vector2( 0.3, 0.3 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -269,10 +270,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 249.0
-margin_top = 293.0
-margin_right = 320.0
-margin_bottom = 324.0
+margin_left = 199.0
+margin_top = 356.0
+margin_right = 362.0
+margin_bottom = 444.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -298,11 +299,23 @@ playback_speed = 1.0
 anims/MainMenuAnimation = SubResource( 2 )
 blend_times = [  ]
 
-[node name="Sprite" type="Sprite" parent="." index="3"]
+[node name="BouncingBox" type="Sprite" parent="." index="3"]
 
 position = Vector2( 120.256, 380.855 )
 texture = ExtResource( 6 )
 _sections_unfolded = [ "Transform" ]
+
+[node name="BG" type="Sprite" parent="." index="4"]
+
+modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 570.939, 304.626 )
+scale = Vector2( 20.6686, 11.7722 )
+z_index = -10
+texture = ExtResource( 7 )
+_sections_unfolded = [ "Visibility", "Z Index" ]
+__meta__ = {
+"_edit_lock_": true
+}
 
 [connection signal="pressed" from="DefaultMenu/NewGameButton" to="." method="_on_NewGameButton_pressed"]
 

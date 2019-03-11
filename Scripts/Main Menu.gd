@@ -20,10 +20,12 @@ func _on_ExitButton_pressed():
 
 func _on_CreditsButton_pressed():
 	$Credits.show()
+	$BouncingBox.hide()
 	$DefaultMenu.hide()
 
 
 func _on_CreditsReturnButton_pressed():
 	$Credits.hide()
+	$BouncingBox.show()
 	$DefaultMenu.show()
 
