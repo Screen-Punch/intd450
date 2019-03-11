@@ -20,7 +20,7 @@ outlines = [ PoolVector2Array( -448.999, 64.0005, -38.0213, 65.5188, -64.1939, -
 custom_solver_bias = 0.0
 extents = Vector2( 32, 32 )
 
-[node name="Level 1-11" type="Node2D"]
+[node name="Level 1-11" type="Node2D" index="0"]
 
 [node name="TileMap" type="TileMap" parent="." index="0"]
 
@@ -65,7 +65,9 @@ position = Vector2( -102.355, 126.913 )
 
 [node name="next_W" parent="." index="3" instance=ExtResource( 5 )]
 
-position = Vector2( -31.9386, -350.555 )
+position = Vector2( -0.597658, -350.015 )
+scale = Vector2( -1, 1 )
+_sections_unfolded = [ "Region", "Transform" ]
 next_world = "res://Levels/Level 1-12.tscn"
 level = 10
 transitionText = "Your time dwindles..."
@@ -78,7 +80,8 @@ position = Vector2( 603.629, -30.2574 )
 [node name="Lock" parent="Key" index="2" instance=ExtResource( 7 )]
 
 position = Vector2( -631.645, 1.0087 )
-_sections_unfolded = [ "Collision", "Visibility" ]
+rotation = 3.14159
+_sections_unfolded = [ "Collision", "Transform", "Visibility" ]
 
 [node name="Mirror" parent="." index="5" instance=ExtResource( 8 )]
 

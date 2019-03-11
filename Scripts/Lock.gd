@@ -6,4 +6,8 @@ func _ready():
 	pass
 
 func _on_Key_keyGotten():
-	queue_free()
+	$AnimationPlayer.play("BarrierDeactivate")
+
+func _on_AnimationPlayer_animation_finished(anim_name):
+	if anim_name == "BarrierDeactivate":
+		queue_free()
