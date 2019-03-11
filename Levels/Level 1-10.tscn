@@ -11,16 +11,16 @@
 
 [sub_resource type="NavigationPolygon" id=1]
 
-vertices = PoolVector2Array( 385.718, 63.6841, 711.569, 64.5006, 706.154, 126.773, 577.998, 125.871, 385.715, 313.81, 575.291, 383.084, -61.8763, 383.987, 319.057, 321.972, -65.4863, 254.929, 312.255, 63.5001, -129.564, 189.046, -448.999, 189.001, -448.999, 64.0005, -125.954, 254.929 )
+vertices = PoolVector2Array( 385.718, 63.6841, 711.569, 64.5006, 706.154, 126.773, 577.998, 125.871, 385.715, 313.81, 575.291, 383.084, -61.8763, 383.987, 257.083, 316.544, -65.4863, 254.929, 257.897, 62.4176, -129.564, 189.046, -448.999, 189.001, -448.999, 64.0005, -125.954, 254.929 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 4, 0, 3, 5 ), PoolIntArray( 4, 5, 6, 7 ), PoolIntArray( 7, 6, 8, 9 ), PoolIntArray( 10, 11, 12, 9 ), PoolIntArray( 10, 9, 8, 13 ) ]
-outlines = [ PoolVector2Array( -448.999, 64.0005, 312.255, 63.5001, 319.057, 321.972, 385.715, 313.81, 385.718, 63.6841, 711.569, 64.5006, 706.154, 126.773, 577.998, 125.871, 575.291, 383.084, -61.8763, 383.987, -65.4863, 254.929, -125.954, 254.929, -129.564, 189.046, -448.999, 189.001 ) ]
+outlines = [ PoolVector2Array( -448.999, 64.0005, 257.897, 62.4176, 257.083, 316.544, 385.715, 313.81, 385.718, 63.6841, 711.569, 64.5006, 706.154, 126.773, 577.998, 125.871, 575.291, 383.084, -61.8763, 383.987, -65.4863, 254.929, -125.954, 254.929, -129.564, 189.046, -448.999, 189.001 ) ]
 
 [sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
 extents = Vector2( 32, 32 )
 
-[node name="Level 1-10" type="Node2D"]
+[node name="Level 1-10" type="Node2D" index="0"]
 
 [node name="TileMap" type="TileMap" parent="." index="0"]
 
@@ -67,6 +67,8 @@ position = Vector2( -102.355, 126.913 )
 
 position = Vector2( 673.951, 98.8969 )
 next_world = "res://Levels/Level 1-11.tscn"
+transitionText = "Run. Flee. Do what you want, it matters not."
+nextLevelText = "Level 10: Opaque"
 
 [node name="Key" parent="." index="4" instance=ExtResource( 6 )]
 

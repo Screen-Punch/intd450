@@ -39,7 +39,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 0.4 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ 0, 170 ]
+"values": [ 0, 250 ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("Sprite:modulate")
@@ -112,8 +112,8 @@ collision_layer = 1028
 collision_mask = 5
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
-_sections_unfolded = [ "Collision" ]
-SPEED = 170
+_sections_unfolded = [ "Collision", "Visibility" ]
+SPEED = 250
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
 
@@ -179,10 +179,11 @@ autostart = false
 [node name="surpriseMark" type="Sprite" parent="." index="6"]
 
 modulate = Color( 1, 0, 0, 0 )
-position = Vector2( -1.55995, -59.4806 )
+position = Vector2( -0.448929, -0.0840073 )
 scale = Vector2( 0.16849, 0.699384 )
 texture = ExtResource( 4 )
-_sections_unfolded = [ "Visibility" ]
+offset = Vector2( -6.59399, -84.927 )
+_sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="MonsterSprites" type="AnimationPlayer" parent="." index="7"]
 

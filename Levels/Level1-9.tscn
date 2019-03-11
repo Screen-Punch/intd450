@@ -53,32 +53,10 @@ position = Vector2( -115.664, 184.099 )
 
 position = Vector2( 926.188, 95.18 )
 next_world = "res://Levels/Level 1-10.tscn"
+transitionText = " You may be able to run, and you may be able to buy yourself a moment's respite… but you will inevitably err."
+nextLevelText = "Lock and Key"
 
-[node name="Label" type="Label" parent="." index="3"]
-
-modulate = Color( 1, 0.984375, 0, 1 )
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = -99.0
-margin_top = 65.0
-margin_right = 33.0
-margin_bottom = 79.0
-rect_scale = Vector2( 2, 2 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-text = "These mirrors..."
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Rect", "Visibility" ]
-
-[node name="Nav2D" parent="." index="4" instance=ExtResource( 4 )]
+[node name="Nav2D" parent="." index="3" instance=ExtResource( 4 )]
 
 [node name="Monster" parent="Nav2D" index="0" instance=ExtResource( 5 )]
 
@@ -92,7 +70,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Mirror" parent="." index="5" instance=ExtResource( 6 )]
+[node name="Mirror" parent="." index="4" instance=ExtResource( 6 )]
 
 editor/display_folded = true
 position = Vector2( 357.746, -177.645 )
@@ -115,7 +93,7 @@ position = Vector2( 0, 257.513 )
 scale = Vector2( 1, 8.35752 )
 shape = SubResource( 2 )
 
-[node name="Mirror2" parent="." index="6" instance=ExtResource( 6 )]
+[node name="Mirror2" parent="." index="5" instance=ExtResource( 6 )]
 
 editor/display_folded = true
 position = Vector2( 795.335, 62.8621 )
@@ -142,7 +120,7 @@ position = Vector2( 0, 257.513 )
 scale = Vector2( 1, 8.35752 )
 shape = SubResource( 2 )
 
-[node name="Mirror3" parent="." index="7" instance=ExtResource( 6 )]
+[node name="Mirror3" parent="." index="6" instance=ExtResource( 6 )]
 
 position = Vector2( 553.224, 401.69 )
 rotation = -1.5708

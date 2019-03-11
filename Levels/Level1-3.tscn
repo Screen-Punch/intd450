@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Scenes/dungeonTileset.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
@@ -6,43 +6,19 @@
 [ext_resource path="res://Scenes/Nav2D.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Monster.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Mirror.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Scripts/AppearingText.gd" type="Script" id=7]
 
 [sub_resource type="NavigationPolygon" id=1]
 
-vertices = PoolVector2Array( 688.051, 129.977, 692.573, 253.58, -516.318, 247.55, -148.526, 123.948, -530.637, -388.605, -405.429, -387.497, -397.673, 121.092, -281.329, 121.092, -155.041, -155.599, -269.042, -152.599 )
-polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 2, 4, 5, 6 ), PoolIntArray( 3, 2, 6, 7 ), PoolIntArray( 8, 3, 7, 9 ) ]
-outlines = [ PoolVector2Array( -148.526, 123.948, 688.051, 129.977, 692.573, 253.58, -516.318, 247.55, -530.637, -388.605, -405.429, -387.497, -397.673, 121.092, -281.329, 121.092, -269.042, -152.599, -155.041, -155.599 ) ]
+vertices = PoolVector2Array( -260.769, 125.646, -271.021, -138.876, -141.836, -130.674, -123.381, 119.495, 676.337, 133.849, 678.388, 248.68, -521.19, 240.478, -389.954, 129.748, -531.443, -391.095, -408.409, -393.145 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 3, 4, 5, 6, 0 ), PoolIntArray( 7, 0, 6 ), PoolIntArray( 7, 6, 8, 9 ) ]
+outlines = [ PoolVector2Array( -271.021, -138.876, -141.836, -130.674, -123.381, 119.495, 676.337, 133.849, 678.388, 248.68, -521.19, 240.478, -531.443, -391.095, -408.409, -393.145, -389.954, 129.748, -260.769, 125.646 ) ]
 
 [sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
 extents = Vector2( 32, 32 )
 
-[sub_resource type="RectangleShape2D" id=3]
-
-custom_solver_bias = 0.0
-extents = Vector2( 32, 32 )
-
-[sub_resource type="Animation" id=4]
-
-length = 1.0
-loop = false
-step = 0.1
-tracks/0/type = "value"
-tracks/0/path = NodePath("Label:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 0.546875, 0.893799, 1, 0 ), Color( 0.546875, 0.893799, 1, 1 ) ]
-}
-
-[node name="Level1-3" type="Node2D" index="0"]
+[node name="Level1-3" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="." index="0"]
 
@@ -75,7 +51,8 @@ position = Vector2( 64.0522, -595.372 )
 
 position = Vector2( 1167.87, -313.486 )
 next_world = "res://Levels/Level1-4.tscn"
-transitionText = "I expected that, one day, another wanderlusting soul would arrive..."
+transitionText = "My wayward whispers… they speak to the countless desires and curiosities within all souls...The compulsion to seek the source of these whispers out eventually becomes... irresistible."
+nextLevelText = "Level 3: Now Two"
 
 [node name="Nav2D" parent="." index="3" instance=ExtResource( 4 )]
 
@@ -114,68 +91,6 @@ position = Vector2( 0, 145.522 )
 scale = Vector2( 1, 5.35212 )
 shape = SubResource( 2 )
 
-[node name="Text1" type="Node2D" parent="." index="5"]
-
-position = Vector2( 485.603, -385.542 )
-script = ExtResource( 7 )
-
-[node name="Label" type="Label" parent="Text1" index="0"]
-
-modulate = Color( 0.546875, 0.893799, 1, 1 )
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = -126.0
-margin_top = 173.0
-margin_right = 82.0
-margin_bottom = 209.0
-rect_scale = Vector2( 2, 2 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-text = "I have never seen these strange objects before..."
-align = 1
-autowrap = true
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Rect", "Visibility" ]
-
-[node name="Area2D" type="Area2D" parent="Text1" index="1"]
-
-position = Vector2( -0.212646, 66.1379 )
-scale = Vector2( 1.6719, 1.96878 )
-input_pickable = true
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-audio_bus_override = false
-audio_bus_name = "Master"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Text1/Area2D" index="0"]
-
-shape = SubResource( 3 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Text1" index="2"]
-
-root_node = NodePath("..")
-autoplay = ""
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
-anims/DisplayText = SubResource( 4 )
-blend_times = [  ]
-
 [connection signal="body_entered" from="Mirror/Area2D" to="Mirror" method="_on_Area2D_body_entered"]
-
-[connection signal="body_entered" from="Text1/Area2D" to="Text1" method="_on_Area2D_body_entered"]
 
 

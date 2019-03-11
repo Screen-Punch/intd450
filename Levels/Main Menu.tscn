@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scripts/Main Menu.gd" type="Script" id=1]
-[ext_resource path="res://Art/player.png" type="Texture" id=2]
+[ext_resource path="res://Scripts/LevelSelection.gd" type="Script" id=2]
+[ext_resource path="res://Art/player.png" type="Texture" id=3]
 
 [sub_resource type="Animation" id=1]
 
@@ -83,9 +84,9 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 620.0
-margin_top = 126.0
+margin_top = 43.0
 margin_right = 738.0
-margin_bottom = 186.0
+margin_bottom = 103.0
 rect_scale = Vector2( 2, 2 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -110,9 +111,9 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 620.0
-margin_top = 274.0
+margin_top = 179.0
 margin_right = 738.0
-margin_bottom = 334.0
+margin_bottom = 239.0
 rect_scale = Vector2( 2, 2 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -136,10 +137,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 620.0
-margin_top = 419.0
-margin_right = 738.0
-margin_bottom = 479.0
+margin_left = 618.0
+margin_top = 316.0
+margin_right = 736.0
+margin_bottom = 376.0
 rect_scale = Vector2( 2, 2 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -156,6 +157,35 @@ text = "Exit"
 flat = false
 align = 1
 _sections_unfolded = [ "Rect" ]
+
+[node name="LevelSelection" type="Button" parent="DefaultMenu" index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 618.0
+margin_top = 449.0
+margin_right = 736.0
+margin_bottom = 509.0
+rect_scale = Vector2( 2, 2 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Select Level"
+flat = false
+align = 1
+script = ExtResource( 2 )
+_sections_unfolded = [ "Rect" ]
+next_world = "res://Levels/Level_Selection.tscn"
 
 [node name="Credits" type="Panel" parent="." index="1"]
 
@@ -246,7 +276,7 @@ blend_times = [  ]
 [node name="Sprite" type="Sprite" parent="." index="3"]
 
 position = Vector2( 355.521, 379.954 )
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 _sections_unfolded = [ "Transform" ]
 
 [connection signal="pressed" from="DefaultMenu/NewGameButton" to="." method="_on_NewGameButton_pressed"]
@@ -254,6 +284,8 @@ _sections_unfolded = [ "Transform" ]
 [connection signal="pressed" from="DefaultMenu/CreditsButton" to="." method="_on_CreditsButton_pressed"]
 
 [connection signal="pressed" from="DefaultMenu/ExitButton" to="." method="_on_ExitButton_pressed"]
+
+[connection signal="pressed" from="DefaultMenu/LevelSelection" to="DefaultMenu/LevelSelection" method="_on_LevelSelection_pressed"]
 
 [connection signal="pressed" from="Credits/CreditsReturnButton" to="." method="_on_CreditsReturnButton_pressed"]
 
