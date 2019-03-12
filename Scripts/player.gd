@@ -124,3 +124,6 @@ func updatePlayerTexture(deaths):
 	if i > 6:	# if above limit
 		i = 5
 	$sprite.texture = load("res://Art/PCs" + str(i) + ".png")
+	
+func hideTimer():
+	$Camera2D/CanvasLayer/RichTextLabel.hide()

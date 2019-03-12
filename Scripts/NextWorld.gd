@@ -52,20 +52,20 @@ func _input(event):
 			textCanAdvance = false
 			if textTracker < transitionText.size()-1:
 				textTracker += 1
-				$CanvasLayer/TextAnimator.play("TextTransition")
-				$CanvasLayer/Label.text = transitionText[textTracker]
+				$CanvasLayer/Control/TextAnimator.play("TextTransition")
+				$CanvasLayer/Control/Label.text = transitionText[textTracker]
 			else:
 				GameManagerNode.loadNextLevel(next_world, nextLevelText)
 
 func _on_next_W_body_entered(body):
 	if body.is_in_group("Player") and !blocked:
-		body.hide()
+		body.hideTimer()
 		GameManagerNode.set_level_time()
 		time = GameManagerNode.get_level_time(level)
 		body.vulnerable = false
 		#_on_Timer_timeout() # Play Monster Noises while reading text
-		$CanvasLayer/AnimationPlayer.play("SceneTransition")
-		$CanvasLayer/TextAnimator.play("TextTransition")
+		$CanvasLayer/Control/AnimationPlayer.play("SceneTransition")
+		$CanvasLayer/Control/TextAnimator.play("TextTransition")
 
 
 func _on_AnimationPlayer_animation_finished(anim_name):
@@ -75,7 +75,7 @@ func _on_AnimationPlayer_animation_finished(anim_name):
 
 func revealExit():
 	blocked = false
-	$CanvasLayer/AnimationPlayer.play("ExitUnlocked")
+	$CanvasLayer/Control/AnimationPlayer.play("ExitUnlocked")
 
 func setTransitionText():
 	var root = get_tree().root
@@ -86,7 +86,7 @@ func setTransitionText():
 	level = int(level)
 	transitionText = narrativeSequences[level]
 	if transitionText.size() > 0:
-		$CanvasLayer/Label.text = transitionText[textTracker]
+		$CanvasLayer/Control/Label.text = transitionText[textTracker]
 
 func _on_TextAnimator_animation_finished(anim_name):
 	if anim_name == "TextTransition":

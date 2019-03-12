@@ -19,7 +19,7 @@ onready var player = get_tree().get_nodes_in_group("Player")[0]
 var canMove = false
 
 const CHASING_PLAYER_COLOR = Color(1, 1, 1, 1)
-const CHASING_MIRROR_COLOR = Color(0.5, 1, 0.5, 1)
+const CHASING_MIRROR_COLOR = Color(0.1, 1, 0.1, 1)
 
 func _ready():
 	MAXSPEED = SPEED
