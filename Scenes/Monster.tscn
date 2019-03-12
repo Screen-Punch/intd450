@@ -3,7 +3,7 @@
 [ext_resource path="res://Scripts/Monster.gd" type="Script" id=1]
 [ext_resource path="res://Art/Monsters.png" type="Texture" id=2]
 [ext_resource path="res://Sounds/SoundFiles/Long-1.wav" type="AudioStream" id=3]
-[ext_resource path="res://godotIcon.png" type="Texture" id=4]
+[ext_resource path="res://Art/mirrors_gates.png" type="Texture" id=4]
 [ext_resource path="res://Sounds/SoundFiles/Shrik-2.wav" type="AudioStream" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -178,12 +178,15 @@ autostart = false
 
 [node name="surpriseMark" type="Sprite" parent="." index="6"]
 
-modulate = Color( 1, 0, 0, 0 )
-position = Vector2( -0.448929, -0.0840073 )
-scale = Vector2( 0.16849, 0.699384 )
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 0.244751, -0.526306 )
+rotation = -1.5708
 texture = ExtResource( 4 )
-offset = Vector2( -6.59399, -84.927 )
-_sections_unfolded = [ "Transform", "Visibility" ]
+offset = Vector2( 129.824, -0.0621814 )
+vframes = 4
+hframes = 2
+frame = 6
+_sections_unfolded = [ "Animation", "Transform", "Visibility" ]
 
 [node name="MonsterSprites" type="AnimationPlayer" parent="." index="7"]
 
