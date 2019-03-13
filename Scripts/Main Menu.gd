@@ -9,6 +9,7 @@ func _ready():
 	# Initialization here
 	GameManagerNode.level_selection_mode = false
 	$AnimationPlayer.play("MainMenuAnimation")
+	$Monster/AnimationPlayer.play("Movement")
 
 func _on_NewGameButton_pressed():
 	get_tree().change_scene("res://Levels/Level1-2.tscn")

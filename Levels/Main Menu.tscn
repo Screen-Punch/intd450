@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://nate'stesttheme.tres" type="Theme" id=1]
 [ext_resource path="res://Scripts/Main Menu.gd" type="Script" id=2]
@@ -6,8 +6,9 @@
 [ext_resource path="res://miniboxes.tres" type="Theme" id=4]
 [ext_resource path="res://Scripts/LevelSelection.gd" type="Script" id=5]
 [ext_resource path="res://Art/CENTURY.TTF" type="DynamicFontData" id=6]
-[ext_resource path="res://Art/player.png" type="Texture" id=7]
-[ext_resource path="res://godotIcon.png" type="Texture" id=8]
+[ext_resource path="res://Art/mirrors_gates.png" type="Texture" id=7]
+[ext_resource path="res://Art/Monsters.png" type="Texture" id=8]
+[ext_resource path="res://godotIcon.png" type="Texture" id=9]
 
 [sub_resource type="DynamicFont" id=1]
 
@@ -27,20 +28,51 @@ _sections_unfolded = [ "Font", "Settings" ]
 
 [sub_resource type="Animation" id=3]
 
-length = 2.0
+length = 4.0
 loop = true
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath("BouncingBox:position")
+tracks/0/path = NodePath("Monster:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( -4, -4 ),
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 120.033, 380.856 ), Vector2( 355.586, 379.954 ) ]
+"values": [ Vector2( 120.256, 380.855 ), Vector2( 396.952, 499.706 ), Vector2( 399.861, 298.75 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AnimationPlayer/Crystal:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 2, 2.1, 2.2, 2.3, 2.4, 2.5, 3.6, 3.7, 3.8, 3.9, 4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 0, 1, 2, 3, 4, 5, 4, 3, 2, 1, 0 ]
+}
+
+[sub_resource type="Animation" id=4]
+
+resource_name = "Movement"
+length = 1.0
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 4, 3, 2, 1, 0 ]
 }
 
 [node name="Main Menu" type="Control"]
@@ -310,11 +342,32 @@ playback_speed = 1.0
 anims/MainMenuAnimation = SubResource( 3 )
 blend_times = [  ]
 
-[node name="BouncingBox" type="Sprite" parent="." index="3"]
+[node name="Crystal" type="Sprite" parent="AnimationPlayer" index="0"]
+
+position = Vector2( 400.815, 235.404 )
+texture = ExtResource( 7 )
+vframes = 4
+hframes = 6
+_sections_unfolded = [ "Animation" ]
+
+[node name="Monster" type="Sprite" parent="." index="3"]
 
 position = Vector2( 120.256, 380.855 )
-texture = ExtResource( 7 )
-_sections_unfolded = [ "Transform" ]
+texture = ExtResource( 8 )
+vframes = 2
+hframes = 3
+frame = 1
+_sections_unfolded = [ "Animation", "Transform" ]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Monster" index="0"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/Movement = SubResource( 4 )
+blend_times = [  ]
 
 [node name="BG" type="Sprite" parent="." index="4"]
 
@@ -322,7 +375,7 @@ modulate = Color( 0, 0, 0, 1 )
 position = Vector2( 570.939, 304.626 )
 scale = Vector2( 20.6686, 11.7722 )
 z_index = -10
-texture = ExtResource( 8 )
+texture = ExtResource( 9 )
 _sections_unfolded = [ "Visibility", "Z Index" ]
 __meta__ = {
 "_edit_lock_": true

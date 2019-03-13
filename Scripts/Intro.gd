@@ -12,3 +12,9 @@ func _process(delta):
 	timer += 1
 	if timer > 300:
 		get_tree().change_scene("res://Levels/Main Menu.tscn")
+
+
+func _input(event):
+	if event is InputEventKey:
+		if event.pressed:
+			get_tree().change_scene("res://Levels/Main Menu.tscn")
