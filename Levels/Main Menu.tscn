@@ -43,7 +43,7 @@ tracks/0/keys = {
 "values": [ Vector2( 120.033, 380.856 ), Vector2( 355.586, 379.954 ) ]
 }
 
-[node name="Main Menu" type="Control" index="0"]
+[node name="Main Menu" type="Control"]
 
 self_modulate = Color( 0, 0, 0, 1 )
 show_behind_parent = true
