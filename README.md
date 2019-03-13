@@ -1,9 +1,9 @@
-# [GAME NAME]
+# Fragments
 INTD 450 Game
 
 Welcome!
 
-[INSERT GAME NAME] is a [INSERT FEATURES HERE] game built in Godot 3 in Winter 2019 for the INT D 450: Computers and Games class offered at the University of Alberta.
+Fragments is a top down 2D puzzle solving game built in Godot 3 in Winter 2019 for the INT D 450: Computers and Games class offered at the University of Alberta.
 
 The Team:
 * Guanfang Dong (Programmer)
@@ -11,7 +11,7 @@ The Team:
 * Boris Fleysher (Producer, Programmer)
 * Stephen Melvin (Writer)
 * Andrew Somerville (Programmer, Musician)
-* Nate Spasiuk (Musician, Artist)
+* Nate Spasiuk (Lead Designer, Musician, Artist)
 
 [INSERT SCREENSHOTS HERE]
 
