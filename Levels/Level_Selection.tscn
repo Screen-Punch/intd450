@@ -5,7 +5,7 @@
 [ext_resource path="res://Scripts/Level1.gd" type="Script" id=3]
 [ext_resource path="res://godotIcon.png" type="Texture" id=4]
 
-[node name="Node2D" type="Control" index="0"]
+[node name="Node2D" type="Control"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -394,7 +394,7 @@ align = 1
 script = ExtResource( 3 )
 next_world = "res://Levels/Main Menu.tscn"
 
-[node name="Sprite" type="Sprite" parent="." index="13"]
+[node name="BG" type="Sprite" parent="." index="13"]
 
 modulate = Color( 0, 0, 0, 1 )
 position = Vector2( 573.019, 326.542 )

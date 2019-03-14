@@ -9,6 +9,7 @@ func _ready():
 	# Initialization here
 	GameManagerNode.level_selection_mode = false
 	$AnimationPlayer.play("MainMenuAnimation")
+	$Monster/AnimationPlayer.play("Movement")
 
 func _on_NewGameButton_pressed():
 	get_tree().change_scene("res://Levels/Level1-2.tscn")
@@ -20,12 +21,14 @@ func _on_ExitButton_pressed():
 
 func _on_CreditsButton_pressed():
 	$Credits.show()
-	$BouncingBox.hide()
+	$AnimationPlayer/Crystal.hide()
+	$Monster.hide()
 	$DefaultMenu.hide()
 
 
 func _on_CreditsReturnButton_pressed():
 	$Credits.hide()
-	$BouncingBox.show()
+	$AnimationPlayer/Crystal.show()
+	$Monster.show()
 	$DefaultMenu.show()
 

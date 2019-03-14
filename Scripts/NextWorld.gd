@@ -13,7 +13,7 @@ var narrativeSequences = [
 ["It was only a matter of time that another wanderlusting soul would find this place..."], #0 indexed
 ["My wayward whispers... snaking and burrowing deeply into unsuspecting hearts and minds…",
 "Like a siren's song... how sweetly they promise the countless, irresistible desires and curiosities of the mortal heart..."],
-[""],	# 2 (Monster first starts appears)
+[""],	# 2 (Monster first appears)
 ["I-..."],
 ["My solitary slumber was left unabated by guests for countless ages since the last intrusion...",
 "...you bear an uncanny resemblance to him. Interesting."],
@@ -27,6 +27,9 @@ var narrativeSequences = [
 ["Turn around, you only delay the end. Perhaps I will be quick."],
 ["Are you not tired!? You have run so far, only approaching the same end!"],
 ["The end has come..."],  # 13 = Last level currently
+["Run..."],
+[],
+[],
 ]
 
 func _ready():
@@ -66,6 +69,8 @@ func _on_next_W_body_entered(body):
 		#_on_Timer_timeout() # Play Monster Noises while reading text
 		$CanvasLayer/Control/AnimationPlayer.play("SceneTransition")
 		$CanvasLayer/Control/TextAnimator.play("TextTransition")
+	if body.is_in_group("Monster") and !blocked:
+		body.playMonsterTakesStairs()
 
 
 func _on_AnimationPlayer_animation_finished(anim_name):
