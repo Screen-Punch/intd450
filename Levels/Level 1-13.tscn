@@ -76,12 +76,9 @@ position = Vector2( -102.355, 126.913 )
 [node name="next_W" parent="." index="3" instance=ExtResource( 5 )]
 
 position = Vector2( 1088.3, 32.2987 )
-next_world = "res://Levels/Main Menu.tscn"
+next_world = "res://Levels/Level 1-14.tscn"
 level = 12
-transitionText = "You delude yourself, mortal. 
-
-You cannot escape the inevitable!"
-nextLevelText = "Null"
+nextLevelText = "Level 13: Gated"
 
 [node name="KeysAndLocks" type="Node2D" parent="." index="4"]
 

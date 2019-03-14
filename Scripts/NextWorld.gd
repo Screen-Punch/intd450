@@ -27,6 +27,9 @@ var narrativeSequences = [
 ["Turn around, you only delay the end. Perhaps I will be quick."],
 ["Are you not tired!? You have run so far, only approaching the same end!"],
 ["The end has come..."],  # 13 = Last level currently
+["Run..."],
+[],
+[],
 ]
 
 func _ready():
