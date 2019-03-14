@@ -203,7 +203,7 @@ tracks/0/keys = {
 "values": [ 5, 3, 4, 3 ]
 }
 
-[node name="Player" type="KinematicBody2D" groups=[
+[node name="Player" type="KinematicBody2D" index="0" groups=[
 "Player",
 ]]
 
@@ -281,7 +281,6 @@ _sections_unfolded = [ "Material", "Mouse" ]
 
 [node name="PauseMenu" type="Panel" parent="CanvasLayer" index="3"]
 
-editor/display_folded = true
 visible = false
 anchor_left = 0.0
 anchor_top = 0.0
