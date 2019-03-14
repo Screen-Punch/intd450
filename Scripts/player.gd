@@ -6,6 +6,7 @@ extends KinematicBody2D
 # Member variables
 const MAX_MOTION_SPEED = 240
 const MOTION_SPEED = 240 # Pixels/second
+const DEATHS_PER_COLOR_CHANGE = 3
 var distance = 500
 
 var target
@@ -118,7 +119,7 @@ func _on_SceneTransition_animation_finished(anim_name):
 
 func updatePlayerTexture(deaths):
 	var i = 1
-	i = int((deaths+4)/ 4)
+	i = int((deaths+DEATHS_PER_COLOR_CHANGE)/ DEATHS_PER_COLOR_CHANGE)
 	if i <= 0:	# if below limit
 		i = 1
 	if i > 6:	# if above limit

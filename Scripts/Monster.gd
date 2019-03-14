@@ -121,3 +121,6 @@ func _on_Timer_timeout():
 	randomNoiseDelay = randi() % 5 + 10
 	randomNoiseTimer.set_wait_time(randomNoiseDelay)
 	randomNoiseTimer.start()
+
+func playMonsterTakesStairs():
+	$AnimationPlayer.play("FadeOut")
