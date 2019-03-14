@@ -21,12 +21,14 @@ func _on_ExitButton_pressed():
 
 func _on_CreditsButton_pressed():
 	$Credits.show()
-	$BouncingBox.hide()
+	$AnimationPlayer/Crystal.hide()
+	$Monster.hide()
 	$DefaultMenu.hide()
 
 
 func _on_CreditsReturnButton_pressed():
 	$Credits.hide()
-	$BouncingBox.show()
+	$AnimationPlayer/Crystal.show()
+	$Monster.show()
 	$DefaultMenu.show()
 

@@ -75,7 +75,7 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 3, 4, 5, 4, 3, 2, 1, 0 ]
 }
 
-[node name="Main Menu" type="Control"]
+[node name="Main Menu" type="Control" index="0"]
 
 self_modulate = Color( 0, 0, 0, 1 )
 show_behind_parent = true
