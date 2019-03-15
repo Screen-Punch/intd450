@@ -19,7 +19,7 @@ onready var player = get_tree().get_nodes_in_group("Player")[0]
 var canMove = false
 
 const CHASING_PLAYER_COLOR = Color(1, 1, 1, 1)
-const CHASING_MIRROR_COLOR = Color(0.5, 1, 0.5, 1)
+const CHASING_MIRROR_COLOR = Color(0.1, 1, 0.1, 1)
 
 func _ready():
 	MAXSPEED = SPEED
@@ -61,7 +61,7 @@ func _process(delta):
 func sawNewTarget():
 	$Sprite.self_modulate = CHASING_MIRROR_COLOR
 	$SurpriseMarkAudio.play(0)
-	$surpriseMark.rotation_degrees = rad2deg(self.get_angle_to(target.position)) + 90
+	$SurpriseManager/surpriseMark.rotation_degrees = rad2deg(self.get_angle_to(target.position))
 	$AnimationPlayer.play("NewTargetAnimation")
 
 func findNewTarget():
@@ -121,3 +121,6 @@ func _on_Timer_timeout():
 	randomNoiseDelay = randi() % 5 + 10
 	randomNoiseTimer.set_wait_time(randomNoiseDelay)
 	randomNoiseTimer.start()
+
+func playMonsterTakesStairs():
+	$AnimationPlayer.play("FadeOut")

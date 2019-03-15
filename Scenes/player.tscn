@@ -1,7 +1,7 @@
 [gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=1]
-[ext_resource path="res://Art/pcs.png" type="Texture" id=2]
+[ext_resource path="res://Art/PCs1.png" type="Texture" id=2]
 [ext_resource path="res://Scenes/Camera2D.tscn" type="PackedScene" id=3]
 [ext_resource path="res://godotIcon.png" type="Texture" id=4]
 [ext_resource path="res://Scripts/Blur.gd" type="Script" id=5]
@@ -150,7 +150,7 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id=9]
 
-length = 0.2
+length = 0.4
 loop = true
 step = 0.1
 tracks/0/type = "value"
@@ -160,10 +160,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 1, 2 ]
+"values": [ 1, 0, 2, 0 ]
 }
 
 [sub_resource type="Animation" id=10]
@@ -187,7 +187,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=11]
 
-length = 0.2
+length = 0.4
 loop = true
 step = 0.1
 tracks/0/type = "value"
@@ -197,30 +197,29 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 5, 4 ]
+"values": [ 5, 3, 4, 3 ]
 }
 
-[node name="Player" type="KinematicBody2D" groups=[
+[node name="Player" type="KinematicBody2D" index="0" groups=[
 "Player",
 ]]
 
+scale = Vector2( 0.8, 0.8 )
 z_index = 2
 input_pickable = false
 collision_layer = 2
 collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
-_sections_unfolded = [ "Collision", "Z Index" ]
+_sections_unfolded = [ "Collision", "Transform", "Z Index" ]
 
 [node name="sprite" type="Sprite" parent="." index="0"]
 
 texture = ExtResource( 2 )
-vframes = 6
 hframes = 8
-frame = 7
 _sections_unfolded = [ "Animation", "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
@@ -282,7 +281,6 @@ _sections_unfolded = [ "Material", "Mouse" ]
 
 [node name="PauseMenu" type="Panel" parent="CanvasLayer" index="3"]
 
-editor/display_folded = true
 visible = false
 anchor_left = 0.0
 anchor_top = 0.0

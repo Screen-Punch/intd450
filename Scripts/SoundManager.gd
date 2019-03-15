@@ -11,7 +11,4 @@ func _Protag_Sound(sfx, position):
 	
 	
 func _BGM_Sound(sound):
-	
-	
-	
-	
+	pass

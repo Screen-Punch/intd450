@@ -49,10 +49,12 @@ position = Vector2( -166.923, 0 )
 
 [node name="next_W" parent="." index="2" instance=ExtResource( 3 )]
 
-position = Vector2( 701.06, -131.162 )
+position = Vector2( 687.06, -131.162 )
 next_world = "res://Levels/Level1-5.tscn"
 level = 3
-transitionText = "..."
+transitionText = "The bittersweet stench of desperation reeks upon you… it betrays your every step. 
+
+How you scurry about like a witless rat..."
 nextLevelText = "Level 4: Back Again"
 
 [node name="Nav2D" parent="." index="3" instance=ExtResource( 4 )]

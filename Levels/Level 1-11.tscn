@@ -65,10 +65,11 @@ position = Vector2( -102.355, 126.913 )
 
 [node name="next_W" parent="." index="3" instance=ExtResource( 5 )]
 
-position = Vector2( -31.9386, -350.555 )
+position = Vector2( -0.597658, -350.015 )
+scale = Vector2( -1, 1 )
+_sections_unfolded = [ "Region", "Transform", "Z Index" ]
 next_world = "res://Levels/Level 1-12.tscn"
 level = 10
-transitionText = "Your time dwindles..."
 nextLevelText = "Level 11: Stuck in the Middle With You"
 
 [node name="Key" parent="." index="4" instance=ExtResource( 6 )]
@@ -78,7 +79,8 @@ position = Vector2( 603.629, -30.2574 )
 [node name="Lock" parent="Key" index="2" instance=ExtResource( 7 )]
 
 position = Vector2( -631.645, 1.0087 )
-_sections_unfolded = [ "Collision", "Visibility" ]
+rotation = 3.14159
+_sections_unfolded = [ "Collision", "Transform", "Visibility" ]
 
 [node name="Mirror" parent="." index="5" instance=ExtResource( 8 )]
 

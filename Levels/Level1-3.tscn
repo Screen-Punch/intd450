@@ -18,7 +18,7 @@ outlines = [ PoolVector2Array( -271.021, -138.876, -141.836, -130.674, -123.381,
 custom_solver_bias = 0.0
 extents = Vector2( 32, 32 )
 
-[node name="Level1-3" type="Node2D"]
+[node name="Level1-3" type="Node2D" index="0"]
 
 [node name="TileMap" type="TileMap" parent="." index="0"]
 
@@ -49,10 +49,9 @@ position = Vector2( 64.0522, -595.372 )
 
 [node name="next_W" parent="." index="2" instance=ExtResource( 3 )]
 
-position = Vector2( 1167.87, -313.486 )
+position = Vector2( 1149.91, -313.486 )
 next_world = "res://Levels/Level1-4.tscn"
 level = 2
-transitionText = "My wayward whispers… they speak to the countless desires and curiosities within all souls...The compulsion to seek the source of these whispers out eventually becomes... irresistible."
 nextLevelText = "Level 3: Now Two"
 
 [node name="Nav2D" parent="." index="3" instance=ExtResource( 4 )]

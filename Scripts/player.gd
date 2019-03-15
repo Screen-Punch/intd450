@@ -6,6 +6,7 @@ extends KinematicBody2D
 # Member variables
 const MAX_MOTION_SPEED = 240
 const MOTION_SPEED = 240 # Pixels/second
+const DEATHS_PER_COLOR_CHANGE = 3
 var distance = 500
 
 var target
@@ -30,11 +31,15 @@ func _ready():
 	$CanvasLayer/Blur.show()
 	oldAnim = ""
 	anim = ""
+	var deaths = GameManagerNode.totalDeaths
+	updatePlayerTexture(deaths)
 
 func _input(event):
-	if event is InputEventKey and target and !target.spawned:
+	if event is InputEventKey:
 		if event.pressed:
-			target.spawn()
+			if target and !target.spawned:
+				target.spawn()
+			$Camera2D/CanvasLayer/RichTextLabel.start()
 
 func _physics_process(delta):
 	var motion = Vector2()
@@ -47,7 +52,7 @@ func _physics_process(delta):
 		motion += Vector2(-1, 0)
 	if Input.is_action_pressed("ui_right"):
 		motion += Vector2(1, 0)
-	if Input.is_action_pressed("ui_pause"):
+	if Input.is_action_pressed("ui_pause") and vulnerable:
 		$CanvasLayer/PauseMenu.show()
 		get_tree().paused = true
 	
@@ -111,3 +116,15 @@ func _on_SceneTransition_animation_finished(anim_name):
 		dead = false
 		MOTION_SPEED = MAX_MOTION_SPEED
 		GameManagerNode.reloadLevel()
+
+func updatePlayerTexture(deaths):
+	var i = 1
+	i = int((deaths+DEATHS_PER_COLOR_CHANGE)/ DEATHS_PER_COLOR_CHANGE)
+	if i <= 0:	# if below limit
+		i = 1
+	if i > 6:	# if above limit
+		i = 5
+	$sprite.texture = load("res://Art/PCs" + str(i) + ".png")
+	
+func hideTimer():
+	$Camera2D/CanvasLayer/RichTextLabel.hide()
