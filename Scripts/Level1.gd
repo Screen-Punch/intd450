@@ -17,3 +17,10 @@ func _on_Level1_pressed():
 	GameManagerNode.loadNextLevel(next_world, " ")
 	GameManagerNode.set_level_selection_to_true()
 
+
+# testing (wang)
+var testing = 1
+func _process(delta):
+	if testing:
+		if Input.is_action_pressed("ui_up"):
+			GameManagerNode.loadNextLevel("res://Levels/Level1-8.tscn","")
