@@ -28,8 +28,9 @@ var narrativeSequences = [
 ["Are you not tired!? You have run so far, only approaching the same end!"],
 ["The end has come..."],  # 13 = Last level currently
 ["Run..."],
-[],
-[],
+["This is a harsh fall"],
+["It was only a matter of time that another wanderlusting soul would find this place...\nMy wayward whispers… snaking and burrowing deeply into unsuspecting hearts and minds…\nLike a siren's song... how sweetly they promise the countless, irresistible desires and curiosities of the mortal heart..."],
+[""],
 ]
 
 func _ready():
@@ -53,12 +54,12 @@ func _input(event):
 	if event is InputEventKey and textCanAdvance:
 		if event.pressed:
 			textCanAdvance = false
-			if textTracker < transitionText.size()-1:
+		if textTracker < transitionText.size()-1:
 				textTracker += 1
 				$CanvasLayer/Control/TextAnimator.play("TextTransition")
 				$CanvasLayer/Control/Label.text = transitionText[textTracker]
-			else:
-				GameManagerNode.loadNextLevel(next_world, nextLevelText)
+		else:
+			GameManagerNode.loadNextLevel(next_world, nextLevelText)
 
 func _on_next_W_body_entered(body):
 	if body.is_in_group("Player") and !blocked:
@@ -88,8 +89,8 @@ func setTransitionText():
 	for child in root.get_children():
 		if "Level" in child.name:
 			level = child.name.split("-")[1]
-	level = int(level)
-	transitionText = narrativeSequences[level]
+
+	transitionText = narrativeSequences[int(level)]
 	if transitionText.size() > 0:
 		$CanvasLayer/Control/Label.text = transitionText[textTracker]
 

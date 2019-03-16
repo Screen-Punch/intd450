@@ -75,7 +75,7 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 3, 4, 5, 4, 3, 2, 1, 0 ]
 }
 
-[node name="Main Menu" type="Control" index="0"]
+[node name="Main Menu" type="Control"]
 
 self_modulate = Color( 0, 0, 0, 1 )
 show_behind_parent = true
@@ -97,7 +97,6 @@ _sections_unfolded = [ "Material", "Theme", "Visibility" ]
 
 [node name="DefaultMenu" type="Control" parent="." index="0"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -139,7 +138,7 @@ clip_text = true
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-_sections_unfolded = [ "custom_colors", "custom_constants", "custom_fonts" ]
+_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Mouse", "Rect", "Size Flags", "Theme", "custom_colors", "custom_constants", "custom_fonts", "custom_styles" ]
 
 [node name="NewGameButton" type="Button" parent="DefaultMenu" index="1"]
 
