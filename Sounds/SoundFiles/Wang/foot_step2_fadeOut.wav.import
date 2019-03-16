@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/foot_step2_fadeOut.wav-d7ac54f64e0bfb80e640d080a083cbe5.sample"
+
+[deps]
+
+source_file="res://Sounds/SoundFiles/Wang/foot_step2_fadeOut.wav"
+dest_files=[ "res://.import/foot_step2_fadeOut.wav-d7ac54f64e0bfb80e640d080a083cbe5.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
