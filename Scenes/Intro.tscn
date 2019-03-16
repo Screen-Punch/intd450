@@ -3,7 +3,7 @@
 [ext_resource path="res://testvideo.ogv" type="VideoStream" id=1]
 [ext_resource path="res://Scripts/Intro.gd" type="Script" id=2]
 
-[node name="VideoPlayer" type="VideoPlayer"]
+[node name="VideoPlayer" type="VideoPlayer" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
