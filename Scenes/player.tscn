@@ -16,7 +16,7 @@ extents = Vector2( 6.71158, 11.2131 )
 [sub_resource type="Animation" id=2]
 
 resource_name = "SceneTransition"
-length = 0.2
+length = 0.4
 loop = false
 step = 0.02
 tracks/0/type = "value"
@@ -233,7 +233,6 @@ shape = SubResource( 1 )
 
 [node name="death2" type="AudioStreamPlayer2D" parent="." index="3"]
 
-scale = Vector2( 1, 1 )
 stream = ExtResource( 4 )
 volume_db = 0.0
 pitch_scale = 1.0
