@@ -67,6 +67,7 @@ func _on_next_W_body_entered(body):
 		GameManagerNode.set_level_time()
 		time = GameManagerNode.get_level_time(level)
 		body.vulnerable = false
+		$foot_step2.play(0)
 		#_on_Timer_timeout() # Play Monster Noises while reading text
 		$CanvasLayer/Control/AnimationPlayer.play("SceneTransition")
 		$CanvasLayer/Control/TextAnimator.play("TextTransition")
