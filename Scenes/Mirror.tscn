@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Scripts/Mirror.gd" type="Script" id=1]
 [ext_resource path="res://Art/mirrors_gates.png" type="Texture" id=2]
-[ext_resource path="res://Sounds/SoundFiles/24 bit/break.wav" type="AudioStream" id=3]
+[ext_resource path="res://Sounds/SoundFiles/Wang/break_crystal1.wav" type="AudioStream" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -28,7 +28,7 @@ tracks/0/keys = {
 "values": [ 0, 2, 3, 4, 5 ]
 }
 
-[node name="Mirror" type="StaticBody2D" groups=[
+[node name="Mirror" type="StaticBody2D" index="0" groups=[
 "Mirror",
 ]]
 
