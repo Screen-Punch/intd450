@@ -12,7 +12,7 @@ func _ready():
 	$Monster/AnimationPlayer.play("Movement")
 
 func _on_NewGameButton_pressed():
-	get_tree().change_scene("res://Levels/Level1-2.tscn")
+	get_tree().change_scene("res://Levels/Level_Intro_Scene.tscn")
 
 
 func _on_ExitButton_pressed():

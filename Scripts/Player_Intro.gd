@@ -21,14 +21,18 @@ var dead = false
 var anim
 var oldAnim
 
+var control = false
+
+
 
 func _ready():
+	$Camera2D.zoomfactor = 0.8
 	var monsters  = get_tree().get_nodes_in_group("Monster")
 	for t in monsters:
 		target = t
 	$CanvasLayer/SceneTransition.play("SceneTransition")
 	vulnerable = true
-	$AnimationPlayer.play("SpawnAnimation")
+	#$AnimationPlayer.play("SpawnAnimation")
 	$CanvasLayer/Blur.show()
 	oldAnim = ""
 	anim = ""
@@ -44,43 +48,43 @@ func _input(event):
 
 func _physics_process(delta):
 	var motion = Vector2()
-	
-	if Input.is_action_pressed("ui_up"):
-		motion += Vector2(0, -1)
-	if Input.is_action_pressed("ui_down"):
-		motion += Vector2(0, 1)
-	if Input.is_action_pressed("ui_left"):
-		motion += Vector2(-1, 0)
-	if Input.is_action_pressed("ui_right"):
-		motion += Vector2(1, 0)
-	if Input.is_action_pressed("ui_pause") and vulnerable:
-		$CanvasLayer/PauseMenu.show()
-		get_tree().paused = true
-	
-	if canMove:
-		if motion.y < 0:
-			anim = "WalkUp"
-		elif motion.y > 0:
-			anim = "WalkDown"
-		if motion.x < 0:
-			anim = "WalkRight"
-			$sprite.flip_h = true
-		elif motion.x > 0:
-			anim = "WalkRight"
-			$sprite.flip_h = false
-		if motion == Vector2(0, 0):
-			if oldAnim == "WalkUp":
-				anim = "IdleUp"
-			if oldAnim == "WalkDown":
-				anim = "IdleDown"
-			if oldAnim == "WalkRight":
-				anim = "IdleRight"
-		if oldAnim != anim:
-			$AnimationPlayer.play(anim)
-			oldAnim = anim
+	if control == true:
+		if Input.is_action_pressed("ui_up"):
+			motion += Vector2(0, -1)
+		if Input.is_action_pressed("ui_down"):
+			motion += Vector2(0, 1)
+		if Input.is_action_pressed("ui_left"):
+			motion += Vector2(-1, 0)
+		if Input.is_action_pressed("ui_right"):
+			motion += Vector2(1, 0)
+		if Input.is_action_pressed("ui_pause") and vulnerable:
+			$CanvasLayer/PauseMenu.show()
+			get_tree().paused = true
 		
-		motion = motion.normalized() * MOTION_SPEED
-		move_and_slide(motion)
+		if canMove:
+			if motion.y < 0:
+				anim = "WalkUp"
+			elif motion.y > 0:
+				anim = "WalkDown"
+			if motion.x < 0:
+				anim = "WalkRight"
+				$sprite.flip_h = true
+			elif motion.x > 0:
+				anim = "WalkRight"
+				$sprite.flip_h = false
+			if motion == Vector2(0, 0):
+				if oldAnim == "WalkUp":
+					anim = "IdleUp"
+				if oldAnim == "WalkDown":
+					anim = "IdleDown"
+				if oldAnim == "WalkRight":
+					anim = "IdleRight"
+			if oldAnim != anim:
+				$AnimationPlayer.play(anim)
+				oldAnim = anim
+			
+			motion = motion.normalized() * MOTION_SPEED
+			move_and_slide(motion)
 	
 func _process(delta):
 	if target:
@@ -129,3 +133,23 @@ func updatePlayerTexture(deaths):
 	
 func hideTimer():
 	$Camera2D/CanvasLayer/RichTextLabel.hide()
+
+func _on_Button_button_pressed():
+	var offset_vec = Vector2()
+	offset_vec.y += 500
+	offset_vec.x -= 200
+	$Camera2D.offset  = offset_vec
+	var zoom_vec = Vector2()
+	zoom_vec.x += 1.3
+	zoom_vec.y += 1.3
+	$Camera2D.zoom = zoom_vec
+	canMove = false
+	control = false
+	
+
+
+func _on_Monster_can_move():
+	canMove = true
+	control = true
+	var offset_vec = Vector2()
+	$Camera2D.offset  = offset_vec
