@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Scripts/NextWorld.gd" type="Script" id=1]
 [ext_resource path="res://Art/switches.png" type="Texture" id=2]
-[ext_resource path="res://godotIcon.png" type="Texture" id=3]
+[ext_resource path="res://Sounds/SoundFiles/Wang/foot_step2_fadeOut.wav" type="AudioStream" id=3]
+[ext_resource path="res://godotIcon.png" type="Texture" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -142,7 +143,7 @@ tracks/1/keys = {
 custom_solver_bias = 0.0
 extents = Vector2( 61.6574, 32 )
 
-[node name="next_W" type="Area2D" groups=[
+[node name="next_W" type="Area2D" index="0" groups=[
 "Exit",
 ]]
 
@@ -173,7 +174,18 @@ hframes = 3
 frame = 6
 _sections_unfolded = [ "Animation" ]
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." index="2"]
+[node name="foot_step2" type="AudioStreamPlayer2D" parent="." index="2"]
+
+stream = ExtResource( 3 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." index="3"]
 
 layer = 1
 offset = Vector2( 0, 0 )
@@ -192,7 +204,7 @@ _sections_unfolded = [ "Z Index" ]
 modulate = Color( 0, 0, 0, 0 )
 position = Vector2( 532.765, 310.185 )
 scale = Vector2( 17.6489, 10.6933 )
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 _sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 __meta__ = {
 "_edit_lock_": true
@@ -270,7 +282,7 @@ playback_speed = 1.0
 anims/TextTransition = SubResource( 4 )
 blend_times = [  ]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." index="3"]
+[node name="StaticBody2D" type="StaticBody2D" parent="." index="4"]
 
 input_pickable = false
 collision_layer = 1
@@ -285,7 +297,7 @@ bounce = 0.0
 shape = SubResource( 5 )
 _sections_unfolded = [ "Visibility" ]
 
-[node name="StatueSprite" type="Sprite" parent="." index="4"]
+[node name="StatueSprite" type="Sprite" parent="." index="5"]
 
 modulate = Color( 0, 0, 0, 1 )
 position = Vector2( -1.31115, -5.63423e-008 )
