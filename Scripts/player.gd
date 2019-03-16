@@ -105,6 +105,7 @@ func takeDamage():
 		MOTION_SPEED = 0
 		dead = true
 		$CanvasLayer/SceneTransition.play_backwards("SceneTransition")
+		$death2.play(0)
 
 
 func _on_AnimationPlayer_animation_finished(anim_name):
