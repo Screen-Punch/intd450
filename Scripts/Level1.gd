@@ -10,8 +10,9 @@ func _ready():
 	if "Level" in name:
 		level = name.split("Level")[1]
 		level = int(level)
-		if GameManagerNode.level_time[level] == -1:
-			hide()
+		if GameManagerNode.level_time[level] != -1:
+			$LockSprite.hide()
+			disabled = false
 
 func _on_Level1_pressed():
 	GameManagerNode.loadNextLevel(next_world, " ")
