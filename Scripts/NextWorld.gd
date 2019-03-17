@@ -28,9 +28,9 @@ var narrativeSequences = [
 ["Are you not tired!? You have run so far, only approaching the same end!"],
 ["The end has come..."],  # 13 = Last level currently
 ["Run..."],
-["This is a harsh fall"],
-["It was only a matter of time that another wanderlusting soul would find this place...\nMy wayward whispers… snaking and burrowing deeply into unsuspecting hearts and minds…\nLike a siren's song... how sweetly they promise the countless, irresistible desires and curiosities of the mortal heart..."],
-[""],
+["So close..."],
+["It was only a matter of time that another wanderlusting soul would find this place...\n"],
+["My wayward whispers… snaking and burrowing deeply into unsuspecting hearts and minds…\nLike a siren's song... how sweetly they promise the countless, irresistible desires and curiosities of the mortal heart..."],
 ]
 
 func _ready():

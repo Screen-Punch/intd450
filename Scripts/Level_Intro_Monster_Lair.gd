@@ -17,6 +17,10 @@ func _process(delta):
 			$Player.control = true
 			$Player.canMove = true
 			changed = true
+	
+	#var v = Vector2()
+	$fog.position.x += 0.1
+	$fog.position.y += 0.1
 
 
 func _on_Button_button_pressed():
