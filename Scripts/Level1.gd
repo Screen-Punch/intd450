@@ -15,6 +15,9 @@ func _ready():
 			disabled = false
 
 func _on_Level1_pressed():
+	BGMPlayer.stream = load("res://Sounds/BGM/Outonalimb.wav")
+	BGMPlayer.play(0)
+	GameManagerNode.BGMAudioName = "res://Sounds/BGM/Outonalimb.wav"
 	GameManagerNode.loadNextLevel(next_world, " ")
 	GameManagerNode.set_level_selection_to_true()
 
