@@ -9,8 +9,10 @@ var level_time = [-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1]
 var current_time
 var current_level
 
+var BGMAudioName = "res://Sounds/BGM/Wakeup.wav"
+
 func _ready():
-	pass
+	BGMPlayer.play(0)
 
 func reloadLevel():
 	call_deferred("_reloadLevel")
