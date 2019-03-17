@@ -18,6 +18,7 @@ boot_splash/bg_color=Color( 0, 0, 0, 1 )
 [autoload]
 
 GameManagerNode="*res://Scenes/GameManagerNode.tscn"
+BGMPlayer="*res://Scenes/BGMPlayer.tscn"
 
 [display]
 

@@ -10,8 +10,15 @@ func _ready():
 	GameManagerNode.level_selection_mode = false
 	$AnimationPlayer.play("MainMenuAnimation")
 	$Monster/AnimationPlayer.play("Movement")
+	
+	if GameManagerNode.BGMAudioName != "res://Sounds/BGM/Wakeup.wav":
+		BGMPlayer.stream = load("res://Sounds/BGM/Wakeup.wav")
+		BGMPlayer.play(0)
 
 func _on_NewGameButton_pressed():
+	BGMPlayer.stream = load("res://Sounds/BGM/Outonalimb.wav")
+	BGMPlayer.play(0)
+	GameManagerNode.BGMAudioName = "res://Sounds/BGM/Outonalimb.wav"
 	get_tree().change_scene("res://Levels/Level_Intro_Scene.tscn")
 
 
