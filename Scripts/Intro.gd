@@ -10,7 +10,7 @@ func _ready():
 
 func _process(delta):
 	timer += 1
-	if timer > 240:
+	if timer > 450:
 		get_tree().change_scene("res://Levels/Main Menu.tscn")
 
 
