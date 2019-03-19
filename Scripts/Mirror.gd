@@ -29,6 +29,7 @@ func takeDamage():
 		var exits = get_tree().get_nodes_in_group("Exit")
 		for exit in exits:
 			exit.revealExit();
+	$Light2D.queue_free()
 
 
 func _on_Area2D_body_entered(body):
