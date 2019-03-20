@@ -130,3 +130,10 @@ func updatePlayerTexture(deaths):
 	
 func hideTimer():
 	$Camera2D/CanvasLayer/RichTextLabel.hide()
+	
+
+func dimCamera():
+	var curLev = $CanvasModulate.color.r - 0.2
+	$CanvasModulate.color = Color(curLev, curLev, curLev)
+	var mirrors  = get_tree().get_nodes_in_group("Mirror")
+	

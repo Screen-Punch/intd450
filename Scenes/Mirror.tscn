@@ -29,7 +29,7 @@ tracks/0/keys = {
 "values": [ 0, 2, 3, 4, 5 ]
 }
 
-[node name="Mirror" type="StaticBody2D" index="0" groups=[
+[node name="Mirror" type="StaticBody2D" groups=[
 "Mirror",
 ]]
 

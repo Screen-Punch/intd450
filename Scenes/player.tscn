@@ -493,6 +493,10 @@ anims/WalkRight = SubResource( 10 )
 anims/WalkUp = SubResource( 11 )
 blend_times = [  ]
 
+[node name="CanvasModulate" type="CanvasModulate" parent="." index="6"]
+
+color = Color( 1, 1, 1, 1 )
+
 [connection signal="animation_finished" from="CanvasLayer/SceneTransition" to="." method="_on_SceneTransition_animation_finished"]
 
 [connection signal="pressed" from="CanvasLayer/PauseMenu/ResumeButton" to="CanvasLayer/PauseMenu" method="_on_ResumeButton_pressed"]
