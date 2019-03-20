@@ -22,6 +22,7 @@ var anim
 var oldAnim
 
 var control = false
+export (bool) var timerVisible = true
 
 
 
@@ -38,6 +39,8 @@ func _ready():
 	anim = ""
 	var deaths = GameManagerNode.totalDeaths
 	updatePlayerTexture(deaths)
+	if !timerVisible:
+		hideTimer()
 
 func _input(event):
 	if event is InputEventKey:

@@ -29,7 +29,7 @@ extents = Vector2( 32, 32 )
 custom_solver_bias = 0.0
 extents = Vector2( 32, 32 )
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node2D" index="0"]
 
 [node name="GreenFloorTile" type="Sprite" parent="." index="0"]
 
@@ -1123,12 +1123,13 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="BackGroundNull" type="Sprite" parent="." index="63"]
 
+modulate = Color( 0, 0, 0, 1 )
 position = Vector2( 150.968, -49.1774 )
 texture = ExtResource( 1 )
 vframes = 10
 hframes = 5
 frame = 45
-_sections_unfolded = [ "Animation" ]
+_sections_unfolded = [ "Animation", "Visibility" ]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="BackGroundNull" index="0"]
 

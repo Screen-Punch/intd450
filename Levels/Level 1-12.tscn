@@ -39,7 +39,7 @@ tracks/0/keys = {
 "values": [ 0, 2, 3, 4, 5 ]
 }
 
-[node name="Level 1-12" type="Node2D"]
+[node name="Level 1-12" type="Node2D" index="0"]
 
 [node name="TileMap" type="TileMap" parent="." index="0"]
 
@@ -88,12 +88,6 @@ position = Vector2( 225.493, 608.724 )
 scale = Vector2( 0.513084, 1 )
 next_world = "res://Levels/Level 1-13.tscn"
 level = 11
-transitionText = "You can feel the oppressive earth above our heads, isolating us completely from the surface world... 
-
-One by one, these conduits of light have nearly become completely expunged. 
-
-Soon, you will know naught but the all-encompassing darkness that returns to swallow this forgotten place.
-"
 nextLevelText = "Level 12: All Around Me"
 
 [node name="KeysAndLocks" type="Node2D" parent="." index="4"]
@@ -158,8 +152,7 @@ shape = SubResource( 2 )
 
 [node name="Mirror4" parent="." index="7" instance=ExtResource( 8 )]
 
-editor/display_folded = true
-position = Vector2( 411.179, -59.9551 )
+position = Vector2( 353.419, -64.4676 )
 rotation = 3.14159
 _sections_unfolded = [ "Collision", "Transform", "Visibility" ]
 mirrorDirection = "horizontal"

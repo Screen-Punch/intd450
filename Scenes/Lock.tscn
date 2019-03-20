@@ -24,7 +24,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 8, 9, 10, 11 ]
+"values": [ 2, 3, 4, 5 ]
 }
 
 [node name="Lock" type="StaticBody2D" index="0"]
@@ -46,9 +46,9 @@ shape = SubResource( 1 )
 [node name="Sprite" type="Sprite" parent="." index="1"]
 
 texture = ExtResource( 2 )
-vframes = 2
+vframes = 3
 hframes = 6
-frame = 8
+frame = 2
 _sections_unfolded = [ "Animation" ]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="2"]

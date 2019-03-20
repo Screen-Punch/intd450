@@ -68,7 +68,6 @@ position = Vector2( -102.355, 126.913 )
 position = Vector2( 639.788, 97.145 )
 next_world = "res://Levels/Level 1-11.tscn"
 level = 9
-transitionText = "Run. Flee. Do what you want, it matters not."
 nextLevelText = "Level 10: Opaque"
 
 [node name="Key" parent="." index="4" instance=ExtResource( 6 )]
@@ -77,7 +76,7 @@ position = Vector2( 423.778, 346.83 )
 
 [node name="Lock" parent="Key" index="2" instance=ExtResource( 7 )]
 
-position = Vector2( 120.915, -247.271 )
+position = Vector2( 120.1, -243.198 )
 
 [node name="Mirror" parent="." index="5" instance=ExtResource( 8 )]
 

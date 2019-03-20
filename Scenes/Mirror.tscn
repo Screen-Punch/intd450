@@ -29,7 +29,7 @@ tracks/0/keys = {
 "values": [ 0, 2, 3, 4, 5 ]
 }
 
-[node name="Mirror" type="StaticBody2D" groups=[
+[node name="Mirror" type="StaticBody2D" index="0" groups=[
 "Mirror",
 ]]
 
@@ -103,6 +103,9 @@ shadow_filter = 0
 shadow_filter_smooth = 0.0
 shadow_item_cull_mask = 1
 _sections_unfolded = [ "Shadow" ]
+__meta__ = {
+"_edit_lock_": true
+}
 
 [connection signal="finished" from="AudioStreamPlayer2D" to="." method="_on_AudioStreamPlayer2D_finished"]
 
