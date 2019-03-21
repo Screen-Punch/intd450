@@ -18,7 +18,7 @@ func _on_Level_mouse_entered(level):
 	if bestTime == -1:
 		bestTime = "Not Played"
 	$Panel/BestTime.text = "Best Time:" + str(bestTime)
-	$Panel/GoalTime.text = "Best Time:" + str(goalTime[level]) + ".0"
+	$Panel/GoalTime.text = "Goal Time:" + str(goalTime[level]) + ".0"
 	
 
 func convertTimeToMMSS(value):
