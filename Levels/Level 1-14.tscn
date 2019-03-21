@@ -132,6 +132,7 @@ position = Vector2( 216.849, -372.989 )
 
 [node name="Area2D" type="Area2D" parent="Mirror4" index="4"]
 
+position = Vector2( 6.18176, -6.18176 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -148,10 +149,11 @@ shape = SubResource( 3 )
 
 [node name="Mirror5" parent="." index="7" instance=ExtResource( 8 )]
 
-position = Vector2( 639.39, -179.221 )
+position = Vector2( 639.39, -191.584 )
 
 [node name="Area2D" type="Area2D" parent="Mirror5" index="4"]
 
+position = Vector2( -3.09094, -3.09094 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
