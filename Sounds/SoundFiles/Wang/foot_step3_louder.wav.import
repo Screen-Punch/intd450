@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/foot_step3_louder.wav-7bcb575b26c538b867865b5b3efbe276.sample"
+
+[deps]
+
+source_file="res://Sounds/SoundFiles/Wang/foot_step3_louder.wav"
+dest_files=[ "res://.import/foot_step3_louder.wav-7bcb575b26c538b867865b5b3efbe276.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
