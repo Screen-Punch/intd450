@@ -42,6 +42,7 @@ func get_level_selection():
 func get_level_time(level):
 	return level_time[level]
 
+#printing time function(optional)
 func foo():
 	print($RichTextLabel.get_time())
 

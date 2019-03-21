@@ -16,6 +16,7 @@ func _ready():
 		connect("mouse_entered", get_parent(), "_on_Level_mouse_entered", [level])
 
 func _on_Level1_pressed():
+	$click.play(0)
 	BGMPlayer.stream = load("res://Sounds/BGM/Outonalimb.wav")
 	BGMPlayer.play(0)
 	GameManagerNode.BGMAudioName = "res://Sounds/BGM/Outonalimb.wav"

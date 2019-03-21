@@ -12,14 +12,17 @@ func _ready():
 	$Monster/AnimationPlayer.play("Movement")
 
 func _on_NewGameButton_pressed():
+	play_click_sound()
 	get_tree().change_scene("res://Levels/Level_Intro_Scene.tscn")
 
 
 func _on_ExitButton_pressed():
+	play_click_sound()
 	get_tree().quit()
 
 
 func _on_CreditsButton_pressed():
+	play_click_sound()
 	$Credits.show()
 	$AnimationPlayer/Crystal.hide()
 	$Monster.hide()
@@ -27,8 +30,12 @@ func _on_CreditsButton_pressed():
 
 
 func _on_CreditsReturnButton_pressed():
+	play_click_sound()
 	$Credits.hide()
 	$AnimationPlayer/Crystal.show()
 	$Monster.show()
 	$DefaultMenu.show()
 
+func play_click_sound():
+	$click.play(0)
+	print("1111")

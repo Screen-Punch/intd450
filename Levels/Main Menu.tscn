@@ -1,21 +1,22 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://nate'stesttheme.tres" type="Theme" id=1]
 [ext_resource path="res://Scripts/Main Menu.gd" type="Script" id=2]
-[ext_resource path="res://Art/Hangul-master/Hangul-master/fonts/hangul_Desktop_OTF/hngl.otf" type="DynamicFontData" id=3]
-[ext_resource path="res://miniboxes.tres" type="Theme" id=4]
-[ext_resource path="res://Scripts/LevelSelection.gd" type="Script" id=5]
-[ext_resource path="res://Art/CENTURY.TTF" type="DynamicFontData" id=6]
-[ext_resource path="res://Art/mirrors_gates.png" type="Texture" id=7]
-[ext_resource path="res://Art/Monsters.png" type="Texture" id=8]
-[ext_resource path="res://godotIcon.png" type="Texture" id=9]
+[ext_resource path="res://Sounds/SoundFiles/Wang/click2.wav" type="AudioStream" id=3]
+[ext_resource path="res://Art/Hangul-master/Hangul-master/fonts/hangul_Desktop_OTF/hngl.otf" type="DynamicFontData" id=4]
+[ext_resource path="res://miniboxes.tres" type="Theme" id=5]
+[ext_resource path="res://Scripts/LevelSelection.gd" type="Script" id=6]
+[ext_resource path="res://Art/CENTURY.TTF" type="DynamicFontData" id=7]
+[ext_resource path="res://Art/mirrors_gates.png" type="Texture" id=8]
+[ext_resource path="res://Art/Monsters.png" type="Texture" id=9]
+[ext_resource path="res://godotIcon.png" type="Texture" id=10]
 
 [sub_resource type="DynamicFont" id=1]
 
 size = 75
 use_mipmaps = false
 use_filter = false
-font_data = ExtResource( 3 )
+font_data = ExtResource( 4 )
 _sections_unfolded = [ "Font", "Settings" ]
 
 [sub_resource type="DynamicFont" id=2]
@@ -23,7 +24,7 @@ _sections_unfolded = [ "Font", "Settings" ]
 size = 16
 use_mipmaps = true
 use_filter = false
-font_data = ExtResource( 6 )
+font_data = ExtResource( 7 )
 _sections_unfolded = [ "Font", "Settings" ]
 
 [sub_resource type="Animation" id=3]
@@ -95,7 +96,18 @@ theme = ExtResource( 1 )
 script = ExtResource( 2 )
 _sections_unfolded = [ "Material", "Theme", "Visibility" ]
 
-[node name="DefaultMenu" type="Control" parent="." index="0"]
+[node name="click" type="AudioStreamPlayer2D" parent="." index="0"]
+
+stream = ExtResource( 3 )
+volume_db = 24.0
+pitch_scale = 1.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
+
+[node name="DefaultMenu" type="Control" parent="." index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -186,7 +198,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 2
 size_flags_horizontal = 1
 size_flags_vertical = 1
-theme = ExtResource( 4 )
+theme = ExtResource( 5 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -195,7 +207,7 @@ text = "Select Level"
 flat = false
 clip_text = true
 align = 1
-script = ExtResource( 5 )
+script = ExtResource( 6 )
 _sections_unfolded = [ "Anchor", "Rect", "Theme" ]
 next_world = "res://Levels/Level_Selection.tscn"
 
@@ -216,7 +228,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 2
 size_flags_horizontal = 1
 size_flags_vertical = 1
-theme = ExtResource( 4 )
+theme = ExtResource( 5 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -244,7 +256,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 2
 size_flags_horizontal = 1
 size_flags_vertical = 1
-theme = ExtResource( 4 )
+theme = ExtResource( 5 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -255,7 +267,7 @@ clip_text = true
 align = 1
 _sections_unfolded = [ "Anchor", "Margin", "Rect", "Theme", "custom_styles" ]
 
-[node name="Credits" type="Panel" parent="." index="1"]
+[node name="Credits" type="Panel" parent="." index="2"]
 
 visible = false
 anchor_left = 0.0
@@ -332,7 +344,7 @@ text = "Back"
 flat = false
 align = 1
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="2"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="3"]
 
 root_node = NodePath("..")
 autoplay = ""
@@ -345,15 +357,15 @@ blend_times = [  ]
 [node name="Crystal" type="Sprite" parent="AnimationPlayer" index="0"]
 
 position = Vector2( 400.815, 235.404 )
-texture = ExtResource( 7 )
+texture = ExtResource( 8 )
 vframes = 4
 hframes = 6
 _sections_unfolded = [ "Animation" ]
 
-[node name="Monster" type="Sprite" parent="." index="3"]
+[node name="Monster" type="Sprite" parent="." index="4"]
 
 position = Vector2( 120.256, 380.855 )
-texture = ExtResource( 8 )
+texture = ExtResource( 9 )
 vframes = 2
 hframes = 3
 frame = 4
@@ -369,13 +381,13 @@ playback_speed = 1.0
 anims/Movement = SubResource( 4 )
 blend_times = [  ]
 
-[node name="BG" type="Sprite" parent="." index="4"]
+[node name="BG" type="Sprite" parent="." index="5"]
 
 modulate = Color( 0, 0, 0, 1 )
 position = Vector2( 570.939, 304.626 )
 scale = Vector2( 20.6686, 11.7722 )
 z_index = -10
-texture = ExtResource( 9 )
+texture = ExtResource( 10 )
 _sections_unfolded = [ "Visibility", "Z Index" ]
 __meta__ = {
 "_edit_lock_": true

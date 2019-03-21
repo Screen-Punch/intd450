@@ -168,7 +168,7 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 3, 4, 5, 4, 3, 2, 1 ]
 }
 
-[node name="Monster" type="KinematicBody2D" index="0" groups=[
+[node name="Monster" type="KinematicBody2D" groups=[
 "Monster",
 ]]
 

@@ -1,22 +1,23 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://nate'stesttheme.tres" type="Theme" id=1]
 [ext_resource path="res://Scripts/Level_Selection.gd" type="Script" id=2]
 [ext_resource path="res://Scenes/LevelSelectButton.tscn" type="PackedScene" id=3]
 [ext_resource path="res://miniboxes.tres" type="Theme" id=4]
 [ext_resource path="res://Scripts/Level1.gd" type="Script" id=5]
-[ext_resource path="res://Art/Hangul-master/Hangul-master/fonts/hangul_Desktop_OTF/hngl.otf" type="DynamicFontData" id=6]
-[ext_resource path="res://godotIcon.png" type="Texture" id=7]
+[ext_resource path="res://Sounds/SoundFiles/Wang/click2.wav" type="AudioStream" id=6]
+[ext_resource path="res://Art/Hangul-master/Hangul-master/fonts/hangul_Desktop_OTF/hngl.otf" type="DynamicFontData" id=7]
+[ext_resource path="res://godotIcon.png" type="Texture" id=8]
 
 [sub_resource type="DynamicFont" id=1]
 
 size = 36
 use_mipmaps = false
 use_filter = false
-font_data = ExtResource( 6 )
+font_data = ExtResource( 7 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="LevelSelect" type="Control"]
+[node name="LevelSelect" type="Control" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -189,6 +190,18 @@ align = 1
 script = ExtResource( 5 )
 next_world = "res://Levels/Main Menu.tscn"
 
+[node name="click" type="AudioStreamPlayer2D" parent="Return" index="0"]
+
+position = Vector2( -379, -390 )
+stream = ExtResource( 6 )
+volume_db = 24.0
+pitch_scale = 1.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
+
 [node name="Panel" type="Panel" parent="." index="14"]
 
 anchor_left = 0.0
@@ -257,7 +270,7 @@ modulate = Color( 0, 0, 0, 1 )
 position = Vector2( 573.019, 326.542 )
 scale = Vector2( 18.9068, 11.2044 )
 z_index = -10
-texture = ExtResource( 7 )
+texture = ExtResource( 8 )
 _sections_unfolded = [ "Visibility", "Z Index" ]
 __meta__ = {
 "_edit_lock_": true
