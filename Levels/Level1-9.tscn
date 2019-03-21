@@ -18,7 +18,7 @@ outlines = [ PoolVector2Array( -445.995, 124.146, 258.001, 125, 250.493, -259.58
 custom_solver_bias = 0.0
 extents = Vector2( 32, 32 )
 
-[node name="Level1-9" type="Node2D" index="0"]
+[node name="Level1-9" type="Node2D"]
 
 _sections_unfolded = [ "Transform" ]
 

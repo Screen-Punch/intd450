@@ -48,7 +48,7 @@ outlines = [ PoolVector2Array( 1199.15, -280.684, 1274.28, -261.115, 1281.1, -10
 custom_solver_bias = 0.0
 extents = Vector2( 30, 32 )
 
-[node name="Level1-2" type="Node2D" index="0"]
+[node name="Level1-2" type="Node2D"]
 
 __meta__ = {
 "_edit_lock_": true

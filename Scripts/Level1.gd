@@ -24,7 +24,7 @@ func _on_Level1_pressed():
 
 
 # testing (wang)
-var testing = 1
+var testing = 0
 func _process(delta):
 	if testing:
 		if Input.is_action_pressed("ui_up"):
