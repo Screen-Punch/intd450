@@ -9,9 +9,9 @@
 
 [sub_resource type="NavigationPolygon" id=1]
 
-vertices = PoolVector2Array( 123.785, 251.158, -451.098, 257.982, -445.995, 124.146, 125.835, 187.591, 192.002, 129.001, 696.876, 195.097, 191.453, -390.664, 570.805, -378.36, 572.855, 124.024, 1213.33, 133.223, 1209.65, 249.858, 704.962, 251.699 )
-polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 3, 2, 4, 5 ), PoolIntArray( 4, 6, 7, 8 ), PoolIntArray( 5, 4, 8, 9, 10 ), PoolIntArray( 5, 10, 11 ) ]
-outlines = [ PoolVector2Array( -445.995, 124.146, 192.002, 129.001, 191.453, -390.664, 570.805, -378.36, 572.855, 124.024, 1213.33, 133.223, 1209.65, 249.858, 704.962, 251.699, 696.876, 195.097, 125.835, 187.591, 123.785, 251.158, -451.098, 257.982 ) ]
+vertices = PoolVector2Array( 123.785, 251.158, -451.098, 257.982, -445.995, 124.146, 125.835, 187.591, 192.002, 129.001, 696.876, 195.097, 572.855, 124.024, 1213.33, 133.223, 1209.65, 249.858, 704.962, 251.699, 584.199, -227.077, 191.453, -390.664, 229.455, -401.373, 570.805, -378.36 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 3, 2, 4, 5 ), PoolIntArray( 6, 7, 8, 5, 4 ), PoolIntArray( 8, 9, 5 ), PoolIntArray( 10, 6, 4, 11, 12, 13 ) ]
+outlines = [ PoolVector2Array( -445.995, 124.146, 192.002, 129.001, 191.453, -390.664, 229.455, -401.373, 570.805, -378.36, 584.199, -227.077, 572.855, 124.024, 1213.33, 133.223, 1209.65, 249.858, 704.962, 251.699, 696.876, 195.097, 125.835, 187.591, 123.785, 251.158, -451.098, 257.982 ) ]
 
 [sub_resource type="RectangleShape2D" id=2]
 
@@ -48,7 +48,6 @@ __meta__ = {
 [node name="player" parent="." index="1" instance=ExtResource( 2 )]
 
 position = Vector2( -115.664, 184.099 )
-timerVisible = false
 
 [node name="next_W" parent="." index="2" instance=ExtResource( 3 )]
 
@@ -114,8 +113,8 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mirror2/Area2D" index="0"]
 
-position = Vector2( 9.72919, 240.132 )
-scale = Vector2( 1, 5.74043 )
+position = Vector2( 9.72919, 234.102 )
+scale = Vector2( 1, 5.91272 )
 shape = SubResource( 2 )
 
 [connection signal="body_entered" from="Mirror/Area2D" to="Mirror" method="_on_Area2D_body_entered"]

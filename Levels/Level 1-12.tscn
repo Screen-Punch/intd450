@@ -11,9 +11,9 @@
 
 [sub_resource type="NavigationPolygon" id=1]
 
-vertices = PoolVector2Array( -62.2901, 64.4016, -68.4066, -188.966, 387.876, -191.618, 388.371, 443.71, 254.547, 446.166, 186.732, 445.369, -64.7883, 450.642, -66.8122, 191.018, -640.457, 192.465, -639.376, 64.3997, 192.878, 641.253, 255.151, 640.35 )
-polygons = [ PoolIntArray( 0, 1, 2, 3, 4 ), PoolIntArray( 5, 6, 7 ), PoolIntArray( 7, 8, 9, 0 ), PoolIntArray( 7, 0, 4, 5 ), PoolIntArray( 10, 5, 4, 11 ) ]
-outlines = [ PoolVector2Array( -639.376, 64.3997, -62.2901, 64.4016, -68.4066, -188.966, 387.876, -191.618, 388.371, 443.71, 254.547, 446.166, 255.151, 640.35, 192.878, 641.253, 186.732, 445.369, -64.7883, 450.642, -66.8122, 191.018, -640.457, 192.465 ) ]
+vertices = PoolVector2Array( -62.2901, 64.4016, -68.4066, -188.966, 387.876, -191.618, 388.371, 443.71, 254.547, 446.166, -66.8122, 191.018, -640.457, 192.465, -639.376, 64.3997, -62.761, 377.193, 186.732, 445.369, 255.151, 640.35, 192.878, 641.253, -64.7883, 450.642, -91.4687, 416.153 )
+polygons = [ PoolIntArray( 0, 1, 2, 3, 4 ), PoolIntArray( 5, 6, 7, 0 ), PoolIntArray( 8, 5, 0, 4, 9 ), PoolIntArray( 4, 10, 11, 9 ), PoolIntArray( 8, 9, 12, 13 ) ]
+outlines = [ PoolVector2Array( -639.376, 64.3997, -62.2901, 64.4016, -68.4066, -188.966, 387.876, -191.618, 388.371, 443.71, 254.547, 446.166, 255.151, 640.35, 192.878, 641.253, 186.732, 445.369, -64.7883, 450.642, -91.4687, 416.153, -62.761, 377.193, -66.8122, 191.018, -640.457, 192.465 ) ]
 
 [sub_resource type="RectangleShape2D" id=2]
 
@@ -76,7 +76,7 @@ __meta__ = {
 
 [node name="Monster" parent="Nav2D" index="1" instance=ExtResource( 3 )]
 
-position = Vector2( -373.984, 128.71 )
+position = Vector2( -350.011, 128.71 )
 
 [node name="player" parent="." index="2" instance=ExtResource( 4 )]
 
@@ -94,7 +94,7 @@ nextLevelText = "Level 12: All Around Me"
 
 [node name="Key" parent="KeysAndLocks" index="0" instance=ExtResource( 6 )]
 
-position = Vector2( -443.954, 129.272 )
+position = Vector2( -419.98, 129.272 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="Lock" parent="KeysAndLocks" index="1" instance=ExtResource( 7 )]
@@ -128,12 +128,13 @@ shape = SubResource( 2 )
 
 [node name="Mirror2" parent="." index="6" instance=ExtResource( 8 )]
 
-position = Vector2( 418.935, 367.439 )
+position = Vector2( 418.935, 351.035 )
 _sections_unfolded = [ "Collision", "Transform", "Visibility" ]
 mirrorDirection = "horizontal"
 
 [node name="Area2D" type="Area2D" parent="Mirror2" index="4"]
 
+position = Vector2( 0, -4.1011 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -141,6 +142,9 @@ linear_damp = 0.1
 angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mirror2/Area2D" index="0"]
 
@@ -160,6 +164,7 @@ anims/MonsterSpotted = SubResource( 3 )
 
 [node name="Area2D" type="Area2D" parent="Mirror4" index="4"]
 
+position = Vector2( 0, -12.3033 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -173,6 +178,9 @@ audio_bus_name = "Master"
 position = Vector2( -264.267, 21.6601 )
 scale = Vector2( 6.95446, 1 )
 shape = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [connection signal="keyGotten" from="KeysAndLocks/Key" to="KeysAndLocks/Lock" method="_on_Key_keyGotten"]
 
