@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Art/floors_ceilings.png" type="Texture" id=1]
 [ext_resource path="res://Art/Walls.png" type="Texture" id=2]
@@ -8,10 +8,11 @@
 custom_solver_bias = 0.0
 extents = Vector2( 32, 32 )
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="OccluderPolygon2D" id=2]
 
-custom_solver_bias = 0.0
-extents = Vector2( 32, 32 )
+closed = true
+cull_mode = 1
+polygon = PoolVector2Array( -32, -32, 32, -32, 32, 32, -32, 32 )
 
 [sub_resource type="RectangleShape2D" id=3]
 
@@ -23,7 +24,12 @@ extents = Vector2( 32, 32 )
 custom_solver_bias = 0.0
 extents = Vector2( 32, 32 )
 
-[node name="Node2D" type="Node2D"]
+[sub_resource type="RectangleShape2D" id=5]
+
+custom_solver_bias = 0.0
+extents = Vector2( 32, 32 )
+
+[node name="Node2D" type="Node2D" index="0"]
 
 [node name="GreenFloorTile" type="Sprite" parent="." index="0"]
 
@@ -386,6 +392,7 @@ _sections_unfolded = [ "Animation" ]
 
 [node name="CeilingTile01" type="Sprite" parent="." index="40"]
 
+editor/display_folded = true
 position = Vector2( 145.564, 647.706 )
 texture = ExtResource( 1 )
 vframes = 10
@@ -406,6 +413,12 @@ bounce = 0.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CeilingTile01/StaticBody2D" index="0"]
 
 shape = SubResource( 1 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="CeilingTile01" index="1"]
+
+occluder = SubResource( 2 )
+light_mask = 1
+_sections_unfolded = [ "Transform" ]
 
 [node name="CeilingTile02" type="Sprite" parent="." index="41"]
 
@@ -429,7 +442,14 @@ bounce = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CeilingTile02/StaticBody2D" index="0"]
 
-shape = SubResource( 2 )
+shape = SubResource( 3 )
+
+[node name="LightOccluder2D2" type="LightOccluder2D" parent="CeilingTile02" index="1"]
+
+position = Vector2( -76.732, 0 )
+occluder = SubResource( 2 )
+light_mask = 1
+_sections_unfolded = [ "Transform" ]
 
 [node name="CeilingTile03" type="Sprite" parent="." index="42"]
 
@@ -453,14 +473,21 @@ bounce = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CeilingTile03/StaticBody2D" index="0"]
 
-shape = SubResource( 3 )
+shape = SubResource( 4 )
+
+[node name="LightOccluder2D3" type="LightOccluder2D" parent="CeilingTile03" index="1"]
+
+position = Vector2( -148.705, -0.440002 )
+occluder = SubResource( 2 )
+light_mask = 1
+_sections_unfolded = [ "Transform" ]
 
 [node name="UpperWall01" type="Sprite" parent="." index="43"]
 
 editor/display_folded = true
 position = Vector2( 775.31, 31.9221 )
 texture = ExtResource( 2 )
-vframes = 8
+vframes = 10
 hframes = 5
 _sections_unfolded = [ "Animation" ]
 
@@ -477,14 +504,21 @@ bounce = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="UpperWall01/StaticBody2D" index="0"]
 
-shape = SubResource( 3 )
+shape = SubResource( 4 )
+
+[node name="LightOccluder2D4" type="LightOccluder2D" parent="UpperWall01" index="1"]
+
+position = Vector2( -629.746, 615.784 )
+occluder = SubResource( 2 )
+light_mask = 1
+_sections_unfolded = [ "Transform" ]
 
 [node name="UpperWall02" type="Sprite" parent="." index="44"]
 
 editor/display_folded = true
 position = Vector2( 848.084, 31.9221 )
 texture = ExtResource( 2 )
-vframes = 8
+vframes = 10
 hframes = 5
 frame = 1
 _sections_unfolded = [ "Animation" ]
@@ -502,14 +536,21 @@ bounce = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="UpperWall02/StaticBody2D" index="0"]
 
-shape = SubResource( 3 )
+shape = SubResource( 4 )
+
+[node name="LightOccluder2D5" type="LightOccluder2D" parent="UpperWall02" index="1"]
+
+position = Vector2( -702.52, 615.784 )
+occluder = SubResource( 2 )
+light_mask = 1
+_sections_unfolded = [ "Transform" ]
 
 [node name="UpperWall03" type="Sprite" parent="." index="45"]
 
 editor/display_folded = true
 position = Vector2( 921.594, 31.9221 )
 texture = ExtResource( 2 )
-vframes = 8
+vframes = 10
 hframes = 5
 frame = 2
 _sections_unfolded = [ "Animation" ]
@@ -527,14 +568,21 @@ bounce = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="UpperWall03/StaticBody2D" index="0"]
 
-shape = SubResource( 3 )
+shape = SubResource( 4 )
+
+[node name="LightOccluder2D5" type="LightOccluder2D" parent="UpperWall03" index="1"]
+
+position = Vector2( -776.03, 615.784 )
+occluder = SubResource( 2 )
+light_mask = 1
+_sections_unfolded = [ "Transform" ]
 
 [node name="UpperWall04" type="Sprite" parent="." index="46"]
 
 editor/display_folded = true
 position = Vector2( 991.427, 31.9221 )
 texture = ExtResource( 2 )
-vframes = 8
+vframes = 10
 hframes = 5
 frame = 3
 _sections_unfolded = [ "Animation" ]
@@ -552,14 +600,21 @@ bounce = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="UpperWall04/StaticBody2D" index="0"]
 
-shape = SubResource( 3 )
+shape = SubResource( 4 )
+
+[node name="LightOccluder2D5" type="LightOccluder2D" parent="UpperWall04" index="1"]
+
+position = Vector2( -845.863, 615.784 )
+occluder = SubResource( 2 )
+light_mask = 1
+_sections_unfolded = [ "Transform" ]
 
 [node name="UpperWall05" type="Sprite" parent="." index="47"]
 
 editor/display_folded = true
 position = Vector2( 1066.41, 31.9221 )
 texture = ExtResource( 2 )
-vframes = 8
+vframes = 10
 hframes = 5
 frame = 4
 _sections_unfolded = [ "Animation" ]
@@ -577,14 +632,21 @@ bounce = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="UpperWall05/StaticBody2D" index="0"]
 
-shape = SubResource( 3 )
+shape = SubResource( 4 )
+
+[node name="LightOccluder2D6" type="LightOccluder2D" parent="UpperWall05" index="1"]
+
+position = Vector2( -920.846, 615.784 )
+occluder = SubResource( 2 )
+light_mask = 1
+_sections_unfolded = [ "Transform" ]
 
 [node name="UpperWall06" type="Sprite" parent="." index="48"]
 
 editor/display_folded = true
 position = Vector2( 775.31, 106.166 )
 texture = ExtResource( 2 )
-vframes = 8
+vframes = 10
 hframes = 5
 frame = 5
 _sections_unfolded = [ "Animation" ]
@@ -602,14 +664,21 @@ bounce = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="UpperWall06/StaticBody2D" index="0"]
 
-shape = SubResource( 3 )
+shape = SubResource( 4 )
+
+[node name="LightOccluder2D6" type="LightOccluder2D" parent="UpperWall06" index="1"]
+
+position = Vector2( -629.746, 541.54 )
+occluder = SubResource( 2 )
+light_mask = 1
+_sections_unfolded = [ "Transform" ]
 
 [node name="UpperWall07" type="Sprite" parent="." index="49"]
 
 editor/display_folded = true
 position = Vector2( 848.084, 106.166 )
 texture = ExtResource( 2 )
-vframes = 8
+vframes = 10
 hframes = 5
 frame = 6
 _sections_unfolded = [ "Animation" ]
@@ -627,14 +696,21 @@ bounce = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="UpperWall07/StaticBody2D" index="0"]
 
-shape = SubResource( 3 )
+shape = SubResource( 4 )
+
+[node name="LightOccluder2D6" type="LightOccluder2D" parent="UpperWall07" index="1"]
+
+position = Vector2( -702.52, 541.54 )
+occluder = SubResource( 2 )
+light_mask = 1
+_sections_unfolded = [ "Transform" ]
 
 [node name="UpperWall08" type="Sprite" parent="." index="50"]
 
 editor/display_folded = true
 position = Vector2( 918.653, 106.166 )
 texture = ExtResource( 2 )
-vframes = 8
+vframes = 10
 hframes = 5
 frame = 7
 _sections_unfolded = [ "Animation" ]
@@ -652,14 +728,21 @@ bounce = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="UpperWall08/StaticBody2D" index="0"]
 
-shape = SubResource( 3 )
+shape = SubResource( 4 )
+
+[node name="LightOccluder2D7" type="LightOccluder2D" parent="UpperWall08" index="1"]
+
+position = Vector2( -773.089, 541.54 )
+occluder = SubResource( 2 )
+light_mask = 1
+_sections_unfolded = [ "Transform" ]
 
 [node name="UpperWall09" type="Sprite" parent="." index="51"]
 
 editor/display_folded = true
 position = Vector2( 990.692, 106.166 )
 texture = ExtResource( 2 )
-vframes = 8
+vframes = 10
 hframes = 5
 frame = 8
 _sections_unfolded = [ "Animation" ]
@@ -677,14 +760,21 @@ bounce = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="UpperWall09/StaticBody2D" index="0"]
 
-shape = SubResource( 3 )
+shape = SubResource( 4 )
+
+[node name="LightOccluder2D7" type="LightOccluder2D" parent="UpperWall09" index="1"]
+
+position = Vector2( -845.128, 541.54 )
+occluder = SubResource( 2 )
+light_mask = 1
+_sections_unfolded = [ "Transform" ]
 
 [node name="UpperWall10" type="Sprite" parent="." index="52"]
 
 editor/display_folded = true
 position = Vector2( 1066.41, 106.166 )
 texture = ExtResource( 2 )
-vframes = 8
+vframes = 10
 hframes = 5
 frame = 9
 _sections_unfolded = [ "Animation" ]
@@ -702,14 +792,21 @@ bounce = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="UpperWall10/StaticBody2D" index="0"]
 
-shape = SubResource( 3 )
+shape = SubResource( 4 )
+
+[node name="LightOccluder2D7" type="LightOccluder2D" parent="UpperWall10" index="1"]
+
+position = Vector2( -920.846, 541.54 )
+occluder = SubResource( 2 )
+light_mask = 1
+_sections_unfolded = [ "Transform" ]
 
 [node name="LowerWall01" type="Sprite" parent="." index="53"]
 
 editor/display_folded = true
 position = Vector2( 775.31, 183.351 )
 texture = ExtResource( 2 )
-vframes = 8
+vframes = 10
 hframes = 5
 frame = 10
 _sections_unfolded = [ "Animation" ]
@@ -727,14 +824,21 @@ bounce = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LowerWall01/StaticBody2D" index="0"]
 
-shape = SubResource( 3 )
+shape = SubResource( 4 )
+
+[node name="LightOccluder2D8" type="LightOccluder2D" parent="LowerWall01" index="1"]
+
+position = Vector2( -629.746, 464.355 )
+occluder = SubResource( 2 )
+light_mask = 1
+_sections_unfolded = [ "Transform" ]
 
 [node name="LowerWall02" type="Sprite" parent="." index="54"]
 
 editor/display_folded = true
 position = Vector2( 845.144, 183.351 )
 texture = ExtResource( 2 )
-vframes = 8
+vframes = 10
 hframes = 5
 frame = 11
 _sections_unfolded = [ "Animation" ]
@@ -752,14 +856,21 @@ bounce = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LowerWall02/StaticBody2D" index="0"]
 
-shape = SubResource( 3 )
+shape = SubResource( 4 )
+
+[node name="LightOccluder2D8" type="LightOccluder2D" parent="LowerWall02" index="1"]
+
+position = Vector2( -699.58, 464.355 )
+occluder = SubResource( 2 )
+light_mask = 1
+_sections_unfolded = [ "Transform" ]
 
 [node name="LowerWall03" type="Sprite" parent="." index="55"]
 
 editor/display_folded = true
 position = Vector2( 919.388, 183.351 )
 texture = ExtResource( 2 )
-vframes = 8
+vframes = 10
 hframes = 5
 frame = 12
 _sections_unfolded = [ "Animation" ]
@@ -777,14 +888,21 @@ bounce = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LowerWall03/StaticBody2D" index="0"]
 
-shape = SubResource( 3 )
+shape = SubResource( 4 )
+
+[node name="LightOccluder2D8" type="LightOccluder2D" parent="LowerWall03" index="1"]
+
+position = Vector2( -773.824, 464.355 )
+occluder = SubResource( 2 )
+light_mask = 1
+_sections_unfolded = [ "Transform" ]
 
 [node name="LowerWall04" type="Sprite" parent="." index="56"]
 
 editor/display_folded = true
 position = Vector2( 990.692, 183.351 )
 texture = ExtResource( 2 )
-vframes = 8
+vframes = 10
 hframes = 5
 frame = 13
 _sections_unfolded = [ "Animation" ]
@@ -802,14 +920,21 @@ bounce = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LowerWall04/StaticBody2D" index="0"]
 
-shape = SubResource( 3 )
+shape = SubResource( 4 )
+
+[node name="LightOccluder2D8" type="LightOccluder2D" parent="LowerWall04" index="1"]
+
+position = Vector2( -845.128, 464.355 )
+occluder = SubResource( 2 )
+light_mask = 1
+_sections_unfolded = [ "Transform" ]
 
 [node name="LowerWall05" type="Sprite" parent="." index="57"]
 
 editor/display_folded = true
 position = Vector2( 1067.88, 183.351 )
 texture = ExtResource( 2 )
-vframes = 8
+vframes = 10
 hframes = 5
 frame = 14
 _sections_unfolded = [ "Animation" ]
@@ -827,14 +952,21 @@ bounce = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LowerWall05/StaticBody2D" index="0"]
 
-shape = SubResource( 3 )
+shape = SubResource( 4 )
+
+[node name="LightOccluder2D8" type="LightOccluder2D" parent="LowerWall05" index="1"]
+
+position = Vector2( -922.316, 464.355 )
+occluder = SubResource( 2 )
+light_mask = 1
+_sections_unfolded = [ "Transform" ]
 
 [node name="CornerWall01" type="Sprite" parent="." index="58"]
 
 editor/display_folded = true
-position = Vector2( 776.045, 259.801 )
+position = Vector2( 778.035, 265.772 )
 texture = ExtResource( 2 )
-vframes = 8
+vframes = 10
 hframes = 5
 frame = 15
 _sections_unfolded = [ "Animation" ]
@@ -852,14 +984,21 @@ bounce = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CornerWall01/StaticBody2D" index="0"]
 
-shape = SubResource( 3 )
+shape = SubResource( 4 )
+
+[node name="LightOccluder2D9" type="LightOccluder2D" parent="CornerWall01" index="1"]
+
+position = Vector2( -630.481, 387.905 )
+occluder = SubResource( 2 )
+light_mask = 1
+_sections_unfolded = [ "Transform" ]
 
 [node name="CornerWall02" type="Sprite" parent="." index="59"]
 
 editor/display_folded = true
 position = Vector2( 846.614, 259.801 )
 texture = ExtResource( 2 )
-vframes = 8
+vframes = 10
 hframes = 5
 frame = 16
 _sections_unfolded = [ "Animation" ]
@@ -877,14 +1016,21 @@ bounce = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CornerWall02/StaticBody2D" index="0"]
 
-shape = SubResource( 3 )
+shape = SubResource( 4 )
+
+[node name="LightOccluder2D9" type="LightOccluder2D" parent="CornerWall02" index="1"]
+
+position = Vector2( -701.05, 387.905 )
+occluder = SubResource( 2 )
+light_mask = 1
+_sections_unfolded = [ "Transform" ]
 
 [node name="CornerWall03" type="Sprite" parent="." index="60"]
 
 editor/display_folded = true
 position = Vector2( 919.388, 259.801 )
 texture = ExtResource( 2 )
-vframes = 8
+vframes = 10
 hframes = 5
 frame = 17
 _sections_unfolded = [ "Animation" ]
@@ -902,14 +1048,21 @@ bounce = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CornerWall03/StaticBody2D" index="0"]
 
-shape = SubResource( 3 )
+shape = SubResource( 4 )
+
+[node name="LightOccluder2D9" type="LightOccluder2D" parent="CornerWall03" index="1"]
+
+position = Vector2( -773.824, 387.905 )
+occluder = SubResource( 2 )
+light_mask = 1
+_sections_unfolded = [ "Transform" ]
 
 [node name="CornerWall04" type="Sprite" parent="." index="61"]
 
 editor/display_folded = true
 position = Vector2( 993.632, 259.801 )
 texture = ExtResource( 2 )
-vframes = 8
+vframes = 10
 hframes = 5
 frame = 18
 _sections_unfolded = [ "Animation" ]
@@ -927,14 +1080,21 @@ bounce = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CornerWall04/StaticBody2D" index="0"]
 
-shape = SubResource( 3 )
+shape = SubResource( 4 )
+
+[node name="LightOccluder2D9" type="LightOccluder2D" parent="CornerWall04" index="1"]
+
+position = Vector2( -848.068, 387.905 )
+occluder = SubResource( 2 )
+light_mask = 1
+_sections_unfolded = [ "Transform" ]
 
 [node name="CornerWall05" type="Sprite" parent="." index="62"]
 
 editor/display_folded = true
 position = Vector2( 1067.88, 259.801 )
 texture = ExtResource( 2 )
-vframes = 8
+vframes = 10
 hframes = 5
 frame = 19
 _sections_unfolded = [ "Animation" ]
@@ -952,16 +1112,24 @@ bounce = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CornerWall05/StaticBody2D" index="0"]
 
-shape = SubResource( 3 )
+shape = SubResource( 4 )
+
+[node name="LightOccluder2D9" type="LightOccluder2D" parent="CornerWall05" index="1"]
+
+position = Vector2( -922.316, 387.905 )
+occluder = SubResource( 2 )
+light_mask = 1
+_sections_unfolded = [ "Transform" ]
 
 [node name="BackGroundNull" type="Sprite" parent="." index="63"]
 
+modulate = Color( 0, 0, 0, 1 )
 position = Vector2( 150.968, -49.1774 )
 texture = ExtResource( 1 )
 vframes = 10
 hframes = 5
 frame = 45
-_sections_unfolded = [ "Animation" ]
+_sections_unfolded = [ "Animation", "Visibility" ]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="BackGroundNull" index="0"]
 
@@ -977,6 +1145,6 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BackGroundNull/StaticBody2D" index="0"]
 
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 

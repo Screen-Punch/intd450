@@ -16,21 +16,27 @@ var narrativeSequences = [
 [""],	# 2 (Monster first appears)
 ["I-..."],
 ["My solitary slumber was left unabated by guests for countless ages since the last intrusion...",
-"...you bear an uncanny resemblance to him. Interesting."],
+"...you bear an uncanny resemblance to him.", "Interesting."],
 ["The bittersweet stench of desperation reeks upon you... it betrays your every step.",
 "How you scurry about like a witless rat..."],
 ["You may be able to run, and you may be able to buy yourself a moment's respite… but you will inevitably err."],
-["Flee you fool..."], # 7
-["...Your essence tastes so sweet."],
-["What are we? Playing cat and mouse in the shadows?"],
-["Your world collapses on you..."], # 10
-["Turn around, you only delay the end. Perhaps I will be quick."],
-["Are you not tired!? You have run so far, only approaching the same end!"],
-["The end has come..."],  # 13 = Last level currently
-["Run..."],
-["This is a harsh fall"],
-["It was only a matter of time that another wanderlusting soul would find this place...\nMy wayward whispers… snaking and burrowing deeply into unsuspecting hearts and minds…\nLike a siren's song... how sweetly they promise the countless, irresistible desires and curiosities of the mortal heart..."],
+["..."], # 7
+["..."],
+["..."],
+["..."], # 10
+["You must realize by now that it is futile to hide just how fleeting and fragile that brave front of yours really is..."],
+["You can feel the oppressive earth above our heads, isolating us completely from the surface world...",
+
+"One by one, these conduits of light have nearly become completely expunged.",
+
+"Soon, you will know naught but the all-encompassing darkness that returns to swallow this forgotten place."],
+["You delude yourself, mortal.",
+
+"You cannot escape the inevitable!"],  # 13 = Last level currently
 [""],
+["Ugh, my head", "W-where am I...?"],
+["It was only a matter of time that another wanderlusting soul would find this place..."],
+["My wayward whispers… snaking and burrowing deeply into unsuspecting hearts and minds…","Like a siren's song... how sweetly they promise the countless, irresistible desires and curiosities of the mortal heart..."],
 ]
 
 func _ready():

@@ -29,6 +29,9 @@ func takeDamage():
 		var exits = get_tree().get_nodes_in_group("Exit")
 		for exit in exits:
 			exit.revealExit();
+	$Light2D.queue_free()
+	var player = get_tree().get_nodes_in_group("Player")[0]
+	player.dimCamera()
 
 
 func _on_Area2D_body_entered(body):

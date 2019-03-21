@@ -6,7 +6,7 @@ extends KinematicBody2D
 # Member variables
 const MAX_MOTION_SPEED = 240
 const MOTION_SPEED = 240 # Pixels/second
-const DEATHS_PER_COLOR_CHANGE = 3
+const DEATHS_PER_COLOR_CHANGE = 1
 var distance = 500
 
 var target
@@ -20,7 +20,8 @@ var canMove = false
 var dead = false
 var anim
 var oldAnim
-
+export (bool) var timerVisible = false
+var totalMirrors = 0
 
 func _ready():
 	var monsters  = get_tree().get_nodes_in_group("Monster")
@@ -34,6 +35,9 @@ func _ready():
 	anim = ""
 	var deaths = GameManagerNode.totalDeaths
 	updatePlayerTexture(deaths)
+	if !timerVisible or GameManagerNode.level_selection_mode:
+		hideTimer()
+	var totalMirrors  = get_tree().get_nodes_in_group("Mirror")
 
 func _input(event):
 	if event is InputEventKey:
@@ -124,9 +128,21 @@ func updatePlayerTexture(deaths):
 	i = int((deaths+DEATHS_PER_COLOR_CHANGE)/ DEATHS_PER_COLOR_CHANGE)
 	if i <= 0:	# if below limit
 		i = 1
-	if i > 6:	# if above limit
-		i = 5
-	$sprite.texture = load("res://Art/PCs" + str(i) + ".png")
+	if i > 18:	# if above limit
+		i = 17
+	var intVal = i
+	if i < 10:
+		intVal = "0" + str(i)
+	$sprite.texture = load("res://Art/PCs" + str(intVal) + ".png")
 	
 func hideTimer():
 	$Camera2D/CanvasLayer/RichTextLabel.hide()
+	
+
+func dimCamera():
+	# Lower limit of 0.3, upper limit of 0.8
+	# (0.8 - 0.3) / 4
+	var delta = (0.8-0.7)/float(totalMirrors+1)
+	var curLev = $CanvasModulate.color.r
+	curLev -= delta
+	$CanvasModulate.color = Color(curLev, curLev, curLev)

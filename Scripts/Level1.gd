@@ -10,10 +10,15 @@ func _ready():
 	if "Level" in name:
 		level = name.split("Level")[1]
 		level = int(level)
-		if GameManagerNode.level_time[level] == -1:
-			hide()
+		if GameManagerNode.level_time[level] != -1:
+			$LockSprite.hide()
+			disabled = false
+		connect("mouse_entered", get_parent(), "_on_Level_mouse_entered", [level])
 
 func _on_Level1_pressed():
+	BGMPlayer.stream = load("res://Sounds/BGM/Outonalimb.wav")
+	BGMPlayer.play(0)
+	GameManagerNode.BGMAudioName = "res://Sounds/BGM/Outonalimb.wav"
 	GameManagerNode.loadNextLevel(next_world, " ")
 	GameManagerNode.set_level_selection_to_true()
 

@@ -204,7 +204,7 @@ tracks/0/keys = {
 "values": [ 5, 3, 4, 3 ]
 }
 
-[node name="Player" type="KinematicBody2D" index="0" groups=[
+[node name="Player" type="KinematicBody2D" groups=[
 "Player",
 ]]
 
@@ -216,6 +216,7 @@ collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
 _sections_unfolded = [ "Collision", "Transform", "Z Index" ]
+timerVisible = false
 
 [node name="sprite" type="Sprite" parent="." index="0"]
 
@@ -492,6 +493,10 @@ anims/WalkDown = SubResource( 9 )
 anims/WalkRight = SubResource( 10 )
 anims/WalkUp = SubResource( 11 )
 blend_times = [  ]
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." index="6"]
+
+color = Color( 0.8, 0.8, 0.8, 1 )
 
 [connection signal="animation_finished" from="CanvasLayer/SceneTransition" to="." method="_on_SceneTransition_animation_finished"]
 

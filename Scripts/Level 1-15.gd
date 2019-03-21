@@ -6,6 +6,12 @@ extends Node2D
 
 func _ready():
 	$next_W.revealExit()
+	
+	if name == "Level 1-17":
+		BGMPlayer.stream = load("res://Sounds/BGM/Outonalimb.wav")
+		BGMPlayer.play(0)
+		GameManagerNode.BGMAudioName = "res://Sounds/BGM/Outonalimb.wav"
+
 
 #func _process(delta):
 #	# Called every frame. Delta is time since last frame.
