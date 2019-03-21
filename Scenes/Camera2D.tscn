@@ -5,7 +5,6 @@
 [ext_resource path="res://Scripts/Zoomer.gd" type="Script" id=3]
 [ext_resource path="res://Scripts/RichTextLabel.gd" type="Script" id=4]
 
-
 [sub_resource type="BitmapFont" id=1]
 
 textures = [  ]

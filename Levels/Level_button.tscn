@@ -112,9 +112,9 @@ enabled = true
 
 [connection signal="reset" from="." to="ButtonLeft" method="_on_Node2D_reset"]
 
-[connection signal="reset" from="." to="ButtonUp" method="_on_Node2D_reset"]
-
 [connection signal="reset" from="." to="ButtonBottom" method="_on_Node2D_reset"]
+
+[connection signal="reset" from="." to="ButtonUp" method="_on_Node2D_reset"]
 
 [connection signal="reset" from="." to="ButtonRight" method="_on_Node2D_reset"]
 

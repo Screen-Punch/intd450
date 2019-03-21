@@ -143,7 +143,7 @@ tracks/1/keys = {
 custom_solver_bias = 0.0
 extents = Vector2( 61.6574, 32 )
 
-[node name="next_W" type="Area2D" index="0" groups=[
+[node name="next_W" type="Area2D" groups=[
 "Exit",
 ]]
 
