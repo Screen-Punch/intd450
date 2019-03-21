@@ -44,19 +44,6 @@ func spawn():
 	$MonsterSprites.play("MonsterMovement")
 
 func _process(delta):
-#	if target:
-#		velocity = (target.position - position).normalized() * SPEED
-#		var move_dist = SPEED * delta
-#		if canMove:
-#			move_along_path(move_dist)
-##		if (target.position - position).length() > 5:
-##			move_and_slide(velocity)
-#		timer += 1
-#		if timer >= 5:
-#			path = Nav2D.update_navigation_path(position, target.position)
-#			timer = 0
-#	else:
-#		findNewTarget()
 
 	if start_move:
 		timer += delta
@@ -71,10 +58,6 @@ func _process(delta):
 		if timer > 7.8:
 			hide()
 			emit_signal("can_move")
-		
-	
-#	var distToTarget = position.distance_to(player.position)
-#	$AudioStreamPlayer2D.volume_db = 20 - distToTarget/20
 	$Sprite.rotation += 0.01
 	
 

@@ -49,6 +49,7 @@ __meta__ = {
 [node name="player" parent="." index="1" instance=ExtResource( 2 )]
 
 position = Vector2( -115.664, 184.099 )
+timerVisible = false
 
 [node name="next_W" parent="." index="2" instance=ExtResource( 3 )]
 

@@ -15,7 +15,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 12.8859, 31.8558 )
 
-[node name="Level 1-16" type="Node2D" index="0"]
+[node name="Level 1-16" type="Node2D"]
 
 position = Vector2( -1, 0 )
 script = ExtResource( 1 )
@@ -99,8 +99,8 @@ _sections_unfolded = [ "Animation", "Offset", "Transform", "Visibility" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Door" index="1"]
 
-position = Vector2( -58.3588, 0.640747 )
-scale = Vector2( 1.81653, 1 )
+position = Vector2( -58.3588, 40.541 )
+scale = Vector2( 1.81653, 2.14472 )
 shape = SubResource( 1 )
 
 [node name="fog" type="Sprite" parent="." index="7"]
@@ -111,9 +111,9 @@ z_index = 8
 texture = ExtResource( 9 )
 _sections_unfolded = [ "Z Index" ]
 
-[connection signal="button_pressed" from="Button" to="." method="_on_Button_button_pressed"]
-
 [connection signal="button_pressed" from="Button" to="Player" method="_on_Button_button_pressed"]
+
+[connection signal="button_pressed" from="Button" to="." method="_on_Button_button_pressed"]
 
 [connection signal="can_move" from="Monster" to="Player" method="_on_Monster_can_move"]
 

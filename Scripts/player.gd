@@ -20,7 +20,7 @@ var canMove = false
 var dead = false
 var anim
 var oldAnim
-export (bool) var timerVisible = true
+export (bool) var timerVisible = false
 var totalMirrors = 0
 
 func _ready():
@@ -35,12 +35,9 @@ func _ready():
 	anim = ""
 	var deaths = GameManagerNode.totalDeaths
 	updatePlayerTexture(deaths)
-	if !timerVisible:
+	if !timerVisible or GameManagerNode.level_selection_mode:
 		hideTimer()
 	var totalMirrors  = get_tree().get_nodes_in_group("Mirror")
-	MOTION_SPEED -= GameManagerNode.totalDeaths * 2
-	if MOTION_SPEED <= 210:
-		MOTION_SPEED = 210
 
 func _input(event):
 	if event is InputEventKey:

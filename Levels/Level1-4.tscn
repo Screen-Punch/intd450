@@ -18,7 +18,7 @@ outlines = [ PoolVector2Array( -446.437, -62.4505, 197.171, -56.7083, 196.001, -
 custom_solver_bias = 0.0
 extents = Vector2( 32, 32 )
 
-[node name="Level1-4" type="Node2D" index="0"]
+[node name="Level1-4" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="." index="0"]
 
@@ -46,6 +46,7 @@ __meta__ = {
 [node name="player" parent="." index="1" instance=ExtResource( 2 )]
 
 position = Vector2( -166.923, 0 )
+timerVisible = false
 
 [node name="next_W" parent="." index="2" instance=ExtResource( 3 )]
 

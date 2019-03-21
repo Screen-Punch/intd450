@@ -204,7 +204,7 @@ tracks/0/keys = {
 "values": [ 5, 3, 4, 3 ]
 }
 
-[node name="Player" type="KinematicBody2D" index="0" groups=[
+[node name="Player" type="KinematicBody2D" groups=[
 "Player",
 ]]
 
@@ -216,7 +216,7 @@ collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
 _sections_unfolded = [ "Collision", "Transform", "Z Index" ]
-timerVisible = true
+timerVisible = false
 
 [node name="sprite" type="Sprite" parent="." index="0"]
 

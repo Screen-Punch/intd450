@@ -18,7 +18,7 @@ outlines = [ PoolVector2Array( -445.995, 124.146, 258.126, 125.252, 252.155, -64
 custom_solver_bias = 0.0
 extents = Vector2( 32, 32 )
 
-[node name="Level1-7a" type="Node2D" index="0"]
+[node name="Level1-7a" type="Node2D"]
 
 _sections_unfolded = [ "Transform" ]
 
@@ -73,7 +73,6 @@ __meta__ = {
 [node name="Mirror" parent="." index="4" instance=ExtResource( 6 )]
 
 position = Vector2( 611.084, -26.698 )
-rotation = 3.14159
 _sections_unfolded = [ "Collision", "Transform", "Visibility" ]
 mirrorDirection = "horizontal"
 
@@ -90,13 +89,13 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mirror/Area2D" index="0"]
 
-position = Vector2( 191.945, 9.07295 )
+position = Vector2( -197.654, -3.42363 )
 scale = Vector2( 4.67544, 1 )
 shape = SubResource( 2 )
 
 [node name="Mirror2" parent="." index="5" instance=ExtResource( 6 )]
 
-position = Vector2( 276.967, 534.93 )
+position = Vector2( 279.411, 543.075 )
 _sections_unfolded = [ "Collision", "Transform", "Visibility" ]
 mirrorDirection = "horizontal"
 
