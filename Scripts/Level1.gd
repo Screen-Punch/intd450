@@ -13,6 +13,7 @@ func _ready():
 		if GameManagerNode.level_time[level] != -1:
 			$LockSprite.hide()
 			disabled = false
+		connect("mouse_entered", get_parent(), "_on_Level_mouse_entered", [level])
 
 func _on_Level1_pressed():
 	BGMPlayer.stream = load("res://Sounds/BGM/Outonalimb.wav")

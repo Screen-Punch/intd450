@@ -72,7 +72,6 @@ position = Vector2( -373.984, 128.71 )
 [node name="player" parent="." index="2" instance=ExtResource( 4 )]
 
 position = Vector2( -102.355, 126.913 )
-timerVisible = false
 
 [node name="next_W" parent="." index="3" instance=ExtResource( 5 )]
 
