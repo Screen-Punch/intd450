@@ -2,14 +2,14 @@
 
 [ext_resource path="res://Scripts/Key.gd" type="Script" id=1]
 [ext_resource path="res://Art/switches.png" type="Texture" id=2]
-[ext_resource path="res://Sounds/SoundFiles/click-1.wav" type="AudioStream" id=3]
+[ext_resource path="res://Sounds/SoundFiles/Wang/click1.wav" type="AudioStream" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 32, 32 )
 
-[node name="Key" type="Node2D"]
+[node name="Key" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Visibility" ]
