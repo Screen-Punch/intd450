@@ -118,9 +118,9 @@ z_index = 8
 texture = ExtResource( 10 )
 _sections_unfolded = [ "Z Index" ]
 
-[connection signal="button_pressed" from="Button" to="Player" method="_on_Button_button_pressed"]
-
 [connection signal="button_pressed" from="Button" to="." method="_on_Button_button_pressed"]
+
+[connection signal="button_pressed" from="Button" to="Player" method="_on_Button_button_pressed"]
 
 [connection signal="can_move" from="Monster" to="Player" method="_on_Monster_can_move"]
 
