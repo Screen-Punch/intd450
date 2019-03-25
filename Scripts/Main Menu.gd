@@ -38,4 +38,3 @@ func _on_CreditsReturnButton_pressed():
 
 func play_click_sound():
 	$click.play(0)
-	print("1111")
