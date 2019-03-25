@@ -5,7 +5,7 @@ var deathsInLevel = 0
 var totalDeaths = 0
 
 var level_selection_mode = false
-var level_time = [-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1]
+var level_time = [-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1]
 var current_time
 var current_level
 
