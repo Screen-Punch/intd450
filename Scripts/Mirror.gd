@@ -16,7 +16,6 @@ func _physics_process(delta):
 func takeDamage():
 	name = "deadmirror"
 	$AnimationPlayer.play("DeathAnim")
-	$AudioStreamPlayer2D.volume_db += 20
 	$AudioStreamPlayer2D.play(0)
 	$CollisionShape2D.queue_free()
 	$Area2D.queue_free()
