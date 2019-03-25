@@ -20,7 +20,7 @@ outlines = [ PoolVector2Array( -448.999, 64.0005, -38.0213, 65.5188, -98.6316, -
 custom_solver_bias = 0.0
 extents = Vector2( 32, 32 )
 
-[node name="Level 1-11" type="Node2D"]
+[node name="Level 1-11" type="Node2D" index="0"]
 
 [node name="TileMap" type="TileMap" parent="." index="0"]
 
@@ -78,19 +78,18 @@ position = Vector2( 603.629, -30.2574 )
 
 [node name="Lock" parent="Key" index="2" instance=ExtResource( 7 )]
 
-position = Vector2( -631.645, 1.0087 )
+position = Vector2( -627.454, 0.409958 )
 rotation = 3.14159
 _sections_unfolded = [ "Collision", "Transform", "Visibility" ]
 
 [node name="Mirror" parent="." index="5" instance=ExtResource( 8 )]
 
-position = Vector2( -98.1272, -32.5797 )
-_sections_unfolded = [ "Collision", "Transform", "Visibility" ]
+position = Vector2( -97.5944, -36.523 )
 visionType = "LoS"
-mirrorDirection = "horizontal"
 
-[node name="Area2D" type="Area2D" parent="Mirror" index="3"]
+[node name="Area2D" type="Area2D" parent="Mirror" index="5"]
 
+position = Vector2( 84.4221, -4.19116 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -101,10 +100,12 @@ audio_bus_name = "Master"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mirror/Area2D" index="0"]
 
-position = Vector2( 370.553, 7.11546 )
-scale = Vector2( 10.9955, 1.08698 )
+position = Vector2( 262.619, -1.79622 )
+scale = Vector2( 9.83773, 1 )
 shape = SubResource( 2 )
 
 [connection signal="keyGotten" from="Key" to="Key/Lock" method="_on_Key_keyGotten"]
+
+[connection signal="body_entered" from="Mirror/Area2D" to="Mirror" method="_on_Area2D_body_entered"]
 
 
