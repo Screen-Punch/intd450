@@ -7,7 +7,10 @@ path="res://.import/click2.wav-76afe48a4b51eb374e46494ec1d453b8.sample"
 [deps]
 
 source_file="res://Sounds/SoundFiles/Wang/click2.wav"
+source_md5="de21e36f49d4fdc5a7255b705a8f0a5d"
+
 dest_files=[ "res://.import/click2.wav-76afe48a4b51eb374e46494ec1d453b8.sample" ]
+dest_md5="92d1d1f8f69bdfa75dac4637b30cab13"
 
 [params]
 

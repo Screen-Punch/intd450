@@ -7,7 +7,10 @@ path="res://.import/death1.wav-ca2e717d1b147e4e4226c68832e36786.sample"
 [deps]
 
 source_file="res://Sounds/SoundFiles/Wang/death1.wav"
+source_md5="4dff923e477a4259d758eb21e1070dc9"
+
 dest_files=[ "res://.import/death1.wav-ca2e717d1b147e4e4226c68832e36786.sample" ]
+dest_md5="81f3119432f6ef003496629a3d26f63d"
 
 [params]
 

@@ -7,7 +7,10 @@ path="res://.import/foot_step3_louder.wav-7bcb575b26c538b867865b5b3efbe276.sampl
 [deps]
 
 source_file="res://Sounds/SoundFiles/Wang/foot_step3_louder.wav"
+source_md5="d80a57844a7a97f7f30363687ed70f2d"
+
 dest_files=[ "res://.import/foot_step3_louder.wav-7bcb575b26c538b867865b5b3efbe276.sample" ]
+dest_md5="f3e7349481ebfaa310acffdc0b3de632"
 
 [params]
 

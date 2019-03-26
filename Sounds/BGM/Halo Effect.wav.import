@@ -7,7 +7,10 @@ path="res://.import/Halo Effect.wav-89d2b70b05857e859568b57249047919.sample"
 [deps]
 
 source_file="res://Sounds/BGM/Halo Effect.wav"
+source_md5="475625999152e49dffc093648a719ad8"
+
 dest_files=[ "res://.import/Halo Effect.wav-89d2b70b05857e859568b57249047919.sample" ]
+dest_md5="4f4444838ae1a1346f3d319333bf7ae1"
 
 [params]
 

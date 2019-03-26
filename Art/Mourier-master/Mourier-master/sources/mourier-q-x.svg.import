@@ -7,7 +7,10 @@ path="res://.import/mourier-q-x.svg-32cbc03941217dbaac2f70a9d70badc1.stex"
 [deps]
 
 source_file="res://Art/Mourier-master/Mourier-master/sources/mourier-q-x.svg"
+source_md5="dc243a2e16561376ab5de02c7778a1b5"
+
 dest_files=[ "res://.import/mourier-q-x.svg-32cbc03941217dbaac2f70a9d70badc1.stex" ]
+dest_md5="31d5d727f849380c1464970fa929c023"
 
 [params]
 

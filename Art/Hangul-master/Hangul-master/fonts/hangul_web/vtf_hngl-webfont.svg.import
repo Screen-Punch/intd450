@@ -7,7 +7,10 @@ path="res://.import/vtf_hngl-webfont.svg-e0485fe203ece6df9599bdc7211d384a.stex"
 [deps]
 
 source_file="res://Art/Hangul-master/Hangul-master/fonts/hangul_web/vtf_hngl-webfont.svg"
+source_md5="84678d37eac718cfb8b81cdea0a7507a"
+
 dest_files=[ "res://.import/vtf_hngl-webfont.svg-e0485fe203ece6df9599bdc7211d384a.stex" ]
+dest_md5="7c58a01ac5bd2b2a913ced328423ee6b"
 
 [params]
 

@@ -7,7 +7,10 @@ path="res://.import/vtf-hangul.svg-d768a7b9e49f36de3bdbd38329147d7b.stex"
 [deps]
 
 source_file="res://Art/Hangul-master/Hangul-master/sources/1-drawing/vtf-hangul.svg"
+source_md5="8fd25f36f6985b59958ce9277ff5efc4"
+
 dest_files=[ "res://.import/vtf-hangul.svg-d768a7b9e49f36de3bdbd38329147d7b.stex" ]
+dest_md5="7c9d30d33c2182422cb02cc6929a9d00"
 
 [params]
 

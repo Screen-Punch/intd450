@@ -7,7 +7,10 @@ path="res://.import/mourier-y-z.svg-04e23e9f64fae4a93880e4fc90a2affa.stex"
 [deps]
 
 source_file="res://Art/Mourier-master/Mourier-master/sources/mourier-y-z.svg"
+source_md5="2136d9f3dc799b9f3bb67464e9899332"
+
 dest_files=[ "res://.import/mourier-y-z.svg-04e23e9f64fae4a93880e4fc90a2affa.stex" ]
+dest_md5="4f507996f302f3ad71c8360df8dd7eb6"
 
 [params]
 

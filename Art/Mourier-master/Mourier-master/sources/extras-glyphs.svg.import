@@ -7,7 +7,10 @@ path="res://.import/extras-glyphs.svg-4a09a4c3e5afcdc4cd4297831c18818b.stex"
 [deps]
 
 source_file="res://Art/Mourier-master/Mourier-master/sources/extras-glyphs.svg"
+source_md5="2da627fbfb6a6ecd182f5d41d7f25e9a"
+
 dest_files=[ "res://.import/extras-glyphs.svg-4a09a4c3e5afcdc4cd4297831c18818b.stex" ]
+dest_md5="a38028545ed3a72495a7f23ed519905c"
 
 [params]
 

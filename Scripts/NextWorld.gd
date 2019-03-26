@@ -6,19 +6,20 @@ export (int) var level
 export (String) var nextLevelText
 var blocked = true
 var textCanAdvance = false
+var aboutToAdvanceLevel = false
 var time = 0
 var transitionText
 var textTracker = 0
 var narrativeSequences = [
 ["It was only a matter of time that another wanderlusting soul would find this place..."], #0 indexed
 ["My wayward whispers... snaking and burrowing deeply into unsuspecting hearts and minds…",
-"Like a siren's song... how sweetly they promise the countless, irresistible desires and curiosities of the mortal heart..."],
+	"Like a siren's song... how sweetly they promise the countless, irresistible desires and curiosities of the mortal heart..."],
 [""],	# 2 (Monster first appears)
 ["I-..."],
 ["My solitary slumber was left unabated by guests for countless ages since the last intrusion...",
-"...you bear an uncanny resemblance to him.", "Interesting."],
+	"...you bear an uncanny resemblance to him.", "Interesting."],
 ["The bittersweet stench of desperation reeks upon you... it betrays your every step.",
-"How you scurry about like a witless rat..."],
+	"How you scurry about like a witless rat..."],
 ["You may be able to run, and you may be able to buy yourself a moment's respite… but you will inevitably err."],
 ["..."], # 7
 ["..."],
@@ -61,11 +62,11 @@ func _input(event):
 		if event.pressed:
 			textCanAdvance = false
 		if textTracker < transitionText.size()-1:
-				textTracker += 1
-				$CanvasLayer/Control/TextAnimator.play("TextTransition")
-				$CanvasLayer/Control/Label.text = transitionText[textTracker]
+			$CanvasLayer/Control/TextAnimator.play("TextFadeOut")
 		else:
-			GameManagerNode.loadNextLevel(next_world, nextLevelText)
+			aboutToAdvanceLevel = true
+			$CanvasLayer/Control/TextAnimator.play("TextFadeOut")
+
 
 func _on_next_W_body_entered(body):
 	if body.is_in_group("Player") and !blocked:
@@ -104,3 +105,10 @@ func setTransitionText():
 func _on_TextAnimator_animation_finished(anim_name):
 	if anim_name == "TextTransition":
 		textCanAdvance = true
+	if anim_name == "TextFadeOut":
+		if aboutToAdvanceLevel:
+			GameManagerNode.loadNextLevel(next_world, nextLevelText)
+		else:
+			textTracker += 1
+			$CanvasLayer/Control/TextAnimator.play("TextTransition")
+			$CanvasLayer/Control/Label.text = transitionText[textTracker]

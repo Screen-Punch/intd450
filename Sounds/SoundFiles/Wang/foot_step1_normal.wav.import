@@ -7,7 +7,10 @@ path="res://.import/foot_step1_normal.wav-5cdacc9ae3a0261ef8250dd47b2b07bf.sampl
 [deps]
 
 source_file="res://Sounds/SoundFiles/Wang/foot_step1_normal.wav"
+source_md5="98e0623bdef4b596e800cd79f1b33c9e"
+
 dest_files=[ "res://.import/foot_step1_normal.wav-5cdacc9ae3a0261ef8250dd47b2b07bf.sample" ]
+dest_md5="9b57e7188916dcf8b7c07df482c9b800"
 
 [params]
 
