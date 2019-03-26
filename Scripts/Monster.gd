@@ -83,6 +83,8 @@ func findNewTarget():
 		return
 	target = get_tree().get_nodes_in_group("Player")[0]
 	$Sprite.self_modulate = CHASING_PLAYER_COLOR
+	$AudioStreamPlayer2D.stream = load("res://Sounds/SoundFiles/Shrik-2.wav")
+	$AudioStreamPlayer2D.play(0)
 
 # Used Nav2D to move
 func move_along_path(distance):

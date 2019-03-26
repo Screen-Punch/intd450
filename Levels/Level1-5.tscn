@@ -19,7 +19,7 @@ _sections_unfolded = [ "Resource" ]
 custom_solver_bias = 0.0
 extents = Vector2( 32, 32 )
 
-[node name="Level1-5" type="Node2D" index="0"]
+[node name="Level1-5" type="Node2D"]
 
 _sections_unfolded = [ "Transform" ]
 

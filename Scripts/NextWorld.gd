@@ -61,11 +61,11 @@ func _input(event):
 	if event is InputEventKey and textCanAdvance:
 		if event.pressed:
 			textCanAdvance = false
-		if textTracker < transitionText.size()-1:
-			$CanvasLayer/Control/TextAnimator.play("TextFadeOut")
-		else:
-			aboutToAdvanceLevel = true
-			$CanvasLayer/Control/TextAnimator.play("TextFadeOut")
+			if textTracker < transitionText.size()-1:
+				$CanvasLayer/Control/TextAnimator.play("TextFadeOut")
+			else:
+				aboutToAdvanceLevel = true
+				$CanvasLayer/Control/TextAnimator.play("TextFadeOut")
 
 
 func _on_next_W_body_entered(body):
@@ -85,6 +85,7 @@ func _on_next_W_body_entered(body):
 func _on_AnimationPlayer_animation_finished(anim_name):
 	if anim_name == "ExitUnlocked":
 		$StatueSprite.queue_free()
+		$Light2D.show()
 
 
 func revealExit():

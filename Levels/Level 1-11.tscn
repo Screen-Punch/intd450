@@ -20,7 +20,7 @@ outlines = [ PoolVector2Array( -448.999, 64.0005, -38.0213, 65.5188, -98.6316, -
 custom_solver_bias = 0.0
 extents = Vector2( 32, 32 )
 
-[node name="Level 1-11" type="Node2D" index="0"]
+[node name="Level 1-11" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="." index="0"]
 
@@ -78,7 +78,7 @@ position = Vector2( 603.629, -30.2574 )
 
 [node name="Lock" parent="Key" index="2" instance=ExtResource( 7 )]
 
-position = Vector2( -627.454, 0.409958 )
+position = Vector2( -631.013, 3.32175 )
 rotation = 3.14159
 _sections_unfolded = [ "Collision", "Transform", "Visibility" ]
 

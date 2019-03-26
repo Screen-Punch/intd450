@@ -228,7 +228,6 @@ blend_times = [  ]
 
 stream = ExtResource( 3 )
 volume_db = 0.0
-pitch_scale = 1.0
 autoplay = false
 max_distance = 2000.0
 attenuation = 1.0
@@ -256,7 +255,6 @@ blend_times = [  ]
 
 stream = ExtResource( 4 )
 volume_db = 0.0
-pitch_scale = 1.0
 autoplay = false
 max_distance = 2000.0
 attenuation = 1.0

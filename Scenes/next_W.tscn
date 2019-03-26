@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scripts/NextWorld.gd" type="Script" id=1]
 [ext_resource path="res://Art/switches.png" type="Texture" id=2]
 [ext_resource path="res://Sounds/SoundFiles/Wang/foot_step3_louder.wav" type="AudioStream" id=3]
 [ext_resource path="res://godotIcon.png" type="Texture" id=4]
+[ext_resource path="res://Art/lighting/light.png" type="Texture" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -339,6 +340,31 @@ vframes = 2
 hframes = 6
 frame = 2
 _sections_unfolded = [ "Animation", "Transform", "Visibility" ]
+
+[node name="Light2D" type="Light2D" parent="." index="6"]
+
+visible = false
+enabled = true
+editor_only = false
+texture = ExtResource( 5 )
+offset = Vector2( 0, 0 )
+texture_scale = 1.0
+color = Color( 1, 1, 1, 1 )
+energy = 1.0
+mode = 0
+range_height = 0.0
+range_z_min = -1024
+range_z_max = 1024
+range_layer_min = 0
+range_layer_max = 0
+range_item_cull_mask = 1
+shadow_enabled = true
+shadow_color = Color( 0, 0, 0, 0 )
+shadow_buffer_size = 2048
+shadow_gradient_length = 0.0
+shadow_filter = 0
+shadow_filter_smooth = 0.0
+shadow_item_cull_mask = 1
 
 [connection signal="body_entered" from="." to="." method="_on_next_W_body_entered"]
 

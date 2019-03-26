@@ -7,6 +7,7 @@ func _ready():
 
 func _on_Key_keyGotten():
 	$AudioStreamPlayer2D.play(0)
+	$LightOccluder2D.queue_free()
 	$AnimationPlayer.play("BarrierDeactivate")
 
 func _on_AnimationPlayer_animation_finished(anim_name):

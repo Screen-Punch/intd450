@@ -47,15 +47,15 @@ func _process(delta):
 
 	if start_move:
 		timer += delta
-		if timer < 6.45:
+		if timer < 3.2:
 			var motion = Vector2()
-			motion.x +=1
+			motion.x +=2
 			position += motion
-		if timer > 6.45 and timer < 7.8:
+		if timer > 3.2 and timer < 3.9:
 			var motion = Vector2()
-			motion.y +=1
+			motion.y +=2
 			position += motion
-		if timer > 7.8:
+		if timer > 3.9:
 			hide()
 			emit_signal("can_move")
 	$Sprite.rotation += 0.01
