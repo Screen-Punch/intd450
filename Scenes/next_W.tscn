@@ -209,6 +209,7 @@ _sections_unfolded = [ "Animation", "Visibility" ]
 
 stream = ExtResource( 3 )
 volume_db = 0.0
+pitch_scale = 1.0
 autoplay = false
 max_distance = 2000.0
 attenuation = 1.0
@@ -332,7 +333,7 @@ _sections_unfolded = [ "Visibility" ]
 
 visible = false
 modulate = Color( 0, 0, 0, 1 )
-position = Vector2( -1.31115, -5.63423e-08 )
+position = Vector2( -1.31115, -5.63423e-008 )
 rotation = 1.5708
 scale = Vector2( 1, 1.35533 )
 texture = ExtResource( 2 )
@@ -365,6 +366,9 @@ shadow_gradient_length = 0.0
 shadow_filter = 0
 shadow_filter_smooth = 0.0
 shadow_item_cull_mask = 1
+__meta__ = {
+"_edit_lock_": true
+}
 
 [connection signal="body_entered" from="." to="." method="_on_next_W_body_entered"]
 
