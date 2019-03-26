@@ -7,10 +7,7 @@ path="res://.import/Outonalimb.wav-b9d994f28dd44b7d719cf83e99c91cc1.sample"
 [deps]
 
 source_file="res://Sounds/BGM/Outonalimb.wav"
-source_md5="9354b14000c12222383dba2f5d573d4a"
-
 dest_files=[ "res://.import/Outonalimb.wav-b9d994f28dd44b7d719cf83e99c91cc1.sample" ]
-dest_md5="5845e8dcb5aac9415b5fdbf8bafa92fb"
 
 [params]
 

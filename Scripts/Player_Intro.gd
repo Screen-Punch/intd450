@@ -16,12 +16,12 @@ var timer = 0
 var magnitude = 10
 var gap = 0.1
 
-var canMove = false
+var canMove = true
 var dead = false
 var anim
 var oldAnim
 
-var control = false
+var control = true
 export (bool) var timerVisible = true
 
 

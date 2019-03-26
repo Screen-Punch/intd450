@@ -222,7 +222,7 @@ timerVisible = false
 
 texture = ExtResource( 2 )
 hframes = 8
-_sections_unfolded = [ "Animation", "Transform" ]
+_sections_unfolded = [ "Animation", "Transform", "Visibility" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 

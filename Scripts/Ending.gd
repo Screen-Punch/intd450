@@ -114,3 +114,17 @@ func _on_TextAnimator_animation_finished(anim_name):
 			textTracker += 1
 			$CanvasLayer/Control/TextAnimator.play("TextTransition")
 			$CanvasLayer/Control/Label.text = transitionText[textTracker]
+
+
+func _on_Ending_body_entered(body):
+	if body.is_in_group("Player") and !blocked:
+		body.hideTimer()
+		GameManagerNode.set_level_time()
+		time = GameManagerNode.get_level_time(level)
+		body.vulnerable = false
+		$foot_step2.play(0)
+		#_on_Timer_timeout() # Play Monster Noises while reading text
+		$CanvasLayer/Control/AnimationPlayer.play("SceneTransition")
+		$CanvasLayer/Control/TextAnimator.play("TextTransition")
+	if body.is_in_group("Monster") and !blocked:
+		body.playMonsterTakesStairs()

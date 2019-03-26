@@ -4,8 +4,10 @@ extends Node2D
 var deathsInLevel = 0
 var totalDeaths = 0
 
+var end_scene = false
+
 var level_selection_mode = false
-var level_time = [-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1]
+var level_time = [-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1]
 var current_time
 var current_level
 

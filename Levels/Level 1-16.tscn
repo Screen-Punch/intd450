@@ -186,7 +186,7 @@ extents = Vector2( 61.6574, 32 )
 custom_solver_bias = 0.0
 extents = Vector2( 12.8859, 31.8558 )
 
-[node name="Level 1-16" type="Node2D" index="0"]
+[node name="Level 1-16" type="Node2D"]
 
 position = Vector2( -1, 0 )
 script = ExtResource( 1 )
@@ -270,6 +270,7 @@ _sections_unfolded = [ "Animation", "Visibility" ]
 
 stream = ExtResource( 9 )
 volume_db = 0.0
+pitch_scale = 1.0
 autoplay = false
 max_distance = 2000.0
 attenuation = 1.0
@@ -393,7 +394,7 @@ _sections_unfolded = [ "Visibility" ]
 
 visible = false
 modulate = Color( 0, 0, 0, 1 )
-position = Vector2( -1.31115, -5.63423e-08 )
+position = Vector2( -1.31115, -5.63423e-008 )
 rotation = 1.5708
 scale = Vector2( 1, 1.35533 )
 texture = ExtResource( 8 )
