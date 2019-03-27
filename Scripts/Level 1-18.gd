@@ -4,6 +4,12 @@ extends Node2D
 # var a
 var color_index = -1
 var move_to_monster = false
+var player_walk = false
+var monster_to_player = false
+
+var player_disappear = false
+
+var show_door = false
 
 var timer = 0
 
@@ -18,7 +24,41 @@ func _process(delta):
 		if timer < 3:
 			$Player.position.x -= 1
 		else:
-			move_to_monster = true
+			move_to_monster = false
+			timer = 0
+			
+			
+	if player_walk:
+		timer += delta
+		if timer < 0.5:
+			$Player.position.x += 0.4
+		else:
+			player_walk = false
+			player_disappear = true
+			$Player.position.x += 100
+			timer = 0
+		
+		
+	if player_disappear:
+		$Player.hide()
+		player_disappear = false
+		show_door = true
+		monster_to_player = true
+		
+	
+		
+	if monster_to_player:
+		timer += delta
+		if timer < 3:
+			$Navigation2D/NavigationPolygonInstance.enabled = false
+			$Navigation2D/Monster.position.x += 1
+			if timer > 1.5 and show_door:
+				$Door.show()
+				show_door = false
+				$Ending_Good.revealExit()
+		else:
+			monster_to_player = false
+			timer = 0
 
 
 
@@ -36,11 +76,22 @@ func _on_Ending_Decide_area_entered(area):
 
 
 func _on_Door_body_entered(body):
-	if color_index > 2:
-		print(color_index)
-		GameManagerNode.end_scene = true
-		$Player.canMove = false
-		$Player.anim = "WalkRight"
-		$Player/sprite.flip_h = true
-		move_to_monster = true
-		$Ending.revealExit()
+	if body.name!= "TileMap":
+		if color_index == 18:
+			GameManagerNode.end_scene = true
+			$Player.canMove = false
+			$Player.anim = "WalkRight"
+			$Player/sprite.flip_h = true
+			move_to_monster = true
+			$Ending.revealExit()
+		else: 
+			$Door.hide()
+			player_walk = true
+			$Player.canMove = false
+			$Player.anim = "WalkRight"
+		
+
+
+func _on_Ending_Good_body_entered(body):
+	if body.name!= "TileMap":
+		monster_to_player = false

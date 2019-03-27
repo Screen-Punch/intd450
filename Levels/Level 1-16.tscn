@@ -186,7 +186,7 @@ extents = Vector2( 61.6574, 32 )
 custom_solver_bias = 0.0
 extents = Vector2( 12.8859, 31.8558 )
 
-[node name="Level 1-16" type="Node2D"]
+[node name="Level 1-16" type="Node2D" index="0"]
 
 position = Vector2( -1, 0 )
 script = ExtResource( 1 )
@@ -435,7 +435,7 @@ scale = Vector2( 0.887331, 0.822141 )
 
 [node name="Door" type="StaticBody2D" parent="." index="7"]
 
-position = Vector2( 408.784, 558.837 )
+position = Vector2( 408.244, 544.247 )
 rotation = -3.14159
 scale = Vector2( 0.491852, 1.00968 )
 input_pickable = false
