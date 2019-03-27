@@ -47,11 +47,11 @@ func _process(delta):
 
 	if start_move:
 		timer += delta
-		if timer < 3.2:
+		if timer < 1.4:
 			var motion = Vector2()
 			motion.x +=2
 			position += motion
-		if timer > 3.2 and timer < 3.9:
+		if timer > 1.4 and timer < 3.9:
 			var motion = Vector2()
 			motion.y +=2
 			position += motion

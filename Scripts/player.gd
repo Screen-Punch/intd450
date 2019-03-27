@@ -105,11 +105,14 @@ func update_magnitude_and_gap(distance):
 	magnitude = pow(2,-distance/50) * 25
 
 func takeDamage():
-	if vulnerable:
+	if vulnerable and GameManagerNode.end_scene == false:
 		MOTION_SPEED = 0
 		dead = true
 		$CanvasLayer/SceneTransition.play_backwards("SceneTransition")
 		$death2.play(0)
+		
+	#if vulnerable and GameManagerNode.end_scene == true:
+		
 
 
 func _on_AnimationPlayer_animation_finished(anim_name):
