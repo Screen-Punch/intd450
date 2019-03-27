@@ -71,6 +71,10 @@ func _input(event):
 
 func _on_next_W_body_entered(body):
 	if body.is_in_group("Player") and !blocked:
+		if GameManagerNode.deathsInLevel == 0:
+			GameManagerNode.totalDeaths -= 3
+			if GameManagerNode.totalDeaths < 0:
+				GameManagerNode.totalDeaths = 0
 		body.hideTimer()
 		GameManagerNode.set_level_time()
 		time = GameManagerNode.get_level_time(level)

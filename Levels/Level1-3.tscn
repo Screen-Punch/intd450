@@ -18,7 +18,7 @@ outlines = [ PoolVector2Array( -277.054, -201.919, -145.097, -204.64, -135.574, 
 custom_solver_bias = 0.0
 extents = Vector2( 32, 32 )
 
-[node name="Level1-3" type="Node2D"]
+[node name="Level1-3" type="Node2D" index="0"]
 
 [node name="TileMap" type="TileMap" parent="." index="0"]
 
@@ -68,6 +68,7 @@ __meta__ = {
 [node name="Monster" parent="Nav2D" index="1" instance=ExtResource( 5 )]
 
 position = Vector2( 66.1562, -842.531 )
+cutscene = false
 
 [node name="Mirror" parent="." index="4" instance=ExtResource( 6 )]
 
