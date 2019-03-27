@@ -18,7 +18,7 @@ outlines = [ PoolVector2Array( -445.995, 124.146, 258.001, 125, 250.493, -259.58
 custom_solver_bias = 0.0
 extents = Vector2( 32, 32 )
 
-[node name="Level1-9" type="Node2D"]
+[node name="Level1-9" type="Node2D" index="0"]
 
 _sections_unfolded = [ "Transform" ]
 
@@ -61,6 +61,7 @@ nextLevelText = "Lock and Key"
 [node name="Monster" parent="Nav2D" index="0" instance=ExtResource( 5 )]
 
 position = Vector2( -379.165, 174.054 )
+cutscene = false
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Nav2D" index="1"]
 
@@ -72,8 +73,8 @@ __meta__ = {
 
 [node name="Mirror" parent="." index="4" instance=ExtResource( 6 )]
 
-editor/display_folded = true
 position = Vector2( 351.314, -250.207 )
+rotation = 3.14159
 _sections_unfolded = [ "Collision", "Transform", "Visibility" ]
 
 [node name="Area2D" type="Area2D" parent="Mirror" index="3"]
@@ -89,13 +90,14 @@ audio_bus_name = "Master"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mirror/Area2D" index="0"]
 
-position = Vector2( 0, 257.513 )
+position = Vector2( -4.52209, -399.688 )
 scale = Vector2( 1, 8.35752 )
 shape = SubResource( 2 )
 
 [node name="Mirror2" parent="." index="5" instance=ExtResource( 6 )]
 
-position = Vector2( 801.969, 90.7258 )
+position = Vector2( 818.426, 101.482 )
+rotation = -1.5708
 _sections_unfolded = [ "Collision", "Transform", "Visibility" ]
 mirrorDirection = "horizontal"
 
@@ -114,8 +116,8 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mirror2/Area2D" index="0"]
 
-position = Vector2( -2.65163, -311.703 )
-scale = Vector2( 1, 8.35752 )
+position = Vector2( 267.894, -21.0716 )
+scale = Vector2( 9.21293, 0.872867 )
 shape = SubResource( 2 )
 
 [node name="Mirror3" parent="." index="6" instance=ExtResource( 6 )]

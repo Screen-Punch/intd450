@@ -77,6 +77,7 @@ __meta__ = {
 [node name="Monster" parent="Nav2D" index="1" instance=ExtResource( 3 )]
 
 position = Vector2( -350.011, 128.71 )
+cutscene = false
 
 [node name="player" parent="." index="2" instance=ExtResource( 4 )]
 
@@ -161,6 +162,10 @@ mirrorDirection = "horizontal"
 [node name="AnimationPlayer" parent="Mirror4" index="2"]
 
 anims/MonsterSpotted = SubResource( 3 )
+
+[node name="AudioStreamPlayer2D" parent="Mirror4" index="3"]
+
+pitch_scale = 1.0
 
 [node name="Area2D" type="Area2D" parent="Mirror4" index="4"]
 
