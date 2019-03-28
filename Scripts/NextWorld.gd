@@ -98,7 +98,7 @@ func _on_AnimationPlayer_animation_finished(anim_name):
 func revealExit():
 	blocked = false
 	$CanvasLayer/Control/AnimationPlayer.play("ExitUnlocked")
-	$Sprite.frame += 1
+	$Sprite.frame -= 1
 
 func setTransitionText():
 	var root = get_tree().root
