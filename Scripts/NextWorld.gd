@@ -4,7 +4,7 @@ extends Area2D
 export (String, FILE, "*.tscn") var next_world
 export (int) var level 
 export (String) var nextLevelText
-var blocked = true
+export (bool) var blocked = true
 var textCanAdvance = false
 var aboutToAdvanceLevel = false
 var time = 0
@@ -52,7 +52,9 @@ func _ready():
 		next_world = "res://Levels/Main Menu.tscn"
 	setTransitionText()
 	if !nextLevelText:
-		nextLevelText = "Level: ???"
+		nextLevelText = ""
+	if !blocked:
+		revealExit()
 
 
 func _process(delta):

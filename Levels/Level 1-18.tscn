@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Scripts/Level 1-18.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/ending.tscn" type="PackedScene" id=2]
@@ -8,7 +8,8 @@
 [ext_resource path="res://Scripts/Nav2D.gd" type="Script" id=6]
 [ext_resource path="res://Scenes/Monster.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/door.tscn" type="PackedScene" id=8]
-
+[ext_resource path="res://Art/stairs.png" type="Texture" id=9]
+[ext_resource path="res://Art/lighting/light.png" type="Texture" id=10]
 
 [sub_resource type="NavigationPolygon" id=1]
 vertices = PoolVector2Array( 382.375, 448.301, 513.065, 510.876, 192.001, 510.876, 322.081, 448.301, 191.97, -319.737, 508.867, -319.737, 384, -254, 318.285, -254.363, 382.551, -62.673, 382.375, 258.376, 190.862, 2.70099, 321.61, -64.8891, 192.001, 191.32, 322.081, 258.376, 1.53891, 193.77, -0.828186, 0.484894 )
@@ -99,6 +100,21 @@ nextLevelText = ""
 position = Vector2( 812.765, 86.5235 )
 scale = Vector2( 1, 2.1742 )
 shape = SubResource( 4 )
+
+[node name="Sprite" type="Sprite" parent="."]
+
+[node name="stairs" type="Sprite" parent="Sprite"]
+position = Vector2( 988.006, 92.3196 )
+rotation = 1.57079
+scale = Vector2( 2.77681, 1 )
+texture = ExtResource( 9 )
+hframes = 2
+
+[node name="Light2D" type="Light2D" parent="Sprite/stairs"]
+visible = false
+position = Vector2( -0.950012, 1.8999 )
+texture = ExtResource( 10 )
+shadow_enabled = true
 
 [connection signal="body_entered" from="Ending_Good" to="." method="_on_Ending_Good_body_entered"]
 [connection signal="body_entered" from="Ending_Good" to="Ending_Good" method="_on_Ending_Good_body_entered"]
