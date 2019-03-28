@@ -238,13 +238,6 @@ margin_right = 154.0
 margin_bottom = 73.0
 text = "Resume"
 
-[node name="SettingsButton" type="Button" parent="CanvasLayer/PauseMenu"]
-margin_left = 77.0
-margin_top = 75.0
-margin_right = 154.0
-margin_bottom = 101.0
-text = "Settings"
-
 [node name="ExitButton" type="Button" parent="CanvasLayer/PauseMenu"]
 margin_left = 77.0
 margin_top = 104.0
@@ -256,8 +249,8 @@ text = "Exit"
 visible = false
 margin_left = -77.0
 margin_top = -104.0
-margin_right = 153.0
-margin_bottom = 67.0
+margin_right = 151.0
+margin_bottom = 65.0
 
 [node name="ConfirmationText" type="Label" parent="CanvasLayer/PauseMenu/ExitButton/ExitConfirmation"]
 margin_top = 49.0

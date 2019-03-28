@@ -37,7 +37,7 @@ func _ready():
 	updatePlayerTexture(deaths)
 	if !timerVisible or GameManagerNode.level_selection_mode:
 		hideTimer()
-	totalMirrors  = get_tree().get_nodes_in_group("Mirror")
+	var totalMirrors  = get_tree().get_nodes_in_group("Mirror")
 
 func _input(event):
 	if event is InputEventKey:
@@ -145,7 +145,7 @@ func hideTimer():
 func dimCamera():
 	# Lower limit of 0.3, upper limit of 0.8
 	# (0.8 - 0.3) / 4
-	var delta = (0.8-0.7)/float(len(totalMirrors)+1)
+	var delta = (0.8-0.7)/float(totalMirrors+1)
 	var curLev = $CanvasModulate.color.r
 	curLev -= delta
 	$CanvasModulate.color = Color(curLev, curLev, curLev)
