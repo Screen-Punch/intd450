@@ -52,11 +52,11 @@ nextLevelText = "Level 11: Stuck in the Middle With You"
 position = Vector2( 603.629, -30.2574 )
 
 [node name="Lock" parent="Key" instance=ExtResource( 7 )]
-position = Vector2( -631.013, 3.32175 )
+position = Vector2( -590.325, 9.166 )
 rotation = 3.14159
 
 [node name="Mirror" parent="." instance=ExtResource( 8 )]
-position = Vector2( -97.5944, -36.523 )
+position = Vector2( -65.2602, -34.2162 )
 visionType = "LoS"
 mirrorDirection = ""
 
