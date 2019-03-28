@@ -3,20 +3,21 @@
 importer="texture"
 type="StreamTexture"
 path="res://.import/vtf_hngl-webfont.svg-e0485fe203ece6df9599bdc7211d384a.stex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
 source_file="res://Art/Hangul-master/Hangul-master/fonts/hangul_web/vtf_hngl-webfont.svg"
-source_md5="84678d37eac718cfb8b81cdea0a7507a"
-
 dest_files=[ "res://.import/vtf_hngl-webfont.svg-e0485fe203ece6df9599bdc7211d384a.stex" ]
-dest_md5="7c58a01ac5bd2b2a913ced328423ee6b"
 
 [params]
 
 compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
+compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
 flags/filter=true
@@ -26,6 +27,7 @@ flags/srgb=2
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
+process/invert_color=false
 stream=false
 size_limit=0
 detect_3d=true

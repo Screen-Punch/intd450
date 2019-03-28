@@ -4,9 +4,9 @@ extends KinematicBody2D
 # move_and_slide works.
 
 # Member variables
-const MAX_MOTION_SPEED = 240
-const MOTION_SPEED = 240 # Pixels/second
-const DEATHS_PER_COLOR_CHANGE = 1
+var MAX_MOTION_SPEED = 240
+var MOTION_SPEED = 240 # Pixels/second
+var DEATHS_PER_COLOR_CHANGE = 1
 var distance = 500
 
 var target

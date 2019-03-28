@@ -3,20 +3,21 @@
 importer="texture"
 type="StreamTexture"
 path="res://.import/mourier-y-z.svg-04e23e9f64fae4a93880e4fc90a2affa.stex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
 source_file="res://Art/Mourier-master/Mourier-master/sources/mourier-y-z.svg"
-source_md5="2136d9f3dc799b9f3bb67464e9899332"
-
 dest_files=[ "res://.import/mourier-y-z.svg-04e23e9f64fae4a93880e4fc90a2affa.stex" ]
-dest_md5="4f507996f302f3ad71c8360df8dd7eb6"
 
 [params]
 
 compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
+compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
 flags/filter=true
@@ -26,6 +27,7 @@ flags/srgb=2
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
+process/invert_color=false
 stream=false
 size_limit=0
 detect_3d=true

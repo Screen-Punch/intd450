@@ -3,20 +3,21 @@
 importer="texture"
 type="StreamTexture"
 path="res://.import/extras-glyphs2.svg-bd15b0bdb8b166a6611b78760d1dfd8c.stex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
 source_file="res://Art/Mourier-master/Mourier-master/sources/extras-glyphs2.svg"
-source_md5="d1e4e48b73cb9b3accebb533aac2a50e"
-
 dest_files=[ "res://.import/extras-glyphs2.svg-bd15b0bdb8b166a6611b78760d1dfd8c.stex" ]
-dest_md5="e87bb07c429127d006bf30715eb70d4f"
 
 [params]
 
 compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
+compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
 flags/filter=true
@@ -26,6 +27,7 @@ flags/srgb=2
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
+process/invert_color=false
 stream=false
 size_limit=0
 detect_3d=true

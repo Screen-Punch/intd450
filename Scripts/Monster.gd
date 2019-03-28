@@ -25,6 +25,7 @@ const CHASING_MIRROR_COLOR = Color(1, 1, 1, 1)
 func _ready():
 	MAXSPEED = SPEED
 	$Sprite.self_modulate = CHASING_PLAYER_COLOR
+	target = player
 
 func spawn():
 	spawned = true
@@ -58,7 +59,7 @@ func _process(delta):
 		var distToTarget = position.distance_to(player.position)
 		$AudioStreamPlayer2D.volume_db = 20 - distToTarget/20
 	else:
-		move_and_slide(target.position.normalized() * SPEED)
+		move_and_slide((target.position - position).normalized() * SPEED)
 	$Sprite.rotation += 0.01
 
 # Called by crystals and such when it sees a new target
