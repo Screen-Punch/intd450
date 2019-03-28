@@ -6,9 +6,6 @@ extends Node
 
 onready var camera = get_parent()
 
-var time = 0
-
-
 
 func _ready():
 	pass

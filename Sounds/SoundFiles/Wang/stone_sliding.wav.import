@@ -7,7 +7,10 @@ path="res://.import/stone_sliding.wav-46bc91839ee4760c9351f178e649eb9f.sample"
 [deps]
 
 source_file="res://Sounds/SoundFiles/Wang/stone_sliding.wav"
+source_md5="00cbc3a2bebe9d389b809242d1f7e124"
+
 dest_files=[ "res://.import/stone_sliding.wav-46bc91839ee4760c9351f178e649eb9f.sample" ]
+dest_md5="402fb9724246565ca3ab2c9c1ecfb7c1"
 
 [params]
 

@@ -17,9 +17,9 @@ func _ready():
 
 func _on_Level1_pressed():
 	$click.play(0)
-	BGMPlayer.stream = load("res://Sounds/BGM/Outonalimb.wav")
+#	BGMPlayer.stream = load("res://Sounds/BGM/Halo Effect.wav")
 	BGMPlayer.play(0)
-	GameManagerNode.BGMAudioName = "res://Sounds/BGM/Outonalimb.wav"
+#	GameManagerNode.BGMAudioName = "res://Sounds/BGM/Halo Effect.wav"
 	GameManagerNode.loadNextLevel(next_world, " ")
 	GameManagerNode.set_level_selection_to_true()
 

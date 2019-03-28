@@ -4,9 +4,9 @@ extends KinematicBody2D
 # move_and_slide works.
 
 # Member variables
-const MAX_MOTION_SPEED = 240
-const MOTION_SPEED = 240 # Pixels/second
-const DEATHS_PER_COLOR_CHANGE = 3
+var MAX_MOTION_SPEED = 240
+var MOTION_SPEED = 240 # Pixels/second
+var DEATHS_PER_COLOR_CHANGE = 3
 var distance = 500
 
 var target
@@ -16,18 +16,18 @@ var timer = 0
 var magnitude = 10
 var gap = 0.1
 
-var canMove = false
+var canMove = true
 var dead = false
 var anim
 var oldAnim
 
-var control = false
+var control = true
 export (bool) var timerVisible = true
 
 
 
 func _ready():
-	$Camera2D.zoomfactor = 0.8
+	$Camera2D.zoomfactor = 1.4
 	var monsters  = get_tree().get_nodes_in_group("Monster")
 	for t in monsters:
 		target = t

@@ -7,7 +7,10 @@ path="res://.import/Safe Space.wav-81d0f0ca90ed078d744cce322ba88a2e.sample"
 [deps]
 
 source_file="res://Sounds/BGM/Safe Space.wav"
+source_md5="4ef5bff46552818c7681a664398c0542"
+
 dest_files=[ "res://.import/Safe Space.wav-81d0f0ca90ed078d744cce322ba88a2e.sample" ]
+dest_md5="938340230c2c5695d9940b7eca943e8a"
 
 [params]
 

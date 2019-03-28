@@ -7,7 +7,10 @@ path="res://.import/foot_step2_fadeOut.wav-d7ac54f64e0bfb80e640d080a083cbe5.samp
 [deps]
 
 source_file="res://Sounds/SoundFiles/Wang/foot_step2_fadeOut.wav"
+source_md5="5165100a0d455bb0d6edb8475ae1f13c"
+
 dest_files=[ "res://.import/foot_step2_fadeOut.wav-d7ac54f64e0bfb80e640d080a083cbe5.sample" ]
+dest_md5="a8fcf4af7300599e823160a9d9c22b3a"
 
 [params]
 

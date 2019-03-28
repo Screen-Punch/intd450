@@ -6,26 +6,27 @@ export (int) var level
 export (String) var nextLevelText
 var blocked = true
 var textCanAdvance = false
+var aboutToAdvanceLevel = false
 var time = 0
 var transitionText
 var textTracker = 0
 var narrativeSequences = [
 ["It was only a matter of time that another wanderlusting soul would find this place..."], #0 indexed
-["My wayward whispers... snaking and burrowing deeply into unsuspecting hearts and minds…",
-"Like a siren's song... how sweetly they promise the countless, irresistible desires and curiosities of the mortal heart..."],
+["My wayward whispers, how they snake and burrow deeply into unsuspecting hearts and minds.",
+	"Like a siren's song, they sweetly promise the countless, irresistible desires and curiosities of the mortal heart."],
 [""],	# 2 (Monster first appears)
-["I-..."],
-["My solitary slumber was left unabated by guests for countless ages since the last intrusion...",
-"...you bear an uncanny resemblance to him.", "Interesting."],
-["The bittersweet stench of desperation reeks upon you... it betrays your every step.",
-"How you scurry about like a witless rat..."],
+["Y-..."],
+["My solitary slumber was left unabated for countless ages since others stepped foot in this place...",
+	"...you bear an uncanny resemblance to one of them. How interesting."],
+["The bittersweet stench of desperation reeks upon you. It betrays your every step.",
+	"How you scurry about like a witless rat..."],
 ["You may be able to run, and you may be able to buy yourself a moment's respite… but you will inevitably err."],
 ["..."], # 7
 ["..."],
 ["..."],
 ["..."], # 10
-["You must realize by now that it is futile to hide just how fleeting and fragile that brave front of yours really is..."],
-["You can feel the oppressive earth above our heads, isolating us completely from the surface world...",
+["You must realize by now that it is futile to hide just how fleeting and fragile that brave front of yours really is."],
+["You can feel the oppressive earth above our heads, isolating us completely from the surface world.",
 
 "One by one, these conduits of light have nearly become completely expunged.",
 
@@ -34,9 +35,10 @@ var narrativeSequences = [
 
 "You cannot escape the inevitable!"],  # 13 = Last level currently
 [""],
-["Ugh, my head", "W-where am I...?"],
+["Ugh… h-how far did I fall, there?", "I-I must keep going... my prize is so close now, I can feel it!"],
 ["It was only a matter of time that another wanderlusting soul would find this place..."],
 ["My wayward whispers… snaking and burrowing deeply into unsuspecting hearts and minds…","Like a siren's song... how sweetly they promise the countless, irresistible desires and curiosities of the mortal heart..."],
+["It must have been so tiring, resisting what you knew deep within to be inevitable…", "Retire all that you once were, mortal, and embrace your new existence… forevermore."]
 ]
 
 func _ready():
@@ -60,15 +62,19 @@ func _input(event):
 	if event is InputEventKey and textCanAdvance:
 		if event.pressed:
 			textCanAdvance = false
-		if textTracker < transitionText.size()-1:
-				textTracker += 1
-				$CanvasLayer/Control/TextAnimator.play("TextTransition")
-				$CanvasLayer/Control/Label.text = transitionText[textTracker]
-		else:
-			GameManagerNode.loadNextLevel(next_world, nextLevelText)
+			if textTracker < transitionText.size()-1:
+				$CanvasLayer/Control/TextAnimator.play("TextFadeOut")
+			else:
+				aboutToAdvanceLevel = true
+				$CanvasLayer/Control/TextAnimator.play("TextFadeOut")
+
 
 func _on_next_W_body_entered(body):
 	if body.is_in_group("Player") and !blocked:
+		if GameManagerNode.deathsInLevel == 0:
+			GameManagerNode.totalDeaths -= 3
+			if GameManagerNode.totalDeaths < 0:
+				GameManagerNode.totalDeaths = 0
 		body.hideTimer()
 		GameManagerNode.set_level_time()
 		time = GameManagerNode.get_level_time(level)
@@ -83,12 +89,14 @@ func _on_next_W_body_entered(body):
 
 func _on_AnimationPlayer_animation_finished(anim_name):
 	if anim_name == "ExitUnlocked":
-		$StatueSprite.queue_free()
+#		$StatueSprite.queue_free()
+		$Light2D.show()
 
 
 func revealExit():
 	blocked = false
 	$CanvasLayer/Control/AnimationPlayer.play("ExitUnlocked")
+	$Sprite.frame += 1
 
 func setTransitionText():
 	var root = get_tree().root
@@ -104,3 +112,10 @@ func setTransitionText():
 func _on_TextAnimator_animation_finished(anim_name):
 	if anim_name == "TextTransition":
 		textCanAdvance = true
+	if anim_name == "TextFadeOut":
+		if aboutToAdvanceLevel:
+			GameManagerNode.loadNextLevel(next_world, nextLevelText)
+		else:
+			textTracker += 1
+			$CanvasLayer/Control/TextAnimator.play("TextTransition")
+			$CanvasLayer/Control/Label.text = transitionText[textTracker]
