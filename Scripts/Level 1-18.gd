@@ -12,6 +12,9 @@ var player_disappear = false
 var show_door = false
 
 var timer = 0
+var delayTimer
+
+var BAD_END_DEATH_THRESHOLD = 18
 
 func _ready():
 	# Called when the node is added to the scene for the first time.
@@ -21,7 +24,7 @@ func _ready():
 func _process(delta):
 	if move_to_monster:
 		timer += delta
-		if timer < 3:
+		if timer < 6:
 			$Player.position.x -= 1
 		else:
 			move_to_monster = false
@@ -30,8 +33,8 @@ func _process(delta):
 			
 	if player_walk:
 		timer += delta
-		if timer < 0.5:
-			$Player.position.x += 0.4
+		if timer < 2:
+			$Player.position.x += 1
 		else:
 			player_walk = false
 			player_disappear = true
@@ -62,36 +65,40 @@ func _process(delta):
 
 
 
-func _on_Ending_Decide_area_entered(area):
-	var color_indicator = ""
-	var sprite = $Player/sprite.texture.resource_path
-	var path = str(sprite)
-	for i in path:
-		if int(i) or str(i) == "0":
-			color_indicator += str(i)
-	color_indicator = int(color_indicator)
-	color_index = color_indicator
-	if color_indicator == 18:
+func _on_Ending_Good_body_entered(body):
+	if body.name!= "TileMap":
+		monster_to_player = false
+
+
+func _on_Ending_Decide_body_entered(body):
+	if body.is_in_group("Player") and GameManagerNode.totalDeaths >= BAD_END_DEATH_THRESHOLD:
 		$Door/Sprite.modulate = Color(1, 0, 0)
 
 
-func _on_Door_body_entered(body):
-	if body.name!= "TileMap":
-		if color_index == 18:
+func _on_Area2D_body_entered(body):	# door touched
+	if body.is_in_group("Player") or body.is_in_group("Monster"):
+		if GameManagerNode.totalDeaths >= BAD_END_DEATH_THRESHOLD: #bad ending
 			GameManagerNode.end_scene = true
 			$Player.canMove = false
 			$Player.anim = "WalkRight"
 			$Player/sprite.flip_h = true
 			move_to_monster = true
 			$Ending.revealExit()
-		else: 
-			$Door.hide()
-			player_walk = true
-			$Player.canMove = false
-			$Player.anim = "WalkRight"
-		
+		else:
+			if body.is_in_group("Player"):
+				$Door.hide()
+				player_walk = true
+				$Player.canMove = false
+				$Player.anim = "WalkRight"
+				$Navigation2D/Monster.cutscene = true
+				$Navigation2D/Monster.SPEED = 50
+				$Door/Sprite.modulate = Color(1, 0, 0)
 
+func _on_Timer_timeout():
+	$Navigation2D/Monster.SPEED = 50
 
-func _on_Ending_Good_body_entered(body):
-	if body.name!= "TileMap":
-		monster_to_player = false
+func _on_PauseArea_body_entered(body):
+	delayTimer = get_node("Timer")
+	delayTimer.set_wait_time(1)
+	delayTimer.start()
+	$Navigation2D/Monster.SPEED = 0

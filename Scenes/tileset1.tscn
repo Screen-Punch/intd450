@@ -31,6 +31,8 @@ extents = Vector2( 32, 32 )
 
 [node name="Node2D" type="Node2D"]
 
+position = Vector2( 2, 0 )
+
 [node name="GreenFloorTile" type="Sprite" parent="." index="0"]
 
 position = Vector2( 134.949, 22.1793 )

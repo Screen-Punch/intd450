@@ -85,7 +85,7 @@ func _on_next_W_body_entered(body):
 
 func _on_AnimationPlayer_animation_finished(anim_name):
 	if anim_name == "ExitUnlocked":
-		$StatueSprite.queue_free()
+#		$StatueSprite.queue_free()
 		$Light2D.show()
 
 

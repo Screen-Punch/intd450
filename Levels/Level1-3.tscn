@@ -68,6 +68,7 @@ __meta__ = {
 [node name="Monster" parent="Nav2D" index="1" instance=ExtResource( 5 )]
 
 position = Vector2( 66.1562, -842.531 )
+cutscene = false
 
 [node name="Mirror" parent="." index="4" instance=ExtResource( 6 )]
 

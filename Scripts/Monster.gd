@@ -2,6 +2,7 @@ extends KinematicBody2D
 
 var MAXSPEED
 export (int) var SPEED = 170
+export (bool) var cutscene = false
 var target
 var velocity
 onready var Nav2D = get_node("../")
@@ -40,21 +41,24 @@ func spawn():
 	$MonsterSprites.play("MonsterMovement")
 
 func _process(delta):
-	if target:
-		velocity = (target.position - position).normalized() * SPEED
-		var move_dist = SPEED * delta
-		if canMove:
-			move_along_path(move_dist)
-#		if (target.position - position).length() > 5:
-#			move_and_slide(velocity)
-		timer += 1
-		if timer >= 5:
-			path = Nav2D.update_navigation_path(position, target.position)
-			timer = 0
+	if !cutscene:
+		if target:
+			velocity = (target.position - position).normalized() * SPEED
+			var move_dist = SPEED * delta
+			if canMove:
+				move_along_path(move_dist)
+	#		if (target.position - position).length() > 5:
+	#			move_and_slide(velocity)
+			timer += 1
+			if timer >= 5:
+				path = Nav2D.update_navigation_path(position, target.position)
+				timer = 0
+		else:
+			findNewTarget()
+		var distToTarget = position.distance_to(player.position)
+		$AudioStreamPlayer2D.volume_db = 20 - distToTarget/20
 	else:
-		findNewTarget()
-	var distToTarget = position.distance_to(player.position)
-	$AudioStreamPlayer2D.volume_db = 20 - distToTarget/20
+		move_and_slide(target.position.normalized() * SPEED)
 	$Sprite.rotation += 0.01
 
 # Called by crystals and such when it sees a new target
