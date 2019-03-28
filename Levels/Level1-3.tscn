@@ -48,7 +48,8 @@ position = Vector2( 66.1562, -842.531 )
 
 [node name="Mirror" parent="." instance=ExtResource( 6 )]
 position = Vector2( 317.946, -683.022 )
-visionType = null
+visionType = ""
+mirrorDirection = ""
 
 [node name="Area2D" type="Area2D" parent="Mirror"]
 position = Vector2( 0.295593, 105.031 )

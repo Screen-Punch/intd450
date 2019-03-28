@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Scripts/Level_Intro_Monster_Lair.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/dungeonTileset.tres" type="TileSet" id=2]
@@ -10,17 +10,18 @@
 [ext_resource path="res://Scenes/next_W.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Art/fog.png" type="Texture" id=9]
 [ext_resource path="res://Scripts/NextWorld.gd" type="Script" id=10]
-[ext_resource path="res://Art/switches.png" type="Texture" id=11]
+[ext_resource path="res://Art/stairs.png" type="Texture" id=11]
 [ext_resource path="res://Sounds/SoundFiles/Wang/foot_step3_louder.wav" type="AudioStream" id=12]
 [ext_resource path="res://godotIcon.png" type="Texture" id=13]
-[ext_resource path="res://Art/lighting/light.png" type="Texture" id=14]
+[ext_resource path="res://Art/switches.png" type="Texture" id=14]
+[ext_resource path="res://Art/lighting/light.png" type="Texture" id=15]
 
-[sub_resource type="NavigationPolygon" id=7]
+[sub_resource type="NavigationPolygon" id=1]
 vertices = PoolVector2Array( 892.641, 901.166, 892.641, 1015.35, 283.682, 1021.48, 284.909, 898.711 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 outlines = [ PoolVector2Array( 892.641, 901.166, 892.641, 1015.35, 283.682, 1021.48, 284.909, 898.711 ) ]
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=7]
 extents = Vector2( 30, 30 )
 
 [sub_resource type="Animation" id=2]
@@ -169,7 +170,7 @@ tracks/1/keys = {
 }
 
 [sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 61.6574, 32 )
+extents = Vector2( 31.1376, 32 )
 
 [node name="Level 1-16" type="Node2D"]
 position = Vector2( -1, 0 )
@@ -207,7 +208,7 @@ SPEED = 500
 cutscene = true
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Nav2D"]
-navpoly = SubResource( 7 )
+navpoly = SubResource( 1 )
 
 [node name="MonsterExit" parent="." instance=ExtResource( 8 )]
 position = Vector2( 344.751, 941.936 )
@@ -224,22 +225,19 @@ __meta__ = {
 [node name="next_W" type="Area2D" parent="." groups=[
 "Exit",
 ]]
-editor/display_folded = true
-position = Vector2( 319.603, 511.307 )
+position = Vector2( 312.319, 514.526 )
 script = ExtResource( 10 )
 next_world = "res://Levels/Level1-2.tscn"
 level = 1
-nextLevelText = "Level 1"
+nextLevelText = "Level 1-1"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="next_W"]
 position = Vector2( 0.160004, 0.261993 )
-shape = SubResource( 1 )
+shape = SubResource( 7 )
 
 [node name="Sprite" type="Sprite" parent="next_W"]
 texture = ExtResource( 11 )
-vframes = 3
-hframes = 3
-frame = 6
+hframes = 2
 
 [node name="foot_step2" type="AudioStreamPlayer2D" parent="next_W"]
 stream = ExtResource( 12 )
@@ -292,6 +290,9 @@ anims/TextFadeOut = SubResource( 4 )
 anims/TextTransition = SubResource( 5 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="next_W"]
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="next_W/StaticBody2D"]
 shape = SubResource( 6 )
@@ -302,22 +303,25 @@ modulate = Color( 0, 0, 0, 1 )
 position = Vector2( -1.31115, -5.63423e-008 )
 rotation = 1.5708
 scale = Vector2( 1, 1.35533 )
-texture = ExtResource( 11 )
+texture = ExtResource( 14 )
 vframes = 2
 hframes = 6
 frame = 2
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Light2D" type="Light2D" parent="next_W"]
 visible = false
 enabled = false
-texture = ExtResource( 14 )
+texture = ExtResource( 15 )
 shadow_enabled = true
 __meta__ = {
 "_edit_lock_": true
 }
 
-[connection signal="keyGotten" from="Key" to="Lock2" method="_on_Key_keyGotten"]
 [connection signal="keyGotten" from="Key" to="Lock" method="_on_Key_keyGotten"]
+[connection signal="keyGotten" from="Key" to="Lock2" method="_on_Key_keyGotten"]
 [connection signal="body_entered" from="next_W" to="next_W" method="_on_next_W_body_entered"]
 [connection signal="animation_finished" from="next_W/CanvasLayer/Control/AnimationPlayer" to="next_W" method="_on_AnimationPlayer_animation_finished"]
 [connection signal="animation_finished" from="next_W/CanvasLayer/Control/TextAnimator" to="next_W" method="_on_TextAnimator_animation_finished"]

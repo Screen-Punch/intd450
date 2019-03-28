@@ -4,7 +4,8 @@
 [ext_resource path="res://Scenes/dungeonTileset.tres" type="TileSet" id=2]
 [ext_resource path="res://Scenes/next_W.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Art/mirrors_gates.png" type="Texture" id=4]
-[ext_resource path="res://Scenes/player.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=5]
+
 
 [node name="Level 1-15" type="Node2D"]
 script = ExtResource( 1 )
