@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Scenes/dungeonTileset.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Scenes/Nav2D.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Monster.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Mirror.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Fog.tscn" type="PackedScene" id=7]
 
 [sub_resource type="NavigationPolygon" id=1]
 vertices = PoolVector2Array( -135.574, 119.132, 676.337, 133.849, 678.388, 248.68, -521.19, 240.478, -263.406, 137.723, -277.054, -201.919, -145.097, -204.64, -403.57, 136.817, -531.443, -391.095, -408.409, -393.145 )
@@ -47,16 +48,19 @@ __meta__ = {
 position = Vector2( 66.1562, -842.531 )
 
 [node name="Mirror" parent="." instance=ExtResource( 6 )]
-position = Vector2( 317.946, -683.022 )
+position = Vector2( 317.946, -697.755 )
+rotation = -3.14159
 visionType = ""
-mirrorDirection = ""
 
 [node name="Area2D" type="Area2D" parent="Mirror"]
-position = Vector2( 0.295593, 105.031 )
+position = Vector2( -0.296051, -105.031 )
+rotation = 3.14159
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mirror/Area2D"]
 position = Vector2( 0, 145.522 )
 scale = Vector2( 1, 5.35212 )
 shape = SubResource( 2 )
+
+[node name="fog" parent="." instance=ExtResource( 7 )]
 
 [connection signal="body_entered" from="Mirror/Area2D" to="Mirror" method="_on_Area2D_body_entered"]

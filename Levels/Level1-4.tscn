@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Scenes/dungeonTileset.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Scenes/Nav2D.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Monster.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Mirror.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Fog.tscn" type="PackedScene" id=7]
 
 [sub_resource type="NavigationPolygon" id=1]
 vertices = PoolVector2Array( 196.001, -188.752, 255.538, -272.524, 319.946, -191.76, 321.432, 193.506, 197.171, -56.7083, 192.9, 61.6497, -448.653, 64.9738, -446.437, -62.4505, 191.792, 62.7577, 194.008, 316.498, 761.323, 313.174, 643.871, 192.398, 767.148, 198.509, 642.763, -190.983, 767.971, -192.091, 889.714, 313.624, 894.115, 200.511, 901.434, 234.835 )
@@ -47,11 +48,12 @@ __meta__ = {
 
 [node name="Mirror" parent="." instance=ExtResource( 6 )]
 position = Vector2( 256.958, -254.516 )
+rotation = 3.14159
 visionType = ""
-mirrorDirection = ""
 
 [node name="Area2D" type="Area2D" parent="Mirror"]
-position = Vector2( 5.44147, 66.6584 )
+position = Vector2( -5.44116, -66.6584 )
+rotation = -3.14159
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mirror/Area2D"]
 position = Vector2( -4.08112, 180.55 )
@@ -60,17 +62,20 @@ shape = SubResource( 2 )
 
 [node name="Mirror2" parent="." instance=ExtResource( 6 )]
 position = Vector2( 894.338, 240.445 )
-visionType = null
+rotation = -1.57079
+visionType = ""
 mirrorDirection = "horizontal"
 
 [node name="Area2D" type="Area2D" parent="Mirror2"]
-position = Vector2( -35.0739, 4.04373 )
-rotation = 1.5708
+position = Vector2( -4.04381, -35.0739 )
+rotation = -3.14159
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mirror2/Area2D"]
 position = Vector2( -5.40324, 314.663 )
 scale = Vector2( 1, 9.7787 )
 shape = SubResource( 2 )
+
+[node name="fog" parent="." instance=ExtResource( 7 )]
 
 [connection signal="body_entered" from="Mirror/Area2D" to="Mirror" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="Mirror2/Area2D" to="Mirror2" method="_on_Area2D_body_entered"]

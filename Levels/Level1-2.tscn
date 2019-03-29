@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Scenes/dungeonTileset.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Scenes/MonsterSpawner.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scripts/Nav2D.gd" type="Script" id=6]
 [ext_resource path="res://Scenes/Mirror.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Fog.tscn" type="PackedScene" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 32, 32 )
@@ -113,7 +114,6 @@ navpoly = SubResource( 4 )
 
 [node name="Mirror" parent="." instance=ExtResource( 7 )]
 position = Vector2( 735.681, -1062.73 )
-mirrorDirection = ""
 
 [node name="Area2D" type="Area2D" parent="Mirror"]
 position = Vector2( 0, 9.95129 )
@@ -125,7 +125,6 @@ shape = SubResource( 5 )
 
 [node name="Mirror2" parent="." instance=ExtResource( 7 )]
 position = Vector2( -482.131, -1099.81 )
-mirrorDirection = ""
 
 [node name="Area2D" type="Area2D" parent="Mirror2"]
 
@@ -144,6 +143,8 @@ mirrorDirection = "horizontal"
 position = Vector2( -3.57375, -96.1591 )
 scale = Vector2( 0.968485, 3.59162 )
 shape = SubResource( 5 )
+
+[node name="fog" parent="." instance=ExtResource( 8 )]
 
 [connection signal="body_entered" from="Text8/Area2D" to="Text8" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="MonsterSpawner/Area2D" to="MonsterSpawner" method="_on_Area2D_body_entered"]

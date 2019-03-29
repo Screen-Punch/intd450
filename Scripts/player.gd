@@ -22,6 +22,7 @@ var anim
 var oldAnim
 export (bool) var timerVisible = false
 var totalMirrors = 0
+var movementKey
 
 func _ready():
 	var monsters  = get_tree().get_nodes_in_group("Monster")
@@ -38,10 +39,11 @@ func _ready():
 	if !timerVisible or GameManagerNode.level_selection_mode:
 		hideTimer()
 	var totalMirrors  = get_tree().get_nodes_in_group("Mirror")
+	movementKey = [KEY_W, KEY_A, KEY_S, KEY_D]
 
 func _input(event):
 	if event is InputEventKey:
-		if event.pressed:
+		if event.pressed and event.scancode in movementKey:
 			if target and !target.spawned:
 				target.spawn()
 			$Camera2D/CanvasLayer/RichTextLabel.start()
@@ -149,3 +151,7 @@ func dimCamera():
 	var curLev = $CanvasModulate.color.r
 	curLev -= delta
 	$CanvasModulate.color = Color(curLev, curLev, curLev)
+
+func _on_Hurtbox_body_entered(body):
+	if body.is_in_group("Monster"):
+		takeDamage()

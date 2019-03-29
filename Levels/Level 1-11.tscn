@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scenes/dungeonTileset.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/Nav2D.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Scenes/Key.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/Lock.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/Mirror.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/Fog.tscn" type="PackedScene" id=9]
 
 [sub_resource type="NavigationPolygon" id=1]
 vertices = PoolVector2Array( 254.226, 179.591, -38.0213, 65.5188, -98.6316, -53.1662, 134.122, -61.2479, 254.226, -1.29004, -62.4296, -325.814, -69.0117, -379.557, 321.416, -383.638, 256.154, -318.594, 318.695, -261.204, 258.342, -66.0029, 518.264, -64.5883, 630.167, -64.5883, 625.032, -4.30472, 447.931, -131.968, 503.233, -123.045, -129.564, 189.046, -448.999, 189.001, -448.999, 64.0005, 445.21, -257.123 )
@@ -15,7 +16,7 @@ polygons = [ PoolIntArray( 0, 1, 2, 3, 4 ), PoolIntArray( 5, 6, 7, 8 ), PoolIntA
 outlines = [ PoolVector2Array( -448.999, 64.0005, -38.0213, 65.5188, -98.6316, -53.1662, 134.122, -61.2479, 258.342, -66.0029, 256.154, -318.594, -62.4296, -325.814, -69.0117, -379.557, 321.416, -383.638, 318.695, -261.204, 445.21, -257.123, 447.931, -131.968, 503.233, -123.045, 518.264, -64.5883, 630.167, -64.5883, 625.032, -4.30472, 254.226, -1.29004, 254.226, 179.591, -129.564, 189.046, -448.999, 189.001 ) ]
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 32, 32 )
+extents = Vector2( 28.8186, 320.816 )
 
 [node name="Level 1-11" type="Node2D"]
 
@@ -42,7 +43,8 @@ position = Vector2( -373.984, 128.71 )
 position = Vector2( -102.355, 126.913 )
 
 [node name="next_W" parent="." instance=ExtResource( 5 )]
-position = Vector2( -0.597658, -350.015 )
+position = Vector2( -32, -350 )
+rotation = -1.57079
 scale = Vector2( -1, 1 )
 next_world = "res://Levels/Level 1-12.tscn"
 level = 10
@@ -57,16 +59,17 @@ rotation = 3.14159
 
 [node name="Mirror" parent="." instance=ExtResource( 8 )]
 position = Vector2( -65.2602, -34.2162 )
+rotation = 1.5708
 visionType = "LoS"
-mirrorDirection = ""
 
 [node name="Area2D" type="Area2D" parent="Mirror"]
 position = Vector2( 84.4221, -4.19116 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mirror/Area2D"]
-position = Vector2( 262.619, -1.79622 )
-scale = Vector2( 9.83773, 1 )
+position = Vector2( -83.045, -319.097 )
 shape = SubResource( 2 )
+
+[node name="fog" parent="." instance=ExtResource( 9 )]
 
 [connection signal="keyGotten" from="Key" to="Key/Lock" method="_on_Key_keyGotten"]
 [connection signal="body_entered" from="Mirror/Area2D" to="Mirror" method="_on_Area2D_body_entered"]
