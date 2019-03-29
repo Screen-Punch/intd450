@@ -105,10 +105,10 @@ tracks/2/keys = {
 [sub_resource type="DynamicFont" id=4]
 font_data = ExtResource( 5 )
 
-[sub_resource type="DynamicFont" id=8]
+[sub_resource type="DynamicFont" id=5]
 font_data = ExtResource( 5 )
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=6]
 length = 0.4
 tracks/0/type = "value"
 tracks/0/path = NodePath("Label:modulate")
@@ -135,7 +135,7 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=7]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Label:modulate")
 tracks/0/interp = 1
@@ -161,7 +161,7 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="RectangleShape2D" id=7]
+[sub_resource type="RectangleShape2D" id=8]
 extents = Vector2( 31.1376, 32 )
 
 [node name="next_W" type="Area2D" groups=[
@@ -177,7 +177,6 @@ shape = SubResource( 1 )
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 2 )
 hframes = 2
-frame = 1
 
 [node name="foot_step2" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 3 )
@@ -222,14 +221,14 @@ margin_left = 386.0
 margin_top = 478.0
 margin_right = 637.0
 margin_bottom = 508.0
-custom_fonts/font = SubResource( 8 )
+custom_fonts/font = SubResource( 5 )
 text = "Press any key to continue..."
 align = 1
 autowrap = true
 
 [node name="TextAnimator" type="AnimationPlayer" parent="CanvasLayer/Control"]
-anims/TextFadeOut = SubResource( 5 )
-anims/TextTransition = SubResource( 6 )
+anims/TextFadeOut = SubResource( 6 )
+anims/TextTransition = SubResource( 7 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 __meta__ = {
@@ -237,7 +236,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-shape = SubResource( 7 )
+shape = SubResource( 8 )
 
 [node name="StatueSprite" type="Sprite" parent="."]
 visible = false
