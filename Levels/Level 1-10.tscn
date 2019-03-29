@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scenes/dungeonTileset.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/Nav2D.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Scenes/Key.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/Lock.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/Mirror.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/Fog.tscn" type="PackedScene" id=9]
 
 [sub_resource type="NavigationPolygon" id=1]
 vertices = PoolVector2Array( 385.718, 63.6841, 711.569, 64.5006, 706.154, 126.773, 577.998, 125.871, 385.715, 313.81, 575.291, 383.084, -61.8763, 383.987, 257.083, 316.544, 258.686, 30.6902, -65.4863, 254.929, 189.453, 58.3834, 202.485, 12.7711, -129.564, 189.046, -448.999, 189.001, -448.999, 64.0005, -125.954, 254.929 )
@@ -42,7 +43,8 @@ position = Vector2( -373.984, 128.71 )
 position = Vector2( -102.355, 126.913 )
 
 [node name="next_W" parent="." instance=ExtResource( 5 )]
-position = Vector2( 639.788, 97.145 )
+position = Vector2( 670, 97.145 )
+rotation = 1.57079
 next_world = "res://Levels/Level 1-11.tscn"
 level = 9
 nextLevelText = "Level 10: Opaque"
@@ -55,14 +57,16 @@ position = Vector2( 120.1, -243.198 )
 
 [node name="Mirror" parent="." instance=ExtResource( 8 )]
 position = Vector2( 226.373, 4.87431 )
-mirrorDirection = ""
+rotation = -3.14159
 
 [node name="Area2D" type="Area2D" parent="Mirror"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mirror/Area2D"]
-position = Vector2( -1.36035, 208.238 )
+position = Vector2( -1.36949, -222.861 )
 scale = Vector2( 1, 4.77305 )
 shape = SubResource( 2 )
+
+[node name="fog" parent="." instance=ExtResource( 9 )]
 
 [connection signal="keyGotten" from="Key" to="Key/Lock" method="_on_Key_keyGotten"]
 [connection signal="body_entered" from="Mirror/Area2D" to="Mirror" method="_on_Area2D_body_entered"]

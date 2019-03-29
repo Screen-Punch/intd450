@@ -12,4 +12,4 @@ func _on_Area2D_body_entered(body):
 		used = true
 		$AudioStreamPlayer2D.play(0)
 		emit_signal("keyGotten")
-		$Sprite.frame = 1
+		$Sprite.frame -= 1
