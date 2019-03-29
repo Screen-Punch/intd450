@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scripts/Mirror.gd" type="Script" id=1]
 [ext_resource path="res://Art/mirrors_gates.png" type="Texture" id=2]
@@ -23,6 +23,9 @@ tracks/0/keys = {
 "update": 1,
 "values": [ 0, 2, 3, 4, 5 ]
 }
+
+[sub_resource type="OccluderPolygon2D" id=3]
+polygon = PoolVector2Array( -31.8689, -33.5781, 0.968552, 26.2151, 29.8831, -30.2661, 5.41415, -30.8778, 25.8049, -25.5762, 0.316467, 19.8952, -27.6189, -29.8583, -5.18903, -30.2661 )
 
 [node name="Mirror" type="StaticBody2D" groups=[
 "Mirror",
@@ -53,5 +56,8 @@ shadow_enabled = true
 __meta__ = {
 "_edit_lock_": true
 }
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource( 3 )
 
 [connection signal="finished" from="AudioStreamPlayer2D" to="." method="_on_AudioStreamPlayer2D_finished"]

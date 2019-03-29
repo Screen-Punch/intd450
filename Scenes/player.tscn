@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=1]
 [ext_resource path="res://Art/PCs1.png" type="Texture" id=2]
@@ -181,6 +181,9 @@ tracks/0/keys = {
 [sub_resource type="OccluderPolygon2D" id=12]
 polygon = PoolVector2Array( -12.5, 37.5, 12.5, 37.5, 12.5, 62.5, -12.5, 62.5 )
 
+[sub_resource type="RectangleShape2D" id=13]
+extents = Vector2( 12.4454, 17.923 )
+
 [node name="Player" type="KinematicBody2D" groups=[
 "Player",
 ]]
@@ -293,9 +296,16 @@ color = Color( 0.8, 0.8, 0.8, 1 )
 [node name="LightOccluder2D" type="LightOccluder2D" parent="."]
 occluder = SubResource( 12 )
 
+[node name="Hurtbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
+position = Vector2( 0.36499, 43.4335 )
+shape = SubResource( 13 )
+
 [connection signal="animation_finished" from="CanvasLayer/SceneTransition" to="." method="_on_SceneTransition_animation_finished"]
 [connection signal="pressed" from="CanvasLayer/PauseMenu/ResumeButton" to="CanvasLayer/PauseMenu" method="_on_ResumeButton_pressed"]
 [connection signal="pressed" from="CanvasLayer/PauseMenu/ExitButton" to="CanvasLayer/PauseMenu" method="_on_ExitButton_pressed"]
 [connection signal="pressed" from="CanvasLayer/PauseMenu/ExitButton/ExitConfirmation/YesExit" to="CanvasLayer/PauseMenu" method="_on_YesExit_pressed"]
 [connection signal="pressed" from="CanvasLayer/PauseMenu/ExitButton/ExitConfirmation/NoExit" to="CanvasLayer/PauseMenu" method="_on_NoExit_pressed"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
+[connection signal="body_entered" from="Hurtbox" to="." method="_on_Hurtbox_body_entered"]
