@@ -3,6 +3,7 @@ extends Node2D
 # class member variables go here, for example:
 var deathsInLevel = 0
 var totalDeaths = 0
+var playerHasDiedOnce = false
 
 var end_scene = false
 

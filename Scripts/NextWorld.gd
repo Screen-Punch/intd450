@@ -20,7 +20,6 @@ func _ready():
 	# Initialization here
 	if !next_world:
 		next_world = "res://Levels/Main Menu.tscn"
-	$CanvasLayer/TextTransition.setTransitionText()
 	if !nextLevelText:
 		nextLevelText = ""
 	if !blocked:
@@ -32,6 +31,7 @@ func _process(delta):
 
 func _on_next_W_body_entered(body):
 	if body.is_in_group("Player") and !blocked:
+		$CanvasLayer/TextTransition.setTransitionText()
 		if GameManagerNode.deathsInLevel == 0:
 			GameManagerNode.totalDeaths -= 3
 			if GameManagerNode.totalDeaths < 0:

@@ -6,6 +6,8 @@ var transitionText
 var textTracker = 0
 var aboutToAdvanceLevel = false
 
+export (bool) var playerDeathSequence = false
+
 signal textFadeOut
 
 var narrativeSequences = [
@@ -38,6 +40,19 @@ var narrativeSequences = [
 ["My wayward whispers… snaking and burrowing deeply into unsuspecting hearts and minds…","Like a siren's song... how sweetly they promise the countless, irresistible desires and curiosities of the mortal heart..."],
 ["It must have been so tiring, resisting what you knew deep within to be inevitable…", "Retire all that you once were, mortal, and embrace your new existence… forevermore."]
 ]
+# 0 is monster, 1 is PC
+var narrativeSequencesTextColors = [[0], [0,0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0]]
+
+
+var playerDiedText = [["Slowly but surely, your mortal body has found its paltry limits.",
+"...and now, I will take but the first fragment of something even more valuable - your soul - from you.", 
+"Fragment by fragment, you will surrender all that you are...in service to my will.",
+"I-I will never serve you, monster!",
+"Your foul trickery will never be rewarded!"
+]]
+var playerDiedTextColors = [[0, 0, 0, 1, 1]]
+var textColor
+var level
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -48,27 +63,31 @@ func _input(event):
 	if event is InputEventKey and textCanAdvance:
 		if event.pressed:
 			textCanAdvance = false
-			if textTracker < transitionText.size()-1:
-				$TextAnimator.play("TextFadeOut")
-			else:
+			$TextAnimator.play("TextFadeOut")
+			if textTracker >= transitionText.size()-1:
 				aboutToAdvanceLevel = true
-				$TextAnimator.play("TextFadeOut")
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
 
-func setTransitionText():
-	var root = get_tree().root
-	var level
-	for child in root.get_children():
-		if "Level" in child.name:
-			level = child.name.split("-")[1]
-
-	transitionText = narrativeSequences[int(level)]
+func setTransitionText(playerDeath = false):
+	if !playerDeath:
+		var root = get_tree().root
+		level = 1
+		for child in root.get_children():
+			if "Level" in child.name:
+				level = child.name.split("-")[1]
+	
+		transitionText = narrativeSequences[int(level)]
+		textColor = narrativeSequencesTextColors
+	else:
+		level = 0
+		transitionText = playerDiedText[level]
+		textColor = playerDiedTextColors
 	if transitionText.size() > 0:
 		$Label.text = transitionText[textTracker]
-
+	if textColor[int(level)][int(textTracker)] == 1:	# Player text
+		$Label.self_modulate = Color(1, 0, 0)
+	else:
+		$Label.self_modulate = Color(0, 0, 1)
 
 func _on_TextAnimator_animation_finished(anim_name):
 	if anim_name == "TextTransition":
@@ -80,5 +99,9 @@ func _on_TextAnimator_animation_finished(anim_name):
 			textTracker += 1
 			$TextAnimator.play("TextTransition")
 			$Label.text = transitionText[textTracker]
+			if textColor[int(level)][int(textTracker)] == 1:	# Player text
+				$Label.self_modulate = Color(1, 0, 0)
+			else:
+				$Label.self_modulate = Color(0, 0, 1)
 	if anim_name == "ScreenBlockerFadeIn":
 		$TextAnimator.play("TextTransition")
