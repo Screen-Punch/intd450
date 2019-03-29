@@ -20,7 +20,7 @@ var narrativeSequences = [
 	"...you bear an uncanny resemblance to one of them. How interesting."],
 ["The bittersweet stench of desperation reeks upon you. It betrays your every step.",
 	"How you scurry about like a witless rat..."],
-["You may be able to run, and you may be able to buy yourself a moment's respite… but you will inevitably err."],
+["You may be able to run, and you may be able to buy yourself a moment's respite... but you will inevitably err."],
 ["..."], # 7
 ["..."],
 ["..."],
@@ -41,7 +41,10 @@ var narrativeSequences = [
 ["It must have been so tiring, resisting what you knew deep within to be inevitable…", "Retire all that you once were, mortal, and embrace your new existence… forevermore."]
 ]
 # 0 is monster, 1 is PC
-var narrativeSequencesTextColors = [[0], [0,0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0], [0]]
+var narrativeSequencesTextColors = [[0], [0,0], [0], [0], [0,0],
+									[0,0], [0], [0], [0], [0],
+									[0], [0], [0, 0, 0], [0], [0],
+									[1,1], [0], [0, 0], [0, 0]]	# level 15-18
 
 
 var playerDiedText = [["Slowly but surely, your mortal body has found its paltry limits.",
