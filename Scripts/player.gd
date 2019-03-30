@@ -108,13 +108,16 @@ func update_magnitude_and_gap(distance):
 
 func takeDamage():
 	if vulnerable and GameManagerNode.end_scene == false:
+		vulnerable = false
 		MOTION_SPEED = 0
 		dead = true
-		$CanvasLayer/SceneTransition.play_backwards("SceneTransition")
 		$death2.play(0)
-		
-	#if vulnerable and GameManagerNode.end_scene == true:
-		
+		if !GameManagerNode.playerHasDiedOnce: # First player death
+			$CanvasLayer/TextTransition.setTransitionText(true)
+			$CanvasLayer/TextTransition/TextAnimator.play("ScreenBlockerFadeIn")
+			GameManagerNode.playerHasDiedOnce = true
+		else:
+			$CanvasLayer/SceneTransition.play_backwards("SceneTransition")
 
 
 func _on_AnimationPlayer_animation_finished(anim_name):
@@ -155,3 +158,6 @@ func dimCamera():
 func _on_Hurtbox_body_entered(body):
 	if body.is_in_group("Monster"):
 		takeDamage()
+
+func _on_TextTransition_textFadeOut():
+	GameManagerNode.reloadLevel()

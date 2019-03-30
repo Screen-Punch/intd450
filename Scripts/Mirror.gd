@@ -29,6 +29,7 @@ func takeDamage():
 		for exit in exits:
 			exit.revealExit();
 	$Light2D.queue_free()
+	$LightOccluder2D.queue_free()
 	var player = get_tree().get_nodes_in_group("Player")[0]
 	player.dimCamera()
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=1]
 [ext_resource path="res://Art/PCs1.png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://godotIcon.png" type="Texture" id=5]
 [ext_resource path="res://Scripts/Blur.gd" type="Script" id=6]
 [ext_resource path="res://Scripts/PauseMenu.gd" type="Script" id=7]
+[ext_resource path="res://Scenes/TextTransition.tscn" type="PackedScene" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 4.51507, 5.39089 )
@@ -281,6 +282,8 @@ margin_right = 182.0
 margin_bottom = 119.0
 text = "Return"
 
+[node name="TextTransition" parent="CanvasLayer" instance=ExtResource( 8 )]
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/IdleDown = SubResource( 5 )
 anims/IdleRight = SubResource( 6 )
@@ -307,5 +310,6 @@ shape = SubResource( 13 )
 [connection signal="pressed" from="CanvasLayer/PauseMenu/ExitButton" to="CanvasLayer/PauseMenu" method="_on_ExitButton_pressed"]
 [connection signal="pressed" from="CanvasLayer/PauseMenu/ExitButton/ExitConfirmation/YesExit" to="CanvasLayer/PauseMenu" method="_on_YesExit_pressed"]
 [connection signal="pressed" from="CanvasLayer/PauseMenu/ExitButton/ExitConfirmation/NoExit" to="CanvasLayer/PauseMenu" method="_on_NoExit_pressed"]
+[connection signal="textFadeOut" from="CanvasLayer/TextTransition" to="." method="_on_TextTransition_textFadeOut"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
 [connection signal="body_entered" from="Hurtbox" to="." method="_on_Hurtbox_body_entered"]
