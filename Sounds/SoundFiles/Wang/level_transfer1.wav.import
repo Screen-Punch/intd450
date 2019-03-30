@@ -7,10 +7,7 @@ path="res://.import/level_transfer1.wav-effa7bfb3081d09c7b81b1d2ec8ac239.sample"
 [deps]
 
 source_file="res://Sounds/SoundFiles/Wang/level_transfer1.wav"
-source_md5="558c6ce7568265b224195a1e7973e3a0"
-
 dest_files=[ "res://.import/level_transfer1.wav-effa7bfb3081d09c7b81b1d2ec8ac239.sample" ]
-dest_md5="d79eac1b59ef20b81eaa3f987c3bcced"
 
 [params]
 

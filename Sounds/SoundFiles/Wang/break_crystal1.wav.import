@@ -7,10 +7,7 @@ path="res://.import/break_crystal1.wav-74126da48d593192b26d349c29b0e1e6.sample"
 [deps]
 
 source_file="res://Sounds/SoundFiles/Wang/break_crystal1.wav"
-source_md5="1fffe2ac68afaaa26f96e15f97117956"
-
 dest_files=[ "res://.import/break_crystal1.wav-74126da48d593192b26d349c29b0e1e6.sample" ]
-dest_md5="1c50e2f2d9c118d8618dc45873fc0b04"
 
 [params]
 

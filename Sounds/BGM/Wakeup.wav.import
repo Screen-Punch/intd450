@@ -7,10 +7,7 @@ path="res://.import/Wakeup.wav-a9ad4965e3792daa7e4aff69c51ab1d7.sample"
 [deps]
 
 source_file="res://Sounds/BGM/Wakeup.wav"
-source_md5="999985bca6369d6e278ca650f3aab8d8"
-
 dest_files=[ "res://.import/Wakeup.wav-a9ad4965e3792daa7e4aff69c51ab1d7.sample" ]
-dest_md5="74a190f207ca99bc040b4d18eed93672"
 
 [params]
 

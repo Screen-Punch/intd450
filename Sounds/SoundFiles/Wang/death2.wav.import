@@ -7,10 +7,7 @@ path="res://.import/death2.wav-b75f9207bdd1a3ebdbbb3a87f270ccc6.sample"
 [deps]
 
 source_file="res://Sounds/SoundFiles/Wang/death2.wav"
-source_md5="c587644e652510081e7121410246f0af"
-
 dest_files=[ "res://.import/death2.wav-b75f9207bdd1a3ebdbbb3a87f270ccc6.sample" ]
-dest_md5="2a73b75d30fb3bfed1ad24b9099473af"
 
 [params]
 
