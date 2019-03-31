@@ -4,8 +4,8 @@
 [ext_resource path="res://Scripts/Intro.gd" type="Script" id=2]
 
 [node name="VideoPlayer" type="VideoPlayer"]
-margin_right = 1037.0
-margin_bottom = 615.0
+margin_right = 1024.0
+margin_bottom = 600.0
 stream = ExtResource( 1 )
 autoplay = true
 script = ExtResource( 2 )
