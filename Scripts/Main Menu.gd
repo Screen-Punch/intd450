@@ -13,11 +13,13 @@ func _ready():
 
 func _on_NewGameButton_pressed():
 	play_click_sound()
+	yield(get_node("click"), "finished")
 	get_tree().change_scene("res://Levels/Level_Intro_Scene.tscn")
 
 
 func _on_ExitButton_pressed():
 	play_click_sound()
+	yield(get_node("click"), "finished")
 	get_tree().quit()
 
 
@@ -31,6 +33,7 @@ func _on_CreditsButton_pressed():
 
 func _on_CreditsReturnButton_pressed():
 	play_click_sound()
+	yield(get_node("click"), "finished")
 	$Credits.hide()
 	$AnimationPlayer/Crystal.show()
 	$Monster.show()
@@ -38,3 +41,4 @@ func _on_CreditsReturnButton_pressed():
 
 func play_click_sound():
 	$click.play(0)
+

@@ -6,65 +6,24 @@
 [ext_resource path="res://Sounds/SoundFiles/Wang/click2.wav" type="AudioStream" id=4]
 
 [node name="Level1" type="Button"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_left = 278.0
 margin_top = 134.0
 margin_right = 357.0
 margin_bottom = 167.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 theme = ExtResource( 1 )
 disabled = true
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
 text = "Level 1"
-flat = false
-align = 1
 script = ExtResource( 2 )
-_sections_unfolded = [ "Anchor", "Margin", "Material" ]
 next_world = "res://Levels/Level1-2.tscn"
 
-[node name="LockSprite" type="NinePatchRect" parent="." index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="LockSprite" type="NinePatchRect" parent="."]
 margin_left = 18.0
 margin_top = -3.0
 margin_right = 61.0
 margin_bottom = 31.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 texture = ExtResource( 3 )
-_sections_unfolded = [ "Anchor", "Margin", "Patch Margin" ]
 
-[node name="click" type="AudioStreamPlayer2D" parent="." index="1"]
-
+[node name="click" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 4 )
-volume_db = 24.0
-pitch_scale = 1.0
-autoplay = false
-max_distance = 2000.0
-attenuation = 1.0
-bus = "Master"
-area_mask = 1
 
 [connection signal="pressed" from="." to="." method="_on_Level1_pressed"]
-
-

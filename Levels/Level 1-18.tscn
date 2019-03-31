@@ -116,8 +116,8 @@ position = Vector2( -0.950012, 1.8999 )
 texture = ExtResource( 10 )
 shadow_enabled = true
 
-[connection signal="body_entered" from="Ending_Good" to="Ending_Good" method="_on_Ending_Good_body_entered"]
 [connection signal="body_entered" from="Ending_Good" to="." method="_on_Ending_Good_body_entered"]
+[connection signal="body_entered" from="Ending_Good" to="Ending_Good" method="_on_Ending_Good_body_entered"]
 [connection signal="body_entered" from="Door/Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="area_entered" from="Ending_Decide" to="." method="_on_Ending_Decide_area_entered"]
 [connection signal="body_entered" from="Ending_Decide" to="." method="_on_Ending_Decide_body_entered"]

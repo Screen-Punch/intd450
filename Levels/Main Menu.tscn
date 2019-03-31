@@ -73,7 +73,6 @@ script = ExtResource( 2 )
 
 [node name="click" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 3 )
-volume_db = 20.0
 
 [node name="DefaultMenu" type="Control" parent="."]
 margin_right = 40.0
@@ -202,6 +201,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
+[connection signal="finished" from="click" to="." method="_on_click_finished"]
 [connection signal="pressed" from="DefaultMenu/NewGameButton" to="." method="_on_NewGameButton_pressed"]
 [connection signal="pressed" from="DefaultMenu/LevelSelection" to="DefaultMenu/LevelSelection" method="_on_LevelSelection_pressed"]
 [connection signal="pressed" from="DefaultMenu/CreditsButton" to="." method="_on_CreditsButton_pressed"]
