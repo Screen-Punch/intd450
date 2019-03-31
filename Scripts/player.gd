@@ -51,19 +51,19 @@ func _input(event):
 func _physics_process(delta):
 	var motion = Vector2()
 	
-	if Input.is_action_pressed("ui_up"):
-		motion += Vector2(0, -1)
-	if Input.is_action_pressed("ui_down"):
-		motion += Vector2(0, 1)
-	if Input.is_action_pressed("ui_left"):
-		motion += Vector2(-1, 0)
-	if Input.is_action_pressed("ui_right"):
-		motion += Vector2(1, 0)
-	if Input.is_action_pressed("ui_pause") and vulnerable:
-		$CanvasLayer/PauseMenu.show()
-		get_tree().paused = true
-	
 	if canMove:
+		if Input.is_action_pressed("ui_up"):
+			motion += Vector2(0, -1)
+		if Input.is_action_pressed("ui_down"):
+			motion += Vector2(0, 1)
+		if Input.is_action_pressed("ui_left"):
+			motion += Vector2(-1, 0)
+		if Input.is_action_pressed("ui_right"):
+			motion += Vector2(1, 0)
+		if Input.is_action_pressed("ui_pause") and vulnerable:
+			$CanvasLayer/PauseMenu.show()
+			get_tree().paused = true
+	
 		if motion.y < 0:
 			anim = "WalkUp"
 		elif motion.y > 0:
@@ -96,7 +96,8 @@ func _process(delta):
 		$Camera2D.zoomIn(distance/100)
 		if distance < 100 and timer > gap:
 			update_magnitude_and_gap(distance)
-			$Camera2D/Shaker.shake(magnitude)
+			if !dead:
+				$Camera2D/Shaker.shake(magnitude)
 			timer = 0
 		var blurLevel = 0
 		if vulnerable:
@@ -111,11 +112,10 @@ func takeDamage():
 		vulnerable = false
 		MOTION_SPEED = 0
 		dead = true
+		canMove = false
 		$death2.play(0)
 		if !GameManagerNode.playerHasDiedOnce: # First player death
-			$CanvasLayer/TextTransition.setTransitionText(true)
-			$CanvasLayer/TextTransition/TextAnimator.play("ScreenBlockerFadeIn")
-			GameManagerNode.playerHasDiedOnce = true
+			$AnimationPlayer.play("Death")
 		else:
 			$CanvasLayer/SceneTransition.play_backwards("SceneTransition")
 
@@ -123,6 +123,10 @@ func takeDamage():
 func _on_AnimationPlayer_animation_finished(anim_name):
 	if anim_name == "SpawnAnimation":
 		canMove = true
+	if anim_name == "Death":
+		$CanvasLayer/TextTransition.setTransitionText(true)
+		$CanvasLayer/TextTransition/TextAnimator.play("ScreenBlockerFadeIn")
+		GameManagerNode.playerHasDiedOnce = true
 
 
 func _on_SceneTransition_animation_finished(anim_name):
@@ -139,8 +143,6 @@ func updatePlayerTexture(deaths):
 	if i > 18:	# if above limit
 		i = 17
 	var intVal = i
-	if i < 10:
-		intVal = "0" + str(i)
 	$sprite.texture = load("res://Art/PCs" + str(intVal) + ".png")
 	
 func hideTimer():
@@ -161,3 +163,14 @@ func _on_Hurtbox_body_entered(body):
 
 func _on_TextTransition_textFadeOut():
 	GameManagerNode.reloadLevel()
+
+
+# used for player death animation
+func updatePlayerDuringDeath():
+	var i = GameManagerNode.totalDeaths
+	if i <= 0:	# if below limit
+		i = 1
+	if i > 10:	# if above limit
+		i = 10
+	var intVal = i
+	$sprite.texture = load("res://Art/PCs" + str(intVal) + ".png")

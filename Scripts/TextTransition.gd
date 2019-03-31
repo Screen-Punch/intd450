@@ -6,6 +6,9 @@ var transitionText
 var textTracker = 0
 var aboutToAdvanceLevel = false
 
+const PLAYER_TEXT_COLOR = Color(205.0/255.0, 50.0/255.0, 50.0/255.0)
+const MONSTER_TEXT_COLOR = Color(30.0/255.0, 20.0/255.0, 100.0/255.0)
+
 export (bool) var playerDeathSequence = false
 
 signal textFadeOut
@@ -88,10 +91,10 @@ func setTransitionText(playerDeath = false):
 	if transitionText.size() > 0:
 		$Label.text = transitionText[textTracker]
 	if textColor[int(level)][int(textTracker)] == 1:	# Player text
-		$Label.self_modulate = Color(1, 0, 0)
+		$Label.self_modulate = PLAYER_TEXT_COLOR
 	else:
-		$Label.self_modulate = Color(0, 0, 1)
-
+		$Label.self_modulate = MONSTER_TEXT_COLOR
+		
 func _on_TextAnimator_animation_finished(anim_name):
 	if anim_name == "TextTransition":
 		textCanAdvance = true
@@ -103,8 +106,8 @@ func _on_TextAnimator_animation_finished(anim_name):
 			$TextAnimator.play("TextTransition")
 			$Label.text = transitionText[textTracker]
 			if textColor[int(level)][int(textTracker)] == 1:	# Player text
-				$Label.self_modulate = Color(1, 0, 0)
+				$Label.self_modulate = PLAYER_TEXT_COLOR
 			else:
-				$Label.self_modulate = Color(0, 0, 1)
+				$Label.self_modulate = MONSTER_TEXT_COLOR
 	if anim_name == "ScreenBlockerFadeIn":
 		$TextAnimator.play("TextTransition")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Scripts/NextWorld.gd" type="Script" id=1]
 [ext_resource path="res://Art/stairs.png" type="Texture" id=2]
@@ -10,10 +10,10 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 30, 30 )
 
-[sub_resource type="RectangleShape2D" id=8]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 31.1376, 32 )
 
-[sub_resource type="Animation" id=9]
+[sub_resource type="Animation" id=3]
 resource_name = "ExitUnlocked"
 length = 0.8
 tracks/0/type = "value"
@@ -53,6 +53,9 @@ tracks/2/keys = {
 "values": [ false, true ]
 }
 
+[sub_resource type="OccluderPolygon2D" id=4]
+polygon = PoolVector2Array( -30.0765, 29.1108, -30.7543, -31.4397, 31.8295, -30.9878, 30.474, 31.822, 28.4405, 31.822, 29.7962, -28.2766, -28.7209, -28.0507, -27.5912, 30.6923 )
+
 [node name="next_W" type="Area2D" groups=[
 "Exit",
 ]]
@@ -80,7 +83,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-shape = SubResource( 8 )
+shape = SubResource( 2 )
 
 [node name="StatueSprite" type="Sprite" parent="."]
 visible = false
@@ -105,7 +108,10 @@ __meta__ = {
 }
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/ExitUnlocked = SubResource( 9 )
+anims/ExitUnlocked = SubResource( 3 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource( 4 )
 
 [connection signal="body_entered" from="." to="." method="_on_next_W_body_entered"]
 [connection signal="textFadeOut" from="CanvasLayer/TextTransition" to="." method="_on_TextTransition_textFadeOut"]
