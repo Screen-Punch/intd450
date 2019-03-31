@@ -53,7 +53,8 @@ nextLevelText = "Level 10: Opaque"
 position = Vector2( 423.778, 346.83 )
 
 [node name="Lock" parent="Key" instance=ExtResource( 7 )]
-position = Vector2( 120.1, -243.198 )
+position = Vector2( 179.897, -281.079 )
+scale = Vector2( 1, 1.92 )
 
 [node name="Mirror" parent="." instance=ExtResource( 8 )]
 position = Vector2( 226.373, 4.87431 )

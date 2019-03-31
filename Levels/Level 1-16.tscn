@@ -18,6 +18,9 @@ outlines = [ PoolVector2Array( 892.641, 901.166, 892.641, 1015.35, 520.183, 1016
 [node name="Level 1-16" type="Node2D"]
 position = Vector2( -1, 0 )
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 2 )
@@ -35,14 +38,14 @@ position = Vector2( 721.167, 607.47 )
 scale = Vector2( 0.887331, 0.822141 )
 
 [node name="Lock" parent="." instance=ExtResource( 5 )]
-position = Vector2( 417.992, 511.582 )
+position = Vector2( 417.992, 488.362 )
 rotation = 3.14159
-scale = Vector2( 1, 1.96 )
+scale = Vector2( 1, 2.72 )
 
 [node name="Lock2" parent="." instance=ExtResource( 5 )]
-position = Vector2( 718.788, 958.479 )
+position = Vector2( 718.788, 924.589 )
 rotation = 3.14159
-scale = Vector2( 1, 1.96 )
+scale = Vector2( 1, 3.12 )
 
 [node name="Nav2D" parent="." instance=ExtResource( 6 )]
 
@@ -78,5 +81,5 @@ level = 2
 nextLevelText = "Level 1: The Haunting"
 blocked = false
 
-[connection signal="keyGotten" from="Key" to="Lock" method="_on_Key_keyGotten"]
 [connection signal="keyGotten" from="Key" to="Lock2" method="_on_Key_keyGotten"]
+[connection signal="keyGotten" from="Key" to="Lock" method="_on_Key_keyGotten"]

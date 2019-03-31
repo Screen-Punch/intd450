@@ -56,7 +56,6 @@ level = 12
 nextLevelText = "The End"
 
 [node name="KeysAndLocks" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="Key" parent="KeysAndLocks" instance=ExtResource( 6 )]
 position = Vector2( 315.228, -101.071 )
@@ -72,7 +71,7 @@ position = Vector2( 2.52679, -97.4864 )
 [node name="Lock2" parent="KeysAndLocks" instance=ExtResource( 7 )]
 position = Vector2( 0.393808, -358.606 )
 rotation = -1.5708
-scale = Vector2( 1.16604, 1.83839 )
+scale = Vector2( 1.16604, 1.99839 )
 
 [node name="Mirror" parent="." instance=ExtResource( 8 )]
 position = Vector2( 221.519, -761.046 )

@@ -54,8 +54,9 @@ nextLevelText = "Level 11: Stuck in the Middle With You"
 position = Vector2( 603.629, -30.2574 )
 
 [node name="Lock" parent="Key" instance=ExtResource( 7 )]
-position = Vector2( -590.325, 9.166 )
+position = Vector2( -586.155, -26.0442 )
 rotation = 3.14159
+scale = Vector2( 1, 1.76 )
 
 [node name="Mirror" parent="." instance=ExtResource( 8 )]
 position = Vector2( -65.2602, -34.2162 )
@@ -66,7 +67,7 @@ visionType = "LoS"
 position = Vector2( 84.4221, -4.19116 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mirror/Area2D"]
-position = Vector2( -83.045, -319.097 )
+position = Vector2( -83.045, -319.56 )
 shape = SubResource( 2 )
 
 [node name="fog" parent="." instance=ExtResource( 9 )]
