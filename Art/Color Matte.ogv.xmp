@@ -1,5 +1,5 @@
 <?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
-<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c145 79.163499, 2018/08/13-16:40:22        " rdfhash="DAA2CD802E02B757BA0A47660AAA9217" merged="0">
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c145 79.163499, 2018/08/13-16:40:22        " rdfhash="5B6CCBD7C5E1EFF42B139383A7E49BD3" merged="0">
  <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
   <rdf:Description rdf:about=""
     xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/"
@@ -10,42 +10,42 @@
     xmlns:xmpDM="http://ns.adobe.com/xmp/1.0/DynamicMedia/"
     xmlns:stDim="http://ns.adobe.com/xap/1.0/sType/Dimensions#"
     xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmpMM:InstanceID="xmp.iid:33d71fd7-c7f0-044b-b373-e944657496f4"
-   xmpMM:DocumentID="969acfc8-f133-2344-7d8e-328b00000049"
-   xmpMM:OriginalDocumentID="xmp.did:0a8ae328-0c5b-314b-bd51-6d9999c5384d"
-   xmp:MetadataDate="2019-03-31T16:51:34-06:00"
-   xmp:ModifyDate="2019-03-31T16:51:34-06:00"
+   xmpMM:InstanceID="xmp.iid:5d577a1c-5c52-894f-a1a5-ff0fe04b24f5"
+   xmpMM:DocumentID="7f10d041-d21a-4037-c58e-f9c100000049"
+   xmpMM:OriginalDocumentID="xmp.did:3399bca4-ab2c-1d42-a3db-16021ef29d0e"
+   xmp:MetadataDate="2019-03-31T17:06:15-06:00"
+   xmp:ModifyDate="2019-03-31T17:06:15-06:00"
    xmp:CreatorTool="Adobe Premiere Pro CC 2019.0 (Windows)"
-   xmp:CreateDate="2019-03-31T16:50:37-06:00"
-   xmpDM:videoFrameRate="25.000000"
+   xmp:CreateDate="2019-03-31T17:05:12-06:00"
+   xmpDM:videoFrameRate="29.970030"
    xmpDM:videoFieldOrder="Progressive"
    xmpDM:videoPixelAspectRatio="1/1"
-   xmpDM:startTimeScale="25"
-   xmpDM:startTimeSampleSize="1"
+   xmpDM:startTimeScale="30000"
+   xmpDM:startTimeSampleSize="1001"
    dc:format="Theora">
    <xmpMM:History>
     <rdf:Seq>
      <rdf:li
       stEvt:action="saved"
-      stEvt:instanceID="5da18ec5-b814-aa2f-0bbb-4abb00000076"
-      stEvt:when="2019-03-31T16:51:34-06:00"
+      stEvt:instanceID="c425f240-f870-b553-1906-e98600000076"
+      stEvt:when="2019-03-31T17:06:15-06:00"
       stEvt:softwareAgent="Adobe Premiere Pro CC 2019.0 (Windows)"
       stEvt:changed="/"/>
      <rdf:li
       stEvt:action="created"
-      stEvt:instanceID="xmp.iid:7fa56dc6-112b-1745-a69a-4d1e915026cf"
-      stEvt:when="2019-03-31T16:51:07-06:00"
+      stEvt:instanceID="xmp.iid:29a839db-c45d-8748-bafc-66c329002b06"
+      stEvt:when="2019-03-31T17:05:42-06:00"
       stEvt:softwareAgent="Adobe Premiere Pro CC 2019.0 (Windows)"/>
      <rdf:li
       stEvt:action="saved"
-      stEvt:instanceID="xmp.iid:107b600a-ce3f-6f42-9bcb-2ae32f66e6ce"
-      stEvt:when="2019-03-31T16:51:34-06:00"
+      stEvt:instanceID="xmp.iid:e48c02e7-db6b-4a46-8139-c0665f1a63d7"
+      stEvt:when="2019-03-31T17:06:15-06:00"
       stEvt:softwareAgent="Adobe Premiere Pro CC 2019.0 (Windows)"
       stEvt:changed="/"/>
      <rdf:li
       stEvt:action="saved"
-      stEvt:instanceID="xmp.iid:33d71fd7-c7f0-044b-b373-e944657496f4"
-      stEvt:when="2019-03-31T16:51:34-06:00"
+      stEvt:instanceID="xmp.iid:5d577a1c-5c52-894f-a1a5-ff0fe04b24f5"
+      stEvt:when="2019-03-31T17:06:15-06:00"
       stEvt:softwareAgent="Adobe Premiere Pro CC 2019.0 (Windows)"
       stEvt:changed="/metadata"/>
     </rdf:Seq>
@@ -85,9 +85,9 @@
     </rdf:Bag>
    </xmpMM:Pantry>
    <xmpMM:DerivedFrom
-    stRef:instanceID="xmp.iid:7fa56dc6-112b-1745-a69a-4d1e915026cf"
-    stRef:documentID="xmp.did:7fa56dc6-112b-1745-a69a-4d1e915026cf"
-    stRef:originalDocumentID="xmp.did:7fa56dc6-112b-1745-a69a-4d1e915026cf"/>
+    stRef:instanceID="xmp.iid:29a839db-c45d-8748-bafc-66c329002b06"
+    stRef:documentID="xmp.did:29a839db-c45d-8748-bafc-66c329002b06"
+    stRef:originalDocumentID="xmp.did:29a839db-c45d-8748-bafc-66c329002b06"/>
    <creatorAtom:windowsAtom
     creatorAtom:extension=".prproj"
     creatorAtom:invocationFlags="/L"
@@ -102,14 +102,14 @@
     stDim:h="600"
     stDim:unit="pixel"/>
    <xmpDM:duration
-    xmpDM:value="400"
-    xmpDM:scale="1/25"/>
+    xmpDM:value="479"
+    xmpDM:scale="1001/30000"/>
    <xmpDM:startTimecode
-    xmpDM:timeFormat="25Timecode"
+    xmpDM:timeFormat="2997NonDropTimecode"
     xmpDM:timeValue="00:00:00:00"/>
    <xmpDM:altTimecode
     xmpDM:timeValue="00:00:00:00"
-    xmpDM:timeFormat="25Timecode"/>
+    xmpDM:timeFormat="2997NonDropTimecode"/>
   </rdf:Description>
  </rdf:RDF>
 </x:xmpmeta>
