@@ -188,7 +188,7 @@ timerVisible = false
 
 [node name="sprite" type="Sprite" parent="."]
 texture = ExtResource( 2 )
-hframes = 12
+hframes = 10
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0.418457, 40.4701 )

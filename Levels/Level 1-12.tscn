@@ -61,7 +61,7 @@ nextLevelText = "Level 12: All Around Me"
 position = Vector2( -419.98, 129.272 )
 
 [node name="Lock" parent="KeysAndLocks" instance=ExtResource( 7 )]
-position = Vector2( 226.333, 530.258 )
+position = Vector2( 224.661, 531.512 )
 rotation = 1.5708
 collision_layer = 2
 collision_mask = 2

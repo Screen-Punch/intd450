@@ -61,19 +61,22 @@ nextLevelText = "Level 13: Gated"
 position = Vector2( 209.447, 389.833 )
 
 [node name="Lock3" parent="KeysAndLocks" instance=ExtResource( 7 )]
-position = Vector2( 992, 32 )
+position = Vector2( 992, 15 )
+scale = Vector2( 1, 1.55 )
 
 [node name="Key2" parent="KeysAndLocks" instance=ExtResource( 6 )]
 position = Vector2( 869.343, -95.34 )
 
 [node name="Lock2" parent="KeysAndLocks" instance=ExtResource( 7 )]
-position = Vector2( 1056, 32 )
+position = Vector2( 1056, 15 )
+scale = Vector2( 1, 1.55 )
 
 [node name="Key3" parent="KeysAndLocks" instance=ExtResource( 6 )]
 position = Vector2( 161.39, -132.684 )
 
 [node name="Lock" parent="KeysAndLocks" instance=ExtResource( 7 )]
-position = Vector2( 928, 32 )
+position = Vector2( 928, 15 )
+scale = Vector2( 1, 1.55 )
 
 [node name="Mirror" parent="." instance=ExtResource( 8 )]
 position = Vector2( -91.2235, 288.648 )
