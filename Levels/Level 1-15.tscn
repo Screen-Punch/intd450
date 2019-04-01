@@ -20,7 +20,6 @@ position = Vector2( 170, 260 )
 rotation = -1.57079
 scale = Vector2( 0.8, 0.8 )
 next_world = "res://Levels/Level 1-16.tscn"
-level = 5
 nextLevelText = "Intro Level"
 
 [node name="Rubble" type="Sprite" parent="."]

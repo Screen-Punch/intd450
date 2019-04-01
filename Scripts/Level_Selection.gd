@@ -1,6 +1,6 @@
 extends Control
 
-var goalTime = [10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10,]
+var goalTime = [-1, 21, 5, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10,]
 
 func _ready():
 	# Called when the node is added to the scene for the first time.
