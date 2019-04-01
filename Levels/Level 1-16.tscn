@@ -81,5 +81,5 @@ level = 2
 nextLevelText = "Level 1: The Haunting"
 blocked = false
 
-[connection signal="keyGotten" from="Key" to="Lock2" method="_on_Key_keyGotten"]
 [connection signal="keyGotten" from="Key" to="Lock" method="_on_Key_keyGotten"]
+[connection signal="keyGotten" from="Key" to="Lock2" method="_on_Key_keyGotten"]
