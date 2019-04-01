@@ -10,7 +10,7 @@ func _ready():
 		name = "Level 1-20"
 		$AnimationPlayer.play("Bad_Ending")
 	else:
-		$AnimationPlayer.play("Good_Ending)
+		$AnimationPlayer.play("Good_Ending")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
