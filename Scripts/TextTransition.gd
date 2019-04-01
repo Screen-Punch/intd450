@@ -7,7 +7,7 @@ var textTracker = 0
 var aboutToAdvanceLevel = false
 
 const PLAYER_TEXT_COLOR = Color(205.0/255.0, 50.0/255.0, 50.0/255.0)
-const MONSTER_TEXT_COLOR = Color(30.0/255.0, 20.0/255.0, 100.0/255.0)
+const MONSTER_TEXT_COLOR = Color(80.0/255.0, 70.0/255.0, 255.0/255.0)
 
 export (bool) var playerDeathSequence = false
 
@@ -42,13 +42,18 @@ var narrativeSequences = [
 ["It was only a matter of time that another wanderlusting soul would find this place..."],
 ["My wayward whispers… snaking and burrowing deeply into unsuspecting hearts and minds…","Like a siren's song... how sweetly they promise the countless, irresistible desires and curiosities of the mortal heart..."],
 ["It must have been so tiring, resisting what you knew deep within to be inevitable…", "Retire all that you once were, mortal, and embrace your new existence… forevermore."],
-["The adventurer, basking in the newfound embrace of sunlight, made haste to return to civilization. Upon reaching home, the adventurer decided against sharing the details of their harrowing experience in that forgotten place - unwilling to risk provoking the curiosities of any other adventurous souls towards any independent investigating. Instead, they returned home quietly and resigned themselves to a relatively stress-free existence.", "The nightmares came, no less, and many a night would be plagued with restlessness. They had ultimately triumphed against overwhelming odds, though, and took solace in this fact.","One lingering concern remained paramount in their mind, however: were there other victims the monster had neglected to mention, and where might they be now…?"],
+["The adventurer, basking in the newfound embrace of sunlight, made haste to return to civilization. Upon reaching home, the adventurer decided against sharing the details of their harrowing experience in that forgotten place - unwilling to risk provoking the curiosities of any other adventurous souls towards any independent investigating.", 
+	"Instead, they returned home quietly and resigned themselves to a relatively stress-free existence.",
+	"The nightmares came, no less, and many a night would be plagued with restlessness. They had ultimately triumphed against overwhelming odds, though, and took solace in this fact.","One lingering concern remained paramount in their mind, however: were there other victims the monster had neglected to mention, and where might they be now…?"],
+["The adventurer began their journey but an ordinary, wanderlusting soul, guided by the call of adventure into the far-off frontier. What they found out there, however, would change them irrevocably.", 
+	"The adventurer, deprived of much of their former humanity, struggled under the antagonistic embrace of the sunlight as they made their way back to civilization. Upon reaching home, the adventurer - heeding the call of a new voice - decided to share their tale with their fellow adventurers - to a certain extent, of course.",
+	"The Old One - slumbering deep beneath the earth in that forgotten place - would be satiated. It was only a matter of time, and its patience was bountiful."],
 ]
 # 0 is monster, 1 is PC
 var narrativeSequencesTextColors = [[0], [0,0], [0], [0], [0,0],
 									[0,0], [0], [0], [0], [0],
 									[0], [0], [0, 0, 0], [0], [0],
-									[1,1], [0], [0, 0], [0, 0], [1, 1, 1]]	# level 15-18
+									[1,1], [0], [0, 0], [0, 0], [1, 1, 1, 1], [0,0,0]]	# level 15-18
 
 
 var playerDiedText = [["Slowly but surely, your mortal body has found its paltry limits.",
