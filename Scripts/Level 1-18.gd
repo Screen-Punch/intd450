@@ -14,7 +14,7 @@ var show_door = false
 var timer = 0
 var delayTimer
 
-var BAD_END_DEATH_THRESHOLD = 18
+var BAD_END_DEATH_THRESHOLD = 5
 
 func _ready():
 	# Called when the node is added to the scene for the first time.

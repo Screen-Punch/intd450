@@ -4,17 +4,17 @@
 [ext_resource path="res://Scenes/ending.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scripts/Endin_Goodg.gd" type="Script" id=3]
 [ext_resource path="res://Scenes/dungeonTileset.tres" type="TileSet" id=4]
-[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/player.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scripts/Nav2D.gd" type="Script" id=6]
 [ext_resource path="res://Scenes/Monster.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/door.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Art/stairs.png" type="Texture" id=9]
 [ext_resource path="res://Art/lighting/light.png" type="Texture" id=10]
 
-[sub_resource type="NavigationPolygon" id=1]
-vertices = PoolVector2Array( 382.375, 448.301, 513.065, 510.876, 192.001, 510.876, 322.081, 448.301, 191.97, -319.737, 508.867, -319.737, 384, -254, 318.285, -254.363, 382.551, -62.673, 382.375, 258.376, 190.862, 2.70099, 321.61, -64.8891, 192.001, 191.32, 322.081, 258.376, 1.53891, 193.77, -0.828186, 0.484894 )
-polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 4, 5, 6, 7 ), PoolIntArray( 8, 6, 5, 1, 0, 9 ), PoolIntArray( 10, 4, 7, 11, 12 ), PoolIntArray( 3, 2, 12, 13 ), PoolIntArray( 12, 14, 15, 10 ), PoolIntArray( 8, 9, 13, 12, 11 ), PoolIntArray( 10, 15, 15 ) ]
-outlines = [ PoolVector2Array( 1.53891, 193.77, 192.001, 191.32, 192.001, 510.876, 513.065, 510.876, 508.867, -319.737, 191.97, -319.737, 190.862, 2.70099, -0.828186, 0.484894, -0.828186, 0.484894 ), PoolVector2Array( 318.285, -254.363, 321.61, -64.8891, 382.551, -62.673, 384, -254 ), PoolVector2Array( 322.081, 258.376, 322.081, 448.301, 382.375, 448.301, 382.375, 258.376 ) ]
+[sub_resource type="NavigationPolygon" id=5]
+vertices = PoolVector2Array( 382.969, -62.2143, 639.292, -65.0782, 703.731, -65.0782, 698.003, 254.252, 639.292, 259.98, 382.969, 259.98, 319.963, -60.7823, 703.731, 447.568, 832.088, 511.952, 191.124, 507.169, 640.724, 449, 384.401, 444.704, 321.395, 443.272, 829.696, -317.953, 700.867, -254.099, 188.733, -320.344, 639.292, -252.667, 381.537, -254.099, 187.391, 194.499, 319.963, 259.98, 188.733, 2.52917, -1.29236, 186.745, -2.58472, 1.93851, 321.395, -254.099 )
+polygons = [ PoolIntArray( 0, 1, 2, 3, 4, 5, 6 ), PoolIntArray( 7, 8, 9, 10 ), PoolIntArray( 11, 10, 9 ), PoolIntArray( 12, 11, 9 ), PoolIntArray( 13, 8, 2, 14 ), PoolIntArray( 15, 13, 14, 16, 17 ), PoolIntArray( 2, 8, 7, 3 ), PoolIntArray( 12, 9, 18, 19 ), PoolIntArray( 4, 10, 11, 5 ), PoolIntArray( 6, 5, 19, 18, 20 ), PoolIntArray( 21, 22, 20, 18 ), PoolIntArray( 6, 20, 15, 23 ), PoolIntArray( 1, 0, 17, 16 ), PoolIntArray( 23, 15, 17 ) ]
+outlines = [ PoolVector2Array( -2.58472, 1.93851, -1.29236, 186.745, 187.391, 194.499, 191.124, 507.169, 832.088, 511.952, 829.696, -317.953, 188.733, -320.344, 188.733, 2.52917 ), PoolVector2Array( 321.395, -254.099, 319.963, -60.7823, 382.969, -62.2143, 381.537, -254.099 ), PoolVector2Array( 639.292, -252.667, 639.292, -65.0782, 703.731, -65.0782, 700.867, -254.099 ), PoolVector2Array( 319.963, 259.98, 321.395, 443.272, 384.401, 444.704, 382.969, 259.98 ), PoolVector2Array( 639.292, 259.98, 640.724, 449, 703.731, 447.568, 698.003, 254.252 ) ]
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 30, 30 )
@@ -47,19 +47,16 @@ __meta__ = {
 }
 
 [node name="Player" parent="." instance=ExtResource( 5 )]
-position = Vector2( 157.772, 102.331 )
+position = Vector2( 160, 66 )
 
-[node name="Navigation2D" type="Navigation2D" parent="."]
+[node name="Nav2D" type="Navigation2D" parent="."]
 script = ExtResource( 6 )
 
-[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Navigation2D"]
-navpoly = SubResource( 1 )
-__meta__ = {
-"_edit_lock_": true
-}
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Nav2D"]
+navpoly = SubResource( 5 )
 
-[node name="Monster" parent="Navigation2D" instance=ExtResource( 7 )]
-position = Vector2( 58.7863, 105.514 )
+[node name="Monster" parent="Nav2D" instance=ExtResource( 7 )]
+position = Vector2( 44, 88 )
 
 [node name="Door" parent="." instance=ExtResource( 8 )]
 position = Vector2( 879.973, 95.3752 )
@@ -116,8 +113,8 @@ position = Vector2( -0.950012, 1.8999 )
 texture = ExtResource( 10 )
 shadow_enabled = true
 
-[connection signal="body_entered" from="Ending_Good" to="." method="_on_Ending_Good_body_entered"]
 [connection signal="body_entered" from="Ending_Good" to="Ending_Good" method="_on_Ending_Good_body_entered"]
+[connection signal="body_entered" from="Ending_Good" to="." method="_on_Ending_Good_body_entered"]
 [connection signal="body_entered" from="Door/Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="area_entered" from="Ending_Decide" to="." method="_on_Ending_Decide_area_entered"]
 [connection signal="body_entered" from="Ending_Decide" to="." method="_on_Ending_Decide_body_entered"]
