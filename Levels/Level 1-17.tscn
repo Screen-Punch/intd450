@@ -20,6 +20,5 @@ position = Vector2( 160, 249.835 )
 position = Vector2( 809.732, 249.712 )
 scale = Vector2( 0.8, 0.8 )
 next_world = "res://Levels/Level1-2.tscn"
-level = 5
 nextLevelText = "Level 1-1"
 
