@@ -7,6 +7,9 @@ var playerHasDiedOnce = false
 
 var end_scene = false
 
+var is_first_ending = false
+var is_second_ending = false
+
 var level_selection_mode = false
 var level_time = [-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1]
 var current_time

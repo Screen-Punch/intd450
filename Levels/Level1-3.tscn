@@ -38,15 +38,15 @@ nextLevelText = "Level 3: Now Two"
 
 [node name="Nav2D" parent="." instance=ExtResource( 4 )]
 
+[node name="Monster" parent="Nav2D" instance=ExtResource( 5 )]
+position = Vector2( 66.1562, -842.531 )
+
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Nav2D"]
 position = Vector2( 529.043, -505.4 )
 navpoly = SubResource( 1 )
 __meta__ = {
 "_edit_lock_": true
 }
-
-[node name="Monster" parent="Nav2D" instance=ExtResource( 5 )]
-position = Vector2( 66.1562, -842.531 )
 
 [node name="Mirror" parent="." instance=ExtResource( 6 )]
 position = Vector2( 317.946, -697.755 )
