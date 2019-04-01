@@ -82,5 +82,4 @@ ui_pause={
 
 [rendering]
 
-quality/driver/driver_name="GLES2"
 quality/2d/use_pixel_snap=true

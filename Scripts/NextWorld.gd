@@ -33,7 +33,7 @@ func _on_next_W_body_entered(body):
 	if body.is_in_group("Player") and !blocked:
 		$CanvasLayer/TextTransition.setTransitionText()
 		if GameManagerNode.deathsInLevel == 0:
-			GameManagerNode.totalDeaths -= 3
+			GameManagerNode.totalDeaths -= 1
 			if GameManagerNode.totalDeaths < 0:
 				GameManagerNode.totalDeaths = 0
 		body.hideTimer()
