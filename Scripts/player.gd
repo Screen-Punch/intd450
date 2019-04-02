@@ -24,6 +24,7 @@ export (bool) var timerVisible = false
 var totalMirrors = 0
 var movementKey
 
+
 func _ready():
 	var monsters  = get_tree().get_nodes_in_group("Monster")
 	for t in monsters:
@@ -51,6 +52,10 @@ func _input(event):
 func _physics_process(delta):
 	var motion = Vector2()
 	
+	if Input.is_action_pressed("ui_pause"):
+		$CanvasLayer/PauseMenu.show()
+		get_tree().paused = true
+
 	if canMove:
 		if Input.is_action_pressed("ui_up"):
 			motion += Vector2(0, -1)
@@ -60,9 +65,6 @@ func _physics_process(delta):
 			motion += Vector2(-1, 0)
 		if Input.is_action_pressed("ui_right"):
 			motion += Vector2(1, 0)
-		if Input.is_action_pressed("ui_pause") and vulnerable:
-			$CanvasLayer/PauseMenu.show()
-			get_tree().paused = true
 	
 		if motion.y < 0:
 			anim = "WalkUp"
@@ -140,8 +142,8 @@ func updatePlayerTexture(deaths):
 	i = int((deaths+DEATHS_PER_COLOR_CHANGE)/ DEATHS_PER_COLOR_CHANGE)
 	if i <= 0:	# if below limit
 		i = 1
-	if i > 18:	# if above limit
-		i = 17
+	if i > 10:	# if above limit
+		i = 10
 	var intVal = i
 	$sprite.texture = load("res://Art/PCs" + str(intVal) + ".png")
 	

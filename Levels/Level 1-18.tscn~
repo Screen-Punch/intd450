@@ -1,6 +1,7 @@
 [gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Scripts/Level 1-18.gd" type="Script" id=1]
+<<<<<<< HEAD
 [ext_resource path="res://Scenes/dungeonTileset.tres" type="TileSet" id=2]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scripts/Nav2D.gd" type="Script" id=4]
@@ -18,6 +19,25 @@ outlines = [ PoolVector2Array( 1.53891, 193.77, 192.001, 191.32, 192.001, 510.87
 
 [sub_resource type="OccluderPolygon2D" id=2]
 polygon = PoolVector2Array( 23.3897, 34.0872, 31.4735, -31.0518, -32.8783, -30.1727, -23.6853, 31.8858, -29.5499, 33.6462, -36.9993, -35.8944, 34.3265, -33.6925 )
+=======
+[ext_resource path="res://Scenes/ending.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scripts/Endin_Goodg.gd" type="Script" id=3]
+[ext_resource path="res://Scenes/dungeonTileset.tres" type="TileSet" id=4]
+[ext_resource path="res://Scenes/player.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scripts/Nav2D.gd" type="Script" id=6]
+[ext_resource path="res://Scenes/Monster.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/door.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Art/stairs.png" type="Texture" id=9]
+[ext_resource path="res://Art/lighting/light.png" type="Texture" id=10]
+
+[sub_resource type="NavigationPolygon" id=1]
+vertices = PoolVector2Array( 382.969, -62.2143, 639.292, -65.0782, 703.731, -65.0782, 698.003, 254.252, 639.292, 259.98, 382.969, 259.98, 319.963, -60.7823, 703.731, 447.568, 832.088, 511.952, 191.124, 507.169, 640.724, 449, 384.401, 444.704, 321.395, 443.272, 829.696, -317.953, 700.867, -254.099, 188.733, -320.344, 639.292, -252.667, 381.537, -254.099, 187.391, 194.499, 319.963, 259.98, 188.733, 2.52917, -1.29236, 186.745, -2.58472, 1.93851, 321.395, -254.099 )
+polygons = [ PoolIntArray( 0, 1, 2, 3, 4, 5, 6 ), PoolIntArray( 7, 8, 9, 10 ), PoolIntArray( 11, 10, 9 ), PoolIntArray( 12, 11, 9 ), PoolIntArray( 13, 8, 2, 14 ), PoolIntArray( 15, 13, 14, 16, 17 ), PoolIntArray( 2, 8, 7, 3 ), PoolIntArray( 12, 9, 18, 19 ), PoolIntArray( 4, 10, 11, 5 ), PoolIntArray( 6, 5, 19, 18, 20 ), PoolIntArray( 21, 22, 20, 18 ), PoolIntArray( 6, 20, 15, 23 ), PoolIntArray( 1, 0, 17, 16 ), PoolIntArray( 23, 15, 17 ) ]
+outlines = [ PoolVector2Array( -2.58472, 1.93851, -1.29236, 186.745, 187.391, 194.499, 191.124, 507.169, 832.088, 511.952, 829.696, -317.953, 188.733, -320.344, 188.733, 2.52917 ), PoolVector2Array( 321.395, -254.099, 319.963, -60.7823, 382.969, -62.2143, 381.537, -254.099 ), PoolVector2Array( 639.292, -252.667, 639.292, -65.0782, 703.731, -65.0782, 700.867, -254.099 ), PoolVector2Array( 319.963, 259.98, 321.395, 443.272, 384.401, 444.704, 382.969, 259.98 ), PoolVector2Array( 639.292, 259.98, 640.724, 449, 703.731, 447.568, 698.003, 254.252 ) ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 30, 30 )
+>>>>>>> 497fbcd16f45853cbf64c425bf9dcb9067c8efae
 
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 29.8071, 37.2403 )
@@ -71,11 +91,24 @@ position = Vector2( 157.772, 102.331 )
 [node name="Navigation2D" type="Navigation2D" parent="."]
 script = ExtResource( 4 )
 
+<<<<<<< HEAD
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Navigation2D"]
 navpoly = SubResource( 1 )
 __meta__ = {
 "_edit_lock_": true
 }
+=======
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Nav2D"]
+navpoly = SubResource( 1 )
+
+[node name="Monster" parent="Nav2D" instance=ExtResource( 7 )]
+position = Vector2( 44, 88 )
+
+[node name="Door" parent="." instance=ExtResource( 8 )]
+position = Vector2( 879.973, 95.3752 )
+rotation = 3.14159
+scale = Vector2( 0.462301, -1.23216 )
+>>>>>>> 497fbcd16f45853cbf64c425bf9dcb9067c8efae
 
 [node name="Monster" parent="Navigation2D" instance=ExtResource( 5 )]
 position = Vector2( 58.7863, 105.514 )
@@ -134,6 +167,15 @@ autowrap = true
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer"]
 anims/Ending = SubResource( 5 )
 
+<<<<<<< HEAD
+=======
+[connection signal="body_entered" from="Ending_Good" to="." method="_on_Ending_Good_body_entered"]
+[connection signal="body_entered" from="Ending_Good" to="Ending_Good" method="_on_Ending_Good_body_entered"]
+[connection signal="body_entered" from="Door/Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="area_entered" from="Ending_Decide" to="." method="_on_Ending_Decide_area_entered"]
+[connection signal="body_entered" from="Ending_Decide" to="." method="_on_Ending_Decide_body_entered"]
+[connection signal="body_entered" from="Ending" to="Ending" method="_on_Ending_body_entered"]
+>>>>>>> 497fbcd16f45853cbf64c425bf9dcb9067c8efae
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="body_entered" from="stairs/Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="animation_finished" from="CanvasLayer/AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]

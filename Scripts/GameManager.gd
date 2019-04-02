@@ -5,10 +5,9 @@ var deathsInLevel = 0
 var totalDeaths = 0
 var playerHasDiedOnce = false
 
-var end_scene = false
+const BAD_END_DEATH_THRESHOLD = 5
 
-var is_first_ending = false
-var is_second_ending = false
+var end_scene = false
 
 var level_selection_mode = false
 var level_time = [-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1]

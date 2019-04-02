@@ -5,7 +5,7 @@
 [ext_resource path="res://Scenes/LevelSelectButton.tscn" type="PackedScene" id=3]
 [ext_resource path="res://miniboxes.tres" type="Theme" id=4]
 [ext_resource path="res://Scripts/Level1.gd" type="Script" id=5]
-[ext_resource path="res://Sounds/SoundFiles/24 bit/on_click_button.wav" type="AudioStream" id=6]
+[ext_resource path="res://Sounds/SoundFiles/Wang/click2.wav" type="AudioStream" id=6]
 [ext_resource path="res://Art/Hangul-master/Hangul-master/fonts/hangul_Desktop_OTF/hngl.otf" type="DynamicFontData" id=7]
 [ext_resource path="res://godotIcon.png" type="Texture" id=8]
 
