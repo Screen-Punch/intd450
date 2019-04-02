@@ -17,16 +17,9 @@ func _ready():
 
 func _on_Level1_pressed():
 	$click.play(0)
+	yield(get_node("click"), "finished")
 #	BGMPlayer.stream = load("res://Sounds/BGM/Halo Effect.wav")
 	BGMPlayer.play(0)
 #	GameManagerNode.BGMAudioName = "res://Sounds/BGM/Halo Effect.wav"
 	GameManagerNode.loadNextLevel(next_world, " ")
 	GameManagerNode.set_level_selection_to_true()
-
-
-# testing (wang)
-var testing = 0
-func _process(delta):
-	if testing:
-		if Input.is_action_pressed("ui_up"):
-			GameManagerNode.loadNextLevel("res://Levels/Level1-8.tscn","")
