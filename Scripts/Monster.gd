@@ -116,6 +116,7 @@ func _on_Area2D_body_entered(body):
 func _on_AnimationPlayer_animation_finished(anim_name):
 	if anim_name == "SpawnAnimation":
 		canMove = true
+		print("move?")
 
 
 func change_speed(new_speed):
