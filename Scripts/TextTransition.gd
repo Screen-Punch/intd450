@@ -52,7 +52,7 @@ var narrativeSequences = [
 # 0 is monster, 1 is PC
 var narrativeSequencesTextColors = [[0], [0,0], [0], [0], [0,0],
 									[0,0], [0], [0], [0], [0],
-									[0], [0], [0, 0, 0], [0], [0],
+									[0], [0], [0, 0, 0], [0,0], [0],
 									[1,1], [0], [0, 0], [0, 0], [1, 1, 1, 1], [0,0,0]]	# level 15-18
 
 
@@ -111,6 +111,7 @@ func _on_TextAnimator_animation_finished(anim_name):
 			textTracker += 1
 			$TextAnimator.play("TextTransition")
 			$Label.text = transitionText[textTracker]
+			print(int(level),":",int(textTracker),"dw")
 			if textColor[int(level)][int(textTracker)] == 1:	# Player text
 				$Label.self_modulate = PLAYER_TEXT_COLOR
 			else:
