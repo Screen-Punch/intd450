@@ -40,7 +40,7 @@ func _ready():
 	if !timerVisible or GameManagerNode.level_selection_mode:
 		hideTimer()
 	var totalMirrors  = get_tree().get_nodes_in_group("Mirror")
-	movementKey = [KEY_W, KEY_A, KEY_S, KEY_D]
+	movementKey = [KEY_W, KEY_A, KEY_S, KEY_D, KEY_UP, KEY_DOWN, KEY_LEFT, KEY_RIGHT]
 
 func _input(event):
 	if event is InputEventKey:
