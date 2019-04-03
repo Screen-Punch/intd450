@@ -14,7 +14,7 @@ extents = Vector2( 4.51507, 5.39089 )
 
 [sub_resource type="Animation" id=2]
 resource_name = "SceneTransition"
-length = 0.4
+length = 2.0
 step = 0.02
 tracks/0/type = "value"
 tracks/0/path = NodePath("ScreenBlocker:modulate")
@@ -23,7 +23,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.2 ),
+"times": PoolRealArray( 0, 1.28 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ) ]
@@ -35,7 +35,7 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.2 ),
+"times": PoolRealArray( 0, 1.28 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ true, false ]
@@ -362,7 +362,7 @@ pause_mode = 2
 anims/SceneTransition = SubResource( 2 )
 
 [node name="ScreenBlocker" type="Sprite" parent="CanvasLayer"]
-modulate = Color( 0, 0, 0, 5.96046e-008 )
+modulate = Color( 0, 0, 0, 1 )
 position = Vector2( 553.168, 316.428 )
 scale = Vector2( 18.2865, 10.8884 )
 texture = ExtResource( 5 )
