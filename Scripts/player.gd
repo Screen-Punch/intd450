@@ -119,7 +119,8 @@ func takeDamage():
 		if !GameManagerNode.playerHasDiedOnce: # First player death
 			$AnimationPlayer.play("Death")
 		else:
-			$CanvasLayer/SceneTransition.play_backwards("SceneTransition")
+			GameManagerNode.reloadLevel()
+			#$CanvasLayer/SceneTransition.play_backwards("SceneTransition")
 
 
 func _on_AnimationPlayer_animation_finished(anim_name):
