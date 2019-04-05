@@ -1,0 +1,96 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://nate'stesttheme.tres" type="Theme" id=1]
+[ext_resource path="res://Scripts/CreditsRoll.gd" type="Script" id=2]
+[ext_resource path="res://godotIcon.png" type="Texture" id=3]
+[ext_resource path="res://Art/CENTURY.TTF" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+use_mipmaps = true
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 32
+font_data = ExtResource( 4 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "Default"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Credits:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("CreditsReturnButton:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 2, 3.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[node name="CreditsRoll" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 551.377, 351.4 )
+scale = Vector2( 18.2305, 11.9813 )
+texture = ExtResource( 3 )
+
+[node name="Credits" type="Panel" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 218.0
+margin_top = 122.0
+margin_right = 780.0
+margin_bottom = 461.0
+
+[node name="CreditsText" type="Label" parent="Credits"]
+margin_left = 2.0
+margin_top = 8.0
+margin_right = 561.0
+margin_bottom = 442.0
+custom_fonts/font = SubResource( 1 )
+text = "Credits
+
+Boris Fleysher - Producer, Programmer, Level Design
+Stephen Melvin - Writer, Story Direction
+Nate Spasiuk - Lead Designer, Artist, BGM
+Andrew Somerville - Audio SFX, Programming support
+Wang Dong - Programmer, Level Design
+Guanfang Dong - Programmer, Level Design
+
+Special thanks to our friends, family, instructors and class for helping us through the semester!
+
+Lastly, thanks to YOU for playing!"
+align = 1
+autowrap = true
+
+[node name="CreditsReturnButton" type="Button" parent="."]
+modulate = Color( 1, 1, 1, 0.0714287 )
+margin_left = 328.554
+margin_top = 478.0
+margin_right = 689.554
+margin_bottom = 566.0
+custom_fonts/font = SubResource( 3 )
+text = "Return to Main Menu"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Default = SubResource( 2 )
+
+[connection signal="pressed" from="CreditsReturnButton" to="." method="_on_CreditsReturnButton_pressed"]

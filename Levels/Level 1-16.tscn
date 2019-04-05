@@ -88,7 +88,7 @@ rotation = 3.14159
 scale = Vector2( 1, 2.72 )
 
 [node name="Lock2" parent="." instance=ExtResource( 5 )]
-modulate = Color( 0, 0, 1, 1 )
+modulate = Color( 1, 0, 0, 1 )
 position = Vector2( -293.922, 554.464 )
 rotation = 3.14159
 scale = Vector2( 1, 3.12 )

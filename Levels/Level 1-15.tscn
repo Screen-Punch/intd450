@@ -24,6 +24,7 @@ next_world = "res://Levels/Level 1-16.tscn"
 nextLevelText = "Intro Level"
 
 [node name="Rubble" type="Sprite" parent="."]
+visible = false
 position = Vector2( 824.501, 249.651 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 4 )
@@ -46,3 +47,4 @@ firstTimeSpawn = true
 
 [node name="fog" parent="." instance=ExtResource( 6 )]
 
+[connection signal="spawned" from="Player" to="." method="_on_Player_spawned"]

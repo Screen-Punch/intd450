@@ -507,7 +507,7 @@ tile_data = PoolIntArray( -458766, 0, 0, -458765, 0, 0, -458764, 0, 0, -458763, 
 [node name="next_W" parent="." instance=ExtResource( 4 )]
 visible = false
 position = Vector2( 681.462, 148.19 )
-next_world = "res://Levels/Main Menu.tscn"
+next_world = "res://Levels/CreditsRoll.tscn"
 level = 19
 blocked = false
 

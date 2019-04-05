@@ -24,7 +24,7 @@ export (bool) var timerVisible = false
 export (bool) var firstTimeSpawn = false
 var totalMirrors = 0
 var movementKey
-
+signal spawned
 
 func _ready():
 	var monsters  = get_tree().get_nodes_in_group("Monster")
@@ -135,6 +135,8 @@ func _on_AnimationPlayer_animation_finished(anim_name):
 		$CanvasLayer/TextTransition/TextAnimator.play("ScreenBlockerFadeIn")
 		GameManagerNode.playerHasDiedOnce = true
 
+func superManSpawnLanded():
+	emit_signal("spawned")
 
 func _on_SceneTransition_animation_finished(anim_name):
 	if anim_name == "SceneTransition" and dead:

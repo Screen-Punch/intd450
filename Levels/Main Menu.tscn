@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://nate'stesttheme.tres" type="Theme" id=1]
 [ext_resource path="res://Scripts/Main Menu.gd" type="Script" id=2]
@@ -6,7 +6,7 @@
 [ext_resource path="res://Art/Hangul-master/Hangul-master/fonts/hangul_Desktop_OTF/hngl.otf" type="DynamicFontData" id=4]
 [ext_resource path="res://miniboxes.tres" type="Theme" id=5]
 [ext_resource path="res://Scripts/LevelSelection.gd" type="Script" id=6]
-[ext_resource path="res://Art/CENTURY.TTF" type="DynamicFontData" id=7]
+[ext_resource path="res://Levels/Credits.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Art/mirrors_gates.png" type="Texture" id=8]
 [ext_resource path="res://Art/Monsters.png" type="Texture" id=9]
 [ext_resource path="res://godotIcon.png" type="Texture" id=10]
@@ -15,11 +15,7 @@
 size = 75
 font_data = ExtResource( 4 )
 
-[sub_resource type="DynamicFont" id=2]
-use_mipmaps = true
-font_data = ExtResource( 7 )
-
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=2]
 length = 4.0
 loop = true
 tracks/0/type = "value"
@@ -47,7 +43,7 @@ tracks/1/keys = {
 "values": [ 0, 0, 1, 2, 3, 4, 5, 4, 3, 2, 1, 0 ]
 }
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=3]
 resource_name = "Movement"
 loop = true
 tracks/0/type = "value"
@@ -139,41 +135,10 @@ theme = ExtResource( 5 )
 text = "Exit"
 clip_text = true
 
-[node name="Credits" type="Panel" parent="."]
-visible = false
-margin_left = 218.0
-margin_top = 122.0
-margin_right = 780.0
-margin_bottom = 461.0
-
-[node name="CreditsText" type="Label" parent="Credits"]
-margin_left = 2.0
-margin_top = 8.0
-margin_right = 561.0
-margin_bottom = 442.0
-custom_fonts/font = SubResource( 2 )
-text = "Credits
-
-Boris Fleysher - Producer, Programmer, Level Design
-Stephen Melvin - Writer, Story Direction
-Nate Spasiuk - Lead Designer, Artist, BGM
-Andrew Somerville - Audio SFX, Programming support
-Wang Dong - Programmer, Level Design
-Guanfang Dong - Programmer, Level Design
-
-Special thanks to our friends, family, instructors and class for helping us through the semester!"
-align = 1
-autowrap = true
-
-[node name="CreditsReturnButton" type="Button" parent="Credits"]
-margin_left = 199.0
-margin_top = 356.0
-margin_right = 362.0
-margin_bottom = 444.0
-text = "Back"
+[node name="Credits" parent="." instance=ExtResource( 7 )]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/MainMenuAnimation = SubResource( 3 )
+anims/MainMenuAnimation = SubResource( 2 )
 
 [node name="Crystal" type="Sprite" parent="AnimationPlayer"]
 position = Vector2( 400.815, 235.404 )
@@ -189,7 +154,7 @@ hframes = 3
 frame = 4
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Monster"]
-anims/Movement = SubResource( 4 )
+anims/Movement = SubResource( 3 )
 
 [node name="BG" type="Sprite" parent="."]
 modulate = Color( 0, 0, 0, 1 )
@@ -206,4 +171,3 @@ __meta__ = {
 [connection signal="pressed" from="DefaultMenu/LevelSelection" to="DefaultMenu/LevelSelection" method="_on_LevelSelection_pressed"]
 [connection signal="pressed" from="DefaultMenu/CreditsButton" to="." method="_on_CreditsButton_pressed"]
 [connection signal="pressed" from="DefaultMenu/ExitButton" to="." method="_on_ExitButton_pressed"]
-[connection signal="pressed" from="Credits/CreditsReturnButton" to="." method="_on_CreditsReturnButton_pressed"]
