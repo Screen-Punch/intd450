@@ -378,6 +378,7 @@ pause_mode = 2
 anims/SceneTransition = SubResource( 2 )
 
 [node name="ScreenBlocker" type="Sprite" parent="CanvasLayer"]
+visible = false
 modulate = Color( 0, 0, 0, 1 )
 position = Vector2( 553.168, 316.428 )
 scale = Vector2( 18.2865, 10.8884 )
