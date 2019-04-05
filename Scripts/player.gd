@@ -21,9 +21,10 @@ var dead = false
 var anim
 var oldAnim
 export (bool) var timerVisible = false
+export (bool) var firstTimeSpawn = false
 var totalMirrors = 0
 var movementKey
-
+signal spawned
 
 func _ready():
 	var monsters  = get_tree().get_nodes_in_group("Monster")
@@ -31,7 +32,10 @@ func _ready():
 		target = t
 	$CanvasLayer/SceneTransition.play("SceneTransition")
 	vulnerable = true
-	$AnimationPlayer.play("SpawnAnimation")
+	if firstTimeSpawn:
+		$AnimationPlayer.play("SuperManSpawnAnimation")
+	else:
+		$AnimationPlayer.play("SpawnAnimation")
 	$CanvasLayer/Blur.show()
 	oldAnim = ""
 	anim = ""
@@ -119,17 +123,20 @@ func takeDamage():
 		if !GameManagerNode.playerHasDiedOnce: # First player death
 			$AnimationPlayer.play("Death")
 		else:
-			$CanvasLayer/SceneTransition.play_backwards("SceneTransition")
+			GameManagerNode.reloadLevel()
+			#$CanvasLayer/SceneTransition.play_backwards("SceneTransition")
 
 
 func _on_AnimationPlayer_animation_finished(anim_name):
-	if anim_name == "SpawnAnimation":
+	if anim_name == "SpawnAnimation" or anim_name == "SuperManSpawnAnimation":
 		canMove = true
 	if anim_name == "Death":
 		$CanvasLayer/TextTransition.setTransitionText(true)
 		$CanvasLayer/TextTransition/TextAnimator.play("ScreenBlockerFadeIn")
 		GameManagerNode.playerHasDiedOnce = true
 
+func superManSpawnLanded():
+	emit_signal("spawned")
 
 func _on_SceneTransition_animation_finished(anim_name):
 	if anim_name == "SceneTransition" and dead:

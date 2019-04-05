@@ -100,7 +100,6 @@ __meta__ = {
 }
 
 [node name="Light2D" type="Light2D" parent="."]
-visible = false
 texture = ExtResource( 6 )
 shadow_enabled = true
 __meta__ = {

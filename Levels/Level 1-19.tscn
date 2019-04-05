@@ -13,7 +13,7 @@
 [ext_resource path="res://Scenes/TextTransition.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Art/stairs.png" type="Texture" id=12]
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=1]
 resource_name = "Bad_Ending"
 length = 12.0
 tracks/0/type = "value"
@@ -87,7 +87,7 @@ tracks/5/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 0, 0, 0, 1 ) ]
 }
 
-[sub_resource type="Animation" id=20]
+[sub_resource type="Animation" id=2]
 resource_name = "Good_Ending"
 length = 5.0
 tracks/0/type = "value"
@@ -161,10 +161,10 @@ tracks/5/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="RectangleShape2D" id=6]
+[sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 4.51507, 5.39089 )
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id=4]
 resource_name = "SceneTransition"
 length = 0.4
 step = 0.02
@@ -193,7 +193,7 @@ tracks/1/keys = {
 "values": [ true, false ]
 }
 
-[sub_resource type="Shader" id=8]
+[sub_resource type="Shader" id=5]
 code = "shader_type canvas_item;
 render_mode unshaded;
 
@@ -204,11 +204,11 @@ void fragment()
 COLOR = textureLod(SCREEN_TEXTURE, SCREEN_UV, float(blurSize)/10.0); 
 }"
 
-[sub_resource type="ShaderMaterial" id=9]
-shader = SubResource( 8 )
+[sub_resource type="ShaderMaterial" id=6]
+shader = SubResource( 5 )
 shader_param/blurSize = 20
 
-[sub_resource type="Animation" id=10]
+[sub_resource type="Animation" id=7]
 resource_name = "Death"
 length = 3.5
 tracks/0/type = "value"
@@ -262,7 +262,7 @@ tracks/3/keys = {
 } ]
 }
 
-[sub_resource type="Animation" id=11]
+[sub_resource type="Animation" id=8]
 length = 0.2
 tracks/0/type = "value"
 tracks/0/path = NodePath("sprite:frame")
@@ -289,7 +289,7 @@ tracks/1/keys = {
 "values": [ 10 ]
 }
 
-[sub_resource type="Animation" id=12]
+[sub_resource type="Animation" id=9]
 length = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("sprite:frame")
@@ -316,7 +316,7 @@ tracks/1/keys = {
 "values": [ 10 ]
 }
 
-[sub_resource type="Animation" id=13]
+[sub_resource type="Animation" id=10]
 length = 0.2
 tracks/0/type = "value"
 tracks/0/path = NodePath("sprite:frame")
@@ -343,7 +343,7 @@ tracks/1/keys = {
 "values": [ 10 ]
 }
 
-[sub_resource type="Animation" id=14]
+[sub_resource type="Animation" id=11]
 length = 0.8
 tracks/0/type = "value"
 tracks/0/path = NodePath("sprite:scale")
@@ -394,7 +394,7 @@ tracks/3/keys = {
 "values": [ 0 ]
 }
 
-[sub_resource type="Animation" id=15]
+[sub_resource type="Animation" id=12]
 length = 0.4
 loop = true
 tracks/0/type = "value"
@@ -422,7 +422,7 @@ tracks/1/keys = {
 "values": [ 10 ]
 }
 
-[sub_resource type="Animation" id=16]
+[sub_resource type="Animation" id=13]
 length = 0.2
 loop = true
 tracks/0/type = "value"
@@ -450,7 +450,7 @@ tracks/1/keys = {
 "values": [ 10 ]
 }
 
-[sub_resource type="Animation" id=17]
+[sub_resource type="Animation" id=14]
 length = 0.4
 loop = true
 tracks/0/type = "value"
@@ -478,10 +478,10 @@ tracks/1/keys = {
 "values": [ 10 ]
 }
 
-[sub_resource type="OccluderPolygon2D" id=18]
+[sub_resource type="OccluderPolygon2D" id=15]
 polygon = PoolVector2Array( -12.5, 37.5, 12.5, 37.5, 12.5, 62.5, -12.5, 62.5 )
 
-[sub_resource type="RectangleShape2D" id=19]
+[sub_resource type="RectangleShape2D" id=16]
 extents = Vector2( 13.4923, 17.923 )
 
 [node name="Level 1-19" type="Node2D"]
@@ -507,13 +507,13 @@ tile_data = PoolIntArray( -458766, 0, 0, -458765, 0, 0, -458764, 0, 0, -458763, 
 [node name="next_W" parent="." instance=ExtResource( 4 )]
 visible = false
 position = Vector2( 681.462, 148.19 )
-next_world = "res://Levels/Main Menu.tscn"
+next_world = "res://Levels/CreditsRoll.tscn"
 level = 19
 blocked = false
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/Bad_Ending = SubResource( 5 )
-anims/Good_Ending = SubResource( 20 )
+anims/Bad_Ending = SubResource( 1 )
+anims/Good_Ending = SubResource( 2 )
 
 [node name="Player" type="KinematicBody2D" parent="." groups=[
 "Player",
@@ -535,7 +535,7 @@ __meta__ = {
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 position = Vector2( 0.418457, 47.3711 )
 scale = Vector2( 3.07742, 1.55583 )
-shape = SubResource( 6 )
+shape = SubResource( 3 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -552,7 +552,7 @@ __meta__ = {
 pause_mode = 2
 
 [node name="SceneTransition" type="AnimationPlayer" parent="Player/CanvasLayer"]
-anims/SceneTransition = SubResource( 7 )
+anims/SceneTransition = SubResource( 4 )
 
 [node name="ScreenBlocker" type="Sprite" parent="Player/CanvasLayer"]
 modulate = Color( 0, 0, 0, 5.96046e-008 )
@@ -565,7 +565,7 @@ __meta__ = {
 
 [node name="Blur" type="ColorRect" parent="Player/CanvasLayer"]
 visible = false
-material = SubResource( 9 )
+material = SubResource( 6 )
 margin_right = 1056.0
 margin_bottom = 654.0
 mouse_filter = 2
@@ -626,14 +626,14 @@ text = "Return"
 [node name="TextTransition" parent="Player/CanvasLayer" instance=ExtResource( 11 )]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Player"]
-anims/Death = SubResource( 10 )
-anims/IdleDown = SubResource( 11 )
-anims/IdleRight = SubResource( 12 )
-anims/IdleUp = SubResource( 13 )
-anims/SpawnAnimation = SubResource( 14 )
-anims/WalkDown = SubResource( 15 )
-anims/WalkRight = SubResource( 16 )
-anims/WalkUp = SubResource( 17 )
+anims/Death = SubResource( 7 )
+anims/IdleDown = SubResource( 8 )
+anims/IdleRight = SubResource( 9 )
+anims/IdleUp = SubResource( 10 )
+anims/SpawnAnimation = SubResource( 11 )
+anims/WalkDown = SubResource( 12 )
+anims/WalkRight = SubResource( 13 )
+anims/WalkUp = SubResource( 14 )
 
 [node name="CanvasModulate" type="CanvasModulate" parent="Player"]
 color = Color( 0.8, 0.8, 0.8, 1 )
@@ -642,7 +642,7 @@ __meta__ = {
 }
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Player"]
-occluder = SubResource( 18 )
+occluder = SubResource( 15 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -654,7 +654,7 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Hurtbox"]
 position = Vector2( 0.36499, 40.1486 )
-shape = SubResource( 19 )
+shape = SubResource( 16 )
 __meta__ = {
 "_edit_lock_": true
 }
