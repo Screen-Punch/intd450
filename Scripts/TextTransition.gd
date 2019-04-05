@@ -115,7 +115,7 @@ func _on_TextAnimator_animation_finished(anim_name):
 			textTracker += 1
 			$TextAnimator.play("TextTransition")
 			$Label.text = transitionText[textTracker]
-			print(int(level),":",int(textTracker),"dw")
+			#print(int(level),":",int(textTracker),"dw")
 			if textColor[int(level)][int(textTracker)] == 1:	# Player text
 				$Label.self_modulate = PLAYER_TEXT_COLOR
 			else:
