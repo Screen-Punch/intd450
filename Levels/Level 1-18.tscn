@@ -36,7 +36,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.9, 2 ),
+"times": PoolRealArray( 0.1, 0.9, 2 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ) ]
@@ -117,7 +117,7 @@ texture = ExtResource( 9 )
 
 [node name="Label" type="Label" parent="CanvasLayer"]
 modulate = Color( 0.313726, 0.27451, 1, 1 )
-self_modulate = Color( 1, 1, 1, 0.0909091 )
+self_modulate = Color( 1, 1, 1, 5.4186e-008 )
 margin_left = 91.0
 margin_top = 117.524
 margin_right = 927.0

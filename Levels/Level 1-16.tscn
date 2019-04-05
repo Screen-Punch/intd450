@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Scripts/Level_Intro_Monster_Lair.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/dungeonTileset.tres" type="TileSet" id=2]
-[ext_resource path="res://Scenes/player_Intro.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/Key_intro.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Lock.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Nav2D.tscn" type="PackedScene" id=6]
@@ -31,7 +31,8 @@ __meta__ = {
 }
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
-position = Vector2( 987.297, 361.374 )
+position = Vector2( 867.935, 295.37 )
+scale = Vector2( 0.8, 0.8 )
 
 [node name="Key" parent="." instance=ExtResource( 4 )]
 position = Vector2( 721.167, 607.47 )
@@ -80,5 +81,5 @@ next_world = "res://Levels/Level1-2.tscn"
 nextLevelText = "Level 1: The Haunting"
 blocked = false
 
-[connection signal="keyGotten" from="Key" to="Lock" method="_on_Key_keyGotten"]
 [connection signal="keyGotten" from="Key" to="Lock2" method="_on_Key_keyGotten"]
+[connection signal="keyGotten" from="Key" to="Lock" method="_on_Key_keyGotten"]
