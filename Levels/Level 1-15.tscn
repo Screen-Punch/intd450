@@ -42,6 +42,7 @@ text = "WASD to Move
 
 [node name="Player" parent="." instance=ExtResource( 5 )]
 position = Vector2( 827.675, 218.555 )
+firstTimeSpawn = true
 
 [node name="fog" parent="." instance=ExtResource( 6 )]
 

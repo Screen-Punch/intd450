@@ -65,10 +65,8 @@ var narrativeSequencesTextColors = [[0], [0,0], [0,0], [0,0], [0,0], # 0, 1, 2, 
 var playerDiedText = [["Slowly but surely, your mortal body has found its paltry limits.",
 "...and now, I will take but the first fragment of something even more valuable - your soul - from you.", 
 "Fragment by fragment, you will surrender all that you are...in service to my will.",
-"You insidious fiend! You... ah... profane the sacred!",
-"I have to... ah... get out of this wretched place before my soul is... ah... completely forfeit!"
 ]]
-var playerDiedTextColors = [[0, 0, 0, 1, 1]]
+var playerDiedTextColors = [[0, 0, 0]]
 var textColor
 var level
 

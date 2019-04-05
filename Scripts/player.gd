@@ -21,6 +21,7 @@ var dead = false
 var anim
 var oldAnim
 export (bool) var timerVisible = false
+export (bool) var firstTimeSpawn = false
 var totalMirrors = 0
 var movementKey
 
@@ -31,7 +32,10 @@ func _ready():
 		target = t
 	$CanvasLayer/SceneTransition.play("SceneTransition")
 	vulnerable = true
-	$AnimationPlayer.play("SpawnAnimation")
+	if firstTimeSpawn:
+		$AnimationPlayer.play("SuperManSpawnAnimation")
+	else:
+		$AnimationPlayer.play("SpawnAnimation")
 	$CanvasLayer/Blur.show()
 	oldAnim = ""
 	anim = ""
@@ -124,7 +128,7 @@ func takeDamage():
 
 
 func _on_AnimationPlayer_animation_finished(anim_name):
-	if anim_name == "SpawnAnimation":
+	if anim_name == "SpawnAnimation" or anim_name == "SuperManSpawnAnimation":
 		canMove = true
 	if anim_name == "Death":
 		$CanvasLayer/TextTransition.setTransitionText(true)
