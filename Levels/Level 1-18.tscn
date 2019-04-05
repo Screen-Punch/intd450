@@ -88,6 +88,7 @@ rotation = 1.57079
 scale = Vector2( 2.77681, 1 )
 texture = ExtResource( 6 )
 hframes = 2
+frame = 1
 
 [node name="Light2D" type="Light2D" parent="stairs"]
 position = Vector2( -0.950012, 1.8999 )

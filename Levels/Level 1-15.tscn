@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scripts/Level 1-15.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/dungeonTileset.tres" type="TileSet" id=2]
 [ext_resource path="res://Scenes/next_W.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Art/mirrors_gates.png" type="Texture" id=4]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Fog.tscn" type="PackedScene" id=6]
 
 [node name="Level 1-15" type="Node2D"]
 script = ExtResource( 1 )
@@ -23,7 +24,7 @@ next_world = "res://Levels/Level 1-16.tscn"
 nextLevelText = "Intro Level"
 
 [node name="Rubble" type="Sprite" parent="."]
-position = Vector2( 701.727, 248.423 )
+position = Vector2( 824.501, 249.651 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 4 )
 vframes = 4
@@ -40,5 +41,7 @@ text = "WASD to Move
 "
 
 [node name="Player" parent="." instance=ExtResource( 5 )]
-position = Vector2( 704.901, 217.327 )
+position = Vector2( 827.675, 218.555 )
+
+[node name="fog" parent="." instance=ExtResource( 6 )]
 

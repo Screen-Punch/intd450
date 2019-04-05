@@ -39,14 +39,15 @@ var narrativeSequences = [
 ["..."],	# 14 Last "full level", decded in onReady
 ["Ugh… h-how far did I fall, there? I can no longer see any light from above...",
 	"The forgotten treasure is nearly within your grasp… do not falter now.",
-	"...n-no! I cannot worry about such things now. I must keep going!",
-	"I have come so far from home on this dangerous adventure. I cannot return empty handed!",
-	"I can still hear the voice. It beckons me just a little further..."],
+	"...no. I cannot worry about such things now. I must keep going.",
+	"I have come so far from home, risking it all on this dangerous adventure into lands unknown... I cannot return empty handed!",
+	"You need but overcome only one final obstacle...",
+	"I can still hear the whispers. They beckon me forth just a little further..."],
 ["It was only a matter of time that another wanderlusting soul would find this place...",
 	"My wayward whispers… snaking and burrowing deeply into unsuspecting hearts and minds…",
 	"Like a siren's song... how sweetly they promise the countless, irresistible desires and curiosities of the mortal heart..."],
 ["..."], # 17 unused level
-["It must have been so tiring, resisting what you knew deep within to be inevitable…", "Retire all that you once were, mortal, and embrace your new existence… forevermore."],
+[""],
 ["The adventurer, basking in the newfound embrace of sunlight, made haste to return to civilization. Upon reaching home, the adventurer decided against sharing the details of their harrowing experience in that forgotten place - unwilling to risk provoking the curiosities of any other adventurous souls towards any independent investigating.", 
 	"Instead, they returned home quietly and resigned themselves to a relatively stress-free existence.",
 	"The nightmares came, no less, and many a night would be plagued with restlessness. They had ultimately triumphed against overwhelming odds, though, and took solace in this fact.","One lingering concern remained paramount in their mind, however: were there other victims the monster had neglected to mention, and where might they be now…?"],
@@ -58,7 +59,7 @@ var narrativeSequences = [
 var narrativeSequencesTextColors = [[0], [0,0], [0,0], [0,0], [0,0], # 0, 1, 2, 3, 4
 									[0,0,0], [0], [0,0,0], [0], [0], # 5, 6, 7, 8, 9
 									[0,0,0], [0], [0, 0, 0], [0,0], [0,0,0], # 10, 11, 12, 13, 14
-									[1,0,1,1,1], [0,0,0], [0, 0], [0, 0], [1, 1, 1, 1], [0,0,0]]	# level 15-18
+									[1,0,1,1,0,1], [0,0,0], [0, 0], [0, 0], [1, 1, 1, 1], [0,0,0]]	# level 15-18
 
 
 var playerDiedText = [["Slowly but surely, your mortal body has found its paltry limits.",
@@ -130,18 +131,11 @@ func updateTransitionText():
 			"Something within you is fundamentally… changing. You know this.",
 			"Do not be afraid. You are not alone in the process..."
 		]
-		narrativeSequences[14] = ["The desire now lingering in your heart...embrace it. Submit to it.", 
-			"Comprehension will come in due time.",
-			"Steel yourself, now. The surface world rushes to greet you once again..."
-		]
 	else:
 		narrativeSequences[10] = ["Your heart desires nothing less than to bask in the warmth of your precious sunlight once again...",
 			"One by one, these conduits of light - your one means of temporary salvation - have nearly become completely expunged.",
 			"Soon, you will know naught but the all-encompassing darkness that returns to swallow this forgotten place.",
 		]
-		narrativeSequences[14] = ["You may have found your escape, mortal, but delude yourself not: you have been changed in ways that you will carry upon your shoulders for the rest of your days.",
-			"You, or another, will return in due time… it is inevitable. And I shall be waiting.",
-			]
 
 
 
