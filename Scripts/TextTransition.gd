@@ -129,11 +129,11 @@ func updateTransitionText():
 			"Something within you is fundamentally… changing. You know this.",
 			"Do not be afraid. You are not alone in the process..."
 		]
+		narrativeSequences[18] = ["The desire now lingering in your heart...embrace it. Submit to it. Comprehension will come in due time. Steel yourself, now. The surface world rushes to greet you once again..."]
 	else:
 		narrativeSequences[10] = ["Your heart desires nothing less than to bask in the warmth of your precious sunlight once again...",
 			"One by one, these conduits of light - your one means of temporary salvation - have nearly become completely expunged.",
 			"Soon, you will know naught but the all-encompassing darkness that returns to swallow this forgotten place.",
 		]
-
-
+		narrativeSequences[18] = ["You may have found your escape, mortal, but delude yourself not: you have been changed in ways that you will carry upon your shoulders for the rest of your days. You, or another, will return in due time… it is inevitable. And I shall be waiting."]
 

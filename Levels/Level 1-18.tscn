@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Scripts/Level 1-18.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/dungeonTileset.tres" type="TileSet" id=2]
@@ -8,51 +8,18 @@
 [ext_resource path="res://Art/stairs.png" type="Texture" id=6]
 [ext_resource path="res://Art/lighting/light.png" type="Texture" id=7]
 [ext_resource path="res://Scenes/next_W.tscn" type="PackedScene" id=8]
-[ext_resource path="res://godotIcon.png" type="Texture" id=9]
-[ext_resource path="res://Art/CENTURY.TTF" type="DynamicFontData" id=10]
+[ext_resource path="res://Scenes/TextTransition.tscn" type="PackedScene" id=9]
 
 [sub_resource type="NavigationPolygon" id=1]
-vertices = PoolVector2Array( 192.001, 510.876, 382.375, 448.301, 640.703, 442.613, 703.995, 446.129, 829.099, 518.704, 322.081, 448.301, 831.047, 193.383, 700.479, 259.771, 702.237, -72.5099, 832.995, -317.002, 836.891, -1.42047, 700.479, -251.836, 191.97, -319.737, 642.462, -253.594, 384, -254, 318.285, -254.363, 190.862, 2.70099, 321.61, -64.8891, 192.001, 191.32, 322.081, 258.376, 631.913, 258.013, 382.375, 258.376, 382.551, -62.673, 913.611, -1.04013, 912.503, 193.975, 1.53891, 193.77, -0.828186, 0.484894, 645.978, -72.5099 )
-polygons = [ PoolIntArray( 0, 1, 2, 3, 4 ), PoolIntArray( 5, 1, 0 ), PoolIntArray( 6, 4, 3, 7, 8 ), PoolIntArray( 9, 10, 6, 8, 11 ), PoolIntArray( 12, 9, 11, 13 ), PoolIntArray( 12, 13, 14, 15 ), PoolIntArray( 16, 12, 15, 17, 18 ), PoolIntArray( 5, 0, 18, 19 ), PoolIntArray( 20, 2, 1, 21, 22 ), PoolIntArray( 23, 24, 6, 10 ), PoolIntArray( 18, 25, 26, 16 ), PoolIntArray( 22, 14, 13, 27, 20 ), PoolIntArray( 8, 7, 20, 27 ), PoolIntArray( 22, 21, 19, 18, 17 ), PoolIntArray( 16, 26, 26 ) ]
-outlines = [ PoolVector2Array( 1.53891, 193.77, 192.001, 191.32, 192.001, 510.876, 829.099, 518.704, 831.047, 193.383, 912.503, 193.975, 913.611, -1.04013, 836.891, -1.42047, 832.995, -317.002, 191.97, -319.737, 190.862, 2.70099, -0.828186, 0.484894, -0.828186, 0.484894 ), PoolVector2Array( 318.285, -254.363, 321.61, -64.8891, 382.551, -62.673, 384, -254 ), PoolVector2Array( 322.081, 258.376, 322.081, 448.301, 382.375, 448.301, 382.375, 258.376 ), PoolVector2Array( 642.462, -253.594, 700.479, -251.836, 702.237, -72.5099, 645.978, -72.5099 ), PoolVector2Array( 631.913, 258.013, 700.479, 259.771, 703.995, 446.129, 640.703, 442.613 ) ]
+vertices = PoolVector2Array( 192.001, 510.876, 382.375, 448.301, 640.703, 442.613, 703.995, 446.129, 829.099, 518.704, 322.081, 448.301, 831.047, 193.383, 700.479, 259.771, 702.237, -72.5099, 832.995, -317.002, 836.891, -1.42047, 700.479, -251.836, 191.97, -319.737, 642.462, -253.594, 384, -254, 318.285, -254.363, 190.862, 2.70099, 321.61, -64.8891, 192.001, 191.32, 322.081, 258.376, 631.913, 258.013, 382.375, 258.376, 382.551, -62.673, 1.53891, 193.77, -0.828186, 0.484894, 645.978, -72.5099, 887.64, 1.65945, 890.504, 184.953 )
+polygons = [ PoolIntArray( 0, 1, 2, 3, 4 ), PoolIntArray( 5, 1, 0 ), PoolIntArray( 6, 4, 3, 7, 8 ), PoolIntArray( 9, 10, 6, 8, 11 ), PoolIntArray( 12, 9, 11, 13 ), PoolIntArray( 12, 13, 14, 15 ), PoolIntArray( 16, 12, 15, 17, 18 ), PoolIntArray( 5, 0, 18, 19 ), PoolIntArray( 20, 2, 1, 21, 22 ), PoolIntArray( 18, 23, 24, 16 ), PoolIntArray( 22, 14, 13, 25, 20 ), PoolIntArray( 10, 26, 27, 6 ), PoolIntArray( 8, 7, 20, 25 ), PoolIntArray( 22, 21, 19, 18, 17 ), PoolIntArray( 16, 24, 24 ) ]
+outlines = [ PoolVector2Array( 1.53891, 193.77, 192.001, 191.32, 192.001, 510.876, 829.099, 518.704, 831.047, 193.383, 890.504, 184.953, 887.64, 1.65945, 836.891, -1.42047, 832.995, -317.002, 191.97, -319.737, 190.862, 2.70099, -0.828186, 0.484894, -0.828186, 0.484894 ), PoolVector2Array( 318.285, -254.363, 321.61, -64.8891, 382.551, -62.673, 384, -254 ), PoolVector2Array( 322.081, 258.376, 322.081, 448.301, 382.375, 448.301, 382.375, 258.376 ), PoolVector2Array( 642.462, -253.594, 700.479, -251.836, 702.237, -72.5099, 645.978, -72.5099 ), PoolVector2Array( 631.913, 258.013, 700.479, 259.771, 703.995, 446.129, 640.703, 442.613 ) ]
 
 [sub_resource type="OccluderPolygon2D" id=2]
 polygon = PoolVector2Array( 23.3897, 34.0872, 31.4735, -31.0518, -32.8783, -30.1727, -23.6853, 31.8858, -29.5499, 33.6462, -36.9993, -35.8944, 34.3265, -33.6925 )
 
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 29.8071, 37.2403 )
-
-[sub_resource type="DynamicFont" id=4]
-size = 32
-font_data = ExtResource( 10 )
-
-[sub_resource type="Animation" id=5]
-resource_name = "Ending"
-length = 10.0
-tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:self_modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0.1, 0.9, 2 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Label:self_modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0.9, 2 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
-}
 
 [node name="Level 1-18" type="Node2D"]
 script = ExtResource( 1 )
@@ -81,6 +48,7 @@ __meta__ = {
 position = Vector2( 58.7863, 105.514 )
 
 [node name="Timer" type="Timer" parent="."]
+one_shot = true
 
 [node name="stairs" type="Sprite" parent="."]
 position = Vector2( 988.006, 92.3196 )
@@ -109,32 +77,8 @@ next_world = "res://Levels/Level 1-19.tscn"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="Sprite" type="Sprite" parent="CanvasLayer"]
-modulate = Color( 0, 0, 0, 1 )
-self_modulate = Color( 1, 1, 1, 0 )
-position = Vector2( 548.525, 323.988 )
-scale = Vector2( 18.1414, 11.1246 )
-texture = ExtResource( 9 )
-
-[node name="Label" type="Label" parent="CanvasLayer"]
-modulate = Color( 0.313726, 0.27451, 1, 1 )
-self_modulate = Color( 1, 1, 1, 5.4186e-008 )
-margin_left = 91.0
-margin_top = 117.524
-margin_right = 927.0
-margin_bottom = 448.524
-custom_fonts/font = SubResource( 4 )
-text = "You may have found your escape, mortal, but delude yourself not: you have been changed in ways that you will carry upon your shoulders for the rest of your days.
-
-You, or another, will return in due time… it is inevitable. And I shall be waiting.
-"
-align = 1
-valign = 1
-autowrap = true
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer"]
-anims/Ending = SubResource( 5 )
+[node name="TextTransition" parent="CanvasLayer" instance=ExtResource( 9 )]
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="body_entered" from="stairs/Area2D" to="." method="_on_Area2D_body_entered"]
-[connection signal="animation_finished" from="CanvasLayer/AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
+[connection signal="textFadeOut" from="CanvasLayer/TextTransition" to="." method="_on_TextTransition_textFadeOut"]
