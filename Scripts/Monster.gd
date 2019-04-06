@@ -111,6 +111,9 @@ func move_along_path(distance):
 func _on_Area2D_body_entered(body):
 	if body.has_method("takeDamage"):
 		body.takeDamage()
+		if body.is_in_group("Player"):
+			cutscene = true
+			target = body
 
 
 func _on_AnimationPlayer_animation_finished(anim_name):
