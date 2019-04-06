@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scripts/Level 1-15.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/dungeonTileset.tres" type="TileSet" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Art/mirrors_gates.png" type="Texture" id=4]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Fog.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/TextTransition.tscn" type="PackedScene" id=7]
 
 [node name="Level 1-15" type="Node2D"]
 script = ExtResource( 1 )
@@ -22,6 +23,7 @@ rotation = -1.57079
 scale = Vector2( 0.8, 0.8 )
 next_world = "res://Levels/Level 1-16.tscn"
 nextLevelText = "Intro Level"
+blocked = false
 
 [node name="Rubble" type="Sprite" parent="."]
 visible = false
@@ -47,4 +49,13 @@ firstTimeSpawn = true
 
 [node name="fog" parent="." instance=ExtResource( 6 )]
 
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextTransition" parent="CanvasLayer" instance=ExtResource( 7 )]
+
 [connection signal="spawned" from="Player" to="." method="_on_Player_spawned"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="textFadeOut" from="CanvasLayer/TextTransition" to="." method="_on_TextTransition_textFadeOut"]

@@ -14,7 +14,10 @@ export (bool) var playerDeathSequence = false
 signal textFadeOut
 
 var narrativeSequences = [
-["It was only a matter of time that another wanderlusting soul would find this place..."], #0 indexed
+["Ugh… h-how far did I fall, there? I can no longer see any light from above...",
+	"The forgotten treasure is nearly within your grasp...",
+	"...no. I cannot worry about such things now. I must keep going!",
+	], #0 indexed. This plays when the player falls down
 ["My wayward whispers, how they snake and burrow deeply into unsuspecting hearts and minds.",
 	"Like a siren's song, they sweetly promise the countless, irresistible desires and curiosities of the mortal heart."],
 ["..."],	# 2 (Monster first appears)
@@ -37,11 +40,9 @@ var narrativeSequences = [
 ["..."], # 12 
 ["..."], 
 ["..."],	# 14 Last "full level", decded in onReady
-["Ugh… h-how far did I fall, there? I can no longer see any light from above...",
-	"The forgotten treasure is nearly within your grasp… do not falter now.",
-	"...no. I cannot worry about such things now. I must keep going.",
-	"I have come so far from home, risking it all on this dangerous adventure into lands unknown... I cannot return empty handed!",
-	"You need but overcome only one final obstacle...",
+["I have come so far from home, risking it all on this dangerous adventure into lands unknown… I cannot return empty handed!",
+	"My family is depending upon it...",
+	"You shall be their deliverance… do not falter now.",
 	"I can still hear the whispers. They beckon me forth just a little further..."],
 ["It was only a matter of time that another wanderlusting soul would find this place...",
 	"My wayward whispers… snaking and burrowing deeply into unsuspecting hearts and minds…",
@@ -56,10 +57,10 @@ var narrativeSequences = [
 	"The Old One - slumbering deep beneath the earth in that forgotten place - would be satiated. It was only a matter of time, and its patience was bountiful."],
 ]
 # 0 is monster, 1 is PC
-var narrativeSequencesTextColors = [[0], [0,0], [0,0], [0,0], [0,0], # 0, 1, 2, 3, 4
+var narrativeSequencesTextColors = [[1,0,1], [0,0], [0,0], [0,0], [0,0], # 0, 1, 2, 3, 4
 									[0,0,0], [0], [0,0,0], [0], [0], # 5, 6, 7, 8, 9
 									[0,0,0], [0], [0, 0, 0], [0,0], [0,0,0], # 10, 11, 12, 13, 14
-									[1,0,1,1,0,1], [0,0,0], [0, 0], [0, 0], [1, 1, 1, 1], [0,0,0]]	# level 15-18
+									[1,1,0,1], [0,0,0], [0, 0], [0, 0], [1, 1, 1, 1], [0,0,0]]	# level 15-18
 
 
 var playerDiedText = [["Slowly but surely, your mortal body has found its paltry limits.",
@@ -115,7 +116,6 @@ func _on_TextAnimator_animation_finished(anim_name):
 			textTracker += 1
 			$TextAnimator.play("TextTransition")
 			$Label.text = transitionText[textTracker]
-			#print(int(level),":",int(textTracker),"dw")
 			if textColor[int(level)][int(textTracker)] == 1:	# Player text
 				$Label.self_modulate = PLAYER_TEXT_COLOR
 			else:

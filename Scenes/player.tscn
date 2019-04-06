@@ -3,7 +3,7 @@
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=1]
 [ext_resource path="res://Art/PCs1.png" type="Texture" id=2]
 [ext_resource path="res://Scenes/Camera2D.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Sounds/SoundFiles/Wang/death2.wav" type="AudioStream" id=4]
+[ext_resource path="res://Sounds/SoundFiles/warp.wav" type="AudioStream" id=4]
 [ext_resource path="res://godotIcon.png" type="Texture" id=5]
 [ext_resource path="res://Scripts/Blur.gd" type="Script" id=6]
 [ext_resource path="res://nate'stesttheme.tres" type="Theme" id=7]
@@ -258,7 +258,7 @@ tracks/3/keys = {
 "values": [ 0 ]
 }
 
-[sub_resource type="Animation" id=20]
+[sub_resource type="Animation" id=15]
 resource_name = "SuperManSpawnAnimation"
 length = 2.4
 step = 0.05
@@ -348,8 +348,22 @@ tracks/6/keys = {
 "method": "superManSpawnLanded"
 } ]
 }
+tracks/7/type = "audio"
+tracks/7/path = NodePath("death2")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.2,
+"stream": ExtResource( 4 )
+} ],
+"times": PoolRealArray( 1.25 )
+}
 
-[sub_resource type="Animation" id=15]
+[sub_resource type="Animation" id=16]
 length = 0.4
 loop = true
 tracks/0/type = "value"
@@ -377,7 +391,7 @@ tracks/1/keys = {
 "values": [ 10 ]
 }
 
-[sub_resource type="Animation" id=16]
+[sub_resource type="Animation" id=17]
 length = 0.2
 loop = true
 tracks/0/type = "value"
@@ -405,7 +419,7 @@ tracks/1/keys = {
 "values": [ 10 ]
 }
 
-[sub_resource type="Animation" id=17]
+[sub_resource type="Animation" id=18]
 length = 0.4
 loop = true
 tracks/0/type = "value"
@@ -433,10 +447,10 @@ tracks/1/keys = {
 "values": [ 10 ]
 }
 
-[sub_resource type="OccluderPolygon2D" id=18]
+[sub_resource type="OccluderPolygon2D" id=19]
 polygon = PoolVector2Array( -12.5, 37.5, 12.5, 37.5, 12.5, 62.5, -12.5, 62.5 )
 
-[sub_resource type="RectangleShape2D" id=19]
+[sub_resource type="RectangleShape2D" id=20]
 extents = Vector2( 13.4923, 17.923 )
 
 [node name="Player" type="KinematicBody2D" groups=[
@@ -450,8 +464,8 @@ script = ExtResource( 1 )
 [node name="sprite" type="Sprite" parent="."]
 texture = ExtResource( 2 )
 flip_h = true
-hframes = 5
-frame = 4
+hframes = 10
+frame = 7
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0.418457, 47.3711 )
@@ -553,22 +567,22 @@ anims/IdleDown = SubResource( 11 )
 anims/IdleRight = SubResource( 12 )
 anims/IdleUp = SubResource( 13 )
 anims/SpawnAnimation = SubResource( 14 )
-anims/SuperManSpawnAnimation = SubResource( 20 )
-anims/WalkDown = SubResource( 15 )
-anims/WalkRight = SubResource( 16 )
-anims/WalkUp = SubResource( 17 )
+anims/SuperManSpawnAnimation = SubResource( 15 )
+anims/WalkDown = SubResource( 16 )
+anims/WalkRight = SubResource( 17 )
+anims/WalkUp = SubResource( 18 )
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color( 0.8, 0.8, 0.8, 1 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="."]
-occluder = SubResource( 18 )
+occluder = SubResource( 19 )
 
 [node name="Hurtbox" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
 position = Vector2( 0.36499, 40.1486 )
-shape = SubResource( 19 )
+shape = SubResource( 20 )
 
 [connection signal="animation_finished" from="CanvasLayer/SceneTransition" to="." method="_on_SceneTransition_animation_finished"]
 [connection signal="pressed" from="CanvasLayer/PauseMenu/ResumeButton" to="CanvasLayer/PauseMenu" method="_on_ResumeButton_pressed"]

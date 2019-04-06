@@ -1,23 +1,23 @@
 extends Node2D
 
-# class member variables go here, for example:
-# var a = 2
-# var b = "textvar"
-
 func _ready():
-	$next_W.revealExit()
-	
-	if name == "Level 1-17":
-		BGMPlayer.stream = load("res://Sounds/BGM/Halo Effect.wav")
-		BGMPlayer.play(0)
-		GameManagerNode.BGMAudioName = "res://Sounds/BGM/Halo Effect.wav"
-
-
-#func _process(delta):
-#	# Called every frame. Delta is time since last frame.
-#	# Update game logic here.
-#	pass
+	pass
 
 
 func _on_Player_spawned():
 	$Rubble.show()
+	$Timer.start(1)
+
+
+func _on_Timer_timeout():
+	name = "Level 1-0"
+	$CanvasLayer/TextTransition.setTransitionText()
+	$CanvasLayer/TextTransition/TextAnimator.play("ScreenBlockerFadeIn")
+	$Player.canMove = false
+
+
+func _on_TextTransition_textFadeOut():
+	$CanvasLayer/TextTransition/TextAnimator.play("TextFadeOutNoFollow")
+	$Player.canMove = true
+	name = "Level 1-15"
+	$CanvasLayer/TextTransition.setTransitionText()
