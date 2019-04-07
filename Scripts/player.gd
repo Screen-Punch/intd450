@@ -128,7 +128,7 @@ func takeDamage():
 
 
 func _on_AnimationPlayer_animation_finished(anim_name):
-	if anim_name == "SpawnAnimation" or anim_name == "SuperManSpawnAnimation":
+	if anim_name == "SpawnAnimation":
 		canMove = true
 	if anim_name == "Death":
 		$CanvasLayer/TextTransition.setTransitionText(true)

@@ -17,6 +17,8 @@ func _on_Timer_timeout():
 
 func _on_TextTransition_textFadeOut():
 	$CanvasLayer/TextTransition/TextAnimator.play("TextFadeOutNoFollow")
+
+func _on_TextTransition_textFadeOutNoFollow():
 	$Player.canMove = true
 	name = "Level 1-15"
 	$CanvasLayer/TextTransition.setTransitionText()

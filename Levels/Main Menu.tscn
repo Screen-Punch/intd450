@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://nate'stesttheme.tres" type="Theme" id=1]
 [ext_resource path="res://Scripts/Main Menu.gd" type="Script" id=2]
@@ -8,8 +8,9 @@
 [ext_resource path="res://Scripts/LevelSelection.gd" type="Script" id=6]
 [ext_resource path="res://Levels/Credits.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Art/mirrors_gates.png" type="Texture" id=8]
-[ext_resource path="res://Art/Monsters.png" type="Texture" id=9]
-[ext_resource path="res://godotIcon.png" type="Texture" id=10]
+[ext_resource path="res://Scenes/Mirror.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Art/Monsters.png" type="Texture" id=10]
+[ext_resource path="res://godotIcon.png" type="Texture" id=11]
 
 [sub_resource type="DynamicFont" id=1]
 size = 75
@@ -93,7 +94,7 @@ clip_text = true
 margin_left = 480.0
 margin_top = 190.0
 margin_right = 864.0
-margin_bottom = 574.0
+margin_bottom = 577.0
 rect_clip_content = true
 mouse_default_cursor_shape = 2
 theme = ExtResource( 1 )
@@ -142,13 +143,18 @@ anims/MainMenuAnimation = SubResource( 2 )
 
 [node name="Crystal" type="Sprite" parent="AnimationPlayer"]
 position = Vector2( 400.815, 235.404 )
+rotation = 3.14159
 texture = ExtResource( 8 )
 vframes = 4
 hframes = 6
 
+[node name="Mirror" parent="AnimationPlayer" instance=ExtResource( 9 )]
+position = Vector2( 912, 88 )
+rotation = -1.57079
+
 [node name="Monster" type="Sprite" parent="."]
 position = Vector2( 120.256, 380.855 )
-texture = ExtResource( 9 )
+texture = ExtResource( 10 )
 vframes = 2
 hframes = 3
 frame = 4
@@ -161,7 +167,7 @@ modulate = Color( 0, 0, 0, 1 )
 position = Vector2( 570.939, 304.626 )
 scale = Vector2( 20.6686, 11.7722 )
 z_index = -10
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -171,3 +177,6 @@ __meta__ = {
 [connection signal="pressed" from="DefaultMenu/LevelSelection" to="DefaultMenu/LevelSelection" method="_on_LevelSelection_pressed"]
 [connection signal="pressed" from="DefaultMenu/CreditsButton" to="." method="_on_CreditsButton_pressed"]
 [connection signal="pressed" from="DefaultMenu/ExitButton" to="." method="_on_ExitButton_pressed"]
+[connection signal="pressed" from="Credits/CreditsReturnButton" to="." method="_on_CreditsReturnButton_pressed"]
+
+[editable path="Credits"]

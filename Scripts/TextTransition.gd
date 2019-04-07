@@ -12,6 +12,7 @@ const MONSTER_TEXT_COLOR = Color(80.0/255.0, 70.0/255.0, 255.0/255.0)
 export (bool) var playerDeathSequence = false
 
 signal textFadeOut
+signal textFadeOutNoFollow
 
 var narrativeSequences = [
 ["Ugh… h-how far did I fall, there? I can no longer see any light from above...",
@@ -122,6 +123,8 @@ func _on_TextAnimator_animation_finished(anim_name):
 				$Label.self_modulate = MONSTER_TEXT_COLOR
 	if anim_name == "ScreenBlockerFadeIn":
 		$TextAnimator.play("TextTransition")
+	if anim_name == "TextFadeOutNoFollow":
+		emit_signal("textFadeOutNoFollow")
 		
 func updateTransitionText():
 	if GameManagerNode.totalDeaths >= GameManagerNode.BAD_END_DEATH_THRESHOLD:

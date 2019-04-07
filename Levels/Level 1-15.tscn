@@ -59,3 +59,4 @@ one_shot = true
 [connection signal="spawned" from="Player" to="." method="_on_Player_spawned"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="textFadeOut" from="CanvasLayer/TextTransition" to="." method="_on_TextTransition_textFadeOut"]
+[connection signal="textFadeOutNoFollow" from="CanvasLayer/TextTransition" to="." method="_on_TextTransition_textFadeOutNoFollow"]

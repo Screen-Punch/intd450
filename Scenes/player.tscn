@@ -448,7 +448,7 @@ tracks/1/keys = {
 }
 
 [sub_resource type="OccluderPolygon2D" id=19]
-polygon = PoolVector2Array( -12.5, 37.5, 12.5, 37.5, 12.5, 62.5, -12.5, 62.5 )
+polygon = PoolVector2Array( -12.5, 37.5, 12.5, 37.5, 12.7373, 56.3186, -12.574, 56.3258 )
 
 [sub_resource type="RectangleShape2D" id=20]
 extents = Vector2( 13.4923, 17.923 )
@@ -484,6 +484,7 @@ pause_mode = 2
 anims/SceneTransition = SubResource( 2 )
 
 [node name="ScreenBlocker" type="Sprite" parent="CanvasLayer"]
+visible = false
 modulate = Color( 0, 0, 0, 1 )
 position = Vector2( 553.168, 316.428 )
 scale = Vector2( 18.2865, 10.8884 )
