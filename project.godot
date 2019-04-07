@@ -17,8 +17,8 @@ _global_script_class_icons={
 
 config/name="Fragments"
 run/main_scene="res://Scenes/Intro.tscn"
-boot_splash/image="res://Art/fistforward(2).png"
-boot_splash/bg_color=Color( 0.117647, 0.0784314, 0.392157, 1 )
+boot_splash/image="res://Art/fistforward.png"
+boot_splash/bg_color=Color( 0, 0, 0, 1 )
 config/icon="res://Art/fistforward(2).png"
 
 [autoload]
