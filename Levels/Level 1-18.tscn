@@ -2,13 +2,13 @@
 
 [ext_resource path="res://Scripts/Level 1-18.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/dungeonTileset.tres" type="TileSet" id=2]
-[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Scripts/Nav2D.gd" type="Script" id=4]
-[ext_resource path="res://Scenes/Monster.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Art/stairs.png" type="Texture" id=6]
-[ext_resource path="res://Art/lighting/light.png" type="Texture" id=7]
-[ext_resource path="res://Scenes/next_W.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Scenes/TextTransition.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/TextTransition.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scripts/Nav2D.gd" type="Script" id=5]
+[ext_resource path="res://Scenes/Monster.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Art/stairs.png" type="Texture" id=7]
+[ext_resource path="res://Art/lighting/light.png" type="Texture" id=8]
+[ext_resource path="res://Scenes/next_W.tscn" type="PackedScene" id=9]
 
 [sub_resource type="NavigationPolygon" id=1]
 vertices = PoolVector2Array( 192.001, 510.876, 382.375, 448.301, 640.703, 442.613, 703.995, 446.129, 829.099, 518.704, 322.081, 448.301, 831.047, 193.383, 700.479, 259.771, 702.237, -72.5099, 832.995, -317.002, 836.891, -1.42047, 700.479, -251.836, 191.97, -319.737, 642.462, -253.594, 384, -254, 318.285, -254.363, 190.862, 2.70099, 321.61, -64.8891, 192.001, 191.32, 322.081, 258.376, 631.913, 258.013, 382.375, 258.376, 382.551, -62.673, 1.53891, 193.77, -0.828186, 0.484894, 645.978, -72.5099, 887.64, 1.65945, 890.504, 184.953 )
@@ -32,11 +32,15 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Player" parent="." instance=ExtResource( 3 )]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextTransition" parent="CanvasLayer" instance=ExtResource( 3 )]
+
+[node name="Player" parent="." instance=ExtResource( 4 )]
 position = Vector2( 157.772, 102.331 )
 
 [node name="Navigation2D" type="Navigation2D" parent="."]
-script = ExtResource( 4 )
+script = ExtResource( 5 )
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Navigation2D"]
 navpoly = SubResource( 1 )
@@ -44,7 +48,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Monster" parent="Navigation2D" instance=ExtResource( 5 )]
+[node name="Monster" parent="Navigation2D" instance=ExtResource( 6 )]
 position = Vector2( 58.7863, 105.514 )
 
 [node name="Timer" type="Timer" parent="."]
@@ -54,13 +58,13 @@ one_shot = true
 position = Vector2( 988.006, 92.3196 )
 rotation = 1.57079
 scale = Vector2( 2.77681, 1 )
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
 hframes = 2
 frame = 1
 
 [node name="Light2D" type="Light2D" parent="stairs"]
 position = Vector2( -0.950012, 1.8999 )
-texture = ExtResource( 7 )
+texture = ExtResource( 8 )
 shadow_enabled = true
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="stairs"]
@@ -71,14 +75,10 @@ occluder = SubResource( 2 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="stairs/Area2D"]
 shape = SubResource( 3 )
 
-[node name="next_W" parent="." instance=ExtResource( 8 )]
+[node name="next_W" parent="." instance=ExtResource( 9 )]
 position = Vector2( -1225.92, 761.185 )
 next_world = "res://Levels/Level 1-19.tscn"
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="TextTransition" parent="CanvasLayer" instance=ExtResource( 9 )]
-
+[connection signal="textFadeOut" from="CanvasLayer/TextTransition" to="." method="_on_TextTransition_textFadeOut"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="body_entered" from="stairs/Area2D" to="." method="_on_Area2D_body_entered"]
-[connection signal="textFadeOut" from="CanvasLayer/TextTransition" to="." method="_on_TextTransition_textFadeOut"]
