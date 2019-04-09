@@ -30,11 +30,10 @@ var narrativeSequences = [
 	"Do not mistake these affordances of fleeting respite for safety, like they did. You will never escape my notice within these walls..."],
 ["..."], # 6
 ["..."],
-["You are beginning to wonder if this labyrinth will ever end, aren’t you?",
-	"You can feel the oppressive earth above your head, below your feet, pressing in against the walls themselves… it encompasses you, isolating you almost completely from the surface world.",
-	"You struggle on two fronts, wanderluster… can you hold out long enough to find the freedom you so dearly desire?"
-],
 ["..."],
+["You are beginning to wonder if this labyrinth will ever end, aren’t you?",
+	"You can feel the oppressive earth above your head, below your feet, pressing in against the walls themselves... it encompasses you, isolating you almost completely from the surface world.",
+	"You struggle on two fronts, wanderluster… can you hold out long enough to find the freedom you so dearly desire?"],
 ["..."], # 10 # Decided in onReady
 ["..."],
 ["..."], # 12 
