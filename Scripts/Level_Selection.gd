@@ -1,6 +1,6 @@
 extends Control
 
-var goalTime = [-1, 21, 5.5, 9, 14.5, 12.5, 11.5, 7.5, 13, 5, 7, 12, 14.5, 20, 10, 10, 10, 10,]
+var goalTime = [-1, 21.0, 5.5, 9.0, 14.5, 12.5, 11.5, 7.5, 13.0, 5.0, 7.0, 12.0, 14.5, 20.0, 10.0, 10.0, 10.0, 10.0,]
 
 func _ready():
 	# Called when the node is added to the scene for the first time.
@@ -18,7 +18,7 @@ func _on_Level_mouse_entered(level):
 	if bestTime == -1:
 		bestTime = "Not Played"
 	$Panel/BestTime.text = "Best Time:" + str(bestTime)
-	$Panel/GoalTime.text = "Goal Time:" + str(goalTime[level]) + ".0"
+	$Panel/GoalTime.text = "Goal Time:" + str(goalTime[level])
 	
 
 func convertTimeToMMSS(value):
