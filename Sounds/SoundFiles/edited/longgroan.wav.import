@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/longgroan.wav-848f8b7c72c5620426799c09cfdf854e.sample"
+
+[deps]
+
+source_file="res://Sounds/SoundFiles/edited/longgroan.wav"
+dest_files=[ "res://.import/longgroan.wav-848f8b7c72c5620426799c09cfdf854e.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
