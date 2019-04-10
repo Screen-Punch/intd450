@@ -56,8 +56,8 @@ var narrativeSequences = [
 	"The Old One - slumbering deep beneath the earth in that forgotten place - would be satiated. It was only a matter of time, and its patience was bountiful."],
 ]
 # 0 is monster, 1 is PC
-var narrativeSequencesTextColors = [[1,0,1], [0,0], [0,0], [0,0], [0,0], # 0, 1, 2, 3, 4
-									[0,0,0], [0], [0,0,0], [0], [0], # 5, 6, 7, 8, 9
+var narrativeSequencesTextColors = [[1,0,1], [0,0], [0,0], [0,0], [0,0,0,0,0], # 0, 1, 2, 3, 4
+									[0,0,0], [0,0,0], [0,0,0], [0,0,0], [0,0,0], # 5, 6, 7, 8, 9
 									[0,0,0], [0], [0, 0, 0], [0,0], [0,0,0], # 10, 11, 12, 13, 14
 									[1,1,0,1], [0,0,0], [0, 0], [0, 0], [1, 1, 1, 1], [0,0,0]]	# level 15-18
 
