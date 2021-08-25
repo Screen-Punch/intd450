@@ -53,7 +53,7 @@ func _input(event):
 				target.spawn()
 			$Camera2D/CanvasLayer/RichTextLabel.start()
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	var motion = Vector2()
 	
 	if Input.is_action_pressed("ui_pause"):

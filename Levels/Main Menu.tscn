@@ -67,6 +67,9 @@ margin_right = 40.0
 margin_bottom = 40.0
 theme = ExtResource( 1 )
 script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="click" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 3 )
@@ -145,8 +148,8 @@ anims/MainMenuAnimation = SubResource( 2 )
 position = Vector2( 400.815, 235.404 )
 rotation = 3.14159
 texture = ExtResource( 8 )
-vframes = 4
 hframes = 6
+vframes = 4
 
 [node name="Mirror" parent="AnimationPlayer" instance=ExtResource( 9 )]
 position = Vector2( 912, 88 )
@@ -155,8 +158,8 @@ rotation = -1.57079
 [node name="Monster" type="Sprite" parent="."]
 position = Vector2( 120.256, 380.855 )
 texture = ExtResource( 10 )
-vframes = 2
 hframes = 3
+vframes = 2
 frame = 4
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Monster"]
@@ -172,7 +175,6 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[connection signal="finished" from="click" to="." method="_on_click_finished"]
 [connection signal="pressed" from="DefaultMenu/NewGameButton" to="." method="_on_NewGameButton_pressed"]
 [connection signal="pressed" from="DefaultMenu/LevelSelection" to="DefaultMenu/LevelSelection" method="_on_LevelSelection_pressed"]
 [connection signal="pressed" from="DefaultMenu/CreditsButton" to="." method="_on_CreditsButton_pressed"]

@@ -14,7 +14,9 @@ func _ready():
 func _on_NewGameButton_pressed():
 	play_click_sound()
 	yield(get_node("click"), "finished")
-	get_tree().change_scene("res://Levels/Level_Intro_Scene.tscn")
+	var err = get_tree().change_scene("res://Levels/Level_Intro_Scene.tscn")
+	if err:
+		print("Error with scene transition: ", err)
 
 
 func _on_ExitButton_pressed():

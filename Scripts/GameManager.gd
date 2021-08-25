@@ -26,7 +26,9 @@ func _reloadLevel():
 	deathsInLevel += 1
 	totalDeaths += 1
 	var sceneName = get_tree().get_current_scene().get_name()
-	get_tree().change_scene("res://Levels/" + sceneName + ".tscn")
+	var err = get_tree().change_scene("res://Levels/" + sceneName + ".tscn")
+	if err:
+		print("Error with scene transition: ", err)
 
 func loadNextLevel(sceneName, levelName):
 	call_deferred("_loadNextLevel", sceneName, levelName)
@@ -36,7 +38,9 @@ func _loadNextLevel(sceneName, levelName):
 	if "Level" in get_tree().get_current_scene().get_name():
 		$CanvasLayer/Label.text = levelName
 		$AnimationPlayer.play("LevelStart")
-	get_tree().change_scene(sceneName)
+	var err = get_tree().change_scene(sceneName)
+	if err:
+		print("Error with scene transition: ", err)
 	
 func set_level_selection_to_true():
 	level_selection_mode = true

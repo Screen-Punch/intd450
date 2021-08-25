@@ -10,7 +10,7 @@ func _ready():
 	if mirrorDirection == "horizontal":
 		pass
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	pass
 
 func takeDamage():

@@ -27,7 +27,9 @@ func _on_ExitButton_pressed():
 
 func _on_YesExit_pressed():
 	get_tree().paused = false
-	get_tree().change_scene("res://Levels/Main Menu.tscn")
+	var err = get_tree().change_scene("res://Levels/Main Menu.tscn")
+	if err:
+		print("Error with scene transition: ", err)
 
 
 func _on_NoExit_pressed():

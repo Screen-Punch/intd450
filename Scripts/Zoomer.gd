@@ -8,7 +8,7 @@ var zoomspeed = 10
 func _ready():
 	pass
 
-func _process(delta):
+func _process(_delta):
 
 	if Input.is_action_pressed("ui_up"):
 		zoomfactor -= 0.1
